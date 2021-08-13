@@ -29,20 +29,6 @@ class _TaggedActivityAvatarState extends State<TaggedActivityAvatar> {
             decoration: BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: Color.fromRGBO(0, 0, 0, 0.1),
-                  spreadRadius: 3.0,
-                  blurRadius: 6.0,
-                  offset: Offset(6, 2),
-                ),
-                BoxShadow(
-                  color: Color.fromRGBO(225, 225, 225, 0.1),
-                  spreadRadius: 3.0,
-                  blurRadius: 6.0,
-                  offset: Offset(-6, -2),
-                ),
-              ],
               image: DecorationImage(
                   image: AssetImage("assets/people.jpg"), fit: BoxFit.cover),
             ),
