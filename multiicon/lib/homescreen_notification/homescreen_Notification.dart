@@ -88,9 +88,6 @@ class _HomeScreenDState extends State<HomeScreenD> {
                       Container(
                         child: TaggedActivityContainers(),
                       ),
-                      Container(
-                        child: ActivityContainers(),
-                      ),
                     ],
                   ),
                 ),

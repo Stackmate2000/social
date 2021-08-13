@@ -206,11 +206,7 @@ class _ActivityContainersState extends State<ActivityContainers> {
             Padding(
               padding: const EdgeInsets.only(right: 15.0),
               child: Container(
-                height: 50,
-                width: MediaQuery.of(context).size.width * 0.25,
-                child: Container(
-                  child: Activityactivity(),
-                ),
+                child: Activityactivity(),
               ),
             ),
           ],
