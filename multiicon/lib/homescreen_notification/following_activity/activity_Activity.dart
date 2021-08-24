@@ -37,7 +37,7 @@ class _ActivityactivityState extends State<Activityactivity> {
                 child: Text(
                   "Following",
                   style: GoogleFonts.roboto(
-                      color: Colors.blueGrey,
+                      color: Colors.blueGrey[500],
                       fontSize: 13,
                       fontWeight: FontWeight.w500),
                 ),

@@ -44,23 +44,33 @@ class _BottomNav2State extends State<BottomNav2> {
                       topRight: Radius.circular(21)),
                   color: Colors.white,
                 ),
-                height: 70,
+                height: 65,
                 child: Align(
                   alignment: Alignment.center,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        GestureDetector(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        child: GestureDetector(
                           onTap: () {
                             setState(() {
                               _index = 0;
                             });
                           },
                           child: Container(
-                              width: MediaQuery.of(context).size.width * 0.15,
-                              decoration: BoxDecoration(),
+                              width: MediaQuery.of(context).size.width * 0.07,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  bottom: BorderSide(
+                                    color: _index == 0
+                                        ? Colors.purple[600]
+                                        : Colors.white,
+                                    width: 3.0,
+                                  ),
+                                ),
+                              ),
                               child: Center(
                                 child: Container(
                                     height: _index == 0 ? 25.0 : 22.0,
@@ -76,19 +86,32 @@ class _BottomNav2State extends State<BottomNav2> {
                                           )),
                               )),
                         ),
-                        GestureDetector(
+                      ),
+                      Container(
+                        child: GestureDetector(
                           onTap: () {
                             setState(() {
                               _index = 1;
                             });
                           },
                           child: Container(
-                              width: MediaQuery.of(context).size.width * 0.15,
-                              decoration: BoxDecoration(),
+                              width: MediaQuery.of(context).size.width * 0.07,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  bottom: BorderSide(
+                                    color: _index == 1
+                                        ? Colors.purple[600]
+                                        : Colors.white,
+                                    width: 3.0,
+                                  ),
+                                ),
+                              ),
                               child: Center(
                                 child: Container(
-                                    height: 20,
-                                    width: 20,
+                                    height: _index == 1 ? 25.0 : 22.0,
+                                    width: 30.0,
                                     child: _index == 1
                                         ? SvgPicture.asset(
                                             "assets/svg/featherwing.svg",
@@ -100,41 +123,66 @@ class _BottomNav2State extends State<BottomNav2> {
                                           )),
                               )),
                         ),
-                        GestureDetector(
+                      ),
+                      Container(
+                        child: GestureDetector(
                           onTap: () {
                             setState(() {
                               _index = 2;
                             });
                           },
                           child: Container(
-                              width: MediaQuery.of(context).size.width * 0.15,
-                              decoration: BoxDecoration(),
-                              child: Center(
-                                child: Container(
-                                  height: 20,
-                                  width: 20,
-                                  child: SvgPicture.asset(
-                                    "assets/svg/reeltv.svg",
+                              width: MediaQuery.of(context).size.width * 0.07,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  bottom: BorderSide(
                                     color: _index == 2
-                                        ? Colors.black
-                                        : Colors.grey[600],
+                                        ? Colors.purple[600]
+                                        : Colors.white,
+                                    width: 3.0,
                                   ),
                                 ),
+                              ),
+                              child: Center(
+                                child: Container(
+                                    height: _index == 2 ? 25.0 : 22.0,
+                                    width: 30.0,
+                                    child: SvgPicture.asset(
+                                      "assets/svg/reeltv.svg",
+                                      color: _index == 2
+                                          ? Colors.black
+                                          : Colors.grey[600],
+                                    )),
                               )),
                         ),
-                        GestureDetector(
+                      ),
+                      Container(
+                        child: GestureDetector(
                           onTap: () {
                             setState(() {
                               _index = 3;
                             });
                           },
                           child: Container(
-                              width: MediaQuery.of(context).size.width * 0.15,
-                              decoration: BoxDecoration(),
+                              width: MediaQuery.of(context).size.width * 0.07,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  bottom: BorderSide(
+                                    color: _index == 3
+                                        ? Colors.purple[600]
+                                        : Colors.white,
+                                    width: 3.0,
+                                  ),
+                                ),
+                              ),
                               child: Center(
                                 child: Container(
-                                    height: 20,
-                                    width: 20,
+                                    height: _index == 3 ? 25.0 : 22.0,
+                                    width: 30.0,
                                     child: _index == 3
                                         ? SvgPicture.asset(
                                             "assets/svg/searchc.svg",
@@ -146,19 +194,32 @@ class _BottomNav2State extends State<BottomNav2> {
                                           )),
                               )),
                         ),
-                        GestureDetector(
+                      ),
+                      Container(
+                        child: GestureDetector(
                           onTap: () {
                             setState(() {
                               _index = 4;
                             });
                           },
                           child: Container(
-                              width: MediaQuery.of(context).size.width * 0.15,
-                              decoration: BoxDecoration(),
+                              width: MediaQuery.of(context).size.width * 0.07,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  bottom: BorderSide(
+                                    color: _index == 4
+                                        ? Colors.purple[600]
+                                        : Colors.white,
+                                    width: 3.0,
+                                  ),
+                                ),
+                              ),
                               child: Center(
                                 child: Container(
-                                    height: 20,
-                                    width: 20,
+                                    height: _index == 4 ? 25.0 : 22.0,
+                                    width: 30.0,
                                     child: _index == 4
                                         ? SvgPicture.asset(
                                             "assets/svg/notifynew.svg",
@@ -170,29 +231,41 @@ class _BottomNav2State extends State<BottomNav2> {
                                           )),
                               )),
                         ),
-                        GestureDetector(
+                      ),
+                      Container(
+                        child: GestureDetector(
                           onTap: () {
                             setState(() {
                               _index = 5;
                             });
                           },
                           child: Container(
-                              width: MediaQuery.of(context).size.width * 0.15,
-                              decoration: BoxDecoration(),
-                              child: Center(
-                                child: Container(
+                            width: MediaQuery.of(context).size.width * 0.07,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border(
+                                bottom: BorderSide(
+                                  color: _index == 5
+                                      ? Colors.purple[600]
+                                      : Colors.white,
+                                  width: 3.0,
+                                ),
+                              ),
+                            ),
+                            child: Center(
+                              child: Container(
                                   height: 20,
                                   width: 20,
-                                  child: SvgPicture.asset(
-                                    "assets/svg/personfill.svg",
-                                    color:
-                                        Colors.blueGrey[900].withOpacity(0.9),
-                                  ),
-                                ),
-                              )),
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[400],
+                                    shape: BoxShape.circle,
+                                  )),
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
