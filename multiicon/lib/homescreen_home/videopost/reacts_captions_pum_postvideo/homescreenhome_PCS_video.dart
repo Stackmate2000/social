@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:multiicon/homescreen_home/postfirst/small%20pages/reportPost_one.dart';
 import 'package:multiicon/homescreen_home/videopost/smallpages/reportVideo.dart';
 
 class HomeScreenHomePCSVideo extends StatefulWidget {
@@ -10,147 +11,152 @@ class HomeScreenHomePCSVideo extends StatefulWidget {
 }
 
 class _HomeScreenHomePCSVideoState extends State<HomeScreenHomePCSVideo> {
-  modalModalBottomSheet(context) {
+  _showModalBottomSheet(context) {
     showModalBottomSheet(
+        isScrollControlled: true,
         backgroundColor: Colors.transparent,
         context: context,
         builder: (BuildContext context) {
           return Container(
-            height: 130.0,
-            decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(16),
-                topRight: Radius.circular(16),
-              ),
-            ),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(16),
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              gradient: LinearGradient(
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                  colors: [Colors.blue[800], Colors.cyan]),
-                            ),
-                            child: Icon(
-                              CupertinoIcons.speaker_slash_fill,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Text(
-                            "Mute",
-                            style: GoogleFonts.roboto(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(16),
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              gradient: LinearGradient(
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                  colors: [Colors.blue[800], Colors.cyan]),
-                            ),
-                            child: Icon(
-                              CupertinoIcons.link,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Text(
-                            "Copy Link",
-                            style: GoogleFonts.roboto(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      child: ReportVideo(),
-                    ),
-                    Container(
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(16),
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              gradient: LinearGradient(
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                  colors: [Colors.blue[800], Colors.cyan]),
-                            ),
-                            child: Icon(
-                              CupertinoIcons.arrow_2_squarepath,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Text(
-                            "Save",
-                            style: GoogleFonts.roboto(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ],
-                      ),
-                    ),
+              height: MediaQuery.of(context).size.height * 0.4,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.indigo[400],
+                    Colors.purple[800],
                   ],
                 ),
-              ],
-            ),
-          );
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+              ),
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 20.0, right: 20.0),
+                        child: IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: Icon(
+                            Icons.clear,
+                            color: Colors.indigo[200],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          top: 50.0, left: 20.0, right: 20.0),
+                      child: Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Container(
+                              child: Text("Video postuserr",
+                                  style: GoogleFonts.roboto(
+                                      color: Colors.white,
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.w500),
+                                  textAlign: TextAlign.center),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.7,
+                              child: Text(
+                                  "Anything about this post you want to share with TrickyBin?",
+                                  style: GoogleFonts.roboto(
+                                      color:
+                                          Colors.purple[100].withOpacity(0.6),
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.w400),
+                                  textAlign: TextAlign.start),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 10.0, left: 20.0, right: 20.0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              child: Text(
+                                "Mute, this user for me.",
+                                style: GoogleFonts.roboto(
+                                    color: Colors.white,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          Container(child: ReportPostOne())
+                        ],
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 30.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          height: MediaQuery.of(context).size.height * 0.07,
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.purple[900].withOpacity(0.7),
+                                  blurRadius: 6.0,
+                                  spreadRadius: 2.0,
+                                  offset: Offset(0.0, 6.0))
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(30.0),
+                            ),
+                          ),
+                          child: Text(
+                            "Cancel",
+                            style: GoogleFonts.roboto(
+                                color: Colors.purple[800],
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ));
         });
   }
 
@@ -225,7 +231,7 @@ class _HomeScreenHomePCSVideoState extends State<HomeScreenHomePCSVideo> {
                 color: Colors.grey[600],
               ),
               onPressed: () {
-                modalModalBottomSheet(context);
+                _showModalBottomSheet(context);
               },
             ),
           ),

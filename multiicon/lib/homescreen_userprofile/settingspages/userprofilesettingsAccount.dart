@@ -28,26 +28,21 @@ class _UserProfileSettingsAccountState
                 padding: const EdgeInsets.only(top: 20.0, left: 20.0),
                 child: Align(
                   alignment: Alignment.topLeft,
-                  child: Container(
-                    width: 35,
-                    height: 35,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                            color: Color(0xFFffffff),
-                            offset: Offset(-5, -5),
-                            blurRadius: 5),
-                        BoxShadow(
-                            color: Color(0xFFbebebe),
-                            offset: Offset(5, 5),
-                            blurRadius: 5),
-                      ],
-                    ),
-                    child: Icon(
-                      MdiIcons.chevronLeft,
-                      color: Colors.blueGrey,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      width: 35,
+                      height: 35,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        MdiIcons.chevronLeft,
+                        color: Colors.blueGrey,
+                      ),
                     ),
                   ),
                 ),
@@ -84,14 +79,6 @@ class _UserProfileSettingsAccountState
                             textAlign: TextAlign.start,
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Container(
-                        height: 100,
-                        width: MediaQuery.of(context).size.width * 0.9,
-                        decoration: BoxDecoration(color: Colors.red),
                       ),
                     ],
                   ),
