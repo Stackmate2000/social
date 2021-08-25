@@ -4,6 +4,8 @@ import 'package:multiicon/speechDesk/buttons.dart/speechLike.dart';
 import 'package:multiicon/speechDesk/buttons.dart/speechShare.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:multiicon/speechDesk/speech/speechOne.dart';
+import 'package:multiicon/speechDesk/speech/speechTwo.dart';
 
 class SpeechDeskMain extends StatefulWidget {
   @override
@@ -30,103 +32,11 @@ class _SpeechDeskMainState extends State<SpeechDeskMain> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                  child: Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: TweenAnimationBuilder(
-                            child: Text(
-                              "The only place where success comes before work is in the dictionary",
-                              style: GoogleFonts.roboto(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500),
-                              textAlign: TextAlign.center,
-                            ),
-                            tween: Tween<double>(begin: 0.0, end: 1.0),
-                            duration: Duration(milliseconds: 500),
-                            builder: (BuildContext context, double _val,
-                                Widget child) {
-                              return Opacity(opacity: _val, child: child);
-                            },
-                          ),
-                        ),
-                        SizedBox(
-                          height: 50.0,
-                        ),
-                        Container(
-                          child: TweenAnimationBuilder(
-                            child: Text(
-                              "- " "VIDAL SESSON " "-",
-                              style: GoogleFonts.roboto(
-                                  color: Colors.white,
-                                  fontSize: 13.0,
-                                  fontWeight: FontWeight.w500,
-                                  fontStyle: FontStyle.italic),
-                              textAlign: TextAlign.center,
-                            ),
-                            tween: Tween<double>(begin: 0.0, end: 1.0),
-                            duration: Duration(milliseconds: 250),
-                            builder: (BuildContext context, double _val,
-                                Widget child) {
-                              return Opacity(opacity: _val, child: child);
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  child: SpeechOne(),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                  child: Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: TweenAnimationBuilder(
-                            child: Text(
-                              "Sometimes the dreams that cometrue are the dreams you never even knew you had",
-                              style: GoogleFonts.roboto(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500),
-                              textAlign: TextAlign.center,
-                            ),
-                            tween: Tween<double>(begin: 0.0, end: 1.0),
-                            duration: Duration(milliseconds: 500),
-                            builder: (BuildContext context, double _val,
-                                Widget child) {
-                              return Opacity(opacity: _val, child: child);
-                            },
-                          ),
-                        ),
-                        SizedBox(
-                          height: 50.0,
-                        ),
-                        Container(
-                          child: TweenAnimationBuilder(
-                            child: Text(
-                              "- " "ALICE SEBOLD " "-",
-                              style: GoogleFonts.roboto(
-                                  color: Colors.white,
-                                  fontSize: 13.0,
-                                  fontWeight: FontWeight.w500,
-                                  fontStyle: FontStyle.italic),
-                              textAlign: TextAlign.center,
-                            ),
-                            tween: Tween<double>(begin: 0.0, end: 1.0),
-                            duration: Duration(milliseconds: 250),
-                            builder: (BuildContext context, double _val,
-                                Widget child) {
-                              return Opacity(opacity: _val, child: child);
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  child: SpeechTwo(),
                 )
               ],
             ),
