@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:multiicon/speechDesk/buttons.dart/selectTheme_speechdesk.dart';
+import 'package:multiicon/speechDesk/buttons.dart/compose.dart';
 import 'package:multiicon/speechDesk/buttons.dart/speechLike.dart';
 import 'package:multiicon/speechDesk/buttons.dart/speechShare.dart';
 
@@ -50,7 +50,7 @@ class _SpeechDeskMainState extends State<SpeechDeskMain> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      child: SelectThemeSpeechDesk(),
+                      child: Compose(),
                     ),
                     Row(
                       children: [

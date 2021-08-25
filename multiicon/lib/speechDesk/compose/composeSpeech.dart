@@ -8,6 +8,8 @@ class ComposeSpeech extends StatefulWidget {
 class _ComposeSpeechState extends State<ComposeSpeech> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      decoration: BoxDecoration(color: Colors.white),
+    );
   }
 }
