@@ -86,7 +86,7 @@ class _HomeScreenAState extends State<HomeScreenA> {
                           ),
                           Center(
                             child: Container(
-                              margin: EdgeInsets.all(6),
+                              margin: EdgeInsets.all(4),
                               decoration: BoxDecoration(
                                   color: Colors.white, shape: BoxShape.circle),
                             ),
@@ -170,39 +170,6 @@ class _HomeScreenAState extends State<HomeScreenA> {
                         endIndent: 30,
                         color: Colors.grey[600],
                         height: 40.0,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 30.0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.87,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                child: Text(
-                                  "Hey there ! Welcome to TrickyBin",
-                                  style: GoogleFonts.roboto(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Container(
-                                child: Text(
-                                  "When you follow people, you'll see the posts their post on this home page.",
-                                  style: GoogleFonts.roboto(
-                                      color: Colors.grey[800],
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400),
-                                  textAlign: TextAlign.center,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
                       ),
                       Container(
                         child: HomeScreenHomePostsFirst(),
