@@ -8,6 +8,7 @@ import 'package:multiicon/homescreen_home/homestory/homestoryUser/homescreenhome
 import 'package:multiicon/homescreen_home/homestory/homestoryUser/homescreenhome_Storytwo.dart';
 import 'package:multiicon/homescreen_home/postfirst/homescreenhomepostsFirst.dart';
 import 'package:multiicon/homescreen_home/postsecond/homescreenhomepostsSecond.dart';
+import 'package:multiicon/homescreen_home/postvideo/homescreenhome_postsVideo.dart';
 import 'package:multiicon/homescreen_home/viewedstory/viewedStory_home.dart';
 
 class HomeScreenA extends StatefulWidget {
@@ -212,6 +213,12 @@ class _HomeScreenAState extends State<HomeScreenA> {
                       Container(
                         child: HomeScreenHomePostsSecond(),
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        child: HomeScreenHomePostVideo(),
+                      )
                     ],
                   ),
                 ),
