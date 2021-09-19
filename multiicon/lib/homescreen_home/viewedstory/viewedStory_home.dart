@@ -169,13 +169,13 @@ class _ViewedStoryHomeState extends State<ViewedStoryHome> {
               shape: BoxShape.circle,
             ),
             child: CircleAvatar(
-              radius: 42,
+              radius: 38,
               backgroundColor: Colors.transparent,
               child: CircleAvatar(
-                radius: 40,
+                radius: 36,
                 backgroundColor: Colors.white,
                 child: CircleAvatar(
-                  radius: 36,
+                  radius: 32,
                   backgroundColor: Colors.blueGrey,
                   backgroundImage: AssetImage("assets/holi.jpg"),
                 ),

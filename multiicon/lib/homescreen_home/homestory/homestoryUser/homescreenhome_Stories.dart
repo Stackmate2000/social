@@ -199,13 +199,13 @@ class _HomePageHomeStoriesState extends State<HomePageHomeStories> {
                 ),
               ),
               child: CircleAvatar(
-                radius: 42,
+                radius: 38,
                 backgroundColor: Colors.transparent,
                 child: CircleAvatar(
-                  radius: 39,
+                  radius: 35,
                   backgroundColor: Colors.white,
                   child: CircleAvatar(
-                    radius: 36,
+                    radius: 32,
                     backgroundColor: Colors.blueGrey,
                     backgroundImage: AssetImage("assets/holis.jpg"),
                   ),

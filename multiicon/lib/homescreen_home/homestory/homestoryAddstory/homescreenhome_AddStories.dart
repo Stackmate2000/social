@@ -27,8 +27,8 @@ class _HomeScreenHomeAddStoriesState extends State<HomeScreenHomeAddStories> {
                           builder: (context) => StoryNewPostTabBar()));
                 },
                 child: Container(
-                  height: 70,
-                  width: 70,
+                  height: 65,
+                  width: 65,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.blueGrey.withOpacity(0.8),
@@ -61,8 +61,8 @@ class _HomeScreenHomeAddStoriesState extends State<HomeScreenHomeAddStories> {
                                 builder: (context) => StoryNewPostTabBar()));
                       },
                       child: Container(
-                        height: 30,
-                        width: 30,
+                        height: 27,
+                        width: 27,
                         decoration: BoxDecoration(
                             gradient: LinearGradient(
                               begin: Alignment.bottomLeft,
