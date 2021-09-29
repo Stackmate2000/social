@@ -178,7 +178,7 @@ class _ActivityContainersState extends State<ActivityContainers> {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "followed you,checkout his profile",
+                      "followed you,checkout his profile.",
                       style: GoogleFonts.roboto(
                           color: Colors.blueGrey[500],
                           fontSize: 13,

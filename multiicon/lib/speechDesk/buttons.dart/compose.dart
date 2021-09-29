@@ -187,7 +187,7 @@ class _ComposeState extends State<Compose> {
                 width: 3.0,
               ),
               Text(
-                "Compose",
+                "Themes",
                 style: GoogleFonts.roboto(
                     color: Colors.white,
                     fontSize: 15,

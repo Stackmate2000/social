@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class TaggedActivityActivity extends StatefulWidget {
+class LikedImageActivity extends StatefulWidget {
   @override
-  _TaggedActivityActivityState createState() => _TaggedActivityActivityState();
+  _LikedImageActivityState createState() => _LikedImageActivityState();
 }
 
-class _TaggedActivityActivityState extends State<TaggedActivityActivity> {
+class _LikedImageActivityState extends State<LikedImageActivity> {
   @override
   Widget build(BuildContext context) {
     return Container(

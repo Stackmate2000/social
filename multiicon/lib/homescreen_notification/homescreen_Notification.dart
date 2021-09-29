@@ -5,6 +5,7 @@ import 'package:multiicon/colors/primaryColor.dart';
 import 'package:multiicon/homescreen_notification/following_activity/activity_Containers.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:multiicon/homescreen_notification/liked_activity/liked_activityContainer.dart';
 import 'package:multiicon/homescreen_notification/tagged_activity/tagged_activityContainers.dart';
 
 class HomeScreenD extends StatefulWidget {
@@ -88,6 +89,9 @@ class _HomeScreenDState extends State<HomeScreenD> {
                       Container(
                         child: TaggedActivityContainers(),
                       ),
+                      Container(
+                        child: LikedActivityContainer(),
+                      )
                     ],
                   ),
                 ),

@@ -1,16 +1,17 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:multiicon/homescreen_notification/liked_activity/liked_activityAvatar.dart';
+import 'package:multiicon/homescreen_notification/liked_activity/liked_imageActivity.dart';
 import 'package:multiicon/homescreen_notification/tagged_activity/tagged_activityActivity.dart';
 import 'package:multiicon/homescreen_notification/tagged_activity/tagged_activityAvatar.dart';
 
-class TaggedActivityContainers extends StatefulWidget {
+class LikedActivityContainer extends StatefulWidget {
   @override
-  _TaggedActivityContainersState createState() =>
-      _TaggedActivityContainersState();
+  _LikedActivityContainerState createState() => _LikedActivityContainerState();
 }
 
-class _TaggedActivityContainersState extends State<TaggedActivityContainers> {
+class _LikedActivityContainerState extends State<LikedActivityContainer> {
   _showModalBottomSheet(context) {
     showModalBottomSheet(
         backgroundColor: Colors.transparent,
@@ -154,7 +155,7 @@ class _TaggedActivityContainersState extends State<TaggedActivityContainers> {
               padding: const EdgeInsets.only(left: 15.0),
               child: Container(
                 alignment: Alignment.center,
-                child: TaggedActivityAvatar(),
+                child: LikedActivityAvatar(),
               ),
             ),
             Container(
@@ -167,7 +168,7 @@ class _TaggedActivityContainersState extends State<TaggedActivityContainers> {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "_Earth_",
+                      "Cristino Alabama",
                       style: GoogleFonts.roboto(
                           color: Colors.blueGrey[900],
                           fontSize: 13,
@@ -179,7 +180,7 @@ class _TaggedActivityContainersState extends State<TaggedActivityContainers> {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "tagged you with some others on his picture.",
+                      "liked your image.",
                       style: GoogleFonts.roboto(
                           color: Colors.blueGrey[500],
                           fontSize: 13,
@@ -211,7 +212,7 @@ class _TaggedActivityContainersState extends State<TaggedActivityContainers> {
                 width: MediaQuery.of(context).size.width * 0.25,
                 child: Stack(
                   children: [
-                    TaggedActivityActivity(),
+                    LikedImageActivity(),
                   ],
                 ),
               ),
