@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:google_fonts/google_fonts.dart';
+
 class EditProfileImageSettings extends StatefulWidget {
   @override
   _EditProfileImageSettingsState createState() =>
@@ -8,10 +10,103 @@ class EditProfileImageSettings extends StatefulWidget {
 }
 
 class _EditProfileImageSettingsState extends State<EditProfileImageSettings> {
+  modalBottomSheet(context) {
+    showModalBottomSheet(
+        backgroundColor: Colors.transparent,
+        context: context,
+        builder: (BuildContext context) {
+          return Container(
+            height: 220.0,
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(16),
+                topRight: Radius.circular(16),
+              ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  height: 120,
+                  width: MediaQuery.of(context).size.width * 0.95,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(16),
+                    ),
+                  ),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Add a new profile picture?",
+                              style: GoogleFonts.roboto(
+                                  color: Colors.blueGrey,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ),
+                        Divider(
+                          thickness: 0.5,
+                          indent: 30,
+                          endIndent: 30,
+                          color: Colors.grey[400],
+                        ),
+                        Container(
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Delete image",
+                              style: GoogleFonts.roboto(
+                                  color: Colors.blueGrey,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ),
+                      ]),
+                ),
+                Container(
+                  height: 60,
+                  width: MediaQuery.of(context).size.width * 0.95,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(18),
+                    ),
+                  ),
+                  child: Container(
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text(
+                        "Cancel",
+                        style: GoogleFonts.roboto(
+                            color: Colors.red,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onLongPress: () {
+        modalBottomSheet(context);
+      },
       child: Container(
         height: 150,
         width: 150,

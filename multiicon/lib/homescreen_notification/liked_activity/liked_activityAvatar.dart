@@ -16,7 +16,7 @@ class _LikedActivityAvatarState extends State<LikedActivityAvatar> {
             height: 10,
             width: 10,
             decoration: BoxDecoration(
-              color: Colors.purple,
+              color: Colors.blue,
               shape: BoxShape.circle,
             ),
           ),

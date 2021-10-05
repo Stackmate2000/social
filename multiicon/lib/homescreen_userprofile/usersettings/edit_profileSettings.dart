@@ -60,7 +60,7 @@ class _EditProfileSettingsState extends State<EditProfileSettings> {
                         child: Column(
                           children: [
                             Text(
-                                "Do you want to change your email address and username?",
+                                "Are you sure, you want to change your email address and username?",
                                 style: GoogleFonts.roboto(
                                     color: Colors.white,
                                     fontSize: 17.0,
@@ -103,7 +103,7 @@ class _EditProfileSettingsState extends State<EditProfileSettings> {
                           ),
                         ),
                         child: Text(
-                          "Yes, change my email",
+                          "Yes, change it.",
                           style: GoogleFonts.roboto(
                               color: Colors.purple[800],
                               fontSize: 16.0,
