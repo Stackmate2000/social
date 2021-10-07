@@ -78,28 +78,39 @@ class _HomeScreenUserProfileSettingsPageState
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 20.0),
-                                child: Container(
-                                  // height: MediaQuery.of(context).size.height * 0.35,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.85,
-                                  decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(16)),
-                                    color: Colors.white,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color:
-                                              Colors.grey[400].withOpacity(0.7),
-                                          blurRadius: 6.0,
-                                          spreadRadius: 2.0,
-                                          offset: Offset(0.0, 6.0))
-                                    ],
+                                child: TweenAnimationBuilder(
+                                  duration: Duration(milliseconds: 1000),
+                                  builder: (BuildContext context, Object _val,
+                                      Widget child) {
+                                    return Padding(
+                                      padding: EdgeInsets.only(left: _val),
+                                      child: child,
+                                    );
+                                  },
+                                  tween: Tween<double>(begin: 200, end: 0),
+                                  curve: Curves.easeIn,
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width *
+                                        0.85,
+                                    decoration: BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(16)),
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey[400]
+                                                .withOpacity(0.7),
+                                            blurRadius: 6.0,
+                                            spreadRadius: 2.0,
+                                            offset: Offset(0.0, 6.0))
+                                      ],
+                                    ),
+                                    child: Padding(
+                                        padding: const EdgeInsets.all(20.0),
+                                        child: Container(
+                                          child: EditProfileSettings(),
+                                        )),
                                   ),
-                                  child: Padding(
-                                      padding: const EdgeInsets.all(20.0),
-                                      child: Container(
-                                        child: EditProfileSettings(),
-                                      )),
                                 ),
                               ),
                               SizedBox(
@@ -113,77 +124,89 @@ class _HomeScreenUserProfileSettingsPageState
                                           builder: (context) =>
                                               UserProfileSettingsAccount()));
                                 },
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.15,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.85,
-                                  decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(16)),
-                                    color: Colors.white,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color:
-                                              Colors.grey[400].withOpacity(0.7),
-                                          blurRadius: 6.0,
-                                          spreadRadius: 2.0,
-                                          offset: Offset(0.0, 6.0))
-                                    ],
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(20.0),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Container(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.5,
-                                              child: Text(
-                                                "Accounts",
-                                                style: GoogleFonts.roboto(
-                                                    color: Colors.blueGrey,
-                                                    fontSize: 19.0,
-                                                    fontWeight:
-                                                        FontWeight.w500),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5.0,
-                                            ),
-                                            Container(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.5,
-                                              child: Text(
-                                                "Change account details",
-                                                style: GoogleFonts.roboto(
-                                                    color: Colors.grey[500],
-                                                    fontSize: 14.0,
-                                                    fontWeight:
-                                                        FontWeight.w500),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        Container(
-                                          child: Icon(
-                                            MdiIcons.keyVariant,
-                                            size: 70.0,
-                                            color: Colors.grey[100],
-                                          ),
-                                        ),
+                                child: TweenAnimationBuilder(
+                                  duration: Duration(milliseconds: 1100),
+                                  builder: (BuildContext context, Object _val,
+                                      Widget child) {
+                                    return Padding(
+                                      padding: EdgeInsets.only(left: _val),
+                                      child: child,
+                                    );
+                                  },
+                                  tween: Tween<double>(begin: 200, end: 0),
+                                  curve: Curves.easeIn,
+                                  child: Container(
+                                    height: MediaQuery.of(context).size.height *
+                                        0.15,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.85,
+                                    decoration: BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(16)),
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey[400]
+                                                .withOpacity(0.7),
+                                            blurRadius: 6.0,
+                                            spreadRadius: 2.0,
+                                            offset: Offset(0.0, 6.0))
                                       ],
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(20.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.5,
+                                                child: Text(
+                                                  "Accounts",
+                                                  style: GoogleFonts.roboto(
+                                                      color: Colors.blueGrey,
+                                                      fontSize: 19.0,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 5.0,
+                                              ),
+                                              Container(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.5,
+                                                child: Text(
+                                                  "Change account details",
+                                                  style: GoogleFonts.roboto(
+                                                      color: Colors.grey[500],
+                                                      fontSize: 14.0,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Container(
+                                            child: Icon(
+                                              MdiIcons.keyVariant,
+                                              size: 70.0,
+                                              color: Colors.grey[100],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -191,8 +214,20 @@ class _HomeScreenUserProfileSettingsPageState
                               SizedBox(
                                 height: 10.0,
                               ),
-                              Container(
-                                child: UserProfileSettingsActivity(),
+                              TweenAnimationBuilder(
+                                duration: Duration(milliseconds: 1200),
+                                builder: (BuildContext context, Object _val,
+                                    Widget child) {
+                                  return Padding(
+                                    padding: EdgeInsets.only(left: _val),
+                                    child: child,
+                                  );
+                                },
+                                tween: Tween<double>(begin: 200, end: 0),
+                                curve: Curves.easeIn,
+                                child: Container(
+                                  child: UserProfileSettingsActivity(),
+                                ),
                               ),
                               SizedBox(
                                 height: 10.0,
@@ -205,77 +240,89 @@ class _HomeScreenUserProfileSettingsPageState
                                           builder: (context) =>
                                               UserProfileSettingsSave()));
                                 },
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.15,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.85,
-                                  decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(16)),
-                                    color: Colors.white,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color:
-                                              Colors.grey[400].withOpacity(0.7),
-                                          blurRadius: 6.0,
-                                          spreadRadius: 2.0,
-                                          offset: Offset(0.0, 6.0))
-                                    ],
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(20.0),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Container(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.5,
-                                              child: Text(
-                                                "Saved ",
-                                                style: GoogleFonts.roboto(
-                                                    color: Colors.blueGrey,
-                                                    fontSize: 19.0,
-                                                    fontWeight:
-                                                        FontWeight.w500),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5.0,
-                                            ),
-                                            Container(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.5,
-                                              child: Text(
-                                                "Save History",
-                                                style: GoogleFonts.roboto(
-                                                    color: Colors.grey[500],
-                                                    fontSize: 14.0,
-                                                    fontWeight:
-                                                        FontWeight.w500),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        Container(
-                                          child: Icon(
-                                            MdiIcons.bookmarkOutline,
-                                            size: 70.0,
-                                            color: Colors.grey[100],
-                                          ),
-                                        ),
+                                child: TweenAnimationBuilder(
+                                  duration: Duration(milliseconds: 1300),
+                                  builder: (BuildContext context, Object _val,
+                                      Widget child) {
+                                    return Padding(
+                                      padding: EdgeInsets.only(left: _val),
+                                      child: child,
+                                    );
+                                  },
+                                  tween: Tween<double>(begin: 200, end: 0),
+                                  curve: Curves.easeIn,
+                                  child: Container(
+                                    height: MediaQuery.of(context).size.height *
+                                        0.15,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.85,
+                                    decoration: BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(16)),
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey[400]
+                                                .withOpacity(0.7),
+                                            blurRadius: 6.0,
+                                            spreadRadius: 2.0,
+                                            offset: Offset(0.0, 6.0))
                                       ],
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(20.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.5,
+                                                child: Text(
+                                                  "Saved ",
+                                                  style: GoogleFonts.roboto(
+                                                      color: Colors.blueGrey,
+                                                      fontSize: 19.0,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 5.0,
+                                              ),
+                                              Container(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.5,
+                                                child: Text(
+                                                  "Save History",
+                                                  style: GoogleFonts.roboto(
+                                                      color: Colors.grey[500],
+                                                      fontSize: 14.0,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Container(
+                                            child: Icon(
+                                              MdiIcons.bookmarkOutline,
+                                              size: 70.0,
+                                              color: Colors.grey[100],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -291,6 +338,107 @@ class _HomeScreenUserProfileSettingsPageState
                                           builder: (context) =>
                                               UserProfileSettingsHelpandSupport()));
                                 },
+                                child: TweenAnimationBuilder(
+                                  duration: Duration(milliseconds: 1300),
+                                  builder: (BuildContext context, Object _val,
+                                      Widget child) {
+                                    return Padding(
+                                      padding: EdgeInsets.only(left: _val),
+                                      child: child,
+                                    );
+                                  },
+                                  tween: Tween<double>(begin: 200, end: 0),
+                                  curve: Curves.easeIn,
+                                  child: Container(
+                                    height: MediaQuery.of(context).size.height *
+                                        0.15,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.85,
+                                    decoration: BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(16)),
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey[400]
+                                                .withOpacity(0.7),
+                                            blurRadius: 6.0,
+                                            spreadRadius: 2.0,
+                                            offset: Offset(0.0, 6.0))
+                                      ],
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(20.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.5,
+                                                child: Text(
+                                                  "Help and Support",
+                                                  style: GoogleFonts.roboto(
+                                                      color: Colors.blueGrey,
+                                                      fontSize: 19.0,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 5.0,
+                                              ),
+                                              Container(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.5,
+                                                child: Text(
+                                                  "Help us with your suggestions",
+                                                  style: GoogleFonts.roboto(
+                                                      color: Colors.grey[500],
+                                                      fontSize: 14.0,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Container(
+                                            child: Icon(
+                                              MdiIcons.chatQuestion,
+                                              size: 70.0,
+                                              color: Colors.grey[100],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              TweenAnimationBuilder(
+                                duration: Duration(milliseconds: 1300),
+                                builder: (BuildContext context, Object _val,
+                                    Widget child) {
+                                  return Padding(
+                                    padding: EdgeInsets.only(left: _val),
+                                    child: child,
+                                  );
+                                },
+                                tween: Tween<double>(begin: 200, end: 0),
+                                curve: Curves.easeIn,
                                 child: Container(
                                   height:
                                       MediaQuery.of(context).size.height * 0.15,
@@ -327,7 +475,7 @@ class _HomeScreenUserProfileSettingsPageState
                                                       .width *
                                                   0.5,
                                               child: Text(
-                                                "Help and Support",
+                                                "Disabled",
                                                 style: GoogleFonts.roboto(
                                                     color: Colors.blueGrey,
                                                     fontSize: 19.0,
@@ -344,7 +492,7 @@ class _HomeScreenUserProfileSettingsPageState
                                                       .width *
                                                   0.5,
                                               child: Text(
-                                                "Help us with your suggestions",
+                                                "Dark Mode",
                                                 style: GoogleFonts.roboto(
                                                     color: Colors.grey[500],
                                                     fontSize: 14.0,
@@ -355,91 +503,17 @@ class _HomeScreenUserProfileSettingsPageState
                                           ],
                                         ),
                                         Container(
-                                          child: Icon(
-                                            MdiIcons.chatQuestion,
-                                            size: 70.0,
-                                            color: Colors.grey[100],
-                                          ),
-                                        ),
+                                          child: Switch(
+                                              activeColor: Colors.purple[800],
+                                              value: status,
+                                              onChanged: (value) {
+                                                print(
+                                                  "VALUE : $value",
+                                                );
+                                              }),
+                                        )
                                       ],
                                     ),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10.0,
-                              ),
-                              Container(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.15,
-                                width: MediaQuery.of(context).size.width * 0.85,
-                                decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(16)),
-                                  color: Colors.white,
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color:
-                                            Colors.grey[400].withOpacity(0.7),
-                                        blurRadius: 6.0,
-                                        spreadRadius: 2.0,
-                                        offset: Offset(0.0, 6.0))
-                                  ],
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(20.0),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.5,
-                                            child: Text(
-                                              "Disabled",
-                                              style: GoogleFonts.roboto(
-                                                  color: Colors.blueGrey,
-                                                  fontSize: 19.0,
-                                                  fontWeight: FontWeight.w500),
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 5.0,
-                                          ),
-                                          Container(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.5,
-                                            child: Text(
-                                              "Dark Mode",
-                                              style: GoogleFonts.roboto(
-                                                  color: Colors.grey[500],
-                                                  fontSize: 14.0,
-                                                  fontWeight: FontWeight.w500),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Container(
-                                        child: Switch(
-                                            activeColor: Colors.purple[800],
-                                            value: status,
-                                            onChanged: (value) {
-                                              print(
-                                                "VALUE : $value",
-                                              );
-                                            }),
-                                      )
-                                    ],
                                   ),
                                 ),
                               ),

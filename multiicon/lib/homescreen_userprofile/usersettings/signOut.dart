@@ -136,33 +136,48 @@ class _SignOutState extends State<SignOut> {
         });
   }
 
+  Tween<double> _scaleTween = Tween<double>(begin: 0, end: 1);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         _showModalBottomSheet(context);
       },
-      child: Container(
-        alignment: Alignment.center,
-        height: MediaQuery.of(context).size.height * 0.07,
-        width: MediaQuery.of(context).size.width * 0.6,
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-                color: Colors.grey[500].withOpacity(0.7),
-                blurRadius: 6.0,
-                spreadRadius: 2.0,
-                offset: Offset(0.0, 6.0))
-          ],
-          color: Colors.purple[800].withOpacity(0.8),
-          borderRadius: BorderRadius.all(
-            Radius.circular(30.0),
+      child: TweenAnimationBuilder(
+        curve: Curves.bounceOut,
+        tween: _scaleTween,
+        duration: Duration(milliseconds: 1000),
+        builder: (BuildContext context, scale, child) {
+          return Transform.scale(
+            scale: scale,
+            child: child,
+          );
+        },
+        child: Container(
+          alignment: Alignment.center,
+          height: MediaQuery.of(context).size.height * 0.07,
+          width: MediaQuery.of(context).size.width * 0.6,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey[500].withOpacity(0.7),
+                  blurRadius: 6.0,
+                  spreadRadius: 2.0,
+                  offset: Offset(0.0, 6.0))
+            ],
+            color: Colors.purple[800].withOpacity(0.8),
+            borderRadius: BorderRadius.all(
+              Radius.circular(30.0),
+            ),
           ),
-        ),
-        child: Text(
-          "Sign Out",
-          style: GoogleFonts.roboto(
-              color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.w500),
+          child: Text(
+            "Sign Out",
+            style: GoogleFonts.roboto(
+                color: Colors.white,
+                fontSize: 16.0,
+                fontWeight: FontWeight.w500),
+          ),
         ),
       ),
     );
