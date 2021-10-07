@@ -101,30 +101,43 @@ class _EditProfileImageSettingsState extends State<EditProfileImageSettings> {
         });
   }
 
+  Tween<double> _scaleTween = Tween<double>(begin: 0, end: 1);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onLongPress: () {
         modalBottomSheet(context);
       },
-      child: Container(
-        height: 180,
-        width: 180,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(16)),
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.indigo[400].withOpacity(0.9),
-              Colors.purple[800].withOpacity(0.8)
-            ],
+      child: TweenAnimationBuilder(
+        curve: Curves.bounceOut,
+        tween: _scaleTween,
+        duration: Duration(milliseconds: 1000),
+        builder: (BuildContext context, scale, child) {
+          return Transform.scale(
+            scale: scale,
+            child: child,
+          );
+        },
+        child: Container(
+          height: 180,
+          width: 180,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(16)),
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.indigo[400].withOpacity(0.9),
+                Colors.purple[800].withOpacity(0.8)
+              ],
+            ),
           ),
-        ),
-        child: Icon(
-          CupertinoIcons.camera,
-          color: Colors.purple[100].withOpacity(0.2),
-          size: 60,
+          child: Icon(
+            CupertinoIcons.camera,
+            color: Colors.purple[100].withOpacity(0.2),
+            size: 60,
+          ),
         ),
       ),
     );

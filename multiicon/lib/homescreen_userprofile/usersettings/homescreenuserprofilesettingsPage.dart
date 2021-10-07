@@ -61,7 +61,9 @@ class _HomeScreenUserProfileSettingsPageState
                                 child: Padding(
                                   padding: const EdgeInsets.only(top: 10.0),
                                   child: Container(
-                                    alignment: Alignment.topRight,
+                                    height: 200,
+                                    color: Colors.transparent,
+                                    alignment: Alignment.centerRight,
                                     width: MediaQuery.of(context).size.width *
                                         0.85,
                                     child: Stack(
