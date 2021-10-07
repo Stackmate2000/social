@@ -10,152 +10,94 @@ class HomeScreenHomePCSOne extends StatefulWidget {
 }
 
 class _HomeScreenHomePCSOneState extends State<HomeScreenHomePCSOne> {
-  _showModalBottomSheet(context) {
+  modalBottomSheet(context) {
     showModalBottomSheet(
-        isScrollControlled: true,
         backgroundColor: Colors.transparent,
         context: context,
         builder: (BuildContext context) {
           return Container(
-              height: MediaQuery.of(context).size.height * 0.4,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.indigo[400],
-                    Colors.purple[800],
-                  ],
-                ),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30),
-                  topRight: Radius.circular(30),
-                ),
+            height: 220.0,
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(16),
+                topRight: Radius.circular(16),
               ),
-              child: Stack(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 20.0, right: 20.0),
-                        child: IconButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          icon: Icon(
-                            Icons.clear,
-                            color: Colors.indigo[200],
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  height: 120,
+                  width: MediaQuery.of(context).size.width * 0.95,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(16),
+                    ),
+                  ),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Report",
+                              style: GoogleFonts.roboto(
+                                  color: Colors.blueGrey[900],
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400),
+                            ),
                           ),
                         ),
+                        Divider(
+                          thickness: 0.5,
+                          indent: 30,
+                          endIndent: 30,
+                          color: Colors.grey[400],
+                        ),
+                        Container(
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Block this user for me",
+                              style: GoogleFonts.roboto(
+                                  color: Colors.blueGrey[900],
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ),
+                      ]),
+                ),
+                Container(
+                  height: 60,
+                  width: MediaQuery.of(context).size.width * 0.95,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(18),
+                    ),
+                  ),
+                  child: Container(
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text(
+                        "Cancel",
+                        style: GoogleFonts.roboto(
+                            color: Colors.red,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400),
                       ),
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          top: 50.0, left: 20.0, right: 20.0),
-                      child: Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Container(
-                              child: Text("First postuserr",
-                                  style: GoogleFonts.roboto(
-                                      color: Colors.white,
-                                      fontSize: 20.0,
-                                      fontWeight: FontWeight.w500),
-                                  textAlign: TextAlign.center),
-                            ),
-                            SizedBox(
-                              height: 10.0,
-                            ),
-                            Container(
-                              width: MediaQuery.of(context).size.width * 0.7,
-                              child: Text(
-                                  "Anything about this post you want to share with TrickyBin?",
-                                  style: GoogleFonts.roboto(
-                                      color:
-                                          Colors.purple[100].withOpacity(0.6),
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w400),
-                                  textAlign: TextAlign.start),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        top: 10.0, left: 20.0, right: 20.0),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              child: Text(
-                                "Mute, this user for me.",
-                                style: GoogleFonts.roboto(
-                                    color: Colors.white,
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
-                          Container(child: ReportPostOne())
-                        ],
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 30.0),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Container(
-                          alignment: Alignment.center,
-                          height: MediaQuery.of(context).size.height * 0.07,
-                          width: MediaQuery.of(context).size.width * 0.6,
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.purple[900].withOpacity(0.7),
-                                  blurRadius: 6.0,
-                                  spreadRadius: 2.0,
-                                  offset: Offset(0.0, 6.0))
-                            ],
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(30.0),
-                            ),
-                          ),
-                          child: Text(
-                            "Cancel",
-                            style: GoogleFonts.roboto(
-                                color: Colors.purple[800],
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ));
+                ),
+              ],
+            ),
+          );
         });
   }
 
@@ -227,7 +169,7 @@ class _HomeScreenHomePCSOneState extends State<HomeScreenHomePCSOne> {
             child: IconButton(
               icon: Icon(MdiIcons.dotsHorizontal, color: Colors.grey[600]),
               onPressed: () {
-                _showModalBottomSheet(context);
+                modalBottomSheet(context);
               },
             ),
           ),

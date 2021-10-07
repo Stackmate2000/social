@@ -45,7 +45,7 @@ class _EditProfileImageSettingsState extends State<EditProfileImageSettings> {
                             child: Text(
                               "Add a new profile picture?",
                               style: GoogleFonts.roboto(
-                                  color: Colors.blueGrey,
+                                  color: Colors.blueGrey[900],
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400),
                             ),
@@ -63,7 +63,7 @@ class _EditProfileImageSettingsState extends State<EditProfileImageSettings> {
                             child: Text(
                               "Delete image",
                               style: GoogleFonts.roboto(
-                                  color: Colors.blueGrey,
+                                  color: Colors.blueGrey[900],
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400),
                             ),
@@ -108,8 +108,8 @@ class _EditProfileImageSettingsState extends State<EditProfileImageSettings> {
         modalBottomSheet(context);
       },
       child: Container(
-        height: 150,
-        width: 150,
+        height: 180,
+        width: 180,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(16)),
           gradient: LinearGradient(
