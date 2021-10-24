@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:multiicon/bottom_nav/bottomNav2.dart';
 import 'package:multiicon/login/animated_Logo.dart';
-import 'package:multiicon/signup/signup_pageA.dart';
+import 'package:multiicon/signup/signup_pageB.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -36,6 +36,7 @@ class _LoginState extends State<Login> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Container(
+                          height: 120,
                           child: AnimatedLogo(),
                         ),
                         Divider(
@@ -236,7 +237,7 @@ class _LoginState extends State<Login> {
 
 Route _nextRoute() {
   return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => SignupA(),
+    pageBuilder: (context, animation, secondaryAnimation) => SignUpB(),
     transitionDuration: Duration(milliseconds: 250),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       var begin = Offset(1.0, 0.0);

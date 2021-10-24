@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:multiicon/startup/hello_page.dart';
+import 'package:multiicon/startup/hellopageNamsatae.dart';
 
 class BrandPage extends StatefulWidget {
   @override
@@ -12,8 +13,8 @@ class _BrandPageState extends State<BrandPage> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 5), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => HelloPage()));
+      Navigator.pushReplacement(context,
+          MaterialPageRoute(builder: (context) => HelloPageNamsatae()));
     });
   }
 
@@ -25,8 +26,8 @@ class _BrandPageState extends State<BrandPage> {
         children: [
           Container(
             decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(16))),
+              color: Colors.white,
+            ),
           ),
           Align(
             alignment: Alignment.center,
