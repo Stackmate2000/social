@@ -118,10 +118,10 @@ class _SignUpBState extends State<SignUpB> {
                                           Color(0xff000000).withOpacity(0.1))),
                               hintText: "Username",
                               hintStyle: GoogleFonts.roboto(
-                                  color: Colors.blueGrey[900].withOpacity(0.4),
+                                  color: Color(0xff000000).withOpacity(0.5),
                                   fontSize: 15,
                                   fontWeight: FontWeight.w400),
-                              fillColor: Colors.grey[100],
+                              fillColor: Color(0xffFAFAFA),
                               filled: true),
                         ),
                       ),
@@ -139,12 +139,12 @@ class _SignUpBState extends State<SignUpB> {
                             decoration: BoxDecoration(
                               boxShadow: [
                                 BoxShadow(
-                                    color: Color(0xff62D7E1).withOpacity(0.2),
+                                    color: Color(0xff3190FF).withOpacity(0.1),
                                     blurRadius: 4.0,
                                     spreadRadius: 2.0,
                                     offset: Offset(0.0, 6.0))
                               ],
-                              color: Color(0xff62D7E1),
+                              color: Color(0xff3190FF),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(8.0),
                               ),
@@ -153,7 +153,7 @@ class _SignUpBState extends State<SignUpB> {
                               "Next",
                               style: GoogleFonts.roboto(
                                   color: Color(0xffFFFFFF),
-                                  fontSize: 15,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500),
                               textAlign: TextAlign.center,
                             )),

@@ -13,222 +13,198 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Material(
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.black,
-          ),
-          child: Stack(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(16.0),
-                    ),
-                    color: Colors.white),
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                        top: 30.0, left: 20.0, right: 20.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Container(
-                          height: 120,
-                          child: AnimatedLogo(),
-                        ),
-                        Divider(
-                          height: 10,
-                          thickness: 0.5,
-                          color: Colors.grey[600].withOpacity(0.6),
-                          endIndent: 16,
-                          indent: 16,
-                        ),
-                        Align(
-                          alignment: Alignment.center,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 20.0),
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.06,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.8,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 20.0, right: 10.0),
-                                    child: TextField(
-                                      style: GoogleFonts.roboto(
-                                          color: Colors.blueGrey[900]
-                                              .withOpacity(0.9),
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.w400),
-                                      textAlign: TextAlign.left,
-                                      autofocus: false,
-                                      decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText: "abc@trickybin.com",
-                                        hintStyle: GoogleFonts.roboto(
-                                            color: Colors.blueGrey[900]
-                                                .withOpacity(0.9),
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w400),
-                                        helperText: "Account address",
-                                        helperStyle: GoogleFonts.roboto(
-                                            color: Colors.grey[500]
-                                                .withOpacity(0.9),
-                                            fontSize: 11,
-                                            fontWeight: FontWeight.w400),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 40.0),
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.06,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.8,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 20.0, right: 10.0),
-                                    child: TextField(
-                                      style: GoogleFonts.roboto(
-                                          color: Colors.blueGrey[900]
-                                              .withOpacity(0.9),
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.w400),
-                                      textAlign: TextAlign.left,
-                                      autofocus: false,
-                                      decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText: "********",
-                                        hintStyle: GoogleFonts.roboto(
-                                            color: Colors.blueGrey[900]
-                                                .withOpacity(0.9),
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w400),
-                                        helperText: "Account password",
-                                        helperStyle: GoogleFonts.roboto(
-                                            color: Colors.grey[500]
-                                                .withOpacity(0.9),
-                                            fontSize: 11,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 5.0),
-                                child: Align(
-                                  alignment: Alignment.centerRight,
-                                  child: Container(
-                                    child: TextButton(
-                                      onPressed: () {},
-                                      child: Text("Forgot your password ?",
-                                          style: GoogleFonts.roboto(
-                                              color: Colors.blueGrey[900]
-                                                  .withOpacity(0.9),
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: 13)),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    right: 0.0, top: 20.0),
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      Navigator.of(context)
-                                          .push(_createRoute());
-                                    },
-                                    child: Container(
-                                      alignment: Alignment.center,
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.07,
-                                      width: MediaQuery.of(context).size.width *
-                                          0.6,
-                                      decoration: BoxDecoration(
-                                        boxShadow: [
-                                          BoxShadow(
-                                              color: Colors.grey[400]
-                                                  .withOpacity(0.9),
-                                              blurRadius: 4.0,
-                                              spreadRadius: 2.0,
-                                              offset: Offset(0.0, 6.0))
-                                        ],
-                                        color: Colors.blueGrey[900]
-                                            .withOpacity(0.8),
-                                        borderRadius: BorderRadius.all(
-                                          Radius.circular(30.0),
-                                        ),
-                                      ),
-                                      child: Text(
-                                        "Continue",
-                                        style: GoogleFonts.roboto(
-                                            color: Colors.white,
-                                            fontSize: 16.0,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 30.0),
-                                child: Container(
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text("New User?",
-                                          style: GoogleFonts.roboto(
-                                              color: Colors.blueGrey[900]
-                                                  .withOpacity(0.9),
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: 12)),
-                                      SizedBox(
-                                        width: 5.0,
-                                      ),
-                                      InkWell(
-                                        onTap: () {
-                                          Navigator.of(context)
-                                              .push(_nextRoute());
-                                        },
-                                        child: Text(
-                                          "Create a new account",
-                                          style: GoogleFonts.roboto(
-                                            color: Colors.blue[900]
-                                                .withOpacity(0.8),
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          color: Color(0xffFFFFFF),
+        ),
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(color: Color(0xffFFFFFF)),
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    child: Text(
+                      "TrickyBin",
+                      style: GoogleFonts.dancingScript(
+                          color: Color(0xff000000),
+                          fontSize: 50,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
                     ),
                   ),
+                  SizedBox(
+                    height: 25.0,
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    child: TextField(
+                      style: GoogleFonts.roboto(
+                          color: Color(0xff000000),
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.left,
+                      autofocus: false,
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Color(0xff000000).withOpacity(0.1)),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(8.0),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
+                              ),
+                              borderSide: BorderSide(
+                                  color: Color(0xff000000).withOpacity(0.1))),
+                          hintText: "Username",
+                          hintStyle: GoogleFonts.roboto(
+                              color: Color(0xff000000).withOpacity(0.5),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400),
+                          fillColor: Color(0xffFAFAFA),
+                          filled: true),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    child: TextField(
+                      style: GoogleFonts.roboto(
+                          color: Color(0xff000000),
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.left,
+                      autofocus: false,
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Color(0xff000000).withOpacity(0.1)),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(8.0),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
+                              ),
+                              borderSide: BorderSide(
+                                  color: Color(0xff000000).withOpacity(0.1))),
+                          hintText: "Password",
+                          hintStyle: GoogleFonts.roboto(
+                              color: Color(0xff000000).withOpacity(0.5),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400),
+                          fillColor: Color(0xffFAFAFA),
+                          filled: true),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5.0,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20.0),
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Container(
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text("Forgot your password ?",
+                              style: GoogleFonts.roboto(
+                                  color: Color(0xff3190FF),
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 13)),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(_createRoute());
+                        },
+                        child: Container(
+                            alignment: Alignment.center,
+                            height: 50,
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Color(0xff3190FF).withOpacity(0.1),
+                                    blurRadius: 4.0,
+                                    spreadRadius: 2.0,
+                                    offset: Offset(0.0, 6.0))
+                              ],
+                              color: Color(0xff3190FF),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
+                              ),
+                            ),
+                            child: Text(
+                              "Log In",
+                              style: GoogleFonts.roboto(
+                                  color: Color(0xffFFFFFF),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500),
+                              textAlign: TextAlign.center,
+                            )),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                bottom: 20.0,
+              ),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Don't have an account?",
+                        style: GoogleFonts.roboto(
+                            color: Color(0xff000000).withOpacity(0.5),
+                            fontWeight: FontWeight.w400,
+                            fontSize: 14)),
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(_nextRoute());
+                      },
+                      child: Text(
+                        "Create one",
+                        style: GoogleFonts.roboto(
+                          color: Color(0xff3190FF),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );

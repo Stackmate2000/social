@@ -78,12 +78,12 @@ class _IntroPageState extends State<IntroPage> {
                                   boxShadow: [
                                     BoxShadow(
                                         color:
-                                            Color(0xff7070B8).withOpacity(0.2),
+                                            Color(0xff3190FF).withOpacity(0.2),
                                         blurRadius: 4.0,
                                         spreadRadius: 2.0,
                                         offset: Offset(0.0, 6.0))
                                   ],
-                                  color: Color(0xff7070B8),
+                                  color: Color(0xff3190FF),
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(16.0),
                                   ),

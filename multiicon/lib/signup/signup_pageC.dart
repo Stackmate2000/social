@@ -13,151 +13,157 @@ class SignUpPageC extends StatefulWidget {
 class _SignUpPageCState extends State<SignUpPageC> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Material(
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.black,
-          ),
-          child: Stack(
-            children: [
-              Align(
-                alignment: Alignment.center,
-                child: Container(
-                  height: MediaQuery.of(context).size.height,
-                  width: MediaQuery.of(context).size.width * 0.97,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(16.0),
-                      ),
-                      color: Colors.white),
-                  child: Align(
-                    alignment: Alignment.topCenter,
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          top: 50.0, left: 30.0, right: 30.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            "Nickname select the type of username you want for TickyBin.",
-                            style: GoogleFonts.roboto(
-                                color: Colors.blueGrey[900].withOpacity(0.9),
-                                fontSize: 13,
-                                fontWeight: FontWeight.w500),
-                            textAlign: TextAlign.center,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 50.0),
-                            child: Align(
-                              alignment: Alignment.center,
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 40.0),
-                                    child: Container(
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.06,
-                                      width: MediaQuery.of(context).size.width *
-                                          0.8,
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 20.0, right: 10.0),
-                                        child: TextField(
-                                          style: GoogleFonts.roboto(
-                                              color: Colors.blueGrey[900]
-                                                  .withOpacity(0.9),
-                                              fontSize: 13,
-                                              fontWeight: FontWeight.w400),
-                                          textAlign: TextAlign.left,
-                                          autofocus: false,
-                                          decoration: InputDecoration(
-                                            border: InputBorder.none,
-                                            hintText: "hello_trickybin_",
-                                            hintStyle: GoogleFonts.roboto(
-                                                color: Colors.blueGrey[900]
-                                                    .withOpacity(0.9),
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.w400),
-                                            helperText: "Set username",
-                                            helperStyle: GoogleFonts.roboto(
-                                                color: Colors.grey[500]
-                                                    .withOpacity(0.9),
-                                                fontSize: 11,
-                                                fontWeight: FontWeight.w500),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        right: 20.0, top: 40.0),
-                                    child: Align(
-                                      alignment: Alignment.centerRight,
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          Navigator.of(context)
-                                              .push(_nextRoute());
-                                        },
-                                        child: Container(
-                                          height: 50,
-                                          width: 50,
-                                          decoration: BoxDecoration(
-                                            boxShadow: [
-                                              BoxShadow(
-                                                  color: Colors.grey[400]
-                                                      .withOpacity(0.9),
-                                                  blurRadius: 4.0,
-                                                  spreadRadius: 2.0,
-                                                  offset: Offset(0.0, 6.0))
-                                            ],
-                                            color: Colors.blueGrey[900]
-                                                .withOpacity(0.8),
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(16.0),
-                                            ),
-                                          ),
-                                          child: Icon(
-                                            CupertinoIcons.arrow_right,
-                                            color:
-                                                Colors.white.withOpacity(0.8),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          color: Color(0xff000000),
+        ),
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(color: Color(0xffFFFFFF)),
+            ),
+            SafeArea(
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(_createRoute());
+                          },
+                          child: Container(
+                            height: 35,
+                            width: 40,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey[100].withOpacity(0.9),
+                                    blurRadius: 4.0,
+                                    spreadRadius: 2.0,
+                                    offset: Offset(0.0, 6.0))
+                              ],
+                              color: Color(0xffFFFFFF),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
                               ),
                             ),
+                            child: Icon(
+                              CupertinoIcons.arrow_left,
+                              color: Color(0xff000000),
+                            ),
                           ),
-                        ],
+                        ),
                       ),
-                    ),
+                      SizedBox(
+                        height: 7.0,
+                      ),
+                      Container(
+                        child: Text(
+                          "Create a password",
+                          style: GoogleFonts.roboto(
+                              color: Color(0xff000000),
+                              fontSize: 25,
+                              fontWeight: FontWeight.w300),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                        child: Container(
+                          child: Text(
+                            "If you want we can remember your password on this device, by clicking on remember me.",
+                            style: GoogleFonts.roboto(
+                                color: Color(0xff000000).withOpacity(0.7),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25.0,
+                      ),
+                      Container(
+                        child: TextField(
+                          style: GoogleFonts.roboto(
+                              color: Color(0xff000000),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.left,
+                          autofocus: true,
+                          decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color(0xff000000).withOpacity(0.1)),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(8.0),
+                                ),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(8.0),
+                                  ),
+                                  borderSide: BorderSide(
+                                      color:
+                                          Color(0xff000000).withOpacity(0.1))),
+                              hintText: "Password",
+                              hintStyle: GoogleFonts.roboto(
+                                  color: Color(0xff000000).withOpacity(0.5),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400),
+                              fillColor: Color(0xffFAFAFA),
+                              filled: true),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25.0,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(_nextRoute());
+                        },
+                        child: Container(
+                            alignment: Alignment.center,
+                            height: 50,
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Color(0xff3190FF).withOpacity(0.2),
+                                    blurRadius: 4.0,
+                                    spreadRadius: 2.0,
+                                    offset: Offset(0.0, 6.0))
+                              ],
+                              color: Color(0xff3190FF),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
+                              ),
+                            ),
+                            child: Text(
+                              "Next",
+                              style: GoogleFonts.roboto(
+                                  color: Color(0xffFFFFFF),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500),
+                              textAlign: TextAlign.center,
+                            )),
+                      ),
+                    ],
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 5.0,
-                  top: 5.0,
-                ),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: IconButton(
-                    icon: Icon(
-                      MdiIcons.chevronLeft,
-                      color: Colors.blueGrey.withOpacity(0.6),
-                    ),
-                    onPressed: () {
-                      Navigator.of(context).push(_createRoute());
-                    },
-                  ),
-                ),
-              )
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
