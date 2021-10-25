@@ -1,179 +1,139 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:multiicon/colors/backgroundColor.dart';
-import 'package:multiicon/homescreen_search/Discover/carouselOne.dart';
-import 'package:multiicon/homescreen_search/Discover/carouselThree.dart';
-import 'package:multiicon/homescreen_search/Discover/carouselTwo.dart';
-import 'package:multiicon/homescreen_search/SidePages/globalSearch.dart';
+
+import 'data.dart';
 
 class HomeScreenSearch extends StatefulWidget {
   @override
   _HomeScreenSearchState createState() => _HomeScreenSearchState();
 }
 
+var cardAspectRatio = 12.0 / 16.0;
+var widgetAspectRation = cardAspectRatio * 1.2;
+
 class _HomeScreenSearchState extends State<HomeScreenSearch> {
+  var CurrentPage = images.length - 1.0;
+
   @override
   Widget build(BuildContext context) {
+    PageController controller = PageController(initialPage: images.length - 1);
+    controller.addListener(() {
+      setState(() {
+        CurrentPage = controller.page;
+      });
+    });
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(color: Colors.white),
+        decoration: BoxDecoration(color: Color(0xffFFFFFF)),
         child: Stack(
           children: [
             Container(
-              alignment: Alignment.topCenter,
-              decoration: BoxDecoration(color: Colors.white),
-              child: SafeArea(
-                child: Align(
-                  alignment: Alignment.topRight,
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.8,
-                    width: MediaQuery.of(context).size.width * 0.65,
-                    decoration: BoxDecoration(
-                      color: backgroundColor.withOpacity(0.4),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(100),
-                        bottomLeft: Radius.circular(100),
-                      ),
+              decoration: BoxDecoration(
+                color: Color(0xff70708B),
+              ),
+            ),
+            Stack(
+              children: [
+                CardScrollingWidget(CurrentPage),
+                Positioned.fill(
+                    child: PageView.builder(
+                  itemCount: images.length,
+                  controller: controller,
+                  reverse: true,
+                  itemBuilder: (context, index) {
+                    return Container();
+                  },
+                )),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class CardScrollingWidget extends StatelessWidget {
+  var currentPage;
+  var padding = 20.0;
+  var verticalInset = 20.0;
+
+  CardScrollingWidget(this.currentPage);
+  @override
+  Widget build(BuildContext context) {
+    return new AspectRatio(
+      aspectRatio: widgetAspectRation,
+      child: LayoutBuilder(
+        // ignore: missing_return
+        builder: (context, constraints) {
+          var width = constraints.maxWidth;
+          var height = constraints.maxHeight;
+
+          // ignore: unused_local_variable
+          var safeWidth = width - 2 * padding;
+          // ignore: unused_local_variable
+          var safeHeight = height - 2 * padding;
+
+          var heightOfPrimaryCard = safeHeight;
+          var widthOfPrimaryCard = heightOfPrimaryCard * cardAspectRatio;
+
+          var primaryCatdLeft = safeWidth - widthOfPrimaryCard;
+          var horizontalInset = primaryCatdLeft / 2;
+
+          List<Widget> cardList = new List();
+
+          for (var i = 0; i < images.length; i++) {
+            var delta = i - currentPage;
+            bool isOnRIght = delta > 0;
+
+            var start = padding +
+                max(
+                    primaryCatdLeft -
+                        horizontalInset * -delta * (isOnRIght ? 15 : 1),
+                    0.0);
+
+            var cardItem = Positioned.directional(
+              top: padding + verticalInset * max(-delta, 0.0),
+              bottom: padding + verticalInset * max(-delta, 0.0),
+              start: start,
+              textDirection: TextDirection.rtl,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16.0),
+                child: Container(
+                  decoration:
+                      BoxDecoration(color: Color(0xffFFFFFF), boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      offset: Offset(3.0, 6.0),
+                      blurRadius: 10.0,
+                    ),
+                  ]),
+                  child: AspectRatio(
+                    aspectRatio: cardAspectRatio,
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        Image.asset(
+                          images[i],
+                          fit: BoxFit.cover,
+                        ),
+                        //Resume
+                      ],
                     ),
                   ),
                 ),
               ),
-            ),
-            SafeArea(
-              child: SingleChildScrollView(
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            top: 30.0, left: 20.0, right: 20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      child: Text(
-                                        "Hello there,",
-                                        style: GoogleFonts.roboto(
-                                            color: Colors.blueGrey[500],
-                                            fontSize: 17.0,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 3.0,
-                                    ),
-                                    Text(
-                                      "Christina",
-                                      style: GoogleFonts.roboto(
-                                          color: Colors.blueGrey[800],
-                                          fontSize: 17.0,
-                                          fontWeight: FontWeight.w600),
-                                    ),
-                                  ],
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                GlobalSearch()));
-                                  },
-                                  icon: Icon(
-                                    Icons.search,
-                                    color: Colors.blueGrey,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 5.0,
-                            ),
-                            Container(
-                              child: Text(
-                                "Here's some suggestions of peoples that you might know or you wanna follow them",
-                                style: GoogleFonts.roboto(
-                                    color: Colors.blueGrey[300],
-                                    fontSize: 13.0,
-                                    fontWeight: FontWeight.w500),
-                                textAlign: TextAlign.start,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 40.0),
-                        child: CarouselSlider(
-                          options: CarouselOptions(
-                              height: MediaQuery.of(context).size.height * 0.65,
-                              initialPage: 0,
-                              enableInfiniteScroll: false,
-                              enlargeCenterPage: true,
-                              scrollDirection: Axis.horizontal,
-                              scrollPhysics: BouncingScrollPhysics()),
-                          items: [
-                            Align(
-                              alignment: Alignment.center,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[100],
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(16),
-                                  ),
-                                  image: DecorationImage(
-                                      image: AssetImage("assets/image.jpg"),
-                                      fit: BoxFit.cover),
-                                ),
-                                child: CarouselOne(),
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.grey[100],
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(16)),
-                                    image: DecorationImage(
-                                        image: AssetImage("assets/image.jpg"),
-                                        fit: BoxFit.cover)),
-                                child: CarouselTwo(),
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.blue[800], Colors.cyan]),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(16)),
-                                ),
-                                child: CarouselThree(),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+            );
+            cardList.add(cardItem);
+          }
+          return Stack(
+            children: cardList,
+          );
+        },
       ),
     );
   }
