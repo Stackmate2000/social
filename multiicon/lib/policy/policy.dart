@@ -152,7 +152,9 @@ class _PolicyState extends State<Policy> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(_nextRoute());
+                      },
                       child: Container(
                           alignment: Alignment.center,
                           height: 50,
