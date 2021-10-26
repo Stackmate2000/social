@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:multiicon/colors/backgroundColor.dart';
 import 'package:multiicon/homescreen_userprofile/buttons/user_Profile.dart';
 import 'package:multiicon/homescreen_userprofile/smallPages/customtabbarProfile.dart';
-import 'package:multiicon/homescreen_userprofile/smallPages/followPage.dart';
 import 'package:multiicon/homescreen_userprofile/usersettings/homescreenuserprofilesettingsPage.dart';
 
 class HomeScreenUserProfile extends StatefulWidget {
@@ -87,12 +86,6 @@ class _HomeScreenUserProfileState extends State<HomeScreenUserProfile> {
                                       ),
                                     ],
                                   ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 10.0),
-                                child: Container(
-                                  child: FollowPage(),
                                 ),
                               ),
                               Padding(

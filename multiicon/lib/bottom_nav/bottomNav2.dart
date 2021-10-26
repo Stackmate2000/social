@@ -4,9 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:multiicon/homescreen_home/homescreen_Home.dart';
 import 'package:multiicon/homescreen_notification/homescreen_Notification.dart';
 import 'package:multiicon/homescreen_reels/homescreen_Reels.dart';
-import 'package:multiicon/homescreen_search/homescreen_Search.dart';
-import 'package:multiicon/homescreen_userprofile/homescreen_userProfile.dart';
-import 'package:multiicon/speechDesk/speechDesk_main.dart';
+import 'package:multiicon/homescreen_userprofile/profileUI/profileUI.dart';
 
 class BottomNav2 extends StatefulWidget {
   @override
@@ -27,14 +25,10 @@ class _BottomNav2State extends State<BottomNav2> {
             _index == 0
                 ? Home()
                 : (_index == 1
-                    ? SpeechDesk()
+                    ? Reels()
                     : _index == 2
-                        ? Reels()
-                        : _index == 3
-                            ? Search()
-                            : _index == 4
-                                ? Notify()
-                                : Profile()),
+                        ? Notify()
+                        : Profile()),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
@@ -112,15 +106,12 @@ class _BottomNav2State extends State<BottomNav2> {
                                 child: Container(
                                     height: _index == 1 ? 25.0 : 22.0,
                                     width: 30.0,
-                                    child: _index == 1
-                                        ? SvgPicture.asset(
-                                            "assets/svg/featherwing.svg",
-                                            color: Colors.purple[600],
-                                          )
-                                        : SvgPicture.asset(
-                                            "assets/svg/featherwing.svg",
-                                            color: Colors.grey[600],
-                                          )),
+                                    child: SvgPicture.asset(
+                                      "assets/svg/reeltv.svg",
+                                      color: _index == 1
+                                          ? Colors.black
+                                          : Colors.grey[600],
+                                    )),
                               )),
                         ),
                       ),
@@ -149,78 +140,7 @@ class _BottomNav2State extends State<BottomNav2> {
                                 child: Container(
                                     height: _index == 2 ? 25.0 : 22.0,
                                     width: 30.0,
-                                    child: SvgPicture.asset(
-                                      "assets/svg/reeltv.svg",
-                                      color: _index == 2
-                                          ? Colors.black
-                                          : Colors.grey[600],
-                                    )),
-                              )),
-                        ),
-                      ),
-                      Container(
-                        child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _index = 3;
-                            });
-                          },
-                          child: Container(
-                              width: MediaQuery.of(context).size.width * 0.07,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border(
-                                  bottom: BorderSide(
-                                    color: _index == 3
-                                        ? Colors.purple[600]
-                                        : Colors.white,
-                                    width: 3.0,
-                                  ),
-                                ),
-                              ),
-                              child: Center(
-                                child: Container(
-                                    height: _index == 3 ? 25.0 : 22.0,
-                                    width: 30.0,
-                                    child: _index == 3
-                                        ? SvgPicture.asset(
-                                            "assets/svg/searchc.svg",
-                                            color: Colors.purple[600],
-                                          )
-                                        : SvgPicture.asset(
-                                            "assets/svg/searchb.svg",
-                                            color: Colors.grey[600],
-                                          )),
-                              )),
-                        ),
-                      ),
-                      Container(
-                        child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _index = 4;
-                            });
-                          },
-                          child: Container(
-                              width: MediaQuery.of(context).size.width * 0.07,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border(
-                                  bottom: BorderSide(
-                                    color: _index == 4
-                                        ? Colors.purple[600]
-                                        : Colors.white,
-                                    width: 3.0,
-                                  ),
-                                ),
-                              ),
-                              child: Center(
-                                child: Container(
-                                    height: _index == 4 ? 25.0 : 22.0,
-                                    width: 30.0,
-                                    child: _index == 4
+                                    child: _index == 2
                                         ? SvgPicture.asset(
                                             "assets/svg/notifynew.svg",
                                             color: Colors.purple[600],
@@ -236,7 +156,7 @@ class _BottomNav2State extends State<BottomNav2> {
                         child: GestureDetector(
                           onTap: () {
                             setState(() {
-                              _index = 5;
+                              _index = 3;
                             });
                           },
                           child: Container(
@@ -246,7 +166,7 @@ class _BottomNav2State extends State<BottomNav2> {
                               color: Colors.white,
                               border: Border(
                                 bottom: BorderSide(
-                                  color: _index == 5
+                                  color: _index == 3
                                       ? Colors.purple[600]
                                       : Colors.white,
                                   width: 3.0,
@@ -286,29 +206,11 @@ class Home extends StatelessWidget {
   }
 }
 
-class Search extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: HomeScreenSearch(),
-    );
-  }
-}
-
 class Reels extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: HomeScreenC(),
-    );
-  }
-}
-
-class SpeechDesk extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: SpeechDeskMain(),
     );
   }
 }
@@ -326,7 +228,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: HomeScreenUserProfile(),
+      child: ProfileUI(),
     );
   }
 }
