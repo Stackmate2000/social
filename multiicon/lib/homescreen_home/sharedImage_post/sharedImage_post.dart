@@ -25,7 +25,8 @@ class _SharedImage_postState extends State<SharedImage_post> {
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding:
+                  const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0),
               child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,

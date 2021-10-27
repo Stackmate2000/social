@@ -37,7 +37,7 @@ class _BottomNav2State extends State<BottomNav2> {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(21),
                       topRight: Radius.circular(21)),
-                  color: Colors.white,
+                  color: _index == 1 ? Color(0xff000000) : Color(0xffFFFFFF),
                 ),
                 height: 65,
                 child: Align(
@@ -55,17 +55,7 @@ class _BottomNav2State extends State<BottomNav2> {
                           child: Container(
                               width: MediaQuery.of(context).size.width * 0.07,
                               height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border(
-                                  bottom: BorderSide(
-                                    color: _index == 0
-                                        ? Colors.purple[600]
-                                        : Colors.white,
-                                    width: 3.0,
-                                  ),
-                                ),
-                              ),
+                              decoration: BoxDecoration(),
                               child: Center(
                                 child: Container(
                                     height: _index == 0 ? 25.0 : 22.0,
@@ -73,7 +63,7 @@ class _BottomNav2State extends State<BottomNav2> {
                                     child: _index == 0
                                         ? SvgPicture.asset(
                                             "assets/svg/homesevenfill.svg",
-                                            color: Colors.purple[600],
+                                            color: Color(0xff3190FF),
                                           )
                                         : SvgPicture.asset(
                                             "assets/svg/homeseven.svg",
@@ -92,17 +82,7 @@ class _BottomNav2State extends State<BottomNav2> {
                           child: Container(
                               width: MediaQuery.of(context).size.width * 0.07,
                               height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border(
-                                  bottom: BorderSide(
-                                    color: _index == 1
-                                        ? Colors.purple[600]
-                                        : Colors.white,
-                                    width: 3.0,
-                                  ),
-                                ),
-                              ),
+                              decoration: BoxDecoration(),
                               child: Center(
                                 child: Container(
                                     height: _index == 1 ? 25.0 : 22.0,
@@ -110,7 +90,7 @@ class _BottomNav2State extends State<BottomNav2> {
                                     child: SvgPicture.asset(
                                       "assets/svg/reeltv.svg",
                                       color: _index == 1
-                                          ? Colors.black
+                                          ? Color(0xffFFFFFF)
                                           : Colors.grey[600],
                                     )),
                               )),
@@ -126,30 +106,21 @@ class _BottomNav2State extends State<BottomNav2> {
                           child: Container(
                               width: MediaQuery.of(context).size.width * 0.07,
                               height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border(
-                                  bottom: BorderSide(
-                                    color: _index == 2
-                                        ? Colors.purple[600]
-                                        : Colors.white,
-                                    width: 3.0,
-                                  ),
-                                ),
-                              ),
+                              decoration: BoxDecoration(),
                               child: Center(
                                 child: Container(
-                                    height: _index == 2 ? 25.0 : 22.0,
-                                    width: 30.0,
-                                    child: _index == 2
-                                        ? SvgPicture.asset(
-                                            "assets/svg/notifynew.svg",
-                                            color: Colors.purple[600],
-                                          )
-                                        : SvgPicture.asset(
-                                            "assets/svg/notificationone.svg",
-                                            color: Colors.black,
-                                          )),
+                                  height: _index == 2 ? 25.0 : 22.0,
+                                  width: 30.0,
+                                  child: _index == 2
+                                      ? SvgPicture.asset(
+                                          "assets/svg/notifynew.svg",
+                                          color: Color(0xff3190FF),
+                                        )
+                                      : SvgPicture.asset(
+                                          "assets/svg/notificationone.svg",
+                                          color: Colors.grey[600],
+                                        ),
+                                ),
                               )),
                         ),
                       ),
@@ -163,17 +134,7 @@ class _BottomNav2State extends State<BottomNav2> {
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.07,
                             height: 50,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border(
-                                bottom: BorderSide(
-                                  color: _index == 3
-                                      ? Colors.purple[600]
-                                      : Colors.white,
-                                  width: 3.0,
-                                ),
-                              ),
-                            ),
+                            decoration: BoxDecoration(),
                             child: Center(
                               child: Container(
                                   height: 20,

@@ -25,7 +25,8 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding:
+                  const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0),
               child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -91,7 +92,7 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                     ),
                     Container(
                       child: Text(
-                        "Worlds best UI/UX design inspiration.Submit your work.Contact us for further details.Best faces in town ",
+                        "",
                         style: GoogleFonts.roboto(
                             fontSize: 16,
                             color: Color(0xff000000).withOpacity(0.7),

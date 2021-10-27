@@ -25,7 +25,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.only(right: 15.0, left: 15.0),
               child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,

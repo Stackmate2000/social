@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:multiicon/homescreen_home/first_image_post/firstImage_post.dart';
@@ -36,21 +38,47 @@ class _HomeMainState extends State<HomeMain> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 15.0, right: 15.0, top: 0.0),
+                          child: Container(
+                            height: 50,
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(color: Color(0xffFFFFFF)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  child: Icon(
+                                    CupertinoIcons.search,
+                                    color: Color(0xff000000).withOpacity(0.7),
+                                  ),
+                                ),
+                                Container(
+                                  child: Text(
+                                    "uNEven",
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 18,
+                                        color: Color(0xff000000),
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                ),
+                                Container(
+                                  child: Icon(
+                                    MdiIcons.feather,
+                                    color: Color(0xff3190FF),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 5.0),
                         Container(
                           child: FirstImagePost(),
                         ),
-                        Divider(
-                          thickness: 0.5,
-                          indent: 20,
-                          color: Color(0xff000000).withOpacity(0.4),
-                        ),
                         Container(
                           child: SharedImage_post(),
-                        ),
-                        Divider(
-                          thickness: 0.5,
-                          indent: 20,
-                          color: Color(0xff000000).withOpacity(0.4),
                         ),
                         Container(
                           child: MultipleImagePost(),
