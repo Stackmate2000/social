@@ -35,9 +35,14 @@ class _ProfileUIState extends State<ProfileUI> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Icon(
-                          MdiIcons.chevronLeft,
-                          color: Color(0xff000000).withOpacity(0.7),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Icon(
+                            MdiIcons.chevronLeft,
+                            color: Color(0xff000000).withOpacity(0.7),
+                          ),
                         ),
                         Row(
                           children: [
@@ -64,7 +69,7 @@ class _ProfileUIState extends State<ProfileUI> {
                   ),
                   Container(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 30.0),
+                      padding: const EdgeInsets.only(top: 15.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -199,7 +204,7 @@ class _ProfileUIState extends State<ProfileUI> {
                     ),
                   ),
                   SizedBox(
-                    height: 25.0,
+                    height: 15.0,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -279,7 +284,7 @@ class _ProfileUIState extends State<ProfileUI> {
                     ],
                   ),
                   SizedBox(
-                    height: 25.0,
+                    height: 15.0,
                   ),
                   Container(
                     child: FollowersView(),

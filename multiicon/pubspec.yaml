@@ -70,7 +70,6 @@ flutter:
   - assets/svg/facebook.svg
   - assets/svg/gif.svg
   - assets/svg/sticker.svg
-
   - assets/svg/searchone.svg
   - assets/svg/reeltv.svg
   - assets/svg/featherwing.svg
@@ -91,6 +90,7 @@ flutter:
   - assets/people.jpg
   - assets/3Drenders.jpg
   - assets/splash.jpg
+  - assets/parkstreet.jpg
  
 
 

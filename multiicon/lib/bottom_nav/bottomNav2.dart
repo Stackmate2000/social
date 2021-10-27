@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:multiicon/homescreen_home/home_Main.dart';
 import 'package:multiicon/homescreen_home/homescreen_Home.dart';
 import 'package:multiicon/homescreen_notification/homescreen_Notification.dart';
 import 'package:multiicon/homescreen_reels/homescreen_Reels.dart';
@@ -201,7 +202,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: HomeScreenA(),
+      child: HomeMain(),
     );
   }
 }
