@@ -137,11 +137,14 @@ class _BottomNav2State extends State<BottomNav2> {
                             decoration: BoxDecoration(),
                             child: Center(
                               child: Container(
-                                  height: 20,
-                                  width: 20,
+                                  height: 22,
+                                  width: 22,
                                   decoration: BoxDecoration(
-                                    color: Colors.grey[400],
+                                    image: DecorationImage(
+                                        image: AssetImage("assets/splash.jpg"),
+                                        fit: BoxFit.cover),
                                     shape: BoxShape.circle,
+                                    color: Colors.grey[600],
                                   )),
                             ),
                           ),
