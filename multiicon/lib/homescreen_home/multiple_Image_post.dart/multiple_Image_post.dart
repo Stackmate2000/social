@@ -237,7 +237,7 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                     width: 3.0,
                                   ),
                                   Text(
-                                    "112",
+                                    "$counter",
                                     style: GoogleFonts.roboto(
                                         fontSize: 14,
                                         color:
@@ -254,19 +254,19 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                       duration: Duration(milliseconds: 0),
                                       reverseDuration:
                                           Duration(milliseconds: 0),
-                                      crossFadeState: isliked
+                                      crossFadeState: isshared
                                           ? CrossFadeState.showSecond
                                           : CrossFadeState.showFirst,
                                       firstChild: GestureDetector(
                                         onTap: () {
                                           setState(() {
-                                            counter++;
+                                            sharecount++;
                                             {
-                                              print("counter++");
+                                              print("sharecounter++");
                                             }
                                           });
                                           setState(() {
-                                            isliked = true;
+                                            isshared = true;
                                           });
                                         },
                                         child: Icon(
@@ -277,17 +277,17 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                       secondChild: GestureDetector(
                                         onTap: () {
                                           setState(() {
-                                            counter--;
+                                            sharecount--;
                                             {
-                                              print("counter--");
+                                              print("sharecounter--");
                                             }
                                           });
                                           setState(() {
-                                            isliked = false;
+                                            isshared = false;
                                           });
                                         },
                                         child: Icon(
-                                          CupertinoIcons.suit_heart_fill,
+                                          CupertinoIcons.arrow_2_squarepath,
                                           color: Colors.red,
                                           size: 20,
                                         ),
@@ -298,7 +298,7 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                     width: 3.0,
                                   ),
                                   Text(
-                                    "364",
+                                    "$sharecount",
                                     style: GoogleFonts.roboto(
                                         fontSize: 14,
                                         color:
