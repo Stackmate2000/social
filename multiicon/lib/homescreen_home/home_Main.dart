@@ -8,6 +8,8 @@ import 'package:multiicon/homescreen_home/first_image_post/firstImage_post.dart'
 import 'package:multiicon/homescreen_home/multiple_Image_post.dart/multiple_Image_post.dart';
 import 'package:multiicon/homescreen_home/reelscover_home/reelOne.dart';
 import 'package:multiicon/homescreen_home/sharedImage_post/sharedImage_post.dart';
+import 'package:multiicon/homescreen_home/stories/addStory/addStory_home.dart';
+import 'package:multiicon/homescreen_home/stories/followingStories/followingStory_one.dart';
 
 class HomeMain extends StatefulWidget {
   @override
@@ -77,7 +79,22 @@ class _HomeMainState extends State<HomeMain> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 5.0),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10),
+                            child: Container(
+                              child: Row(
+                                children: [
+                                  AddStoryHome(),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  FollowingStoryOne(),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10.0),
                           Container(
                             child: FirstImagePost(),
                           ),
