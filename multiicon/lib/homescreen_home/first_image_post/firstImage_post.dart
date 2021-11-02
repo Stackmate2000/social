@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:multiicon/homescreen_home/first_image_post/first_image_buttons/firstImage_menubutton.dart';
 
 class FirstImagePost extends StatefulWidget {
   @override
@@ -80,10 +81,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
                             ),
                           ],
                         ),
-                        Icon(
-                          MdiIcons.dotsHorizontal,
-                          color: Color(0xff000000).withOpacity(0.5),
-                        )
+                     Container(child: FirstImageMenuButton(),)
                       ],
                     ),
                     SizedBox(

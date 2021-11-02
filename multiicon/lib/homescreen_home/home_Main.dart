@@ -33,57 +33,61 @@ class _HomeMainState extends State<HomeMain> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(0.0),
-                  child: Align(
-                    alignment: Alignment.topCenter,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 15.0, right: 15.0, top: 0.0),
-                          child: Container(
-                            height: 50,
-                            width: MediaQuery.of(context).size.width,
-                            decoration: BoxDecoration(color: Color(0xffFFFFFF)),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  child: Icon(
-                                    CupertinoIcons.search,
-                                    color: Color(0xff000000).withOpacity(0.7),
+                  child: SafeArea(
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 15.0, right: 15.0, top: 0.0),
+                            child: Container(
+                              height: 50,
+                              width: MediaQuery.of(context).size.width,
+                              decoration:
+                                  BoxDecoration(color: Color(0xffFFFFFF)),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    child: Icon(
+                                      CupertinoIcons.search,
+                                      color: Color(0xff000000).withOpacity(0.7),
+                                    ),
                                   ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    "uNEven",
-                                    style: GoogleFonts.roboto(
-                                        fontSize: 18,
-                                        color: Color(0xff000000),
-                                        fontWeight: FontWeight.w500),
+                                  Container(
+                                    child: Text(
+                                      "uNEven",
+                                      style: GoogleFonts.roboto(
+                                          fontSize: 18,
+                                          color: Color(0xff000000),
+                                          fontWeight: FontWeight.w500),
+                                    ),
                                   ),
-                                ),
-                                Container(
-                                  child: Icon(
-                                    MdiIcons.feather,
-                                    color: Color(0xff3190FF),
+                                  Container(
+                                    child: Icon(
+                                      MdiIcons.feather,
+                                      color: Color(0xff3190FF),
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(height: 5.0),
-                        Container(
-                          child: FirstImagePost(),
-                        ),
-                        Container(
-                          child: SharedImage_post(),
-                        ),
-                        Container(
-                          child: MultipleImagePost(),
-                        )
-                      ],
+                          SizedBox(height: 5.0),
+                          Container(
+                            child: FirstImagePost(),
+                          ),
+                          Container(
+                            child: SharedImage_post(),
+                          ),
+                          Container(
+                            child: MultipleImagePost(),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 )

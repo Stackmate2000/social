@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -18,7 +20,6 @@ class _BottomNav2State extends State<BottomNav2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Container(
         decoration: BoxDecoration(color: Colors.grey[400]),
         child: Stack(
@@ -31,17 +32,16 @@ class _BottomNav2State extends State<BottomNav2> {
                         ? Notify()
                         : Profile()),
             Align(
-              alignment: Alignment.bottomCenter,
+              alignment: Alignment.bottomRight,
               child: Container(
+                height: 65,
+                width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(21),
-                      topRight: Radius.circular(21)),
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(60)),
+                  border: Border.all(color: Colors.grey[200]),
                   color: _index == 1 ? Color(0xff000000) : Color(0xffFFFFFF),
                 ),
-                height: 65,
-                child: Align(
-                  alignment: Alignment.center,
+                child: Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -125,32 +125,40 @@ class _BottomNav2State extends State<BottomNav2> {
                         ),
                       ),
                       Container(
-                        child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _index = 3;
-                            });
-                          },
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.07,
-                            height: 50,
-                            decoration: BoxDecoration(),
-                            child: Center(
-                              child: Container(
-                                  height: 22,
-                                  width: 22,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage("assets/splash.jpg"),
-                                        fit: BoxFit.cover),
-                                    shape: BoxShape.circle,
-                                    color: Colors.grey[600],
-                                  )),
-                            ),
-                          ),
-                        ),
+                        width: MediaQuery.of(context).size.width * 0.07,
+                        height: 50,
+                        decoration: BoxDecoration(),
                       ),
                     ],
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              top: MediaQuery.of(context).size.height - 80,
+              right: e + 30,
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    _index = 3;
+                  });
+                },
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                      gradient: LinearGradient(
+                          colors: [
+                            Color(0xff3190FF),
+                            Color(0xff46C0DE),
+                          ],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter)),
+                  child: Icon(
+                    CupertinoIcons.person_fill,
+                    color: Color(0xffFFFFFF),
+                    size: 22,
                   ),
                 ),
               ),

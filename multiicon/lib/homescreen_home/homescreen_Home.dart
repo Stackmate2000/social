@@ -6,9 +6,6 @@ import 'package:multiicon/homescreen_home/buttons/homefloatingaddPhotos.dart';
 import 'package:multiicon/homescreen_home/homestory/homestoryAddstory/homescreenhome_AddStories.dart';
 import 'package:multiicon/homescreen_home/homestory/homestoryUser/homescreenhome_Stories.dart';
 import 'package:multiicon/homescreen_home/homestory/homestoryUser/homescreenhome_Storytwo.dart';
-import 'package:multiicon/homescreen_home/postfirst/homescreenhomepostsFirst.dart';
-import 'package:multiicon/homescreen_home/postsecond/homescreenhomepostsSecond.dart';
-import 'package:multiicon/homescreen_home/postvideo/homescreenhome_postsVideo.dart';
 import 'package:multiicon/homescreen_home/viewedstory/viewedStory_home.dart';
 
 class HomeScreenA extends StatefulWidget {
@@ -164,28 +161,6 @@ class _HomeScreenAState extends State<HomeScreenA> {
                           ),
                         ),
                       ),
-                      Divider(
-                        thickness: 0.5,
-                        indent: 30,
-                        endIndent: 30,
-                        color: Colors.grey[600],
-                        height: 40.0,
-                      ),
-                      Container(
-                        child: HomeScreenHomePostsFirst(),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        child: HomeScreenHomePostsSecond(),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        child: HomeScreenHomePostVideo(),
-                      )
                     ],
                   ),
                 ),
