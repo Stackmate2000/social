@@ -38,7 +38,7 @@ class _BottomNav2State extends State<BottomNav2> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(60)),
-                  border: Border.all(color: Colors.grey[200]),
+                  border: Border.all(color: Color(0xff000000).withOpacity(0.1)),
                   color: _index == 1 ? Color(0xff000000) : Color(0xffFFFFFF),
                 ),
                 child: Container(
@@ -147,6 +147,13 @@ class _BottomNav2State extends State<BottomNav2> {
                   height: 50,
                   width: 50,
                   decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Color(0xff46C0DE).withOpacity(0.2),
+                            blurRadius: 4.0,
+                            spreadRadius: 2.0,
+                            offset: Offset(0.0, 6.0))
+                      ],
                       borderRadius: BorderRadius.all(Radius.circular(16.0)),
                       gradient: LinearGradient(
                           colors: [

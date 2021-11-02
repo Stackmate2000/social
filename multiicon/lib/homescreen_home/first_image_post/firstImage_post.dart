@@ -1,9 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/homescreen_home/first_image_post/first_image_buttons/firstImage_menubutton.dart';
 
 class FirstImagePost extends StatefulWidget {
@@ -81,7 +78,9 @@ class _FirstImagePostState extends State<FirstImagePost> {
                             ),
                           ],
                         ),
-                     Container(child: FirstImageMenuButton(),)
+                        Container(
+                          child: FirstImageMenuButton(),
+                        )
                       ],
                     ),
                     SizedBox(
