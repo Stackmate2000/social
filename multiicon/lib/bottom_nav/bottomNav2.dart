@@ -143,6 +143,13 @@ class _BottomNav2State extends State<BottomNav2> {
                         height: 50,
                         width: 50,
                         decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Color(0xff050D3E).withOpacity(0.2),
+                                  blurRadius: 4.0,
+                                  spreadRadius: 2.0,
+                                  offset: Offset(0.0, 6.0))
+                            ],
                             borderRadius:
                                 BorderRadius.all(Radius.circular(16.0)),
                             gradient: LinearGradient(

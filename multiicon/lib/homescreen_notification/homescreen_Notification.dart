@@ -28,36 +28,6 @@ class _HomeScreenDState extends State<HomeScreenD> {
                 color: Colors.white,
               ),
               Align(
-                alignment: Alignment.center,
-                child: Center(
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment.center,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 60.0, top: 20.0),
-                          child: Text(
-                            "Notifications",
-                            style: GoogleFonts.roboto(
-                                color: primaryColor.withOpacity(0.3),
-                                fontSize: 30,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        child: SvgPicture.asset(
-                          "assets/svg/notifynew.svg",
-                          color: backgroundColor.withOpacity(0.3),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Align(
                 alignment: Alignment.topCenter,
                 child: SingleChildScrollView(
                   physics: BouncingScrollPhysics(),

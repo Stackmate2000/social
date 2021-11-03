@@ -24,13 +24,11 @@ class _ForYouReelsPageState extends State<ForYouReelsPage> {
       decoration: BoxDecoration(color: Colors.black),
       child: Stack(
         children: [
-          SafeArea(
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.black,
-                image: DecorationImage(
-                    image: AssetImage("assets/splash.jpg"), fit: BoxFit.cover),
-              ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.black,
+              image: DecorationImage(
+                  image: AssetImage("assets/splash.jpg"), fit: BoxFit.cover),
             ),
           ),
           Align(
