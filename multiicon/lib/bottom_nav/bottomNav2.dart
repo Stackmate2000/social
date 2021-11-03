@@ -35,10 +35,9 @@ class _BottomNav2State extends State<BottomNav2> {
               alignment: Alignment.bottomRight,
               child: Container(
                 height: 65,
-                width: MediaQuery.of(context).size.width * 0.95,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(60)),
-                  border: Border.all(color: Color(0xff000000).withOpacity(0.1)),
                   color: _index == 1 ? Color(0xff000000) : Color(0xffFFFFFF),
                 ),
                 child: Container(

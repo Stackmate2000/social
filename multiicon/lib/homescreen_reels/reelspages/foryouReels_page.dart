@@ -24,13 +24,19 @@ class _ForYouReelsPageState extends State<ForYouReelsPage> {
       decoration: BoxDecoration(color: Colors.black),
       child: Stack(
         children: [
-          Container(
-            decoration: BoxDecoration(color: Colors.black),
+          SafeArea(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.black,
+                image: DecorationImage(
+                    image: AssetImage("assets/splash.jpg"), fit: BoxFit.cover),
+              ),
+            ),
           ),
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 80.0, right: 20.0),
+              padding: const EdgeInsets.only(bottom: 100.0, right: 20.0),
               child: Container(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -98,29 +104,6 @@ class _ForYouReelsPageState extends State<ForYouReelsPage> {
               ),
             ),
           ),
-          SafeArea(
-            child: Align(
-              alignment: Alignment.topRight,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 20.0, right: 20.0),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => StoryNewPostTabBar()));
-                  },
-                  child: Container(
-                    child: Icon(
-                      CupertinoIcons.camera,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          )
         ],
       ),
     );
