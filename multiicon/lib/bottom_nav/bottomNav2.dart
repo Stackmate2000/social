@@ -134,42 +134,70 @@ class _BottomNav2State extends State<BottomNav2> {
                 ),
               ),
             ),
-            Positioned(
-              top: MediaQuery.of(context).size.height - 80,
-              right: e + 30,
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _index = 3;
-                  });
-                },
-                child: Container(
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: Color(0xff46C0DE).withOpacity(0.2),
-                            blurRadius: 4.0,
-                            spreadRadius: 2.0,
-                            offset: Offset(0.0, 6.0))
-                      ],
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                      gradient: LinearGradient(
-                          colors: [
-                            Color(0xff3190FF),
-                            Color(0xff46C0DE),
-                          ],
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter)),
-                  child: Icon(
-                    CupertinoIcons.person_fill,
-                    color: Color(0xffFFFFFF),
-                    size: 22,
-                  ),
-                ),
-              ),
-            ),
+            _index == 1
+                ? Positioned(
+                    top: MediaQuery.of(context).size.height - 80,
+                    right: e + 30,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(16.0)),
+                            gradient: LinearGradient(
+                                colors: [
+                                  Color(0xff783EFD),
+                                  Color(0xff050D2E),
+                                ],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter)),
+                        child: Icon(
+                          CupertinoIcons.add,
+                          color: Color(0xffFFFFFF),
+                          size: 22,
+                        ),
+                      ),
+                    ),
+                  )
+                : Positioned(
+                    top: MediaQuery.of(context).size.height - 80,
+                    right: e + 30,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _index = 3;
+                        });
+                      },
+                      child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Color(0xff46C0DE).withOpacity(0.2),
+                                  blurRadius: 4.0,
+                                  spreadRadius: 2.0,
+                                  offset: Offset(0.0, 6.0))
+                            ],
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(16.0)),
+                            gradient: LinearGradient(
+                                colors: [
+                                  Color(0xff3190FF),
+                                  Color(0xff46C0DE),
+                                ],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter)),
+                        child: Icon(
+                          CupertinoIcons.person_fill,
+                          color: Color(0xffFFFFFF),
+                          size: 22,
+                        ),
+                      ),
+                    ),
+                  )
           ],
         ),
       ),

@@ -10,6 +10,7 @@ import 'package:multiicon/homescreen_home/reelscover_home/reelOne.dart';
 import 'package:multiicon/homescreen_home/sharedImage_post/sharedImage_post.dart';
 import 'package:multiicon/homescreen_home/stories/addStory/addStory_home.dart';
 import 'package:multiicon/homescreen_home/stories/followingStories/followingStory_one.dart';
+import 'package:multiicon/homescreen_home/stories/trickyBin_story/trickyBin_story.dart';
 
 class HomeMain extends StatefulWidget {
   @override
@@ -82,15 +83,18 @@ class _HomeMainState extends State<HomeMain> {
                           Padding(
                             padding:
                                 const EdgeInsets.only(left: 10.0, right: 10),
-                            child: Container(
-                              child: Row(
-                                children: [
-                                  AddStoryHome(),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  FollowingStoryOne(),
-                                ],
+                            child: SingleChildScrollView(
+                              physics: BouncingScrollPhysics(),
+                              child: Container(
+                                child: Row(
+                                  children: [
+                                    AddStoryHome(),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    FollowingStoryOne(),
+                                  ],
+                                ),
                               ),
                             ),
                           ),

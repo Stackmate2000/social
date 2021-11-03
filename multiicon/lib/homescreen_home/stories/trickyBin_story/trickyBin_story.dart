@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-class FollowingStoryOne extends StatefulWidget {
+class TrickyBinStory extends StatefulWidget {
   @override
-  _FollowingStoryOneState createState() => _FollowingStoryOneState();
+  _TrickyBinStoryState createState() => _TrickyBinStoryState();
 }
 
-class _FollowingStoryOneState extends State<FollowingStoryOne> {
+class _TrickyBinStoryState extends State<TrickyBinStory> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,11 +16,14 @@ class _FollowingStoryOneState extends State<FollowingStoryOne> {
           height: 70,
           width: 70,
           decoration: BoxDecoration(
-            color: Color(0xffADB3BF),
+            color: Color(0xffFFFFFF),
             shape: BoxShape.circle,
           ),
-          child: CircleAvatar(
-            backgroundImage: AssetImage("assets/splash.jpg"),
+          child: Container(
+            alignment: Alignment.center,
+            child: SvgPicture.asset(
+              "assets/svg/logorabbit.svg",
+            ),
           ),
         ),
         SizedBox(
@@ -27,7 +31,7 @@ class _FollowingStoryOneState extends State<FollowingStoryOne> {
         ),
         Container(
           child: Text(
-            "Talan",
+            "TrickyBin",
             style: GoogleFonts.roboto(
                 fontSize: 14,
                 color: Color(0xff000000),
