@@ -21,9 +21,15 @@ class _HomeScreenReelsProfileState extends State<HomeScreenReelsProfile> {
       child: Row(
         children: [
           Container(
-            child: GestureDetector(
-              onTap: () {},
-              child: CircleAvatar(),
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage("assets/splash.jpg"),
+              ),
             ),
           ),
           SizedBox(
