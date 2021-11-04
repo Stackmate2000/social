@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:multiicon/homescreen_home/first_image_post/firstImage_hero.dart';
 import 'package:multiicon/homescreen_home/first_image_post/first_image_buttons/firstImage_menubutton.dart';
 
 class FirstImagePost extends StatefulWidget {
@@ -41,7 +42,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                     image: AssetImage("assets/splash.jpg"),
                                     fit: BoxFit.cover),
                                 shape: BoxShape.circle,
-                                color: Colors.grey[600],
+                                color: Color(0xffADB3BF),
                               ),
                             ),
                             SizedBox(
@@ -101,15 +102,25 @@ class _FirstImagePostState extends State<FirstImagePost> {
                     ),
                     Column(
                       children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height * 0.4,
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(16)),
-                            image: DecorationImage(
-                                image: AssetImage("assets/splash.jpg"),
-                                fit: BoxFit.cover),
-                            color: Colors.grey[600],
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(_nextRoute());
+                          },
+                          child: Hero(
+                            tag: 'firstpost',
+                            child: Container(
+                              height: MediaQuery.of(context).size.height * 0.4,
+                              width: MediaQuery.of(context).size.width * 0.7,
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(16)),
+                                image: DecorationImage(
+                                  image: AssetImage("assets/splash.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
+                                color: Color(0xffADB3BF),
+                              ),
+                            ),
                           ),
                         ),
                         SizedBox(
@@ -278,4 +289,23 @@ class _FirstImagePostState extends State<FirstImagePost> {
       ),
     );
   }
+}
+
+Route _nextRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => FirstImageHero(),
+    transitionDuration: Duration(milliseconds: 250),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(0.0, 0.0);
+      var end = Offset.zero;
+      var curve = Curves.easeIn;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      // ignore: unused_local_variable
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
 }

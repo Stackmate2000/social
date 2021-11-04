@@ -25,10 +25,10 @@ class _ActivityactivityState extends State<Activityactivity> {
               },
               child: Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
                     color: Colors.white,
                     border: Border.all(
-                      color: Colors.grey[400],
+                      color: Color(0xff3190FF),
                       width: 1.0,
                     )),
                 height: 30,
@@ -37,7 +37,7 @@ class _ActivityactivityState extends State<Activityactivity> {
                 child: Text(
                   "Following",
                   style: GoogleFonts.roboto(
-                      color: Colors.blueGrey[500],
+                      color: Color(0xff3190FF),
                       fontSize: 13,
                       fontWeight: FontWeight.w500),
                 ),
@@ -50,8 +50,8 @@ class _ActivityactivityState extends State<Activityactivity> {
               child: Container(
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                  color: Colors.blue[600],
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  color: Color(0xff3190FF),
                 ),
                 height: 30,
                 width: MediaQuery.of(context).size.width * 0.25,

@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:multiicon/homescreen_home/sharedImage_post/sharedImage_hero.dart';
 
 class SharedImage_post extends StatefulWidget {
   @override
@@ -205,20 +206,31 @@ class _SharedImage_postState extends State<SharedImage_post> {
                                       ),
                                     ),
                                   ),
-                                  Container(
-                                    height: MediaQuery.of(context).size.height *
-                                        0.3,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.7,
-                                    decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                            image: AssetImage(
-                                                "assets/parkstreet.jpg"),
-                                            fit: BoxFit.cover),
-                                        borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(16.0),
-                                            bottomRight:
-                                                Radius.circular(16.0))),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(_nextRoute());
+                                    },
+                                    child: Hero(
+                                      tag: 'sharedPost',
+                                      child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.3,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.7,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/parkstreet.jpg"),
+                                                fit: BoxFit.cover),
+                                            borderRadius: BorderRadius.only(
+                                                bottomLeft:
+                                                    Radius.circular(16.0),
+                                                bottomRight:
+                                                    Radius.circular(16.0))),
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -391,4 +403,23 @@ class _SharedImage_postState extends State<SharedImage_post> {
       ),
     );
   }
+}
+
+Route _nextRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => SharedImageHero(),
+    transitionDuration: Duration(milliseconds: 250),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(0.0, 0.0);
+      var end = Offset.zero;
+      var curve = Curves.easeIn;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      // ignore: unused_local_variable
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
 }
