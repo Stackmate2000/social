@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:multiicon/homescreen_home/multiple_Image_post.dart/multipleImage_hero.dart';
 
 class MultipleImagePost extends StatefulWidget {
   @override
@@ -118,59 +119,90 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Container(
-                                    height: MediaQuery.of(context).size.height *
-                                        0.36,
-                                    width: MediaQuery.of(context).size.width *
-                                        0.35,
-                                    decoration: BoxDecoration(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(16)),
-                                      image: DecorationImage(
-                                          image:
-                                              AssetImage("assets/splash.jpg"),
-                                          fit: BoxFit.cover),
-                                      color: Colors.grey[600],
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(_firstRoute());
+                                    },
+                                    child: Hero(
+                                      tag: 'multipleImageOne',
+                                      child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.36,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.35,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(16)),
+                                          image: DecorationImage(
+                                              image: AssetImage(
+                                                  "assets/splash.jpg"),
+                                              fit: BoxFit.cover),
+                                          color: Colors.grey[600],
+                                        ),
+                                      ),
                                     ),
                                   ),
                                   Column(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Container(
-                                        height:
-                                            MediaQuery.of(context).size.height *
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.of(context)
+                                              .push(_secondRoute());
+                                        },
+                                        child: Hero(
+                                          tag: 'multipleImageTwo',
+                                          child: Container(
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
                                                 0.18,
-                                        width:
-                                            MediaQuery.of(context).size.width *
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
                                                 0.3,
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(16)),
-                                          image: DecorationImage(
-                                              image:
-                                                  AssetImage("assets/girl.jpg"),
-                                              fit: BoxFit.cover),
-                                          color: Colors.grey[600],
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(16)),
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      "assets/girl.jpg"),
+                                                  fit: BoxFit.cover),
+                                              color: Colors.grey[600],
+                                            ),
+                                          ),
                                         ),
                                       ),
-                                      Container(
-                                        height:
-                                            MediaQuery.of(context).size.height *
-                                                0.18,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.3,
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(16)),
-                                          image: DecorationImage(
-                                              image:
-                                                  AssetImage("assets/work.jpg"),
-                                              fit: BoxFit.cover),
-                                          color: Colors.grey[600],
-                                        ),
-                                      ),
+                                      GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context)
+                                                .push(_thirdRoute());
+                                          },
+                                          child: Hero(
+                                            tag: 'multipleImageThree',
+                                            child: Container(
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                  0.18,
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.3,
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(16)),
+                                                image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/work.jpg"),
+                                                    fit: BoxFit.cover),
+                                                color: Colors.grey[600],
+                                              ),
+                                            ),
+                                          )),
                                     ],
                                   )
                                 ],
@@ -344,4 +376,63 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
       ),
     );
   }
+}
+
+Route _firstRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) =>
+        MultipleImageHero(),
+    transitionDuration: Duration(milliseconds: 250),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(0.0, 0.0);
+      var end = Offset.zero;
+      var curve = Curves.easeIn;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      // ignore: unused_local_variable
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _secondRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => MultipleImageTwo(),
+    transitionDuration: Duration(milliseconds: 250),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(0.0, 0.0);
+      var end = Offset.zero;
+      var curve = Curves.easeIn;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      // ignore: unused_local_variable
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _thirdRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) =>
+        MultipleImageThree(),
+    transitionDuration: Duration(milliseconds: 250),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(0.0, 0.0);
+      var end = Offset.zero;
+      var curve = Curves.easeIn;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      // ignore: unused_local_variable
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
 }
