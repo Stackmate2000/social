@@ -225,7 +225,7 @@ class _FirstImageHeroState extends State<FirstImageHero> {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

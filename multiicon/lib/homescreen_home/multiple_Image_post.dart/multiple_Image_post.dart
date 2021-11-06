@@ -30,7 +30,7 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                   const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0),
               child: Container(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,15 +67,32 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                   SizedBox(
                                     height: 4.0,
                                   ),
-                                  Container(
-                                    child: Text(
-                                      "@Soloman",
-                                      style: GoogleFonts.roboto(
-                                          fontSize: 15,
-                                          color: Color(0xff000000)
-                                              .withOpacity(0.5),
-                                          fontWeight: FontWeight.w400),
-                                    ),
+                                  Row(
+                                    children: [
+                                      Container(
+                                        child: Text(
+                                          "@Soloman",
+                                          style: GoogleFonts.roboto(
+                                              fontSize: 15,
+                                              color: Color(0xff000000)
+                                                  .withOpacity(0.5),
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 5.0,
+                                      ),
+                                      Container(
+                                        child: Text(
+                                          "posted.",
+                                          style: GoogleFonts.roboto(
+                                              fontSize: 13,
+                                              color: Color(0xff000000)
+                                                  .withOpacity(0.7),
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
@@ -93,7 +110,7 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                     ),
                     Container(
                       child: Text(
-                        "",
+                        "Friends!!!",
                         style: GoogleFonts.roboto(
                             fontSize: 16,
                             color: Color(0xff000000).withOpacity(0.7),
@@ -104,268 +121,298 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                     SizedBox(
                       height: 5.0,
                     ),
-                    Column(
+                    Row(
                       children: [
                         Container(
-                          height: MediaQuery.of(context).size.height * 0.4,
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          decoration: BoxDecoration(
-                            color: Color(0xffFFFFFF),
-                          ),
-                          child: Stack(
-                            children: [
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.of(context).push(_firstRoute());
-                                    },
-                                    child: Hero(
-                                      tag: 'multipleImageOne',
-                                      child: Container(
-                                        height:
-                                            MediaQuery.of(context).size.height *
-                                                0.36,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.35,
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(16)),
-                                          image: DecorationImage(
-                                              image: AssetImage(
-                                                  "assets/splash.jpg"),
-                                              fit: BoxFit.cover),
-                                          color: Colors.grey[600],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      GestureDetector(
-                                        onTap: () {
-                                          Navigator.of(context)
-                                              .push(_secondRoute());
-                                        },
-                                        child: Hero(
-                                          tag: 'multipleImageTwo',
-                                          child: Container(
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                0.18,
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.3,
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(16)),
-                                              image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/girl.jpg"),
-                                                  fit: BoxFit.cover),
-                                              color: Colors.grey[600],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      GestureDetector(
-                                          onTap: () {
-                                            Navigator.of(context)
-                                                .push(_thirdRoute());
-                                          },
-                                          child: Hero(
-                                            tag: 'multipleImageThree',
-                                            child: Container(
-                                              height: MediaQuery.of(context)
-                                                      .size
-                                                      .height *
-                                                  0.18,
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.3,
-                                              decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(16)),
-                                                image: DecorationImage(
-                                                    image: AssetImage(
-                                                        "assets/work.jpg"),
-                                                    fit: BoxFit.cover),
-                                                color: Colors.grey[600],
-                                              ),
-                                            ),
-                                          )),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
+                          child: Text(
+                            "Posted",
+                            style: GoogleFonts.roboto(
+                                fontSize: 15,
+                                color: Color(0xff000000).withOpacity(0.7),
+                                letterSpacing: 0.2,
+                                fontWeight: FontWeight.w500),
                           ),
                         ),
                         SizedBox(
-                          height: 5.0,
+                          width: 5.0,
                         ),
                         Container(
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    child: AnimatedCrossFade(
-                                      duration: Duration(milliseconds: 0),
-                                      reverseDuration:
-                                          Duration(milliseconds: 0),
-                                      crossFadeState: isliked
-                                          ? CrossFadeState.showSecond
-                                          : CrossFadeState.showFirst,
-                                      firstChild: GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            counter++;
-                                            {
-                                              print("counter++");
-                                            }
-                                          });
-                                          setState(() {
-                                            isliked = true;
-                                          });
-                                        },
-                                        child: Icon(
-                                          CupertinoIcons.suit_heart,
-                                          size: 20,
-                                        ),
-                                      ),
-                                      secondChild: GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            counter--;
-                                            {
-                                              print("counter--");
-                                            }
-                                          });
-                                          setState(() {
-                                            isliked = false;
-                                          });
-                                        },
-                                        child: Icon(
-                                          CupertinoIcons.suit_heart_fill,
-                                          color: Colors.red,
-                                          size: 20,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 3.0,
-                                  ),
-                                  Text(
-                                    "$counter",
-                                    style: GoogleFonts.roboto(
-                                        fontSize: 14,
-                                        color:
-                                            Color(0xff000000).withOpacity(0.7),
-                                        letterSpacing: 0.2,
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    child: AnimatedCrossFade(
-                                      duration: Duration(milliseconds: 0),
-                                      reverseDuration:
-                                          Duration(milliseconds: 0),
-                                      crossFadeState: isshared
-                                          ? CrossFadeState.showSecond
-                                          : CrossFadeState.showFirst,
-                                      firstChild: GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            sharecount++;
-                                            {
-                                              print("sharecounter++");
-                                            }
-                                          });
-                                          setState(() {
-                                            isshared = true;
-                                          });
-                                        },
-                                        child: Icon(
-                                          CupertinoIcons.arrow_2_squarepath,
-                                          size: 20,
-                                        ),
-                                      ),
-                                      secondChild: GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            sharecount--;
-                                            {
-                                              print("sharecounter--");
-                                            }
-                                          });
-                                          setState(() {
-                                            isshared = false;
-                                          });
-                                        },
-                                        child: Icon(
-                                          CupertinoIcons.arrow_2_squarepath,
-                                          color: Colors.red,
-                                          size: 20,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 3.0,
-                                  ),
-                                  Text(
-                                    "$sharecount",
-                                    style: GoogleFonts.roboto(
-                                        fontSize: 14,
-                                        color:
-                                            Color(0xff000000).withOpacity(0.7),
-                                        letterSpacing: 0.2,
-                                        fontWeight: FontWeight.w400),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    child: Icon(
-                                      CupertinoIcons.bubble_middle_bottom,
-                                      size: 20.0,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 3.0,
-                                  ),
-                                  Text(
-                                    "5,423",
-                                    style: GoogleFonts.roboto(
-                                        fontSize: 14,
-                                        color:
-                                            Color(0xff000000).withOpacity(0.7),
-                                        letterSpacing: 0.2,
-                                        fontWeight: FontWeight.w400),
-                                  )
-                                ],
-                              ),
-                            ],
+                          height: 3.0,
+                          width: 3.0,
+                          decoration: BoxDecoration(
+                            color: Color(0xff000000).withOpacity(0.7),
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5.0,
+                        ),
+                        Container(
+                          child: Text(
+                            "7d ago",
+                            style: GoogleFonts.roboto(
+                                fontSize: 15,
+                                color: Color(0xff000000).withOpacity(0.7),
+                                letterSpacing: 0.2,
+                                fontWeight: FontWeight.w400),
                           ),
                         ),
                       ],
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Column(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.4,
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            decoration: BoxDecoration(
+                              color: Color(0xffFFFFFF),
+                            ),
+                            child: Stack(
+                              children: [
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context)
+                                            .push(_firstRoute());
+                                      },
+                                      child: Hero(
+                                        tag: 'multipleImageOne',
+                                        child: Container(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.36,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.35,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(16)),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/splash.jpg"),
+                                                fit: BoxFit.cover),
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Container(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.18,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.3,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(16)),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/girl.jpg"),
+                                                fit: BoxFit.cover),
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                        Container(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.18,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.3,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(16)),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/work.jpg"),
+                                                fit: BoxFit.cover),
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5.0,
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      child: AnimatedCrossFade(
+                                        duration: Duration(milliseconds: 0),
+                                        reverseDuration:
+                                            Duration(milliseconds: 0),
+                                        crossFadeState: isliked
+                                            ? CrossFadeState.showSecond
+                                            : CrossFadeState.showFirst,
+                                        firstChild: GestureDetector(
+                                          onTap: () {
+                                            setState(() {
+                                              counter++;
+                                              {
+                                                print("counter++");
+                                              }
+                                            });
+                                            setState(() {
+                                              isliked = true;
+                                            });
+                                          },
+                                          child: Icon(
+                                            CupertinoIcons.suit_heart,
+                                            size: 20,
+                                          ),
+                                        ),
+                                        secondChild: GestureDetector(
+                                          onTap: () {
+                                            setState(() {
+                                              counter--;
+                                              {
+                                                print("counter--");
+                                              }
+                                            });
+                                            setState(() {
+                                              isliked = false;
+                                            });
+                                          },
+                                          child: Icon(
+                                            CupertinoIcons.suit_heart_fill,
+                                            color: Colors.red,
+                                            size: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 3.0,
+                                    ),
+                                    Text(
+                                      "$counter",
+                                      style: GoogleFonts.roboto(
+                                          fontSize: 14,
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.7),
+                                          letterSpacing: 0.2,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      child: AnimatedCrossFade(
+                                        duration: Duration(milliseconds: 0),
+                                        reverseDuration:
+                                            Duration(milliseconds: 0),
+                                        crossFadeState: isshared
+                                            ? CrossFadeState.showSecond
+                                            : CrossFadeState.showFirst,
+                                        firstChild: GestureDetector(
+                                          onTap: () {
+                                            setState(() {
+                                              sharecount++;
+                                              {
+                                                print("sharecounter++");
+                                              }
+                                            });
+                                            setState(() {
+                                              isshared = true;
+                                            });
+                                          },
+                                          child: Icon(
+                                            CupertinoIcons.arrow_2_squarepath,
+                                            size: 20,
+                                          ),
+                                        ),
+                                        secondChild: GestureDetector(
+                                          onTap: () {
+                                            setState(() {
+                                              sharecount--;
+                                              {
+                                                print("sharecounter--");
+                                              }
+                                            });
+                                            setState(() {
+                                              isshared = false;
+                                            });
+                                          },
+                                          child: Icon(
+                                            CupertinoIcons.arrow_2_squarepath,
+                                            color: Colors.red,
+                                            size: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 3.0,
+                                    ),
+                                    Text(
+                                      "$sharecount",
+                                      style: GoogleFonts.roboto(
+                                          fontSize: 14,
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.7),
+                                          letterSpacing: 0.2,
+                                          fontWeight: FontWeight.w400),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      child: Icon(
+                                        CupertinoIcons.bubble_middle_bottom,
+                                        size: 20.0,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 3.0,
+                                    ),
+                                    Text(
+                                      "5,423",
+                                      style: GoogleFonts.roboto(
+                                          fontSize: 14,
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.7),
+                                          letterSpacing: 0.2,
+                                          fontWeight: FontWeight.w400),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
