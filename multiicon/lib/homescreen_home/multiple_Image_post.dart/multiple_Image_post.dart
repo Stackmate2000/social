@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/homescreen_home/multiple_Image_post.dart/multipleImage_hero.dart';
+import 'package:multiicon/homescreen_home/multiple_Image_post.dart/multipleImage_menubutton.dart';
 
 class MultipleImagePost extends StatefulWidget {
   @override
@@ -99,9 +100,8 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                             ),
                           ],
                         ),
-                        Icon(
-                          MdiIcons.dotsHorizontal,
-                          color: Color(0xff000000).withOpacity(0.5),
+                        Container(
+                          child: MultipleImageMenuButton(),
                         )
                       ],
                     ),

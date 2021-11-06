@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/homescreen_home/sharedImage_post/sharedImage_hero.dart';
+import 'package:multiicon/homescreen_home/sharedImage_post/sharedImage_menubutton.dart';
 
 class SharedImage_post extends StatefulWidget {
   @override
@@ -97,9 +98,9 @@ class _SharedImage_postState extends State<SharedImage_post> {
                           ),
                         ],
                       ),
-                      //Container(
-                      //  child: FirstImageMenuButton(),
-                      // )
+                      Container(
+                        child: SharedImageMenuButton(),
+                      )
                     ],
                   ),
                   SizedBox(

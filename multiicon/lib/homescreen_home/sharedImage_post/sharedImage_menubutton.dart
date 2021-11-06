@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class FirstImageMenuButton extends StatefulWidget {
+class SharedImageMenuButton extends StatefulWidget {
   @override
-  _FirstImageMenuButtonState createState() => _FirstImageMenuButtonState();
+  _SharedImageMenuButtonState createState() => _SharedImageMenuButtonState();
 }
 
-class _FirstImageMenuButtonState extends State<FirstImageMenuButton> {
+class _SharedImageMenuButtonState extends State<SharedImageMenuButton> {
   modalBottomSheet(context) {
     showModalBottomSheet(
         backgroundColor: Colors.transparent,

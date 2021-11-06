@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:multiicon/homescreen_home/first_image_post/firstImage_hero.dart';
-import 'package:multiicon/homescreen_home/first_image_post/first_image_buttons/firstImage_menubutton.dart';
+import 'package:multiicon/homescreen_home/first_image_post/firstImage_menubutton.dart';
 
 class FirstImagePost extends StatefulWidget {
   @override
@@ -80,25 +80,12 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                     ),
                                     Container(
                                       child: Text(
-                                        "tag",
+                                        "posted with tags.",
                                         style: GoogleFonts.roboto(
                                             fontSize: 13,
                                             color: Color(0xff000000)
                                                 .withOpacity(0.7),
                                             fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 5.0,
-                                    ),
-                                    Container(
-                                      child: Text(
-                                        "23 others",
-                                        style: GoogleFonts.roboto(
-                                            fontSize: 15,
-                                            color: Color(0xff000000)
-                                                .withOpacity(0.5),
-                                            fontWeight: FontWeight.w400),
                                       ),
                                     ),
                                   ],
