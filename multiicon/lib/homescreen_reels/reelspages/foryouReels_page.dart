@@ -1,13 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:multiicon/animation/animatedcamera/animatedMusic_button.dart';
-import 'package:multiicon/homescreen_home/homestory/userinput/newpost_pages/story_Newpost.dart';
-import 'package:multiicon/homescreen_home/homestory/userinput/storyNewpost_tabbar.dart';
 import 'package:multiicon/homescreen_reels/buttons/comment_Button.dart';
 import 'package:multiicon/homescreen_reels/buttons/homescreenreelsMenu.dart';
 import 'package:multiicon/homescreen_reels/buttons/like_Button.dart';
 import 'package:multiicon/homescreen_reels/buttons/marqrueeMusic.dart';
-import 'package:multiicon/homescreen_reels/buttons/music_Button.dart';
 import 'package:multiicon/homescreen_reels/buttons/share_Button.dart';
 import 'package:multiicon/homescreen_reels/small_pages/homescreenreelsCaption.dart';
 import 'package:multiicon/homescreen_reels/small_pages/homescreenreelsProfile.dart';

@@ -27,7 +27,7 @@ class _CustomTabBarProfileState extends State<CustomTabBarProfile> {
           Container(
             decoration: BoxDecoration(color: Colors.white),
             height: 50.0,
-            width: MediaQuery.of(context).size.width,
+            width: double.infinity,
             child: Padding(
               padding: const EdgeInsets.only(left: 0.0, right: 0.0),
               child: Row(
@@ -41,7 +41,6 @@ class _CustomTabBarProfileState extends State<CustomTabBarProfile> {
                     },
                     child: Container(
                       height: 50,
-                      width: MediaQuery.of(context).size.width * 0.33,
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
@@ -72,7 +71,6 @@ class _CustomTabBarProfileState extends State<CustomTabBarProfile> {
                     },
                     child: Container(
                       height: 50.0,
-                      width: MediaQuery.of(context).size.width * 0.33,
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
@@ -110,7 +108,6 @@ class _CustomTabBarProfileState extends State<CustomTabBarProfile> {
                                   _index == 2 ? Colors.blueGrey : Colors.white),
                         ),
                       ),
-                      width: MediaQuery.of(context).size.width * 0.33,
                       height: 50.0,
                       child: Center(
                         child: Container(

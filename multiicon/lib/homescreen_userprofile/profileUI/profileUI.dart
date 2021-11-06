@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/homescreen_userprofile/profileUI/followersView.dart';
+import 'package:multiicon/homescreen_userprofile/smallPages/customtabbarProfile.dart';
 
 class ProfileUI extends StatefulWidget {
   @override
@@ -279,6 +280,12 @@ class _ProfileUIState extends State<ProfileUI> {
                     Container(
                       child: FollowersView(),
                     ),
+                    SizedBox(
+                      width: 15.0,
+                    ),
+                    Container(
+                      child: CustomTabBarProfile(),
+                    )
                   ],
                 ),
               ),

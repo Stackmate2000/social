@@ -6,7 +6,6 @@ import 'package:multiicon/homescreen_home/buttons/homefloatingaddPhotos.dart';
 import 'package:multiicon/homescreen_home/homestory/homestoryAddstory/homescreenhome_AddStories.dart';
 import 'package:multiicon/homescreen_home/homestory/homestoryUser/homescreenhome_Stories.dart';
 import 'package:multiicon/homescreen_home/homestory/homestoryUser/homescreenhome_Storytwo.dart';
-import 'package:multiicon/homescreen_home/viewedstory/viewedStory_home.dart';
 
 class HomeScreenA extends StatefulWidget {
   @override
@@ -153,9 +152,6 @@ class _HomeScreenAState extends State<HomeScreenA> {
                               ),
                               SizedBox(
                                 width: 10.0,
-                              ),
-                              Container(
-                                child: ViewedStoryHome(),
                               ),
                             ],
                           ),

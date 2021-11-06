@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:multiicon/bottom_nav/bottomNav2.dart';
-import 'package:multiicon/login/animated_Logo.dart';
 import 'package:multiicon/signup/signup_pageB.dart';
 
 class Login extends StatefulWidget {
