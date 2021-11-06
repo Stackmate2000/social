@@ -107,7 +107,7 @@ class _SharedImage_postState extends State<SharedImage_post> {
                   ),
                   Container(
                     child: Text(
-                      "Worlds best UI/UX design inspiration.Submit your work.Contact us for further details.Best faces in town",
+                      "night life,smooth life.",
                       style: GoogleFonts.roboto(
                           fontSize: 16,
                           color: Color(0xff000000).withOpacity(0.7),
