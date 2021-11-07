@@ -1,10 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:multiicon/homescreen_userprofile/smallPages/customtabbar_ProfilePages/reelsCustom_tabbar.dart';
-import 'package:multiicon/homescreen_userprofile/smallPages/customtabbar_ProfilePages/userimagesCustom_tabbar.dart';
-import 'package:multiicon/homescreen_userprofile/smallPages/customtabbar_ProfilePages/usertagsCustom_tabbar.dart';
 
 class CustomTabBarProfile extends StatefulWidget {
   @override
@@ -136,9 +132,7 @@ class _CustomTabBarProfileState extends State<CustomTabBarProfile> {
 class ReelsTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ReelsCustomTabBar(),
-    );
+    return Container();
   }
 }
 
@@ -146,7 +140,7 @@ class PhotosTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: UserImagesCustomTabBar(),
+      color: Colors.red,
     );
   }
 }
@@ -154,8 +148,6 @@ class PhotosTabBar extends StatelessWidget {
 class TagsTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: UserTagsCustomTabBar(),
-    );
+    return Container();
   }
 }

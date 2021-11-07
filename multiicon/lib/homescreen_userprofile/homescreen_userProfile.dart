@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:multiicon/colors/backgroundColor.dart';
-import 'package:multiicon/homescreen_userprofile/buttons/user_Profile.dart';
-import 'package:multiicon/homescreen_userprofile/settings/profileSettings.dart';
-import 'package:multiicon/homescreen_userprofile/smallPages/customtabbarProfile.dart';
+import 'package:multiicon/homescreen_userprofile/galleryprofile/customtabbarProfile.dart';
 
 class HomeScreenUserProfile extends StatefulWidget {
   @override
@@ -54,9 +52,6 @@ class _HomeScreenUserProfileState extends State<HomeScreenUserProfile> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Container(
-                                        child: UserProfile(),
-                                      ),
                                       GestureDetector(
                                         onTap: () {},
                                         child: Container(
