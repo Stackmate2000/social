@@ -49,11 +49,11 @@ class _SignOutState extends State<SignOut> {
                                         Navigator.pop(context);
                                       },
                                       child: Text(
-                                        "Cancel",
+                                        "Not now",
                                         style: GoogleFonts.roboto(
-                                            color: Colors.red,
+                                            color: Color(0xff000000),
                                             fontSize: 15.0,
-                                            fontWeight: FontWeight.w500),
+                                            fontWeight: FontWeight.w400),
                                       ),
                                     ),
                                     SizedBox(
@@ -61,9 +61,9 @@ class _SignOutState extends State<SignOut> {
                                           0.3,
                                     ),
                                     Text(
-                                      "Save",
+                                      "Remember",
                                       style: GoogleFonts.roboto(
-                                          color: Colors.grey[500],
+                                          color: Color(0xff3190FF),
                                           fontSize: 15.0,
                                           fontWeight: FontWeight.w500),
                                     )
@@ -80,11 +80,11 @@ class _SignOutState extends State<SignOut> {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 20.0),
                                   child: Text(
-                                    "Sign Out of " "Christina?",
+                                    "Remember me",
                                     style: GoogleFonts.roboto(
                                         color: Colors.black,
-                                        fontSize: 19.0,
-                                        fontWeight: FontWeight.w500),
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.w400),
                                   ),
                                 ),
                                 SizedBox(
@@ -113,7 +113,9 @@ class _SignOutState extends State<SignOut> {
                                             MediaQuery.of(context).size.width *
                                                 0.8,
                                         child: Text(
-                                          "This will save ur log in address for later",
+                                          "we'll remember the account info of "
+                                          'moloiraj_baruah '
+                                          "so that you won't need to login again.",
                                           style: GoogleFonts.roboto(
                                               color: Colors.grey[500],
                                               fontSize: 14.0,
@@ -161,12 +163,12 @@ class _SignOutState extends State<SignOut> {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                  color: Colors.grey[500].withOpacity(0.7),
+                  color: Colors.grey[500].withOpacity(0.2),
                   blurRadius: 6.0,
                   spreadRadius: 2.0,
                   offset: Offset(0.0, 6.0))
             ],
-            color: Colors.purple[800].withOpacity(0.8),
+            color: Color(0xff3190FF),
             borderRadius: BorderRadius.all(
               Radius.circular(30.0),
             ),

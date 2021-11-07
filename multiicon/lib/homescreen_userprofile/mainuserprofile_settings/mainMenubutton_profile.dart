@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:multiicon/homescreen_userprofile/settings/profileSettings.dart';
 
 class MainMenuButtonProfile extends StatefulWidget {
   @override
@@ -41,28 +42,36 @@ class _MainMenuButtonProfileState extends State<MainMenuButtonProfile> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Row(
-                        children: [
-                          Container(
-                            child: Icon(
-                              CupertinoIcons.settings,
-                              color: Color(0xff000000).withOpacity(0.9),
-                            ),
-                          ),
-                          Container(
-                            child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Settings",
-                                style: GoogleFonts.roboto(
-                                    color: Color(0xff000000),
-                                    letterSpacing: 0.3,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w400),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(_nextRoute());
+                        },
+                        child: Container(
+                          width: double.infinity,
+                          child: Row(
+                            children: [
+                              Container(
+                                child: Icon(
+                                  CupertinoIcons.settings,
+                                  color: Color(0xff000000).withOpacity(0.9),
+                                ),
                               ),
-                            ),
+                              Container(
+                                child: TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Settings",
+                                    style: GoogleFonts.roboto(
+                                        color: Color(0xff000000),
+                                        letterSpacing: 0.3,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
                       Divider(
                         thickness: 0.1,
@@ -203,4 +212,23 @@ class _MainMenuButtonProfileState extends State<MainMenuButtonProfile> {
       ),
     );
   }
+}
+
+Route _nextRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProfileSettings(),
+    transitionDuration: Duration(milliseconds: 500),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(1.0, 0.0);
+      var end = Offset.zero;
+      var curve = Curves.easeIn;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      // ignore: unused_local_variable
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
 }
