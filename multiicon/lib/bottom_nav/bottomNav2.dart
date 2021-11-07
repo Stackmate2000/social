@@ -37,8 +37,10 @@ class _BottomNav2State extends State<BottomNav2> {
                 height: 65,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(60)),
-                  color: _index == 1 ? Color(0xff000000) : Color(0xffFFFFFF),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(16),
+                      topRight: Radius.circular(16)),
+                  color: _index == 1 ? Color(0xff000000) : Color(0xffFFFFFFF),
                 ),
                 child: Container(
                   child: Row(
@@ -96,6 +98,10 @@ class _BottomNav2State extends State<BottomNav2> {
                         ),
                       ),
                       Container(
+                        height: 50,
+                        width: MediaQuery.of(context).size.width * 0.07,
+                      ),
+                      Container(
                         child: GestureDetector(
                           onTap: () {
                             setState(() {
@@ -124,86 +130,65 @@ class _BottomNav2State extends State<BottomNav2> {
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.07,
-                        height: 50,
-                        decoration: BoxDecoration(),
+                        child: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              _index = 3;
+                            });
+                          },
+                          child: Container(
+                              width: MediaQuery.of(context).size.width * 0.07,
+                              height: 50,
+                              decoration: BoxDecoration(),
+                              child: Center(
+                                child: Container(
+                                    height: _index == 3 ? 25.0 : 22.0,
+                                    width: 30.0,
+                                    child: Icon(CupertinoIcons.person)),
+                              )),
+                        ),
                       ),
                     ],
                   ),
                 ),
               ),
             ),
-            _index == 1
-                ? Positioned(
-                    top: MediaQuery.of(context).size.height - 80,
-                    right: e + 30,
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Color(0xff050D3E).withOpacity(0.2),
-                                  blurRadius: 4.0,
-                                  spreadRadius: 2.0,
-                                  offset: Offset(0.0, 6.0))
-                            ],
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(16.0)),
-                            gradient: LinearGradient(
-                                colors: [
-                                  Color(0xff783EFD),
-                                  Color(0xff050D2E),
-                                ],
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter)),
-                        child: Icon(
-                          CupertinoIcons.add,
-                          color: Color(0xffFFFFFF),
-                          size: 22,
-                        ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 15.0),
+              child: Container(
+                alignment: Alignment.bottomCenter,
+                child: Positioned(
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                color: Color(0xff46C0DE).withOpacity(0.2),
+                                blurRadius: 4.0,
+                                spreadRadius: 2.0,
+                                offset: Offset(0.0, 6.0))
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(21.0)),
+                          gradient: LinearGradient(
+                              colors: [
+                                Color(0xff3190FF),
+                                Color(0xff46C0DE),
+                              ],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter)),
+                      child: Icon(
+                        CupertinoIcons.add,
+                        color: Color(0xffFFFFFF),
+                        size: 22,
                       ),
                     ),
-                  )
-                : Positioned(
-                    top: MediaQuery.of(context).size.height - 80,
-                    right: e + 30,
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          _index = 3;
-                        });
-                      },
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Color(0xff46C0DE).withOpacity(0.2),
-                                  blurRadius: 4.0,
-                                  spreadRadius: 2.0,
-                                  offset: Offset(0.0, 6.0))
-                            ],
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(16.0)),
-                            gradient: LinearGradient(
-                                colors: [
-                                  Color(0xff3190FF),
-                                  Color(0xff46C0DE),
-                                ],
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter)),
-                        child: Icon(
-                          CupertinoIcons.person_fill,
-                          color: Color(0xffFFFFFF),
-                          size: 22,
-                        ),
-                      ),
-                    ),
-                  )
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
