@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:multiicon/homescreen_home/first_image_post/firstImage_post.dart';
 import 'package:multiicon/homescreen_home/multiple_Image_post.dart/multiple_Image_post.dart';
@@ -10,7 +8,6 @@ import 'package:multiicon/homescreen_home/reelscover_home/reelOne.dart';
 import 'package:multiicon/homescreen_home/sharedImage_post/sharedImage_post.dart';
 import 'package:multiicon/homescreen_home/stories/addStory/addStory_home.dart';
 import 'package:multiicon/homescreen_home/stories/followingStories/followingStory_one.dart';
-import 'package:multiicon/homescreen_home/stories/trickyBin_story/trickyBin_story.dart';
 
 class HomeMain extends StatefulWidget {
   @override

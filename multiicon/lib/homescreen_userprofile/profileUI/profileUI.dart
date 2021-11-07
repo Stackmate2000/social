@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:multiicon/homescreen_userprofile/mainuserprofile_settings/mainMenubutton_profile.dart';
 import 'package:multiicon/homescreen_userprofile/profileUI/followersView.dart';
 import 'package:multiicon/homescreen_userprofile/smallPages/customtabbarProfile.dart';
 
@@ -31,31 +32,14 @@ class _ProfileUIState extends State<ProfileUI> {
               child: Align(
                 alignment: Alignment.topRight,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Container(
-                        child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(
-                          MdiIcons.bellRingOutline,
-                          color: Color(0xff000000).withOpacity(0.5),
-                        ),
-                        SizedBox(
-                          width: 20.0,
-                        ),
-                        GestureDetector(
-                          onTap: () {},
-                          child: Container(
-                            child: Icon(
-                              MdiIcons.dotsVertical,
-                              color: Color(0xff000000).withOpacity(0.5),
-                            ),
-                          ),
-                        ),
-                      ],
-                    )),
+                      child: Container(
+                        child: MainMenuButtonProfile(),
+                      ),
+                    ),
                     Container(
                       child: Padding(
                         padding: const EdgeInsets.only(top: 15.0),
@@ -197,82 +181,95 @@ class _ProfileUIState extends State<ProfileUI> {
                     SizedBox(
                       height: 15.0,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          child: Column(
-                            children: [
-                              Text(
-                                "30",
-                                style: GoogleFonts.roboto(
-                                    fontSize: 18,
-                                    color: Color(0xff000000).withOpacity(0.7),
-                                    fontWeight: FontWeight.w500),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.8,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "30",
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 18,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.7),
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                  SizedBox(
+                                    height: 4.0,
+                                  ),
+                                  Text(
+                                    "Posts",
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 16,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.7),
+                                        letterSpacing: 0.2,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ],
                               ),
-                              SizedBox(
-                                height: 4.0,
+                            ),
+                            Container(
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "$followcounter",
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 18,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.7),
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                  SizedBox(
+                                    height: 4.0,
+                                  ),
+                                  Text(
+                                    "Followers",
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 16,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.7),
+                                        letterSpacing: 0.2,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ],
                               ),
-                              Text(
-                                "Posts",
-                                style: GoogleFonts.roboto(
-                                    fontSize: 16,
-                                    color: Color(0xff000000).withOpacity(0.7),
-                                    letterSpacing: 0.2,
-                                    fontWeight: FontWeight.w400),
+                            ),
+                            Container(
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "260",
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 18,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.7),
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                  SizedBox(
+                                    height: 4.0,
+                                  ),
+                                  Text(
+                                    "Following",
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 16,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.7),
+                                        letterSpacing: 0.2,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                        Container(
-                          child: Column(
-                            children: [
-                              Text(
-                                "$followcounter",
-                                style: GoogleFonts.roboto(
-                                    fontSize: 18,
-                                    color: Color(0xff000000).withOpacity(0.7),
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              SizedBox(
-                                height: 4.0,
-                              ),
-                              Text(
-                                "Followers",
-                                style: GoogleFonts.roboto(
-                                    fontSize: 16,
-                                    color: Color(0xff000000).withOpacity(0.7),
-                                    letterSpacing: 0.2,
-                                    fontWeight: FontWeight.w400),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Column(
-                            children: [
-                              Text(
-                                "260",
-                                style: GoogleFonts.roboto(
-                                    fontSize: 18,
-                                    color: Color(0xff000000).withOpacity(0.7),
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              SizedBox(
-                                height: 4.0,
-                              ),
-                              Text(
-                                "Following",
-                                style: GoogleFonts.roboto(
-                                    fontSize: 16,
-                                    color: Color(0xff000000).withOpacity(0.7),
-                                    letterSpacing: 0.2,
-                                    fontWeight: FontWeight.w400),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                     SizedBox(
                       height: 15.0,
