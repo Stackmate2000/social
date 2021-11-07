@@ -34,13 +34,14 @@ class _BottomNav2State extends State<BottomNav2> {
             Align(
               alignment: Alignment.bottomRight,
               child: Container(
-                height: 65,
+                height: 55,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(16),
-                      topRight: Radius.circular(16)),
-                  color: _index == 1 ? Color(0xff000000) : Color(0xffFFFFFFF),
+                  border: Border(
+                    top: BorderSide(
+                        color: Colors.black.withOpacity(0.2), width: 0.8),
+                  ),
+                  color: _index == 1 ? Color(0xff000000) : Color(0xffFFFFFF),
                 ),
                 child: Container(
                   child: Row(
@@ -144,7 +145,12 @@ class _BottomNav2State extends State<BottomNav2> {
                                 child: Container(
                                     height: _index == 3 ? 25.0 : 22.0,
                                     width: 30.0,
-                                    child: Icon(CupertinoIcons.person)),
+                                    child: Icon(
+                                      CupertinoIcons.person,
+                                      color: _index == 3
+                                          ? Color(0xff3190FF)
+                                          : Colors.grey[600],
+                                    )),
                               )),
                         ),
                       ),
@@ -154,15 +160,15 @@ class _BottomNav2State extends State<BottomNav2> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 15.0),
+              padding: const EdgeInsets.only(bottom: 8.0),
               child: Container(
                 alignment: Alignment.bottomCenter,
                 child: Positioned(
                   child: GestureDetector(
                     onTap: () {},
                     child: Container(
-                      height: 60,
-                      width: 60,
+                      height: 55,
+                      width: 55,
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
