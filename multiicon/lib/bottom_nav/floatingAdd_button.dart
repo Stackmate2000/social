@@ -38,52 +38,18 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width:
-                          isOpen ? MediaQuery.of(context).size.width * 0.40 : 0,
-                      height: 55,
+                          isOpen ? MediaQuery.of(context).size.width * 0.45 : 0,
+                      height: 180,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(16)),
-                        color: Color(0xff3190FF),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            height: 30,
-                            width: 30,
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(8)),
-                                color: Color(0xff000000).withOpacity(0.2)),
-                            child: Icon(
-                              Icons.zoom_in,
-                              color: Color(0xffFFFFFF),
-                            ),
-                          ),
-                          Container(
-                            height: 30,
-                            width: 30,
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(8)),
-                                color: Color(0xff000000).withOpacity(0.2)),
-                            child: Icon(
-                              Icons.hearing_outlined,
-                              color: Color(0xffFFFFFF),
-                            ),
-                          ),
-                          Container(
-                            height: 30,
-                            width: 30,
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(8)),
-                                color: Color(0xff000000).withOpacity(0.2)),
-                            child: Icon(
-                              Icons.radio,
-                              color: Color(0xffFFFFFF),
-                            ),
-                          ),
-                        ],
+                        gradient: LinearGradient(
+                          colors: [
+                            Color(0xffA55FEB),
+                            Color(0xff8334D3),
+                          ],
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomLeft,
+                        ),
                       ),
                     ),
                   ),
@@ -115,13 +81,7 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                               offset: Offset(0.0, 6.0))
                         ],
                         borderRadius: BorderRadius.all(Radius.circular(21.0)),
-                        gradient: LinearGradient(
-                            colors: [
-                              Color(0xff3190FF),
-                              Color(0xff46C0DE),
-                            ],
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter)),
+                        color: Color(0xffA55FEB)),
                     child: isOpen
                         ? Icon(MdiIcons.close,
                             color: Color(0xffFFFFFF), size: 22)

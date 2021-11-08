@@ -66,7 +66,7 @@ class _BottomNav2State extends State<BottomNav2> {
                                     child: _index == 0
                                         ? SvgPicture.asset(
                                             "assets/svg/homesevenfill.svg",
-                                            color: Color(0xff3190FF),
+                                            color: Color(0xff000000),
                                           )
                                         : SvgPicture.asset(
                                             "assets/svg/homeseven.svg",
