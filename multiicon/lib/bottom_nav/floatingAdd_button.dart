@@ -9,7 +9,7 @@ class FloatingAddButton extends StatefulWidget {
 }
 
 class _FloatingAddButtonState extends State<FloatingAddButton> {
-  var isOpen = true;
+  var isOpen = false;
 
   _toggleOpen() {
     setState(() {
@@ -38,18 +38,59 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width:
-                          isOpen ? MediaQuery.of(context).size.width * 0.45 : 0,
-                      height: 60,
+                          isOpen ? MediaQuery.of(context).size.width * 0.40 : 0,
+                      height: 55,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(21)),
-                        color: Color(0xffFFFFFF),
+                        borderRadius: BorderRadius.all(Radius.circular(16)),
+                        color: Color(0xff3190FF),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            height: 30,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8)),
+                                color: Color(0xff000000).withOpacity(0.2)),
+                            child: Icon(
+                              Icons.zoom_in,
+                              color: Color(0xffFFFFFF),
+                            ),
+                          ),
+                          Container(
+                            height: 30,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8)),
+                                color: Color(0xff000000).withOpacity(0.2)),
+                            child: Icon(
+                              Icons.hearing_outlined,
+                              color: Color(0xffFFFFFF),
+                            ),
+                          ),
+                          Container(
+                            height: 30,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8)),
+                                color: Color(0xff000000).withOpacity(0.2)),
+                            child: Icon(
+                              Icons.radio,
+                              color: Color(0xffFFFFFF),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
                 )
               : Container(
                   width: isOpen ? MediaQuery.of(context).size.width * 0.45 : 0,
-                  height: 60,
+                  height: 0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(21)),
                     color: Color(0xffFFFFFF),
