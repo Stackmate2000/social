@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:multiicon/addButton_bottomnav/moodCheck_in.dart';
 
 class FloatingAddButton extends StatefulWidget {
   @override
@@ -42,52 +43,14 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                       height: 180,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(16)),
-                        gradient: LinearGradient(
-                          colors: [
-                            Color(0xffA55FEB),
-                            Color(0xff8334D3),
-                          ],
-                          begin: Alignment.topRight,
-                          end: Alignment.bottomLeft,
-                        ),
+                        color: Color(0xff32C1E0),
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            GestureDetector(
-                              onTap: () {},
-                              child: Container(
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      'Mood check-in',
-                                      style: GoogleFonts.roboto(
-                                          fontSize: 16,
-                                          color: Color(0xffFFFFFF),
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                    Container(
-                                      height: 25,
-                                      width: 25,
-                                      decoration: BoxDecoration(
-                                          color: Color(0xff000000)
-                                              .withOpacity(0.1),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0)),
-                                      child: Icon(
-                                        MdiIcons.pencil,
-                                        color: Color(0xffFFFFFF),
-                                        size: 15,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
+                            MoodCheckIn(),
                             GestureDetector(
                               onTap: () {},
                               child: Container(
@@ -179,15 +142,16 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                     height: 55,
                     width: 55,
                     decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                              color: Color(0xff8334D3).withOpacity(0.1),
-                              blurRadius: 4.0,
-                              spreadRadius: 2.0,
-                              offset: Offset(0.0, 6.0))
-                        ],
-                        borderRadius: BorderRadius.all(Radius.circular(21.0)),
-                        color: Color(0xffA55FEB)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Color(0xff32C1E0).withOpacity(0.1),
+                            blurRadius: 4.0,
+                            spreadRadius: 2.0,
+                            offset: Offset(0.0, 6.0))
+                      ],
+                      borderRadius: BorderRadius.all(Radius.circular(21.0)),
+                      color: Color(0xff32C1E0),
+                    ),
                     child: isOpen
                         ? Icon(MdiIcons.close,
                             color: Color(0xffFFFFFF), size: 22)

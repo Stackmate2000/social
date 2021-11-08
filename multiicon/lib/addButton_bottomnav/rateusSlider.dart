@@ -23,7 +23,7 @@ class _RateusSliderState extends State<RateusSlider> {
           Container(
             child: Icon(
               FeedBackIcon,
-              color: Colors.white,
+              color: Color(0xff32C1E0),
               size: 100,
             ),
           ),
@@ -48,8 +48,8 @@ class _RateusSliderState extends State<RateusSlider> {
               max: 5.0,
               divisions: 5,
               value: sliderValue,
-              activeColor: Colors.white,
-              inactiveColor: Colors.white,
+              activeColor: Color(0xff32C1E0),
+              inactiveColor: Color(0xff32C1E0).withOpacity(0.2),
               onChanged: (newValue) {
                 setState(
                   () {
