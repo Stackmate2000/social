@@ -32,7 +32,7 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                       child: child,
                     );
                   },
-                  tween: Tween<double>(begin: 50, end: 60),
+                  tween: Tween<double>(begin: 45, end: 60),
                   curve: Curves.easeIn,
                   child: Align(
                     alignment: Alignment.bottomCenter,
@@ -49,6 +49,112 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                           ],
                           begin: Alignment.topRight,
                           end: Alignment.bottomLeft,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Mood check-in',
+                                      style: GoogleFonts.roboto(
+                                          fontSize: 16,
+                                          color: Color(0xffFFFFFF),
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Container(
+                                      height: 25,
+                                      width: 25,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.1),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0)),
+                                      child: Icon(
+                                        MdiIcons.pencil,
+                                        color: Color(0xffFFFFFF),
+                                        size: 15,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Record reel',
+                                      style: GoogleFonts.roboto(
+                                          fontSize: 16,
+                                          color: Color(0xffFFFFFF),
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Container(
+                                      height: 25,
+                                      width: 25,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.1),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0)),
+                                      child: Icon(
+                                        MdiIcons.musicNotePlus,
+                                        color: Color(0xffFFFFFF),
+                                        size: 15.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      child: Text(
+                                        'Add photo',
+                                        style: GoogleFonts.roboto(
+                                            fontSize: 16,
+                                            color: Color(0xffFFFFFF),
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 25,
+                                      width: 25,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.1),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0)),
+                                      child: Icon(
+                                        Icons.photo_outlined,
+                                        size: 15,
+                                        color: Color(0xffFFFFFF),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -75,7 +181,7 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                              color: Color(0xff46C0DE).withOpacity(0.2),
+                              color: Color(0xff8334D3).withOpacity(0.1),
                               blurRadius: 4.0,
                               spreadRadius: 2.0,
                               offset: Offset(0.0, 6.0))
