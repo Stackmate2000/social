@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:multiicon/bottom_nav/floatingAdd_button.dart';
 import 'package:multiicon/homescreen_home/home_Main.dart';
 import 'package:multiicon/homescreen_home/homescreen_Home.dart';
 import 'package:multiicon/homescreen_notification/homescreen_Notification.dart';
@@ -159,41 +160,8 @@ class _BottomNav2State extends State<BottomNav2> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: Container(
-                alignment: Alignment.bottomCenter,
-                child: Positioned(
-                  child: GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      height: 55,
-                      width: 55,
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                                color: Color(0xff46C0DE).withOpacity(0.2),
-                                blurRadius: 4.0,
-                                spreadRadius: 2.0,
-                                offset: Offset(0.0, 6.0))
-                          ],
-                          borderRadius: BorderRadius.all(Radius.circular(21.0)),
-                          gradient: LinearGradient(
-                              colors: [
-                                Color(0xff3190FF),
-                                Color(0xff46C0DE),
-                              ],
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter)),
-                      child: Icon(
-                        CupertinoIcons.add,
-                        color: Color(0xffFFFFFF),
-                        size: 22,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+            Container(
+              child: FloatingAddButton(),
             ),
           ],
         ),
