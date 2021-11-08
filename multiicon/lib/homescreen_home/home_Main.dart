@@ -60,11 +60,12 @@ class _HomeMainState extends State<HomeMain> {
                                   ),
                                   Container(
                                     child: Text(
-                                      "uNEven",
-                                      style: GoogleFonts.roboto(
-                                          fontSize: 18,
+                                      "TrickyBin",
+                                      style: GoogleFonts.dancingScript(
                                           color: Color(0xff000000),
-                                          fontWeight: FontWeight.w500),
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.bold),
+                                      textAlign: TextAlign.center,
                                     ),
                                   ),
                                   Container(
