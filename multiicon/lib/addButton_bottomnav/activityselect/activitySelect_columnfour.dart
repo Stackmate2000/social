@@ -10,27 +10,19 @@ class ActivitySelectColumnFour extends StatefulWidget {
 }
 
 class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
-  var isrelationship = false;
+  var isgaming = false;
 
-  _togglerelationship() {
+  _togglegaming() {
     setState(() {
-      isrelationship = !isrelationship;
+      isgaming = !isgaming;
     });
   }
 
-  var istraveller = false;
+  var isselfemployed = false;
 
-  _toggletraveller() {
+  _toggleselfemployed() {
     setState(() {
-      istraveller = !istraveller;
-    });
-  }
-
-  var isgym = false;
-
-  _togglegym() {
-    setState(() {
-      isgym = !isgym;
+      isselfemployed = !isselfemployed;
     });
   }
 
@@ -42,7 +34,7 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
         children: [
           GestureDetector(
             onTap: () {
-              _togglerelationship();
+              _togglegaming();
             },
             child: Container(
               height: 80,
@@ -54,7 +46,7 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                 ),
                 boxShadow: [
                   BoxShadow(
-                      color: isrelationship
+                      color: isgaming
                           ? Color(0xff32C1E0).withOpacity(0.2)
                           : Colors.white,
                       blurRadius: 6.0,
@@ -84,7 +76,7 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
           ),
           GestureDetector(
             onTap: () {
-              _toggletraveller();
+              _toggleselfemployed();
             },
             child: Container(
               height: 80,
@@ -96,7 +88,7 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                 ),
                 boxShadow: [
                   BoxShadow(
-                      color: istraveller
+                      color: isselfemployed
                           ? Color(0xff32C1E0).withOpacity(0.2)
                           : Colors.white,
                       blurRadius: 6.0,
@@ -125,26 +117,12 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
             ),
           ),
           GestureDetector(
-            onTap: () {
-              _togglegym();
-            },
+            onTap: () {},
             child: Container(
               height: 80,
               width: 120,
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                      color: isgym
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
-                      spreadRadius: 2.0,
-                      offset: Offset(0.0, 6.0))
-                ],
               ),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,

@@ -18,19 +18,19 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
     });
   }
 
-  var istraveller = false;
+  var issports = false;
 
-  _toggletraveller() {
+  _togglesports() {
     setState(() {
-      istraveller = !istraveller;
+      issports = !issports;
     });
   }
 
-  var isgym = false;
+  var isrelaxing = false;
 
-  _togglegym() {
+  _togglerelaxing() {
     setState(() {
-      isgym = !isgym;
+      isrelaxing = !isrelaxing;
     });
   }
 
@@ -84,7 +84,7 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
           ),
           GestureDetector(
             onTap: () {
-              _toggletraveller();
+              _togglesports();
             },
             child: Container(
               height: 80,
@@ -96,7 +96,7 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                 ),
                 boxShadow: [
                   BoxShadow(
-                      color: istraveller
+                      color: issports
                           ? Color(0xff32C1E0).withOpacity(0.2)
                           : Colors.white,
                       blurRadius: 6.0,
@@ -126,7 +126,7 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
           ),
           GestureDetector(
             onTap: () {
-              _togglegym();
+              _togglerelaxing();
             },
             child: Container(
               height: 80,
@@ -138,7 +138,7 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                 ),
                 boxShadow: [
                   BoxShadow(
-                      color: isgym
+                      color: isrelaxing
                           ? Color(0xff32C1E0).withOpacity(0.2)
                           : Colors.white,
                       blurRadius: 6.0,
