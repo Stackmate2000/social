@@ -34,13 +34,13 @@ class _RateusSliderState extends State<RateusSlider> {
             child: Text(
               FeedbackText,
               style: GoogleFonts.roboto(
-                  color: Colors.white.withOpacity(0.7),
+                  color: Color(0xff32C1E0).withOpacity(0.7),
                   fontSize: 15,
                   fontWeight: FontWeight.w500),
             ),
           ),
           SizedBox(
-            height: 20.0,
+            height: 15.0,
           ),
           Container(
             child: Slider(

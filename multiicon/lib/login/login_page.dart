@@ -138,30 +138,31 @@ class _LoginState extends State<Login> {
                           Navigator.of(context).push(_createRoute());
                         },
                         child: Container(
-                            alignment: Alignment.center,
-                            height: 50,
-                            width: MediaQuery.of(context).size.width * 0.9,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xff3190FF).withOpacity(0.1),
-                                    blurRadius: 4.0,
-                                    spreadRadius: 2.0,
-                                    offset: Offset(0.0, 6.0))
-                              ],
-                              color: Color(0xff3190FF),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(8.0),
-                              ),
+                          alignment: Alignment.center,
+                          height: 50,
+                          width: MediaQuery.of(context).size.width * 0.9,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Color(0xff3190FF).withOpacity(0.1),
+                                  blurRadius: 4.0,
+                                  spreadRadius: 2.0,
+                                  offset: Offset(0.0, 6.0))
+                            ],
+                            color: Color(0xff3190FF),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(8.0),
                             ),
-                            child: Text(
-                              "Log In",
-                              style: GoogleFonts.roboto(
-                                  color: Color(0xffFFFFFF),
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500),
-                              textAlign: TextAlign.center,
-                            )),
+                          ),
+                          child: Text(
+                            "Log In",
+                            style: GoogleFonts.roboto(
+                                color: Color(0xffFFFFFF),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
                       ),
                     ),
                   ),
