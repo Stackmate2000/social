@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:multiicon/addButton_bottomnav/activityselect/activitySelect_columnfour.dart';
 import 'package:multiicon/addButton_bottomnav/activityselect/activitySelect_columnone.dart';
+import 'package:multiicon/addButton_bottomnav/activityselect/activitySelect_columnthree.dart';
 import 'package:multiicon/addButton_bottomnav/activityselect/activitySelect_columntow.dart';
 import 'package:multiicon/addButton_bottomnav/rateusSlider.dart';
 
@@ -119,6 +121,17 @@ class _SelectActivityState extends State<SelectActivity> {
                                 width: 15.0,
                               ),
                               ActivitySelectColumnTwo(),
+                              SizedBox(
+                                width: 15.0,
+                              ),
+                              ActivitySelectColumnThree(),
+                              SizedBox(
+                                width: 15.0,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 15.0),
+                                child: ActivitySelectColumnFour(),
+                              ),
                             ],
                           ),
                         ),

@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class ActivitySelectColumnTwo extends StatefulWidget {
+class ActivitySelectColumnFour extends StatefulWidget {
   @override
-  _ActivitySelectColumnTwoState createState() =>
-      _ActivitySelectColumnTwoState();
+  _ActivitySelectColumnFourState createState() =>
+      _ActivitySelectColumnFourState();
 }
 
-class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
+class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
   var isrelationship = false;
 
   _togglerelationship() {
@@ -67,12 +67,12 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                   children: [
                     Container(
                       child: Icon(
-                        MdiIcons.heartPulse,
+                        MdiIcons.googleController,
                       ),
                     ),
                     Container(
                       child: Text(
-                        "relationship",
+                        "gaming",
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: Color(0xff000000),
@@ -109,12 +109,12 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                   children: [
                     Container(
                       child: Icon(
-                        MdiIcons.airplaneTakeoff,
+                        MdiIcons.laptop,
                       ),
                     ),
                     Container(
                       child: Text(
-                        "traveller",
+                        "self-employed",
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: Color(0xff000000),
@@ -151,12 +151,12 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                   children: [
                     Container(
                       child: Icon(
-                        MdiIcons.weightLifter,
+                        MdiIcons.plus,
                       ),
                     ),
                     Container(
                       child: Text(
-                        "hitting the gym",
+                        "other",
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: Color(0xff000000),

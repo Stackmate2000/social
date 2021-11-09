@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class ActivitySelectColumnTwo extends StatefulWidget {
+class ActivitySelectColumnThree extends StatefulWidget {
   @override
-  _ActivitySelectColumnTwoState createState() =>
-      _ActivitySelectColumnTwoState();
+  _ActivitySelectColumnThreeState createState() =>
+      _ActivitySelectColumnThreeState();
 }
 
-class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
-  var isrelationship = false;
+class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
+  var ishealthconsious = false;
 
-  _togglerelationship() {
+  _togglehealthconsious() {
     setState(() {
-      isrelationship = !isrelationship;
+      ishealthconsious = !ishealthconsious;
     });
   }
 
@@ -42,7 +42,7 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
         children: [
           GestureDetector(
             onTap: () {
-              _togglerelationship();
+              _togglehealthconsious();
             },
             child: Container(
               height: 80,
@@ -54,7 +54,7 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                 ),
                 boxShadow: [
                   BoxShadow(
-                      color: isrelationship
+                      color: ishealthconsious
                           ? Color(0xff32C1E0).withOpacity(0.2)
                           : Colors.white,
                       blurRadius: 6.0,
@@ -67,12 +67,12 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                   children: [
                     Container(
                       child: Icon(
-                        MdiIcons.heartPulse,
+                        MdiIcons.briefcaseOutline,
                       ),
                     ),
                     Container(
                       child: Text(
-                        "relationship",
+                        "health consious",
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: Color(0xff000000),
@@ -109,12 +109,12 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                   children: [
                     Container(
                       child: Icon(
-                        MdiIcons.airplaneTakeoff,
+                        MdiIcons.soccer,
                       ),
                     ),
                     Container(
                       child: Text(
-                        "traveller",
+                        "into sports",
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: Color(0xff000000),
@@ -151,12 +151,12 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                   children: [
                     Container(
                       child: Icon(
-                        MdiIcons.weightLifter,
+                        MdiIcons.sofaSingleOutline,
                       ),
                     ),
                     Container(
                       child: Text(
-                        "hitting the gym",
+                        "relaxing",
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: Color(0xff000000),
