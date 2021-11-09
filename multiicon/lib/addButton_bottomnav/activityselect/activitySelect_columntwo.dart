@@ -68,6 +68,9 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                     Container(
                       child: Icon(
                         MdiIcons.heartPulse,
+                        color: isrelationship
+                            ? Color(0xff32C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -75,7 +78,9 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                         "relationship",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: isrelationship
+                                ? Color(0xff32C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -110,6 +115,9 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                     Container(
                       child: Icon(
                         MdiIcons.airplaneTakeoff,
+                        color: istraveller
+                            ? Color(0xff32C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -117,7 +125,9 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                         "traveller",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: istraveller
+                                ? Color(0xff32C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -152,6 +162,9 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                     Container(
                       child: Icon(
                         MdiIcons.weightLifter,
+                        color: isgym
+                            ? Color(0xff32C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -159,7 +172,9 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                         "hitting the gym",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: isgym
+                                ? Color(0xff32C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),

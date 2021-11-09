@@ -60,6 +60,9 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                     Container(
                       child: Icon(
                         MdiIcons.googleController,
+                        color: isgaming
+                            ? Color(0xff32C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -67,7 +70,9 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                         "gaming",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: isgaming
+                                ? Color(0xff32C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -102,6 +107,9 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                     Container(
                       child: Icon(
                         MdiIcons.laptop,
+                        color: isselfemployed
+                            ? Color(0xff32C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -109,7 +117,9 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                         "self-employed",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: isselfemployed
+                                ? Color(0xff32C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -130,6 +140,7 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                     Container(
                       child: Icon(
                         MdiIcons.plus,
+                        color: Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -137,7 +148,7 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                         "other",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),

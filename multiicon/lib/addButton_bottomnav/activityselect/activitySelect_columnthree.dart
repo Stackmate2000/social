@@ -68,6 +68,9 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                     Container(
                       child: Icon(
                         MdiIcons.briefcaseOutline,
+                        color: ishealthconsious
+                            ? Color(0xff21C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -75,7 +78,9 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                         "health consious",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: ishealthconsious
+                                ? Color(0xff21C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -110,6 +115,9 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                     Container(
                       child: Icon(
                         MdiIcons.soccer,
+                        color: issports
+                            ? Color(0xff21C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -117,7 +125,9 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                         "into sports",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: issports
+                                ? Color(0xff21C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -152,6 +162,9 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                     Container(
                       child: Icon(
                         MdiIcons.sofaSingleOutline,
+                        color: isrelaxing
+                            ? Color(0xff21C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -159,7 +172,9 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                         "relaxing",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: isrelaxing
+                                ? Color(0xff21C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),

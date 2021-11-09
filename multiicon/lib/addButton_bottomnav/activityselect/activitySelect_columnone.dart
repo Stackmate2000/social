@@ -68,6 +68,9 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                     Container(
                       child: Icon(
                         MdiIcons.briefcaseOutline,
+                        color: isWorking
+                            ? Color(0xff32C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -75,7 +78,9 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                         "work",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: isWorking
+                                ? Color(0xff32C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -110,6 +115,9 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                     Container(
                       child: Icon(
                         MdiIcons.schoolOutline,
+                        color: isSchool
+                            ? Color(0xff32C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -117,7 +125,9 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                         "school",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: isSchool
+                                ? Color(0xff32C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -152,6 +162,9 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                     Container(
                       child: Icon(
                         MdiIcons.noodles,
+                        color: isFoodie
+                            ? Color(0xff32C1E0)
+                            : Color(0xff000000).withOpacity(0.7),
                       ),
                     ),
                     Container(
@@ -159,7 +172,9 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                         "foodie",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000),
+                            color: isFoodie
+                                ? Color(0xff32C1E0)
+                                : Color(0xff000000).withOpacity(0.7),
                             fontWeight: FontWeight.w600),
                       ),
                     ),
