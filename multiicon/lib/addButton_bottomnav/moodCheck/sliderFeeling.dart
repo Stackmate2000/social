@@ -58,8 +58,8 @@ class _SliderFeelingState extends State<SliderFeeling> {
                       "Morning!,How was your day today?",
                       style: GoogleFonts.karla(
                           fontSize: 20,
-                          color: Color(0xff000000),
-                          fontWeight: FontWeight.w500),
+                          color: Color(0xffFFFFFF),
+                          fontWeight: FontWeight.bold),
                       textAlign: TextAlign.start,
                     ),
                   ),
@@ -72,7 +72,7 @@ class _SliderFeelingState extends State<SliderFeeling> {
                       style: GoogleFonts.karla(
                           fontSize: 14,
                           color: Color(0xff000000).withOpacity(0.3),
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.bold),
                       textAlign: TextAlign.start,
                     ),
                   ),
@@ -88,7 +88,7 @@ class _SliderFeelingState extends State<SliderFeeling> {
                 Container(
                   child: Icon(
                     FeedBackIcon,
-                    color: Color(0xff32C1E0),
+                    color: Color(0xffFFFFFF),
                     size: 100,
                   ),
                 ),
@@ -98,10 +98,10 @@ class _SliderFeelingState extends State<SliderFeeling> {
                 Container(
                   child: Text(
                     FeedbackText,
-                    style: GoogleFonts.roboto(
-                        color: Color(0xff32C1E0).withOpacity(0.7),
+                    style: GoogleFonts.karla(
+                        color: Color(0xffFFFFFF).withOpacity(0.9),
                         fontSize: 15,
-                        fontWeight: FontWeight.w500),
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(
@@ -113,36 +113,36 @@ class _SliderFeelingState extends State<SliderFeeling> {
                     max: 5.0,
                     divisions: 5,
                     value: sliderValue,
-                    activeColor: Color(0xff32C1E0),
-                    inactiveColor: Color(0xff32C1E0).withOpacity(0.2),
+                    activeColor: Color(0xffFFFFFF),
+                    inactiveColor: Color(0xffFFFFFF).withOpacity(0.2),
                     onChanged: (newValue) {
                       setState(
                         () {
                           sliderValue = newValue;
 
                           if (sliderValue == 0.0 && sliderValue == 0.0) {
-                            FeedbackText = "Really Terrible";
+                            FeedbackText = "REALLY TERRIBLE";
                             FeedBackIcon = Icons.zoom_out_sharp;
                           }
 
                           if (sliderValue >= 1.0 && sliderValue <= 1.0) {
-                            FeedbackText = "Terrible";
+                            FeedbackText = "SOMEWHAT BAD";
                             FeedBackIcon = Icons.calendar_today;
                           }
                           if (sliderValue >= 1.1 && sliderValue <= 2.0) {
-                            FeedbackText = "Somewhat Bad";
+                            FeedbackText = "MEDIUM";
                             FeedBackIcon = Icons.car_rental;
                           }
                           if (sliderValue >= 2.1 && sliderValue <= 3.0) {
-                            FeedbackText = "Preety Good";
-                            FeedBackIcon = Icons.ac_unit;
+                            FeedbackText = "PREETY GOOD";
+                            FeedBackIcon = CupertinoIcons.smiley;
                           }
                           if (sliderValue >= 3.1 && sliderValue <= 4.0) {
-                            FeedbackText = "Awsome";
+                            FeedbackText = "AWSOME";
                             FeedBackIcon = Icons.access_alarm;
                           }
                           if (sliderValue >= 4.1 && sliderValue <= 5.0) {
-                            FeedbackText = "Super Awsome";
+                            FeedbackText = "SUPER AWSOME";
                             FeedBackIcon = Icons.car_rental;
                           }
                         },
@@ -169,19 +169,19 @@ class _SliderFeelingState extends State<SliderFeeling> {
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                              color: Color(0xff3190FF).withOpacity(0.2),
+                              color: Color(0xff000000).withOpacity(0.1),
                               blurRadius: 4.0,
                               spreadRadius: 2.0,
                               offset: Offset(0.0, 6.0))
                         ],
-                        color: Color(0xff3190FF),
+                        color: Color(0xffFFFFFF),
                         borderRadius: BorderRadius.all(
                           Radius.circular(16.0),
                         ),
                       ),
                       child: Icon(
                         CupertinoIcons.arrow_right,
-                        color: Colors.white,
+                        color: Color(0xffA55FEB),
                       ),
                     ),
                   ),
