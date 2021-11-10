@@ -40,16 +40,16 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: isgaming ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: isgaming
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -60,10 +60,11 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                     Container(
                       child: Icon(
                         MdiIcons.googleController,
-                        color: isgaming
-                            ? Color(0xff32C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                        color: isgaming ? Color(0xffA55FEB) : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
@@ -71,9 +72,9 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: isgaming
-                                ? Color(0xff32C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),
@@ -87,16 +88,16 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: isselfemployed ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: isselfemployed
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -108,9 +109,12 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                       child: Icon(
                         MdiIcons.laptop,
                         color: isselfemployed
-                            ? Color(0xff32C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                            ? Color(0xffA55FEB)
+                            : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
@@ -118,9 +122,9 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: isselfemployed
-                                ? Color(0xff32C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),
@@ -131,16 +135,14 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
             child: Container(
               height: 80,
               width: 120,
-              decoration: BoxDecoration(
-                color: Colors.white,
-              ),
+              decoration: BoxDecoration(),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       child: Icon(
                         MdiIcons.plus,
-                        color: Color(0xff000000).withOpacity(0.7),
+                        color: Color(0xffFFFFFF),
                       ),
                     ),
                     Container(
@@ -148,7 +150,7 @@ class _ActivitySelectColumnFourState extends State<ActivitySelectColumnFour> {
                         "other",
                         style: GoogleFonts.karla(
                             fontSize: 14,
-                            color: Color(0xff000000).withOpacity(0.7),
+                            color: Color(0xffFFFFFF).withOpacity(0.6),
                             fontWeight: FontWeight.w600),
                       ),
                     ),

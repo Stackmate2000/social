@@ -17,23 +17,23 @@ class _SelectAvtivityState extends State<SelectAvtivity> {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Container(
-            alignment: Alignment.center,
-            height: MediaQuery.of(context).size.height * 0.1,
-            child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 0.0, right: 30.0, left: 30.0, bottom: 10.0),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 30.0,
+              right: 30.0,
+              left: 30.0,
+            ),
+            child: Container(
+              alignment: Alignment.center,
+              height: MediaQuery.of(context).size.height * 0.1,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
+                    onTap: () {},
                     child: Icon(CupertinoIcons.arrow_left,
-                        color: Color(0xff000000).withOpacity(0.2)),
+                        color: Color(0xffFFFFFF).withOpacity(0.5)),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -44,10 +44,10 @@ class _SelectAvtivityState extends State<SelectAvtivity> {
                       width: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                          color: Color(0xff000000).withOpacity(0.1)),
+                          color: Color(0xffFFFFFF).withOpacity(0.1)),
                       child: Icon(
                         MdiIcons.close,
-                        color: Color(0xffFFFFFF),
+                        color: Color(0xffFFFFFF).withOpacity(0.5),
                       ),
                     ),
                   ),
@@ -68,8 +68,8 @@ class _SelectAvtivityState extends State<SelectAvtivity> {
                       "Hey! Select something thats makes you feel preety good.",
                       style: GoogleFonts.karla(
                           fontSize: 20,
-                          color: Color(0xff000000),
-                          fontWeight: FontWeight.w500),
+                          color: Color(0xffFFFFFF),
+                          fontWeight: FontWeight.bold),
                       textAlign: TextAlign.start,
                     ),
                   ),
@@ -82,7 +82,7 @@ class _SelectAvtivityState extends State<SelectAvtivity> {
                       style: GoogleFonts.karla(
                           fontSize: 14,
                           color: Color(0xff000000).withOpacity(0.3),
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.bold),
                       textAlign: TextAlign.start,
                     ),
                   ),
@@ -137,19 +137,19 @@ class _SelectAvtivityState extends State<SelectAvtivity> {
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                              color: Color(0xff3190FF).withOpacity(0.2),
+                              color: Color(0xff000000).withOpacity(0.1),
                               blurRadius: 4.0,
                               spreadRadius: 2.0,
                               offset: Offset(0.0, 6.0))
                         ],
-                        color: Color(0xff3190FF),
+                        color: Color(0xffFFFFFF),
                         borderRadius: BorderRadius.all(
                           Radius.circular(16.0),
                         ),
                       ),
                       child: Icon(
                         CupertinoIcons.arrow_right,
-                        color: Colors.white,
+                        color: Color(0xffA55FEB),
                       ),
                     ),
                   ),

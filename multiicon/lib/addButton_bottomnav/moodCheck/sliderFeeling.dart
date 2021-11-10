@@ -17,39 +17,31 @@ class _SliderFeelingState extends State<SliderFeeling> {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Container(
-            alignment: Alignment.center,
-            height: MediaQuery.of(context).size.height * 0.1,
-            child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 0.0, right: 30.0, left: 30.0, bottom: 10.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: Icon(CupertinoIcons.arrow_left,
-                        color: Color(0xff000000).withOpacity(0.2)),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 30.0,
+              right: 30.0,
+              left: 30.0,
+            ),
+            child: Container(
+              alignment: Alignment.centerRight,
+              height: MediaQuery.of(context).size.height * 0.1,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                      color: Color(0xffFFFFFF).withOpacity(0.1)),
+                  child: Icon(
+                    MdiIcons.close,
+                    color: Color(0xffFFFFFF).withOpacity(0.5),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                          color: Color(0xff000000).withOpacity(0.1)),
-                      child: Icon(
-                        MdiIcons.close,
-                        color: Color(0xffFFFFFF),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
           ),

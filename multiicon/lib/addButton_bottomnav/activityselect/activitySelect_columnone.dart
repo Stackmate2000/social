@@ -48,16 +48,16 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: isWorking ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: isWorking
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -68,10 +68,12 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                     Container(
                       child: Icon(
                         MdiIcons.briefcaseOutline,
-                        color: isWorking
-                            ? Color(0xff32C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                        color:
+                            isWorking ? Color(0xffA55FEB) : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
@@ -79,9 +81,9 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: isWorking
-                                ? Color(0xff32C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),
@@ -95,16 +97,16 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: isSchool ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: isSchool
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -115,10 +117,11 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                     Container(
                       child: Icon(
                         MdiIcons.schoolOutline,
-                        color: isSchool
-                            ? Color(0xff32C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                        color: isSchool ? Color(0xffA55FEB) : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
@@ -126,9 +129,9 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: isSchool
-                                ? Color(0xff32C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),
@@ -142,16 +145,16 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: isFoodie ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: isFoodie
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -162,10 +165,11 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                     Container(
                       child: Icon(
                         MdiIcons.noodles,
-                        color: isFoodie
-                            ? Color(0xff32C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                        color: isFoodie ? Color(0xffA55FEB) : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
@@ -173,9 +177,9 @@ class _ActivitySelectColumnOneState extends State<ActivitySelectColumnOne> {
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: isFoodie
-                                ? Color(0xff32C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),

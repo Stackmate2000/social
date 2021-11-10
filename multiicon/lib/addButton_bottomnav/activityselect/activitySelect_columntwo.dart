@@ -48,16 +48,16 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: isrelationship ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: isrelationship
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -69,9 +69,12 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                       child: Icon(
                         MdiIcons.heartPulse,
                         color: isrelationship
-                            ? Color(0xff32C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                            ? Color(0xffA55FEB)
+                            : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
@@ -79,9 +82,9 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: isrelationship
-                                ? Color(0xff32C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),
@@ -95,16 +98,16 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: istraveller ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: istraveller
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -115,10 +118,12 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                     Container(
                       child: Icon(
                         MdiIcons.airplaneTakeoff,
-                        color: istraveller
-                            ? Color(0xff32C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                        color:
+                            istraveller ? Color(0xffA55FEB) : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
@@ -126,9 +131,9 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: istraveller
-                                ? Color(0xff32C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),
@@ -142,16 +147,16 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: isgym ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: isgym
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -161,21 +166,22 @@ class _ActivitySelectColumnTwoState extends State<ActivitySelectColumnTwo> {
                   children: [
                     Container(
                       child: Icon(
-                        MdiIcons.weightLifter,
-                        color: isgym
-                            ? Color(0xff32C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                        MdiIcons.dumbbell,
+                        color: isgym ? Color(0xffA55FEB) : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
-                        "hitting the gym",
+                        "exercise",
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: isgym
-                                ? Color(0xff32C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),

@@ -48,16 +48,16 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: ishealthconsious ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: ishealthconsious
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -69,19 +69,22 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                       child: Icon(
                         MdiIcons.briefcaseOutline,
                         color: ishealthconsious
-                            ? Color(0xff21C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                            ? Color(0xffA55FEB)
+                            : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
-                        "health consious",
+                        "health conciuos",
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: ishealthconsious
-                                ? Color(0xff21C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),
@@ -95,16 +98,16 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: issports ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: issports
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -115,20 +118,21 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                     Container(
                       child: Icon(
                         MdiIcons.soccer,
-                        color: issports
-                            ? Color(0xff21C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                        color: issports ? Color(0xffA55FEB) : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
-                        "into sports",
+                        "sports lover",
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: issports
-                                ? Color(0xff21C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),
@@ -142,16 +146,16 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
               height: 80,
               width: 120,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: isrelaxing ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
+                  Radius.circular(16.0),
                 ),
                 boxShadow: [
                   BoxShadow(
                       color: isrelaxing
-                          ? Color(0xff32C1E0).withOpacity(0.2)
-                          : Colors.white,
-                      blurRadius: 6.0,
+                          ? Color(0xff000000).withOpacity(0.1)
+                          : Colors.transparent,
+                      blurRadius: 4.0,
                       spreadRadius: 2.0,
                       offset: Offset(0.0, 6.0))
                 ],
@@ -162,10 +166,12 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                     Container(
                       child: Icon(
                         MdiIcons.sofaSingleOutline,
-                        color: isrelaxing
-                            ? Color(0xff21C1E0)
-                            : Color(0xff000000).withOpacity(0.7),
+                        color:
+                            isrelaxing ? Color(0xffA55FEB) : Color(0xffFFFFFF),
                       ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
                     ),
                     Container(
                       child: Text(
@@ -173,9 +179,9 @@ class _ActivitySelectColumnThreeState extends State<ActivitySelectColumnThree> {
                         style: GoogleFonts.karla(
                             fontSize: 14,
                             color: isrelaxing
-                                ? Color(0xff21C1E0)
-                                : Color(0xff000000).withOpacity(0.7),
-                            fontWeight: FontWeight.w600),
+                                ? Color(0xffA55FEB)
+                                : Color(0xffFFFFFF).withOpacity(0.6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]),

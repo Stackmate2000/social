@@ -21,7 +21,10 @@ class _MoodCheckInState extends State<MoodCheckIn> {
           return Container(
             height: MediaQuery.of(context).size.height * 0.95,
             decoration: BoxDecoration(
-              color: Color(0xffFFFFFF),
+              gradient: LinearGradient(colors: [
+                Color(0xffA55FEB),
+                Color(0xffA55FEB),
+              ], begin: Alignment.centerLeft, end: Alignment.centerRight),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30.0),
                 topRight: Radius.circular(30.0),
