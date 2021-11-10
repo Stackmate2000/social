@@ -92,7 +92,6 @@ class _SliderFeelingState extends State<SliderFeeling> {
             height: MediaQuery.of(context).size.height * 0.45,
             width: double.infinity,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
                   child: Icon(
@@ -112,6 +111,9 @@ class _SliderFeelingState extends State<SliderFeeling> {
                         fontSize: 15,
                         fontWeight: FontWeight.w500),
                   ),
+                ),
+                SizedBox(
+                  height: 15.0,
                 ),
                 Container(
                   child: Slider(
