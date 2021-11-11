@@ -166,69 +166,144 @@ class _BoxSettingsState extends State<BoxSettings> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-            child: Container(
-              height: MediaQuery.of(context).size.height * 0.3,
-              width: MediaQuery.of(context).size.width * 0.4,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(16)),
-                color: Color(0xffFFFFFF),
-                boxShadow: [
-                  BoxShadow(
-                      color: Color(0xff000000).withOpacity(0.1),
-                      blurRadius: 4.0,
-                      spreadRadius: 2.0,
-                      offset: Offset(0.0, 6.0))
-                ],
-              ),
-              child: Stack(
-                children: [
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0, bottom: 30.0),
-                      child: Container(
-                        child: Text(
-                          "Know ",
-                          style: GoogleFonts.karla(
-                            fontSize: 38,
-                            color: Color(0xff000000).withOpacity(0.1),
-                            fontWeight: FontWeight.bold,
+            child: Row(
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(16)),
+                    color: Color(0xffFFFFFF),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color(0xff000000).withOpacity(0.1),
+                          blurRadius: 4.0,
+                          spreadRadius: 2.0,
+                          offset: Offset(0.0, 6.0))
+                    ],
+                  ),
+                  child: Stack(
+                    children: [
+                      Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding:
+                              const EdgeInsets.only(left: 20.0, bottom: 30.0),
+                          child: Container(
+                            child: Text(
+                              "Know ",
+                              style: GoogleFonts.karla(
+                                fontSize: 38,
+                                color: Color(0xff000000).withOpacity(0.1),
+                                fontWeight: FontWeight.bold,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
                           ),
-                          textAlign: TextAlign.start,
                         ),
                       ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0, top: 20.0),
-                      child: Container(
-                          child: Icon(
-                        Icons.book_outlined,
-                        color: Color(0xff896ae4),
-                      )),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0, bottom: 10.0),
-                      child: Container(
-                        child: Text(
-                          "Know about our Policy",
-                          style: GoogleFonts.karla(
-                            fontSize: 16,
-                            color: Color(0xff000000),
-                            fontWeight: FontWeight.w600,
-                          ),
-                          textAlign: TextAlign.start,
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20.0, top: 20.0),
+                          child: Container(
+                              child: Icon(
+                            Icons.book_outlined,
+                            color: Color(0xff896ae4),
+                          )),
                         ),
                       ),
-                    ),
+                      Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding:
+                              const EdgeInsets.only(left: 20.0, bottom: 10.0),
+                          child: Container(
+                            child: Text(
+                              "Know about our Policy",
+                              style: GoogleFonts.karla(
+                                fontSize: 16,
+                                color: Color(0xff000000),
+                                fontWeight: FontWeight.w600,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+                SizedBox(
+                  width: 15.0,
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(16)),
+                    color: Color(0xffFFFFFF),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color(0xff000000).withOpacity(0.1),
+                          blurRadius: 4.0,
+                          spreadRadius: 2.0,
+                          offset: Offset(0.0, 6.0))
+                    ],
+                  ),
+                  child: Stack(
+                    children: [
+                      Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding:
+                              const EdgeInsets.only(left: 20.0, bottom: 10.0),
+                          child: Container(
+                            child: Text(
+                              "Achieve",
+                              style: GoogleFonts.karla(
+                                fontSize: 38,
+                                color: Color(0xff000000).withOpacity(0.1),
+                                fontWeight: FontWeight.bold,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20.0, top: 20.0),
+                          child: Container(
+                              child: Icon(
+                            MdiIcons.bullseyeArrow,
+                            color: Color(0xff896ae4),
+                          )),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding:
+                              const EdgeInsets.only(left: 20.0, bottom: 10.0),
+                          child: Container(
+                            child: Text(
+                              "Achievements",
+                              style: GoogleFonts.karla(
+                                fontSize: 16,
+                                color: Color(0xff000000),
+                                fontWeight: FontWeight.w600,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ],
