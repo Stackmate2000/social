@@ -22,9 +22,9 @@ class _MoodCheckInState extends State<MoodCheckIn> {
             height: MediaQuery.of(context).size.height * 0.95,
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
-                Color(0xffA55FEB),
-                Color(0xffA55FEB),
-              ], begin: Alignment.centerLeft, end: Alignment.centerRight),
+                Color(0xff896ae4),
+                Color(0xff937cdc),
+              ], begin: Alignment.topRight, end: Alignment.bottomLeft),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30.0),
                 topRight: Radius.circular(30.0),
@@ -42,7 +42,6 @@ class _MoodCheckInState extends State<MoodCheckIn> {
                     alignment: Alignment.topCenter,
                     child: PageView(
                       children: [
-                        SliderFeeling(),
                         SelectAvtivity(),
                         MoodCheckInResults(),
                       ],
@@ -67,10 +66,10 @@ class _MoodCheckInState extends State<MoodCheckIn> {
           children: [
             Text(
               'Mood check-in',
-              style: GoogleFonts.roboto(
+              style: GoogleFonts.karla(
                   fontSize: 16,
                   color: Color(0xffFFFFFF),
-                  fontWeight: FontWeight.w500),
+                  fontWeight: FontWeight.bold),
             ),
             Container(
               height: 25,

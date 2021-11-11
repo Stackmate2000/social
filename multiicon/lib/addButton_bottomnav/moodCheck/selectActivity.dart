@@ -140,7 +140,7 @@ class _SelectAvtivityState extends State<SelectAvtivity> {
                               color: Color(0xff000000).withOpacity(0.1),
                               blurRadius: 4.0,
                               spreadRadius: 2.0,
-                              offset: Offset(0.0, 6.0))
+                              offset: Offset(7.0, 7.0))
                         ],
                         color: Color(0xffFFFFFF),
                         borderRadius: BorderRadius.all(
