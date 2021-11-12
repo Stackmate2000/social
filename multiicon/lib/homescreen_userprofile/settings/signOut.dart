@@ -24,23 +24,26 @@ class _SignOutState extends State<SignOut> {
         },
         child: Container(
           alignment: Alignment.center,
-          height: 50,
-          width: MediaQuery.of(context).size.width * 0.9,
+          height: 55,
+          width: MediaQuery.of(context).size.width * 0.8,
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                  color: Color(0xff3190FF).withOpacity(0.2),
+                  color: Color(0xff000000).withOpacity(0.1),
                   blurRadius: 6.0,
                   spreadRadius: 2.0,
                   offset: Offset(0.0, 6.0))
             ],
-            color: Color(0xff3190FF),
+            gradient: LinearGradient(colors: [
+              Color(0xff896ae4),
+              Color(0xff937cdc),
+            ], begin: Alignment.topRight, end: Alignment.bottomLeft),
             borderRadius: BorderRadius.all(
-              Radius.circular(8.0),
+              Radius.circular(30.0),
             ),
           ),
           child: Text(
-            "Sign Out",
+            "Log out",
             style: GoogleFonts.roboto(
                 color: Colors.white,
                 fontSize: 15.0,

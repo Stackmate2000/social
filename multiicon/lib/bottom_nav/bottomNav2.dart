@@ -121,7 +121,7 @@ class _BottomNav2State extends State<BottomNav2> {
                                   child: _index == 2
                                       ? SvgPicture.asset(
                                           "assets/svg/notifynew.svg",
-                                          color: Color(0xff3190FF),
+                                          color: Color(0xff000000),
                                         )
                                       : SvgPicture.asset(
                                           "assets/svg/notificationone.svg",
@@ -149,7 +149,7 @@ class _BottomNav2State extends State<BottomNav2> {
                                     child: Icon(
                                       CupertinoIcons.person,
                                       color: _index == 3
-                                          ? Color(0xff3190FF)
+                                          ? Color(0xff000000)
                                           : Colors.grey[600],
                                     )),
                               )),

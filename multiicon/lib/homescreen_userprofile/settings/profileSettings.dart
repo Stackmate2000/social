@@ -23,13 +23,14 @@ class _ProfileSettingsState extends State<ProfileSettings> {
           children: [
             Container(
               decoration: BoxDecoration(
-                color: Color(0xffFFFFFF),
+                color: Color(0xffF4F6F6),
               ),
             ),
             SafeArea(
               child: Align(
                 alignment: Alignment.topLeft,
                 child: SingleChildScrollView(
+                  physics: BouncingScrollPhysics(),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,7 +58,7 @@ class _ProfileSettingsState extends State<ProfileSettings> {
                                   height:
                                       MediaQuery.of(context).size.height * 0.3,
                                   width:
-                                      MediaQuery.of(context).size.width * 0.5,
+                                      MediaQuery.of(context).size.width * 0.45,
                                   decoration: BoxDecoration(
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(16)),
@@ -131,9 +132,9 @@ class _ProfileSettingsState extends State<ProfileSettings> {
                                       children: [
                                         Container(
                                           child: Icon(
-                                            CupertinoIcons.settings,
+                                            MdiIcons.accountLockOutline,
                                             color: Color(0xff000000)
-                                                .withOpacity(0.9),
+                                                .withOpacity(0.7),
                                           ),
                                         ),
                                         Container(
@@ -141,10 +142,10 @@ class _ProfileSettingsState extends State<ProfileSettings> {
                                             onPressed: () {},
                                             child: Text(
                                               "Privacy",
-                                              style: GoogleFonts.karla(
+                                              style: GoogleFonts.roboto(
                                                   color: Color(0xff000000),
                                                   fontSize: 16,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontWeight: FontWeight.w500),
                                             ),
                                           ),
                                         ),
@@ -176,9 +177,9 @@ class _ProfileSettingsState extends State<ProfileSettings> {
                                       children: [
                                         Container(
                                           child: Icon(
-                                            CupertinoIcons.settings,
+                                            MdiIcons.shieldLockOutline,
                                             color: Color(0xff000000)
-                                                .withOpacity(0.9),
+                                                .withOpacity(0.7),
                                           ),
                                         ),
                                         Container(
@@ -186,10 +187,55 @@ class _ProfileSettingsState extends State<ProfileSettings> {
                                             onPressed: () {},
                                             child: Text(
                                               "Security",
-                                              style: GoogleFonts.karla(
+                                              style: GoogleFonts.roboto(
                                                   color: Color(0xff000000),
                                                   fontSize: 16,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontWeight: FontWeight.w500),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Container(
+                                      child: Icon(
+                                        MdiIcons.chevronRight,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.2),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                width: double.infinity,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Container(
+                                          child: Icon(
+                                            MdiIcons.bookmarkOutline,
+                                            color: Color(0xff000000)
+                                                .withOpacity(0.7),
+                                          ),
+                                        ),
+                                        Container(
+                                          child: TextButton(
+                                            onPressed: () {},
+                                            child: Text(
+                                              "Saved",
+                                              style: GoogleFonts.roboto(
+                                                  color: Color(0xff000000),
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w500),
                                             ),
                                           ),
                                         ),
@@ -246,21 +292,24 @@ class _ProfileSettingsState extends State<ProfileSettings> {
                             Container(
                               child: Text(
                                 "Add account",
-                                style: GoogleFonts.karla(
+                                style: GoogleFonts.roboto(
                                     color: Color(0xff3190FF),
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w600),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400),
                               ),
                             ),
                             SizedBox(
-                              height: 20.0,
+                              height: 15.0,
                             ),
                             Padding(
                               padding: const EdgeInsets.only(bottom: 20.0),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: Container(
-                                  child: SignOut(),
+                              child: Container(
+                                child: Text(
+                                  "Log out moloiraj_baruah",
+                                  style: GoogleFonts.roboto(
+                                      color: Color(0xff3190FF),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400),
                                 ),
                               ),
                             ),
