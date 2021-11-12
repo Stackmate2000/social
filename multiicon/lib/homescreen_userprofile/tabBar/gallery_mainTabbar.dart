@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:multiicon/homescreen_userprofile/tabBar/indexOne.dart';
 
-class CustomTabBarProfile extends StatefulWidget {
+class GalleryMainTabBar extends StatefulWidget {
   @override
-  _CustomTabBarProfileState createState() => _CustomTabBarProfileState();
+  _GalleryMainTabBarState createState() => _GalleryMainTabBarState();
 }
 
-class _CustomTabBarProfileState extends State<CustomTabBarProfile> {
+class _GalleryMainTabBarState extends State<GalleryMainTabBar> {
   int _index = 1;
   @override
   Widget build(BuildContext context) {
@@ -20,12 +21,21 @@ class _CustomTabBarProfileState extends State<CustomTabBarProfile> {
           _index == 0
               ? ReelsTabBar()
               : (_index == 1 ? PhotosTabBar() : TagsTabBar()),
-          Container(
-            decoration: BoxDecoration(color: Colors.white),
-            height: 50.0,
-            width: double.infinity,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 0.0, right: 0.0),
+          Center(
+            child: Container(
+              height: 70,
+              width: MediaQuery.of(context).size.width * 0.95,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(16)),
+                color: Color(0xffFFFFFF),
+                boxShadow: [
+                  BoxShadow(
+                      color: Color(0xff000000).withOpacity(0.1),
+                      blurRadius: 4.0,
+                      spreadRadius: 2.0,
+                      offset: Offset(0.0, 3.0))
+                ],
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -132,7 +142,14 @@ class _CustomTabBarProfileState extends State<CustomTabBarProfile> {
 class ReelsTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.only(top: 79.0, bottom: 80.0),
+      child: Container(
+        height: 300,
+        width: MediaQuery.of(context).size.width,
+        child: IndexOne(),
+      ),
+    );
   }
 }
 
@@ -140,7 +157,9 @@ class PhotosTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
+      height: 300,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(color: Colors.cyan),
     );
   }
 }
@@ -148,6 +167,10 @@ class PhotosTabBar extends StatelessWidget {
 class TagsTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      height: 300,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(color: Color(0xff3190FF)),
+    );
   }
 }

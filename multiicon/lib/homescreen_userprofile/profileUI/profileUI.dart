@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:multiicon/homescreen_userprofile/profileUI/followersView.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/homescreen_userprofile/settings/profileSettings.dart';
+import 'package:multiicon/homescreen_userprofile/tabBar/gallery_mainTabbar.dart';
 
 class ProfileUI extends StatefulWidget {
   @override
@@ -41,46 +43,52 @@ class _ProfileUIState extends State<ProfileUI> {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.topLeft,
-            child: Column(
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.3,
-                      width: MediaQuery.of(context).size.width * 0.45,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(21.0),
+          SingleChildScrollView(
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Column(
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.3,
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(21.0),
+                          ),
+                          image: DecorationImage(
+                              image: AssetImage("assets/splash.jpg"),
+                              fit: BoxFit.cover),
+                          color: Colors.grey[600],
                         ),
-                        image: DecorationImage(
-                            image: AssetImage("assets/splash.jpg"),
-                            fit: BoxFit.cover),
-                        color: Colors.grey[600],
                       ),
-                    ),
-                    SizedBox(
-                      width: 15.0,
-                    ),
-                    Text(
-                      "@moloi26",
-                      style: GoogleFonts.roboto(
-                        fontSize: 18,
-                        color: Color(0xff000000),
-                        fontWeight: FontWeight.w500,
+                      SizedBox(
+                        width: 15.0,
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 15.0,
-                ),
-                Container(
-                  child: FollowersView(),
-                ),
-              ],
+                      Text(
+                        "moloi_26",
+                        style: GoogleFonts.roboto(
+                          fontSize: 18,
+                          color: Color(0xff000000),
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 15.0,
+                  ),
+                  Container(
+                    child: FollowersView(),
+                  ),
+                  SizedBox(
+                    height: 30.0,
+                  ),
+                  GalleryMainTabBar(),
+                ],
+              ),
             ),
           ),
         ],

@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:multiicon/colors/backgroundColor.dart';
-import 'package:multiicon/homescreen_userprofile/galleryprofile/customtabbarProfile.dart';
 
 class HomeScreenUserProfile extends StatefulWidget {
   @override
@@ -80,12 +79,6 @@ class _HomeScreenUserProfileState extends State<HomeScreenUserProfile> {
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 15.0),
-                                child: Container(
-                                  child: CustomTabBarProfile(),
-                                ),
-                              )
                             ],
                           ),
                         ),
