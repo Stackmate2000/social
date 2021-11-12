@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:multiicon/homescreen_userprofile/profileUI/followersView.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/homescreen_userprofile/settings/profileSettings.dart';

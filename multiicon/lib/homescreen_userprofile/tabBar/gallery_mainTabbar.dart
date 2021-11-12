@@ -145,7 +145,6 @@ class ReelsTabBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 79.0, bottom: 80.0),
       child: Container(
-        height: 300,
         width: MediaQuery.of(context).size.width,
         child: IndexOne(),
       ),
