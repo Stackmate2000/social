@@ -83,7 +83,7 @@ class _ProfileUIState extends State<ProfileUI> {
                     child: FollowersView(),
                   ),
                   SizedBox(
-                    height: 30.0,
+                    height: 15.0,
                   ),
                   GalleryMainTabBar(),
                 ],

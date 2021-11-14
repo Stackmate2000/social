@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:multiicon/homescreen_userprofile/tabBar/indexOne.dart';
+import 'package:multiicon/homescreen_userprofile/tabBar/indexThree.dart';
+import 'package:multiicon/homescreen_userprofile/tabBar/indexTwo.dart';
 
 class GalleryMainTabBar extends StatefulWidget {
   @override
@@ -13,9 +15,7 @@ class _GalleryMainTabBarState extends State<GalleryMainTabBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-      ),
+      decoration: BoxDecoration(),
       child: Stack(
         children: [
           _index == 0
@@ -27,14 +27,7 @@ class _GalleryMainTabBarState extends State<GalleryMainTabBar> {
               width: MediaQuery.of(context).size.width * 0.95,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(16)),
-                color: Color(0xffFFFFFF),
-                boxShadow: [
-                  BoxShadow(
-                      color: Color(0xff000000).withOpacity(0.1),
-                      blurRadius: 4.0,
-                      spreadRadius: 2.0,
-                      offset: Offset(0.0, 3.0))
-                ],
+                color: Colors.transparent,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -46,7 +39,7 @@ class _GalleryMainTabBarState extends State<GalleryMainTabBar> {
                       });
                     },
                     child: Container(
-                      height: 50,
+                      height: 40,
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
@@ -143,7 +136,7 @@ class ReelsTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 79.0, bottom: 80.0),
+      padding: const EdgeInsets.only(top: 60.0, bottom: 80.0),
       child: Container(
         width: MediaQuery.of(context).size.width,
         child: IndexOne(),
@@ -155,10 +148,12 @@ class ReelsTabBar extends StatelessWidget {
 class PhotosTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 300,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(color: Colors.cyan),
+    return Padding(
+      padding: const EdgeInsets.only(top: 60.0, bottom: 80.0),
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        child: IndexTwo(),
+      ),
     );
   }
 }
@@ -166,10 +161,12 @@ class PhotosTabBar extends StatelessWidget {
 class TagsTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 300,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(color: Color(0xff3190FF)),
+    return Padding(
+      padding: const EdgeInsets.only(top: 60.0, bottom: 80.0),
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        child: IndexThree(),
+      ),
     );
   }
 }
