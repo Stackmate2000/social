@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:multiicon/addButton_bottomnav/floatingAdd_button.dart';
 import 'package:multiicon/homescreen_home/home_Main.dart';
-import 'package:multiicon/homescreen_home/homescreen_Home.dart';
 import 'package:multiicon/homescreen_notification/homescreen_Notification.dart';
 import 'package:multiicon/homescreen_reels/homescreen_Reels.dart';
 import 'package:multiicon/homescreen_userprofile/profileUI/profileUI.dart';
@@ -38,9 +37,9 @@ class _BottomNav2State extends State<BottomNav2> {
                 height: 55,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(
-                        color: Colors.black.withOpacity(0.2), width: 0.8),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
                   ),
                   color: _index == 1 ? Color(0xff000000) : Color(0xffFFFFFF),
                 ),

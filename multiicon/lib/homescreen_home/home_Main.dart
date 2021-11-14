@@ -23,7 +23,7 @@ class _HomeMainState extends State<HomeMain> {
           padding: const EdgeInsets.only(bottom: 70.0),
           child: Container(
             decoration: BoxDecoration(
-              color: Color(0xffFFFFFF),
+              color: Color(0xffF4F6F6),
             ),
             child: Stack(
               children: [
@@ -47,7 +47,7 @@ class _HomeMainState extends State<HomeMain> {
                               height: 50,
                               width: MediaQuery.of(context).size.width,
                               decoration:
-                                  BoxDecoration(color: Color(0xffFFFFFF)),
+                                  BoxDecoration(color: Colors.transparent),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -100,9 +100,16 @@ class _HomeMainState extends State<HomeMain> {
                           Container(
                             child: FirstImagePost(),
                           ),
-                          ReelOne(),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+
+                          //ReelOne(),
                           Container(
                             child: SharedImage_post(),
+                          ),
+                          SizedBox(
+                            height: 15.0,
                           ),
                           Container(
                             child: MultipleImagePost(),

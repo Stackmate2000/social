@@ -20,12 +20,11 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        decoration: BoxDecoration(color: Color(0xffFFFFFF)),
+        decoration: BoxDecoration(color: Colors.transparent),
         child: Stack(
           children: [
             Padding(
-              padding:
-                  const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0),
+              padding: const EdgeInsets.only(left: 15.0, right: 15.0),
               child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -166,9 +165,7 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                           Container(
                             height: MediaQuery.of(context).size.height * 0.4,
                             width: MediaQuery.of(context).size.width * 0.7,
-                            decoration: BoxDecoration(
-                              color: Color(0xffFFFFFF),
-                            ),
+                            decoration: BoxDecoration(),
                             child: Stack(
                               children: [
                                 Row(

@@ -45,7 +45,7 @@ class _AddStoryHomeState extends State<AddStoryHome> {
                 child: SizedBox(
                   child: CircleAvatar(
                     radius: 14,
-                    backgroundColor: Colors.white,
+                    backgroundColor: Color(0xffF4F6F6),
                     child: GestureDetector(
                       onTap: () {},
                       child: Container(
@@ -56,7 +56,7 @@ class _AddStoryHomeState extends State<AddStoryHome> {
                         child: Center(
                           child: Icon(
                             MdiIcons.plus,
-                            color: Colors.white,
+                            color: Color(0xffF4F6F6),
                             size: 16,
                           ),
                         ),

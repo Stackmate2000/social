@@ -19,7 +19,6 @@ class _FirstImagePostState extends State<FirstImagePost> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Color(0xffFFFFFF)),
       child: Stack(
         children: [
           Padding(

@@ -12,11 +12,10 @@ class _ReelOneState extends State<ReelOne> {
     return Container(
       height: MediaQuery.of(context).size.height * 0.37,
       width: double.infinity,
-      decoration: BoxDecoration(color: Colors.white),
       child: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(color: Colors.white),
+            decoration: BoxDecoration(color: Colors.transparent),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 15.0, right: 15.0),

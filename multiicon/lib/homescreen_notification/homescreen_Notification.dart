@@ -24,9 +24,7 @@ class _HomeScreenDState extends State<HomeScreenD> {
           ),
           child: Stack(
             children: [
-              Container(
-                color: Colors.white,
-              ),
+              Container(color: Color(0xffF4F6F6)),
               Align(
                 alignment: Alignment.topCenter,
                 child: SingleChildScrollView(
