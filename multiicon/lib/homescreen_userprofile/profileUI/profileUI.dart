@@ -32,30 +32,47 @@ class _ProfileUIState extends State<ProfileUI> {
               child: Column(
                 children: [
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.3,
-                        width: MediaQuery.of(context).size.width * 0.45,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(21.0),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.3,
+                            width: MediaQuery.of(context).size.width * 0.45,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomRight: Radius.circular(21.0),
+                              ),
+                              image: DecorationImage(
+                                  image: AssetImage("assets/splash.jpg"),
+                                  fit: BoxFit.cover),
+                              color: Colors.grey[600],
+                            ),
                           ),
-                          image: DecorationImage(
-                              image: AssetImage("assets/splash.jpg"),
-                              fit: BoxFit.cover),
-                          color: Colors.grey[600],
-                        ),
+                          SizedBox(
+                            width: 15.0,
+                          ),
+                          Text(
+                            "moloi_26",
+                            style: GoogleFonts.roboto(
+                              fontSize: 18,
+                              color: Color(0xff000000),
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
                       ),
-                      SizedBox(
-                        width: 15.0,
-                      ),
-                      Text(
-                        "moloi_26",
-                        style: GoogleFonts.roboto(
-                          fontSize: 18,
-                          color: Color(0xff000000),
-                          fontWeight: FontWeight.w500,
+                      SafeArea(
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 15.0),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(_nextRoute());
+                            },
+                            child: Icon(CupertinoIcons.settings),
+                          ),
                         ),
                       ),
                     ],
