@@ -44,39 +44,41 @@ class _HomeMainState extends State<HomeMain> {
                             padding: const EdgeInsets.only(
                                 left: 15.0, right: 15.0, top: 0.0),
                             child: Container(
+                              alignment: Alignment.centerLeft,
                               height: 50,
                               width: MediaQuery.of(context).size.width,
                               decoration:
                                   BoxDecoration(color: Colors.transparent),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    child: Icon(
-                                      CupertinoIcons.search,
-                                      color: Color(0xff000000).withOpacity(0.7),
-                                    ),
-                                  ),
-                                  Container(
-                                    child: Text(
-                                      "TrickyBin",
+                              child: Container(
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "B",
                                       style: GoogleFonts.dancingScript(
                                           color: Color(0xff000000),
-                                          fontSize: 24,
+                                          fontSize: 30,
                                           fontWeight: FontWeight.bold),
                                       textAlign: TextAlign.center,
                                     ),
-                                  ),
-                                  Container(
-                                    child: Icon(
-                                      MdiIcons.feather,
-                                      color: Color(0xff3190FF),
+                                    Container(
+                                      child: Text(
+                                        "eta",
+                                        style: GoogleFonts.dancingScript(
+                                            color: Color(0xff000000),
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.bold),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
+                          ),
+                          SizedBox(
+                            height: 10.0,
                           ),
                           Padding(
                             padding:
@@ -100,20 +102,12 @@ class _HomeMainState extends State<HomeMain> {
                           Container(
                             child: FirstImagePost(),
                           ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
+                          //SizedBox(height: 15.0),
 
                           //ReelOne(),
-                          Container(
-                            child: SharedImage_post(),
-                          ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
-                          Container(
-                            child: MultipleImagePost(),
-                          )
+                          // Container(child: SharedImage_post()),
+                          SizedBox(height: 15.0),
+                          Container(child: MultipleImagePost()),
                         ],
                       ),
                     ),

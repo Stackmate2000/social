@@ -25,7 +25,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
             padding: const EdgeInsets.only(right: 15.0, left: 15.0),
             child: Container(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,49 +47,12 @@ class _FirstImagePostState extends State<FirstImagePost> {
                             width: 10.0,
                           ),
                           Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  child: Text(
-                                    "Talan Lipshutz",
-                                    style: GoogleFonts.roboto(
-                                        fontSize: 16,
-                                        color: Color(0xff000000),
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 4.0,
-                                ),
-                                Row(
-                                  children: [
-                                    Container(
-                                      child: Text(
-                                        "@Soloman",
-                                        style: GoogleFonts.roboto(
-                                            fontSize: 15,
-                                            color: Color(0xff000000)
-                                                .withOpacity(0.5),
-                                            fontWeight: FontWeight.w400),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 5.0,
-                                    ),
-                                    Container(
-                                      child: Text(
-                                        "posted with tags.",
-                                        style: GoogleFonts.roboto(
-                                            fontSize: 13,
-                                            color: Color(0xff000000)
-                                                .withOpacity(0.7),
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                            child: Text(
+                              "Talan Lipshutz",
+                              style: GoogleFonts.roboto(
+                                  fontSize: 16,
+                                  color: Color(0xff000000),
+                                  fontWeight: FontWeight.w500),
                             ),
                           ),
                         ],
@@ -100,55 +63,34 @@ class _FirstImagePostState extends State<FirstImagePost> {
                     ],
                   ),
                   SizedBox(
-                    height: 5.0,
+                    height: 7.0,
                   ),
-                  Container(
-                    child: Text(
-                      "Worlds best UI/UX design inspiration.Submit your work.Contact us for further details.Best faces in town",
-                      style: GoogleFonts.roboto(
-                          fontSize: 16,
-                          color: Color(0xff000000).withOpacity(0.7),
-                          letterSpacing: 0.2,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5.0,
-                  ),
-                  Row(
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                         child: Text(
-                          "Posted",
-                          style: GoogleFonts.roboto(
-                              fontSize: 15,
-                              color: Color(0xff000000).withOpacity(0.7),
-                              letterSpacing: 0.2,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5.0,
-                      ),
-                      Container(
-                        height: 3.0,
-                        width: 3.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xff000000).withOpacity(0.7),
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5.0,
-                      ),
-                      Container(
-                        child: Text(
-                          "2h ago",
-                          style: GoogleFonts.roboto(
-                              fontSize: 15,
-                              color: Color(0xff000000).withOpacity(0.7),
-                              letterSpacing: 0.2,
+                          "FINDING BALANCE",
+                          style: GoogleFonts.notoSans(
+                              fontSize: 16,
+                              color: Color(0xff000000),
                               fontWeight: FontWeight.w400),
+                          textAlign: TextAlign.start,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 3.0,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                        child: Text(
+                          "When I find myself in a creative block I always find it the most reenergizing to explore the way.",
+                          style: GoogleFonts.roboto(
+                              fontSize: 14,
+                              color: Color(0xff000000),
+                              fontWeight: FontWeight.w400),
+                          textAlign: TextAlign.start,
                         ),
                       ),
                     ],
@@ -167,8 +109,8 @@ class _FirstImagePostState extends State<FirstImagePost> {
                           child: Hero(
                             tag: 'firstpost',
                             child: Container(
-                              height: MediaQuery.of(context).size.height * 0.45,
-                              width: MediaQuery.of(context).size.width * 0.8,
+                              height: MediaQuery.of(context).size.height * 0.4,
+                              width: MediaQuery.of(context).size.width * 0.7,
                               decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(16)),
@@ -189,6 +131,28 @@ class _FirstImagePostState extends State<FirstImagePost> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    child: Icon(
+                                      CupertinoIcons.bubble_middle_bottom,
+                                      size: 20.0,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 3.0,
+                                  ),
+                                  Text(
+                                    "0",
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 14,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.7),
+                                        letterSpacing: 0.2,
+                                        fontWeight: FontWeight.w400),
+                                  )
+                                ],
+                              ),
                               Row(
                                 children: [
                                   Container(
@@ -302,28 +266,6 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                   ),
                                   Text(
                                     "$sharecount",
-                                    style: GoogleFonts.roboto(
-                                        fontSize: 14,
-                                        color:
-                                            Color(0xff000000).withOpacity(0.7),
-                                        letterSpacing: 0.2,
-                                        fontWeight: FontWeight.w400),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    child: Icon(
-                                      CupertinoIcons.bubble_middle_bottom,
-                                      size: 20.0,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 3.0,
-                                  ),
-                                  Text(
-                                    "5,423",
                                     style: GoogleFonts.roboto(
                                         fontSize: 14,
                                         color:

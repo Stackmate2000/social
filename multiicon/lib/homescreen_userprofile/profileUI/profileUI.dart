@@ -26,22 +26,6 @@ class _ProfileUIState extends State<ProfileUI> {
               color: Color(0xffF4F6F6),
             ),
           ),
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.only(right: 15.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(_nextRoute());
-                },
-                child: Align(
-                  alignment: Alignment.topRight,
-                  child: Icon(
-                    MdiIcons.menu,
-                  ),
-                ),
-              ),
-            ),
-          ),
           SingleChildScrollView(
             child: Align(
               alignment: Alignment.topLeft,

@@ -118,47 +118,6 @@ class _SharedImage_postState extends State<SharedImage_post> {
                   SizedBox(
                     height: 5.0,
                   ),
-                  Row(
-                    children: [
-                      Container(
-                        child: Text(
-                          "Posted",
-                          style: GoogleFonts.roboto(
-                              fontSize: 15,
-                              color: Color(0xff000000).withOpacity(0.7),
-                              letterSpacing: 0.2,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5.0,
-                      ),
-                      Container(
-                        height: 3.0,
-                        width: 3.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xff000000).withOpacity(0.7),
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5.0,
-                      ),
-                      Container(
-                        child: Text(
-                          "2h ago",
-                          style: GoogleFonts.roboto(
-                              fontSize: 15,
-                              color: Color(0xff000000).withOpacity(0.7),
-                              letterSpacing: 0.2,
-                              fontWeight: FontWeight.w400),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
                   Align(
                     alignment: Alignment.center,
                     child: Column(

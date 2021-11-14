@@ -64,33 +64,6 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                   SizedBox(
                                     height: 4.0,
                                   ),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        child: Text(
-                                          "@Soloman",
-                                          style: GoogleFonts.roboto(
-                                              fontSize: 15,
-                                              color: Color(0xff000000)
-                                                  .withOpacity(0.5),
-                                              fontWeight: FontWeight.w400),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 5.0,
-                                      ),
-                                      Container(
-                                        child: Text(
-                                          "posted.",
-                                          style: GoogleFonts.roboto(
-                                              fontSize: 13,
-                                              color: Color(0xff000000)
-                                                  .withOpacity(0.7),
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
                                 ],
                               ),
                             ),
@@ -102,58 +75,18 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                       ],
                     ),
                     SizedBox(
-                      height: 5.0,
+                      height: 7.0,
                     ),
-                    Container(
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                       child: Text(
-                        "Friends!!!",
+                        "When I find myself in a creative block I always find it the most reenergizing to explore the way.",
                         style: GoogleFonts.roboto(
-                            fontSize: 16,
-                            color: Color(0xff000000).withOpacity(0.7),
-                            letterSpacing: 0.2,
+                            fontSize: 14,
+                            color: Color(0xff000000),
                             fontWeight: FontWeight.w400),
+                        textAlign: TextAlign.start,
                       ),
-                    ),
-                    SizedBox(
-                      height: 5.0,
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          child: Text(
-                            "Posted",
-                            style: GoogleFonts.roboto(
-                                fontSize: 15,
-                                color: Color(0xff000000).withOpacity(0.7),
-                                letterSpacing: 0.2,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 5.0,
-                        ),
-                        Container(
-                          height: 3.0,
-                          width: 3.0,
-                          decoration: BoxDecoration(
-                            color: Color(0xff000000).withOpacity(0.7),
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 5.0,
-                        ),
-                        Container(
-                          child: Text(
-                            "7d ago",
-                            style: GoogleFonts.roboto(
-                                fontSize: 15,
-                                color: Color(0xff000000).withOpacity(0.7),
-                                letterSpacing: 0.2,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ),
-                      ],
                     ),
                     SizedBox(
                       height: 10.0,
@@ -258,6 +191,28 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      child: Icon(
+                                        CupertinoIcons.bubble_middle_bottom,
+                                        size: 20.0,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 3.0,
+                                    ),
+                                    Text(
+                                      "5",
+                                      style: GoogleFonts.roboto(
+                                          fontSize: 14,
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.7),
+                                          letterSpacing: 0.2,
+                                          fontWeight: FontWeight.w400),
+                                    )
+                                  ],
+                                ),
                                 Row(
                                   children: [
                                     Container(
@@ -371,28 +326,6 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                     ),
                                     Text(
                                       "$sharecount",
-                                      style: GoogleFonts.roboto(
-                                          fontSize: 14,
-                                          color: Color(0xff000000)
-                                              .withOpacity(0.7),
-                                          letterSpacing: 0.2,
-                                          fontWeight: FontWeight.w400),
-                                    )
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Container(
-                                      child: Icon(
-                                        CupertinoIcons.bubble_middle_bottom,
-                                        size: 20.0,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 3.0,
-                                    ),
-                                    Text(
-                                      "5,423",
                                       style: GoogleFonts.roboto(
                                           fontSize: 14,
                                           color: Color(0xff000000)
