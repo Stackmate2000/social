@@ -28,13 +28,29 @@ class _LoginState extends State<Login> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
-                    child: Text(
-                      "TrickyBin",
-                      style: GoogleFonts.dancingScript(
-                          color: Color(0xff000000),
-                          fontSize: 50,
-                          fontWeight: FontWeight.w500),
-                      textAlign: TextAlign.center,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "B",
+                          style: GoogleFonts.dancingScript(
+                              color: Color(0xff000000),
+                              fontSize: 50,
+                              fontWeight: FontWeight.w600),
+                          textAlign: TextAlign.center,
+                        ),
+                        Container(
+                          child: Text(
+                            "eta",
+                            style: GoogleFonts.dancingScript(
+                                color: Color(0xff000000),
+                                fontSize: 42,
+                                fontWeight: FontWeight.w600),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   SizedBox(

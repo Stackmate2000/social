@@ -11,6 +11,7 @@ class MultipleImageMenuButton extends StatefulWidget {
 class _MultipleImageMenuButtonState extends State<MultipleImageMenuButton> {
   modalBottomSheet(context) {
     showModalBottomSheet(
+        barrierColor: Color(0xfff4F6F6).withOpacity(0.9),
         backgroundColor: Colors.transparent,
         context: context,
         builder: (BuildContext context) {
@@ -28,9 +29,9 @@ class _MultipleImageMenuButtonState extends State<MultipleImageMenuButton> {
               children: [
                 Container(
                   height: 260,
-                  width: MediaQuery.of(context).size.width * 0.95,
+                  width: MediaQuery.of(context).size.width * 0.9,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Color(0xffFFFFFFF),
                     borderRadius: BorderRadius.all(
                       Radius.circular(16),
                     ),
@@ -109,9 +110,9 @@ class _MultipleImageMenuButtonState extends State<MultipleImageMenuButton> {
                 ),
                 Container(
                   height: 60,
-                  width: MediaQuery.of(context).size.width * 0.95,
+                  width: MediaQuery.of(context).size.width * 0.9,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Color(0xffFFFFFF),
                     borderRadius: BorderRadius.all(
                       Radius.circular(18),
                     ),

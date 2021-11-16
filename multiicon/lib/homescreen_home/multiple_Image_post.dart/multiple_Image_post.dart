@@ -125,10 +125,10 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(16)),
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    "assets/splash.jpg"),
-                                                fit: BoxFit.cover),
+                                            // image: DecorationImage(
+                                            //    image: AssetImage(
+                                            //       "assets/splash.jpg"),
+                                            //   fit: BoxFit.cover),//
                                             color: Colors.grey[600],
                                           ),
                                         ),
@@ -150,10 +150,10 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(16)),
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    "assets/girl.jpg"),
-                                                fit: BoxFit.cover),
+                                            // image: DecorationImage(
+                                            //    image: AssetImage(
+                                            //       "assets/girl.jpg"),
+                                            //
                                             color: Colors.grey[600],
                                           ),
                                         ),
@@ -169,10 +169,10 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(16)),
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    "assets/work.jpg"),
-                                                fit: BoxFit.cover),
+                                            // image: DecorationImage(
+                                            //    image: AssetImage(
+                                            //       "assets/work.jpg"),
+                                            //
                                             color: Colors.grey[600],
                                           ),
                                         ),
