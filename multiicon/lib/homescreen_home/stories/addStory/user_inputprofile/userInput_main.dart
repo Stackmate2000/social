@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:multiicon/homescreen_home/first_image_post/firstImage_post.dart';
-
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:multiicon/homescreen_home/stories/addStory/leftCorner_mediabuttons/storyMedia_buttons.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class UserInputMain extends StatefulWidget {
   @override
@@ -19,7 +17,7 @@ class _UserInputMainState extends State<UserInputMain> {
         context: context,
         builder: (BuildContext context) {
           return Container(
-            height: MediaQuery.of(context).size.height * 0.9,
+            height: MediaQuery.of(context).size.height * 0.95,
             decoration: BoxDecoration(
               color: Color(0xffFFFFFF),
               borderRadius: BorderRadius.only(
@@ -42,8 +40,11 @@ class _UserInputMainState extends State<UserInputMain> {
           children: [
             Container(
               decoration: BoxDecoration(
-                color: Color(0xff000000),
-              ),
+                  color: Color(0xff000000),
+                  image: DecorationImage(
+                    image: AssetImage("assets/splash.jpg"),
+                    fit: BoxFit.cover,
+                  )),
             ),
             SafeArea(
               child: Padding(
@@ -69,14 +70,14 @@ class _UserInputMainState extends State<UserInputMain> {
                           style: GoogleFonts.roboto(
                               color: Color(0xffFFFFFF),
                               fontSize: 15,
-                              fontWeight: FontWeight.w400),
+                              fontWeight: FontWeight.w500),
                         ),
                         GestureDetector(
                           onTap: () {
                             modalBottomSheet(context);
                           },
                           child: Icon(
-                            CupertinoIcons.settings,
+                            MdiIcons.cogOutline,
                             color: Color(0xffFFFFFF).withOpacity(0.9),
                           ),
                         ),
@@ -85,7 +86,16 @@ class _UserInputMainState extends State<UserInputMain> {
                   ),
                 ),
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 15.0, top: 0.0, right: 0.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  child: StoryMediaButtons(),
+                ),
+              ),
+            ),
           ],
         ),
       ),
