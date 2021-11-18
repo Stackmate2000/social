@@ -36,10 +36,12 @@ class _FirstImagePostState extends State<FirstImagePost> {
                             height: 50,
                             width: 50,
                             decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(16.0),
+                              ),
                               image: DecorationImage(
                                   image: AssetImage("assets/splash.jpg"),
                                   fit: BoxFit.cover),
-                              shape: BoxShape.circle,
                               color: Color(0xffADB3BF),
                             ),
                           ),
@@ -47,12 +49,27 @@ class _FirstImagePostState extends State<FirstImagePost> {
                             width: 10.0,
                           ),
                           Container(
-                            child: Text(
-                              "Talan Lipshutz",
-                              style: GoogleFonts.roboto(
-                                  fontSize: 16,
-                                  color: Color(0xff000000),
-                                  fontWeight: FontWeight.w500),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Rovira james",
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 16,
+                                      color: Color(0xff000000).withOpacity(0.9),
+                                      fontWeight: FontWeight.w400),
+                                ),
+                                SizedBox(
+                                  height: 2.0,
+                                ),
+                                Text(
+                                  "netherland",
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 12,
+                                      color: Color(0xff000000).withOpacity(0.5),
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
                             ),
                           ),
                         ],
@@ -66,31 +83,31 @@ class _FirstImagePostState extends State<FirstImagePost> {
                     height: 7.0,
                   ),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                         child: Text(
                           "FINDING BALANCE",
-                          style: GoogleFonts.notoSans(
-                              fontSize: 16,
+                          style: GoogleFonts.montserrat(
+                              fontSize: 15,
                               color: Color(0xff000000),
-                              fontWeight: FontWeight.w400),
-                          textAlign: TextAlign.start,
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.center,
                         ),
                       ),
                       SizedBox(
-                        height: 3.0,
+                        height: 10.0,
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                         child: Text(
                           "When I find myself in a creative block I always find it the most reenergizing to explore the way.",
-                          style: GoogleFonts.roboto(
-                              fontSize: 14,
+                          style: GoogleFonts.montserrat(
+                              fontSize: 13,
                               color: Color(0xff000000),
                               fontWeight: FontWeight.w400),
-                          textAlign: TextAlign.start,
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ],

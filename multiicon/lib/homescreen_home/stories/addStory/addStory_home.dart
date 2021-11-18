@@ -28,16 +28,10 @@ class _AddStoryHomeState extends State<AddStoryHome> {
                   height: 70,
                   width: 70,
                   decoration: BoxDecoration(
-                      shape: BoxShape.circle, color: Color(0xffADB3BF)),
-                  child: Center(
-                    child: Container(
-                      height: 35,
-                      width: 35,
-                      child: SvgPicture.asset(
-                        "assets/svg/personfill.svg",
-                        color: Colors.white.withOpacity(0.6),
-                      ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(16.0),
                     ),
+                    color: Color(0xffADB3BF),
                   ),
                 ),
               ),
@@ -57,7 +51,7 @@ class _AddStoryHomeState extends State<AddStoryHome> {
                         height: 20,
                         width: 20,
                         decoration: BoxDecoration(
-                            color: Color(0xff3190FF), shape: BoxShape.circle),
+                            color: Color(0xff896ae4), shape: BoxShape.circle),
                         child: Center(
                           child: Icon(
                             MdiIcons.plus,
@@ -79,10 +73,10 @@ class _AddStoryHomeState extends State<AddStoryHome> {
         Container(
           child: Text(
             "Add story",
-            style: GoogleFonts.roboto(
+            style: GoogleFonts.montserrat(
                 fontSize: 14,
-                color: Color(0xff000000).withOpacity(0.7),
-                fontWeight: FontWeight.w400),
+                color: Color(0xff000000).withOpacity(0.6),
+                fontWeight: FontWeight.w500),
           ),
         ),
       ],

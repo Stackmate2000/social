@@ -38,11 +38,13 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                               height: 50,
                               width: 50,
                               decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(16.0),
+                                ),
                                 image: DecorationImage(
-                                    image: AssetImage("assets/splash.jpg"),
+                                    image: AssetImage("assets/girl.jpg"),
                                     fit: BoxFit.cover),
-                                shape: BoxShape.circle,
-                                color: Colors.grey[600],
+                                color: Color(0xffADB3BF),
                               ),
                             ),
                             SizedBox(
@@ -52,17 +54,24 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Container(
-                                    child: Text(
-                                      "Talan Lipshutz",
-                                      style: GoogleFonts.roboto(
-                                          fontSize: 16,
-                                          color: Color(0xff000000),
-                                          fontWeight: FontWeight.w500),
-                                    ),
+                                  Text(
+                                    "Jonason mike",
+                                    style: GoogleFonts.montserrat(
+                                        fontSize: 16,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.9),
+                                        fontWeight: FontWeight.w400),
                                   ),
                                   SizedBox(
-                                    height: 4.0,
+                                    height: 2.0,
+                                  ),
+                                  Text(
+                                    "United States",
+                                    style: GoogleFonts.montserrat(
+                                        fontSize: 12,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.5),
+                                        fontWeight: FontWeight.w400),
                                   ),
                                 ],
                               ),
@@ -81,11 +90,11 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                       padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                       child: Text(
                         "When I find myself in a creative block I always find it the most reenergizing to explore the way.",
-                        style: GoogleFonts.roboto(
-                            fontSize: 14,
+                        style: GoogleFonts.montserrat(
+                            fontSize: 13,
                             color: Color(0xff000000),
                             fontWeight: FontWeight.w400),
-                        textAlign: TextAlign.start,
+                        textAlign: TextAlign.center,
                       ),
                     ),
                     SizedBox(

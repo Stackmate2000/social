@@ -147,11 +147,12 @@ class _FollowingStoryOneState extends State<FollowingStoryOne> {
             height: 70,
             width: 70,
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                Radius.circular(16.0),
+              ),
+              image: DecorationImage(
+                  image: AssetImage("assets/splash.jpg"), fit: BoxFit.cover),
               color: Color(0xffADB3BF),
-              shape: BoxShape.circle,
-            ),
-            child: CircleAvatar(
-              backgroundImage: AssetImage("assets/splash.jpg"),
             ),
           ),
           SizedBox(
@@ -160,10 +161,10 @@ class _FollowingStoryOneState extends State<FollowingStoryOne> {
           Container(
             child: Text(
               "Talana",
-              style: GoogleFonts.roboto(
+              style: GoogleFonts.raleway(
                   fontSize: 14,
                   color: Color(0xff000000),
-                  fontWeight: FontWeight.w400),
+                  fontWeight: FontWeight.w600),
             ),
           ),
         ],
