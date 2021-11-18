@@ -31,7 +31,7 @@ class _LikedImageActivityState extends State<LikedImageActivity> {
           ),
         ],
         image: DecorationImage(
-            image: AssetImage("assets/people.jpg"), fit: BoxFit.cover),
+            image: AssetImage("assets/splash.jpg"), fit: BoxFit.cover),
       ),
     );
   }

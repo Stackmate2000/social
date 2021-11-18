@@ -40,7 +40,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                 Radius.circular(16.0),
                               ),
                               image: DecorationImage(
-                                  image: AssetImage("assets/splash.jpg"),
+                                  image: AssetImage("assets/work.jpg"),
                                   fit: BoxFit.cover),
                               color: Color(0xffADB3BF),
                             ),

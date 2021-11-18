@@ -164,14 +164,12 @@ class _ActivityContainersState extends State<ActivityContainers> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    alignment: Alignment.centerLeft,
                     child: Text(
-                      "_hfkuelofns_jj_",
-                      style: GoogleFonts.roboto(
-                          color: Colors.blueGrey[900],
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500),
-                      textAlign: TextAlign.left,
+                      "Rovira james",
+                      style: GoogleFonts.montserrat(
+                          fontSize: 14,
+                          color: Color(0xff000000).withOpacity(0.9),
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                   SizedBox(height: 2.0),
@@ -179,10 +177,11 @@ class _ActivityContainersState extends State<ActivityContainers> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "followed you,checkout his profile.",
-                      style: GoogleFonts.roboto(
-                          color: Colors.blueGrey[500],
+                      style: GoogleFonts.montserrat(
                           fontSize: 13,
+                          color: Color(0xff000000),
                           fontWeight: FontWeight.w400),
+                      textAlign: TextAlign.start,
                       maxLines: 2,
                     ),
                   ),
@@ -193,8 +192,8 @@ class _ActivityContainersState extends State<ActivityContainers> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "9 Jul 2021,11.34 PM ",
-                      style: GoogleFonts.roboto(
-                          color: Colors.blueGrey[500],
+                      style: GoogleFonts.montserrat(
+                          color: Color(0xff000000),
                           fontSize: 11,
                           fontWeight: FontWeight.w400),
                       maxLines: 2,

@@ -165,25 +165,24 @@ class _TaggedActivityContainersState extends State<TaggedActivityContainers> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    alignment: Alignment.centerLeft,
                     child: Text(
-                      "_Earth_",
-                      style: GoogleFonts.roboto(
-                          color: Colors.blueGrey[900],
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500),
-                      textAlign: TextAlign.left,
+                      "Rovira james",
+                      style: GoogleFonts.montserrat(
+                          fontSize: 14,
+                          color: Color(0xff000000).withOpacity(0.9),
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                   SizedBox(height: 2.0),
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "tagged you with some others on his picture.",
-                      style: GoogleFonts.roboto(
-                          color: Colors.blueGrey[500],
+                      "tagged you in a post",
+                      style: GoogleFonts.montserrat(
                           fontSize: 13,
+                          color: Color(0xff000000),
                           fontWeight: FontWeight.w400),
+                      textAlign: TextAlign.start,
                       maxLines: 2,
                     ),
                   ),
@@ -193,9 +192,9 @@ class _TaggedActivityContainersState extends State<TaggedActivityContainers> {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "17 Jul 2021,11.34 PM ",
-                      style: GoogleFonts.roboto(
-                          color: Colors.blueGrey[500],
+                      "9 Jul 2021,11.34 PM ",
+                      style: GoogleFonts.montserrat(
+                          color: Color(0xff000000),
                           fontSize: 11,
                           fontWeight: FontWeight.w400),
                       maxLines: 2,

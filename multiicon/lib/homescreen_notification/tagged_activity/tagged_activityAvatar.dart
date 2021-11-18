@@ -27,10 +27,12 @@ class _TaggedActivityAvatarState extends State<TaggedActivityAvatar> {
             height: 50,
             width: 50,
             decoration: BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
+              borderRadius: BorderRadius.all(
+                Radius.circular(16.0),
+              ),
               image: DecorationImage(
-                  image: AssetImage("assets/people.jpg"), fit: BoxFit.cover),
+                  image: AssetImage("assets/work.jpg"), fit: BoxFit.cover),
+              color: Color(0xffADB3BF),
             ),
           ),
         ],

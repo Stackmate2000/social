@@ -166,25 +166,24 @@ class _LikedActivityContainerState extends State<LikedActivityContainer> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    alignment: Alignment.centerLeft,
                     child: Text(
-                      "Cristino Alabama",
-                      style: GoogleFonts.roboto(
-                          color: Colors.blueGrey[900],
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500),
-                      textAlign: TextAlign.left,
+                      "Kriss Jona",
+                      style: GoogleFonts.montserrat(
+                          fontSize: 14,
+                          color: Color(0xff000000).withOpacity(0.9),
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                   SizedBox(height: 2.0),
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "liked your image.",
-                      style: GoogleFonts.roboto(
-                          color: Colors.blueGrey[500],
+                      "liked your photo.",
+                      style: GoogleFonts.montserrat(
                           fontSize: 13,
+                          color: Color(0xff000000),
                           fontWeight: FontWeight.w400),
+                      textAlign: TextAlign.start,
                       maxLines: 2,
                     ),
                   ),
@@ -194,9 +193,9 @@ class _LikedActivityContainerState extends State<LikedActivityContainer> {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "17 Jul 2021,11.34 PM ",
-                      style: GoogleFonts.roboto(
-                          color: Colors.blueGrey[500],
+                      "9 Jul 2021,11.34 PM ",
+                      style: GoogleFonts.montserrat(
+                          color: Color(0xff000000),
                           fontSize: 11,
                           fontWeight: FontWeight.w400),
                       maxLines: 2,
