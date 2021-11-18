@@ -60,19 +60,19 @@ class _FollowersViewState extends State<FollowersView> {
                                             children: [
                                               Text(
                                                 "67",
-                                                style: GoogleFonts.karla(
+                                                style: GoogleFonts.montserrat(
                                                   fontSize: 24,
                                                   color: Color(0xff000000),
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                 ),
                                               ),
                                               Text(
                                                 "Photo",
-                                                style: GoogleFonts.karla(
-                                                  fontSize: 16,
+                                                style: GoogleFonts.montserrat(
+                                                  fontSize: 15,
                                                   color: Color(0xff000000)
                                                       .withOpacity(0.5),
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                 ),
                                               ),
                                             ],
@@ -103,19 +103,19 @@ class _FollowersViewState extends State<FollowersView> {
                                             children: [
                                               Text(
                                                 "326 K",
-                                                style: GoogleFonts.karla(
+                                                style: GoogleFonts.montserrat(
                                                   fontSize: 24,
                                                   color: Color(0xff000000),
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                 ),
                                               ),
                                               Text(
                                                 "following",
-                                                style: GoogleFonts.karla(
-                                                  fontSize: 16,
+                                                style: GoogleFonts.montserrat(
+                                                  fontSize: 15,
                                                   color: Color(0xff000000)
                                                       .withOpacity(0.5),
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                 ),
                                               ),
                                             ],
@@ -146,19 +146,19 @@ class _FollowersViewState extends State<FollowersView> {
                                             children: [
                                               Text(
                                                 "7",
-                                                style: GoogleFonts.karla(
+                                                style: GoogleFonts.montserrat(
                                                   fontSize: 24,
                                                   color: Color(0xff000000),
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                 ),
                                               ),
                                               Text(
                                                 "follower",
-                                                style: GoogleFonts.karla(
-                                                  fontSize: 16,
+                                                style: GoogleFonts.montserrat(
+                                                  fontSize: 15,
                                                   color: Color(0xff000000)
                                                       .withOpacity(0.5),
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                 ),
                                               ),
                                             ],
@@ -184,11 +184,10 @@ class _FollowersViewState extends State<FollowersView> {
                       Container(
                         child: Text(
                           "We make designs driven development of your web product.",
-                          style: GoogleFonts.karla(
-                            fontSize: 16,
-                            color: Color(0xff000000),
-                            fontWeight: FontWeight.w500,
-                          ),
+                          style: GoogleFonts.montserrat(
+                              fontSize: 13,
+                              color: Color(0xff000000),
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
                       SizedBox(
@@ -197,8 +196,8 @@ class _FollowersViewState extends State<FollowersView> {
                       Container(
                         child: Text(
                           "Born 3 of Febuary",
-                          style: GoogleFonts.roboto(
-                            fontSize: 16,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 13,
                             color: Color(0xff000000),
                             fontWeight: FontWeight.w400,
                           ),
@@ -210,8 +209,8 @@ class _FollowersViewState extends State<FollowersView> {
                       Container(
                         child: Text(
                           "www.websitedesigner@hotmail.com",
-                          style: GoogleFonts.roboto(
-                            fontSize: 16,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 13,
                             color: Color(0xff3190FF),
                             fontWeight: FontWeight.w400,
                           ),

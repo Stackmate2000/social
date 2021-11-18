@@ -88,7 +88,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
                       Padding(
                         padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                         child: Text(
-                          "FINDING BALANCE",
+                          "Exploring",
                           style: GoogleFonts.montserrat(
                               fontSize: 15,
                               color: Color(0xff000000),
@@ -132,7 +132,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(16)),
                                 image: DecorationImage(
-                                  image: AssetImage("assets/splash.jpg"),
+                                  image: AssetImage("assets/nigga.jpg"),
                                   fit: BoxFit.cover,
                                 ),
                                 color: Color(0xffADB3BF),

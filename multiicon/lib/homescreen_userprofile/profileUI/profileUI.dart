@@ -55,12 +55,11 @@ class _ProfileUIState extends State<ProfileUI> {
                             width: 15.0,
                           ),
                           Text(
-                            "moloi_26",
-                            style: GoogleFonts.roboto(
-                              fontSize: 18,
-                              color: Color(0xff000000),
-                              fontWeight: FontWeight.w500,
-                            ),
+                            "Jonasson mike",
+                            style: GoogleFonts.montserrat(
+                                fontSize: 16,
+                                color: Color(0xff000000).withOpacity(0.9),
+                                fontWeight: FontWeight.w400),
                           ),
                         ],
                       ),
