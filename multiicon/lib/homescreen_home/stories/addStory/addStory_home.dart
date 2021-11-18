@@ -25,19 +25,24 @@ class _AddStoryHomeState extends State<AddStoryHome> {
                   Navigator.of(context).push(_nextRoute());
                 },
                 child: Container(
-                  height: 70,
-                  width: 70,
+                  height: 100,
+                  width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(16.0),
                     ),
                     color: Color(0xffADB3BF),
                   ),
+                  child: Icon(
+                    CupertinoIcons.person_fill,
+                    color: Color(0xff000000).withOpacity(0.3),
+                    size: 80,
+                  ),
                 ),
               ),
               Positioned(
                 bottom: 0,
-                right: e - 20,
+                right: e - 45,
                 left: 30,
                 child: SizedBox(
                   child: CircleAvatar(

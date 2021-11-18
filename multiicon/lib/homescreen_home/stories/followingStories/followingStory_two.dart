@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FollowingStoryOne extends StatefulWidget {
+class FollowingStoryTwo extends StatefulWidget {
   @override
-  _FollowingStoryOneState createState() => _FollowingStoryOneState();
+  _FollowingStoryTwoState createState() => _FollowingStoryTwoState();
 }
 
-class _FollowingStoryOneState extends State<FollowingStoryOne> {
+class _FollowingStoryTwoState extends State<FollowingStoryTwo> {
   modalBottomSheet(context) {
     showModalBottomSheet(
         backgroundColor: Colors.transparent,
@@ -151,7 +151,7 @@ class _FollowingStoryOneState extends State<FollowingStoryOne> {
                 Radius.circular(16.0),
               ),
               image: DecorationImage(
-                  image: AssetImage("assets/girl.jpg"), fit: BoxFit.cover),
+                  image: AssetImage("assets/splash.jpg"), fit: BoxFit.cover),
               color: Color(0xffADB3BF),
             ),
           ),
@@ -160,7 +160,7 @@ class _FollowingStoryOneState extends State<FollowingStoryOne> {
           ),
           Container(
             child: Text(
-              "Kylie",
+              "Joseph",
               style: GoogleFonts.raleway(
                   fontSize: 14,
                   color: Color(0xff000000),

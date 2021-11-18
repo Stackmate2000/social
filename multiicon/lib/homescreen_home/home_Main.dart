@@ -8,6 +8,7 @@ import 'package:multiicon/homescreen_home/reelscover_home/reelOne.dart';
 import 'package:multiicon/homescreen_home/sharedImage_post/sharedImage_post.dart';
 import 'package:multiicon/homescreen_home/stories/addStory/addStory_home.dart';
 import 'package:multiicon/homescreen_home/stories/followingStories/followingStory_one.dart';
+import 'package:multiicon/homescreen_home/stories/followingStories/followingStory_two.dart';
 
 class HomeMain extends StatefulWidget {
   @override
@@ -51,54 +52,44 @@ class _HomeMainState extends State<HomeMain> {
                                   BoxDecoration(color: Colors.transparent),
                               child: Container(
                                 child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(
-                                      "B",
-                                      style: GoogleFonts.dancingScript(
-                                          color: Color(0xff000000),
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold),
-                                      textAlign: TextAlign.center,
+                                    Icon(MdiIcons.text),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "B",
+                                          style: GoogleFonts.dancingScript(
+                                              color: Color(0xff000000),
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.bold),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        Container(
+                                          child: Text(
+                                            "eta",
+                                            style: GoogleFonts.dancingScript(
+                                                color: Color(0xff000000),
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.bold),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                    Container(
-                                      child: Text(
-                                        "eta",
-                                        style: GoogleFonts.dancingScript(
-                                            color: Color(0xff000000),
-                                            fontSize: 24,
-                                            fontWeight: FontWeight.bold),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ),
+                                    Icon(Icons.send),
                                   ],
                                 ),
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.only(left: 10.0, right: 10),
-                            child: SingleChildScrollView(
-                              physics: BouncingScrollPhysics(),
-                              child: Container(
-                                child: Row(
-                                  children: [
-                                    AddStoryHome(),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    FollowingStoryOne(),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 10.0),
+
+                          SizedBox(height: 15.0),
                           Container(
                             child: FirstImagePost(),
                           ),
