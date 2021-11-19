@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:multiicon/homescreen_home/stories/addStory/user_inputprofile/userInput_main.dart';
 import 'package:multiicon/homescreen_home/stories/followingStories/followingStory_one.dart';
 import 'package:multiicon/homescreen_home/stories/followingStories/followingStory_two.dart';
+import 'package:multiicon/homescreen_home/stories/followingstory_viewed/followingstoryViewed_one.dart';
 
 class StoryMain extends StatefulWidget {
   @override
@@ -204,7 +205,7 @@ class _StoryMainState extends State<StoryMain> {
                         ),
                       ),
                       SizedBox(
-                        height: 15.0,
+                        height: 25.0,
                       ),
                       Container(
                         child: Text(
@@ -216,13 +217,29 @@ class _StoryMainState extends State<StoryMain> {
                         ),
                       ),
                       SizedBox(
-                        height: 15.0,
+                        height: 10.0,
                       ),
                       FollowingStoryOne(),
                       SizedBox(
                         height: 10.0,
                       ),
                       FollowingStoryTwo(),
+                      SizedBox(
+                        height: 25.0,
+                      ),
+                      Container(
+                        child: Text(
+                          "Viewed stories",
+                          style: GoogleFonts.montserrat(
+                              fontSize: 16,
+                              color: Color(0xff000000).withOpacity(0.9),
+                              fontWeight: FontWeight.w400),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      FollowingStoryViewedOne(),
                     ],
                   ),
                 ),
