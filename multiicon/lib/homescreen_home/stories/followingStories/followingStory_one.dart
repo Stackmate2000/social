@@ -141,11 +141,11 @@ class _FollowingStoryOneState extends State<FollowingStoryOne> {
       onTap: () {
         modalBottomSheet(context);
       },
-      child: Column(
+      child: Row(
         children: [
           Container(
-            height: 100,
-            width: 100,
+            height: 60,
+            width: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(16.0),
@@ -156,15 +156,30 @@ class _FollowingStoryOneState extends State<FollowingStoryOne> {
             ),
           ),
           SizedBox(
-            height: 4.0,
+            width: 10.0,
           ),
           Container(
-            child: Text(
-              "Kylie",
-              style: GoogleFonts.raleway(
-                  fontSize: 14,
-                  color: Color(0xff000000),
-                  fontWeight: FontWeight.w600),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "kylie",
+                  style: GoogleFonts.montserrat(
+                      fontSize: 16,
+                      color: Color(0xff000000).withOpacity(0.9),
+                      fontWeight: FontWeight.w400),
+                ),
+                SizedBox(
+                  height: 2.0,
+                ),
+                Text(
+                  "3min ago",
+                  style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      color: Color(0xff000000).withOpacity(0.5),
+                      fontWeight: FontWeight.w400),
+                ),
+              ],
             ),
           ),
         ],

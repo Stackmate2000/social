@@ -9,6 +9,7 @@ import 'package:multiicon/homescreen_home/sharedImage_post/sharedImage_post.dart
 import 'package:multiicon/homescreen_home/stories/addStory/addStory_home.dart';
 import 'package:multiicon/homescreen_home/stories/followingStories/followingStory_one.dart';
 import 'package:multiicon/homescreen_home/stories/followingStories/followingStory_two.dart';
+import 'package:multiicon/homescreen_home/stories/story_Main.dart';
 
 class HomeMain extends StatefulWidget {
   @override
@@ -55,7 +56,15 @@ class _HomeMainState extends State<HomeMain> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Icon(MdiIcons.text),
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context)
+                                            .push(_nextRoute());
+                                      },
+                                      child: Container(
+                                        child: Icon(MdiIcons.text),
+                                      ),
+                                    ),
                                     Row(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.end,
@@ -82,7 +91,7 @@ class _HomeMainState extends State<HomeMain> {
                                         ),
                                       ],
                                     ),
-                                    Icon(Icons.send),
+                                    Container(child: Icon(Icons.send)),
                                   ],
                                 ),
                               ),
@@ -111,4 +120,23 @@ class _HomeMainState extends State<HomeMain> {
       ),
     );
   }
+}
+
+Route _nextRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => StoryMain(),
+    transitionDuration: Duration(milliseconds: 3000),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(-1.0, 0.0);
+      var end = Offset.zero;
+      var curve = Curves.easeIn;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      // ignore: unused_local_variable
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
 }
