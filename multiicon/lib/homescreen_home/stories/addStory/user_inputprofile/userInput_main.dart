@@ -10,25 +10,6 @@ class UserInputMain extends StatefulWidget {
 }
 
 class _UserInputMainState extends State<UserInputMain> {
-  modalBottomSheet(context) {
-    showModalBottomSheet(
-        backgroundColor: Colors.transparent,
-        isScrollControlled: true,
-        context: context,
-        builder: (BuildContext context) {
-          return Container(
-            height: MediaQuery.of(context).size.height * 0.95,
-            decoration: BoxDecoration(
-              color: Color(0xffFFFFFF),
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30.0),
-                topRight: Radius.circular(30.0),
-              ),
-            ),
-          );
-        });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,11 +21,12 @@ class _UserInputMainState extends State<UserInputMain> {
           children: [
             Container(
               decoration: BoxDecoration(
-                  color: Color(0xff000000),
-                  image: DecorationImage(
-                    image: AssetImage("assets/splash.jpg"),
-                    fit: BoxFit.cover,
-                  )),
+                color: Color(0xff000000),
+                // image: DecorationImage(
+                //   image: AssetImage("assets/splash.jpg"),
+                // fit: BoxFit.cover,
+                // ),
+              ),
             ),
             SafeArea(
               child: Padding(
@@ -73,9 +55,7 @@ class _UserInputMainState extends State<UserInputMain> {
                               fontWeight: FontWeight.w500),
                         ),
                         GestureDetector(
-                          onTap: () {
-                            modalBottomSheet(context);
-                          },
+                          onTap: () {},
                           child: Icon(
                             MdiIcons.cogOutline,
                             color: Color(0xffFFFFFF).withOpacity(0.9),
