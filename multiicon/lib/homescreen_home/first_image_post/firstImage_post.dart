@@ -87,13 +87,15 @@ class _FirstImagePostState extends State<FirstImagePost> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-                        child: Text(
-                          "Exploring",
-                          style: GoogleFonts.montserrat(
-                              fontSize: 15,
-                              color: Color(0xff000000),
-                              fontWeight: FontWeight.w500),
-                          textAlign: TextAlign.center,
+                        child: Container(
+                          child: Text(
+                            "Exploring",
+                            style: GoogleFonts.montserrat(
+                                fontSize: 15,
+                                color: Color(0xff000000),
+                                fontWeight: FontWeight.w500),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -101,13 +103,15 @@ class _FirstImagePostState extends State<FirstImagePost> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-                        child: Text(
-                          "When I find myself in a creative block I always find it the most reenergizing to explore the way.",
-                          style: GoogleFonts.montserrat(
-                              fontSize: 13,
-                              color: Color(0xff000000),
-                              fontWeight: FontWeight.w400),
-                          textAlign: TextAlign.center,
+                        child: Container(
+                          child: Text(
+                            "When I find myself in a creative block I always find it the most reenergizing to explore the way.",
+                            style: GoogleFonts.montserrat(
+                                fontSize: 13,
+                                color: Color(0xff000000),
+                                fontWeight: FontWeight.w400),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ],

@@ -29,9 +29,67 @@ class _UploadPageTwoState extends State<UploadPageTwo> {
                       offset: Offset(7.0, 10.0))
                 ],
                 color: Color(0xffFFFFFF),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(21.0),
-                ),
+              ),
+              child: Stack(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(color: Colors.white),
+                    child: Container(
+                      height: MediaQuery.of(context).size.height,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/nigga.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                        color: Color(0xffADB3BF),
+                      ),
+                      child: Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 15.0, right: 15.0, top: 30.0),
+                            child: Container(
+                              alignment: Alignment.center,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    child: Text(
+                                      "THE BETTER SUMMER",
+                                      style: GoogleFonts.montserrat(
+                                          fontSize: 14,
+                                          color: Color(0xff000000),
+                                          fontWeight: FontWeight.w400),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5.0,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0, right: 15.0),
+                                    child: Container(
+                                      child: Text(
+                                        "Endless Adventure",
+                                        style: GoogleFonts.dancingScript(
+                                            fontSize: 26.0,
+                                            color: Color(0xff000000),
+                                            fontWeight: FontWeight.w500),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
