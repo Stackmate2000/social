@@ -29,13 +29,18 @@ class _UploadPhotoMainState extends State<UploadPhotoMain> {
                 padding: const EdgeInsets.only(right: 15.0, top: 15.0),
                 child: Align(
                   alignment: Alignment.topRight,
-                  child: Container(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                          color: Color(0xffFFFFFF).withOpacity(0.1)),
                       child: Icon(
-                        CupertinoIcons.clear,
+                        MdiIcons.close,
                         color: Color(0xffFFFFFF).withOpacity(0.5),
                       ),
                     ),
