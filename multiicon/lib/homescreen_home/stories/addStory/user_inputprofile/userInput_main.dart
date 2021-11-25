@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:multiicon/homescreen_home/stories/addStory/leftCorner_mediabuttons/storyMedia_buttons.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/homescreen_home/stories/addStory/uploadstorytypes/storyTypes.dart';
 
 class UserInputMain extends StatefulWidget {
