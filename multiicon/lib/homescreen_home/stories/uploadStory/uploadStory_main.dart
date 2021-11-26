@@ -59,117 +59,109 @@ class _UploadStoryMainState extends State<UploadStoryMain> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Container(
-                      child: Container(
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 15.0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                child: GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      _index = 0;
-                                    });
-                                  },
-                                  child: _index == 0
-                                      ? Container(
-                                          child: Icon(
-                                            MdiIcons.brush,
-                                            color: Colors.white,
-                                          ),
-                                        )
-                                      : Container(
-                                          child: Icon(
-                                            MdiIcons.brush,
-                                            color:
-                                                Colors.white.withOpacity(0.5),
-                                          ),
-                                        ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20.0,
-                              ),
-                              Container(
-                                child: GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      _index = 1;
-                                    });
-                                  },
-                                  child: _index == 1
-                                      ? Container(
-                                          child: Icon(
-                                            MdiIcons.brush,
-                                            color: Colors.white,
-                                          ),
-                                        )
-                                      : Container(
-                                          child: Icon(
-                                            MdiIcons.brush,
-                                            color:
-                                                Colors.white.withOpacity(0.5),
-                                          ),
-                                        ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20.0,
-                              ),
-                              Container(
-                                child: GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      _index = 2;
-                                    });
-                                  },
-                                  child: _index == 2
-                                      ? Container(
-                                          child: Icon(
-                                            MdiIcons.brush,
-                                            color: Colors.white,
-                                          ),
-                                        )
-                                      : Container(
-                                          child: Icon(
-                                            MdiIcons.brush,
-                                            color:
-                                                Colors.white.withOpacity(0.5),
-                                          ),
-                                        ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20.0,
-                              ),
-                              Container(
-                                child: GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      _index = 3;
-                                    });
-                                  },
-                                  child: _index == 3
-                                      ? Container(
-                                          child: Icon(
-                                            MdiIcons.brush,
-                                            color: Colors.white,
-                                          ),
-                                        )
-                                      : Container(
-                                          child: Icon(
-                                            MdiIcons.brush,
-                                            color:
-                                                Colors.white.withOpacity(0.5),
-                                          ),
-                                        ),
-                                ),
-                              ),
-                            ],
+                      width: MediaQuery.of(context).size.width * 0.1,
+                      alignment: Alignment.center,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _index = 0;
+                                });
+                              },
+                              child: _index == 0
+                                  ? Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  : Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white.withOpacity(0.5),
+                                      ),
+                                    ),
+                            ),
                           ),
-                        ),
+                          SizedBox(
+                            height: 20.0,
+                          ),
+                          Container(
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _index = 1;
+                                });
+                              },
+                              child: _index == 1
+                                  ? Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  : Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white.withOpacity(0.5),
+                                      ),
+                                    ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20.0,
+                          ),
+                          Container(
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _index = 2;
+                                });
+                              },
+                              child: _index == 2
+                                  ? Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  : Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white.withOpacity(0.5),
+                                      ),
+                                    ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20.0,
+                          ),
+                          Container(
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _index = 3;
+                                });
+                              },
+                              child: _index == 3
+                                  ? Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  : Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white.withOpacity(0.5),
+                                      ),
+                                    ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -179,25 +171,29 @@ class _UploadStoryMainState extends State<UploadStoryMain> {
                       padding: const EdgeInsets.only(
                           bottom: 15.0, left: 15.0, right: 15.0),
                       child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(12.0)),
-                              color: Color(0xffFFFFFF),
-                            ),
-                          ),
-                          Container(
-                            child: Icon(
-                              CupertinoIcons.camera_rotate_fill,
-                              size: 30,
-                              color: Color(0xffFFFFFF),
-                            ),
-                          ),
+                          _index == 0
+                              ? Container()
+                              : Container(
+                                  height: 40,
+                                  width: 40,
+                                  decoration: BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(12.0)),
+                                    color: Color(0xffFFFFFF),
+                                  ),
+                                ),
+                          _index == 0
+                              ? Container()
+                              : Container(
+                                  child: Icon(
+                                    CupertinoIcons.camera_rotate_fill,
+                                    size: 30,
+                                    color: Color(0xffFFFFFF),
+                                  ),
+                                ),
                         ],
                       ),
                     ),

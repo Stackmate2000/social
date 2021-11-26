@@ -33,13 +33,6 @@ class _StoryTypesState extends State<StoryTypes> {
                       Color(0xff896ae4),
                       Color(0xff937cdc),
                     ], begin: Alignment.topRight, end: Alignment.bottomLeft),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Color(0xff000000).withOpacity(0.1),
-                          blurRadius: 4.0,
-                          spreadRadius: 4.0,
-                          offset: Offset(7.0, 6.0))
-                    ],
                   ),
                   child: Stack(
                     children: [
