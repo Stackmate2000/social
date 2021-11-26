@@ -56,9 +56,14 @@ class _ProfileUIState extends State<ProfileUI> {
                                     fontWeight: FontWeight.w500),
                               ),
                             ),
-                            Icon(
-                              MdiIcons.dotsHorizontal,
-                              color: Color(0xff000000).withOpacity(0.7),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(_nextRoute());
+                              },
+                              child: Icon(
+                                MdiIcons.dotsHorizontal,
+                                color: Color(0xff000000).withOpacity(0.7),
+                              ),
                             ),
                           ],
                         ),
