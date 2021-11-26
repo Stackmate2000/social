@@ -51,22 +51,28 @@ class _FirstImagePostState extends State<FirstImagePost> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Rovira james",
-                                  style: GoogleFonts.montserrat(
-                                      fontSize: 16,
-                                      color: Color(0xff000000).withOpacity(0.9),
-                                      fontWeight: FontWeight.w400),
+                                Container(
+                                  child: Text(
+                                    "Rovira james",
+                                    style: GoogleFonts.montserrat(
+                                        fontSize: 16,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.9),
+                                        fontWeight: FontWeight.w400),
+                                  ),
                                 ),
                                 SizedBox(
                                   height: 2.0,
                                 ),
-                                Text(
-                                  "netherland",
-                                  style: GoogleFonts.montserrat(
-                                      fontSize: 12,
-                                      color: Color(0xff000000).withOpacity(0.5),
-                                      fontWeight: FontWeight.w400),
+                                Container(
+                                  child: Text(
+                                    "netherland",
+                                    style: GoogleFonts.montserrat(
+                                        fontSize: 12,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.5),
+                                        fontWeight: FontWeight.w400),
+                                  ),
                                 ),
                               ],
                             ),

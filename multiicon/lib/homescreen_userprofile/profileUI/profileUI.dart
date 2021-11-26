@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:multiicon/homescreen_userprofile/profileUI/followersView.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/homescreen_userprofile/settings/profileSettings.dart';
 import 'package:multiicon/homescreen_userprofile/tabBar/gallery_mainTabbar.dart';
@@ -13,7 +12,12 @@ class ProfileUI extends StatefulWidget {
 
 class _ProfileUIState extends State<ProfileUI> {
   bool isfollowing = false;
-  int followcounter = 0;
+
+  _pressed() {
+    setState(() {
+      isfollowing = !isfollowing;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,67 +30,249 @@ class _ProfileUIState extends State<ProfileUI> {
               color: Color(0xffF4F6F6),
             ),
           ),
-          SingleChildScrollView(
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Column(
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
+          Align(
+            alignment: Alignment.topCenter,
+            child: SafeArea(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 15.0, right: 15.0, top: 15.0),
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(
+                              MdiIcons.chevronLeft,
+                              color: Color(0xff000000).withOpacity(0.7),
+                            ),
+                            Container(
+                              child: Text(
+                                "ekko_design",
+                                style: GoogleFonts.montserrat(
+                                    fontSize: 14,
+                                    color: Color(0xff000000).withOpacity(0.5),
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                            Icon(
+                              MdiIcons.dotsHorizontal,
+                              color: Color(0xff000000).withOpacity(0.7),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Container(
+                                child: Text(
+                                  "1376",
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 16,
+                                      color: Color(0xff000000).withOpacity(0.9),
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 2.0,
+                              ),
+                              Container(
+                                child: Text(
+                                  "Followers",
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 12,
+                                      color: Color(0xff000000).withOpacity(0.5),
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 15.0,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(16.0),
+                            ),
+                            image: DecorationImage(
+                                image: AssetImage("assets/work.jpg"),
+                                fit: BoxFit.cover),
+                            color: Color(0xffADB3BF),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 15.0,
+                        ),
+                        Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                child: Text(
+                                  "136",
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 16,
+                                      color: Color(0xff000000).withOpacity(0.9),
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 2.0,
+                              ),
+                              Container(
+                                child: Text(
+                                  "Following",
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 12,
+                                      color: Color(0xff000000).withOpacity(0.5),
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 15.0,
+                        right: 15.0,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            height: MediaQuery.of(context).size.height * 0.3,
-                            width: MediaQuery.of(context).size.width * 0.45,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(21.0),
-                              ),
-                              image: DecorationImage(
-                                  image: AssetImage("assets/splash.jpg"),
-                                  fit: BoxFit.cover),
-                              color: Colors.grey[600],
+                            child: Text(
+                              "Rovira James",
+                              style: GoogleFonts.montserrat(
+                                  fontSize: 16,
+                                  color: Color(0xff000000).withOpacity(0.9),
+                                  fontWeight: FontWeight.w400),
                             ),
                           ),
                           SizedBox(
-                            width: 15.0,
+                            height: 10.0,
                           ),
-                          Text(
-                            "Jonasson mike",
-                            style: GoogleFonts.montserrat(
-                                fontSize: 16,
-                                color: Color(0xff000000).withOpacity(0.9),
-                                fontWeight: FontWeight.w400),
+                          Container(
+                            child: Text(
+                              "When I find myself in a creative block I always find it the most reenergizing to explore the way.",
+                              style: GoogleFonts.montserrat(
+                                  fontSize: 12,
+                                  color: Color(0xff000000).withOpacity(0.5),
+                                  fontWeight: FontWeight.w500),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 4.0,
+                          ),
+                          Container(
+                            child: Text(
+                              "UX/UI Design | Logo & Branding | Illustration",
+                              style: GoogleFonts.montserrat(
+                                  fontSize: 13,
+                                  color: Color(0xff000000).withOpacity(0.6),
+                                  fontWeight: FontWeight.w500),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 4.0,
+                          ),
+                          Container(
+                            child: Text(
+                              "www.ekkodesigm.com",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 13,
+                                color: Color(0xff937cdc),
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          Container(
+                            child: isfollowing
+                                ? GestureDetector(
+                                    onTap: () {
+                                      _pressed();
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(30)),
+                                          color: Colors.white,
+                                          border: Border.all(
+                                            color: Color(0xff3190FF),
+                                            width: 1.0,
+                                          )),
+                                      height: 30,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "Following",
+                                        style: GoogleFonts.montserrat(
+                                            color: Color(0xff3190FF),
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                  )
+                                : GestureDetector(
+                                    onTap: () {
+                                      _pressed();
+                                    },
+                                    child: Container(
+                                      alignment: Alignment.center,
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                            colors: [
+                                              Color(0xff896ae4),
+                                              Color(0xff937cdc),
+                                            ],
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(30)),
+                                      ),
+                                      height: 30,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
+                                      child: Text(
+                                        "Follow",
+                                        style: GoogleFonts.montserrat(
+                                            color: Colors.white,
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                  ),
                           ),
                         ],
                       ),
-                      SafeArea(
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 15.0),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(_nextRoute());
-                            },
-                            child: Icon(CupertinoIcons.settings),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 15.0,
-                  ),
-                  Container(
-                    child: FollowersView(),
-                  ),
-                  SizedBox(
-                    height: 15.0,
-                  ),
-                  GalleryMainTabBar(),
-                ],
+                    ),
+                    GalleryMainTabBar(),
+                  ],
+                ),
               ),
             ),
           ),
