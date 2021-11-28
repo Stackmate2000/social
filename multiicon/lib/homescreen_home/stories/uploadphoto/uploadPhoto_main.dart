@@ -50,17 +50,15 @@ class _UploadPhotoMainState extends State<UploadPhotoMain> {
             ),
             Align(
               alignment: Alignment.center,
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 40.0),
-                child: Container(
-                  child: PageView(
-                    physics: BouncingScrollPhysics(),
-                    children: [
-                      UploadPageOne(),
-                      UploadPageTwo(),
-                      UploadPageThree(),
-                    ],
-                  ),
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.7,
+                child: PageView(
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    UploadPageOne(),
+                    UploadPageTwo(),
+                    UploadPageThree(),
+                  ],
                 ),
               ),
             ),

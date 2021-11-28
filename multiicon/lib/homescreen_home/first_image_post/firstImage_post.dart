@@ -275,7 +275,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                         });
                                       },
                                       child: Icon(
-                                        CupertinoIcons.bookmark_solid,
+                                        CupertinoIcons.bookmark,
                                         size: 20,
                                       ),
                                     ),
@@ -286,7 +286,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                         });
                                       },
                                       child: Icon(
-                                        CupertinoIcons.bookmark,
+                                        CupertinoIcons.bookmark_solid,
                                         size: 20,
                                       ),
                                     ),

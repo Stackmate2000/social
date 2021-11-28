@@ -13,7 +13,6 @@ class _UploadPageOneState extends State<UploadPageOne> {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      decoration: BoxDecoration(),
       child: Stack(
         children: [
           Container(
@@ -28,9 +27,6 @@ class _UploadPageOneState extends State<UploadPageOne> {
                     offset: Offset(7.0, 10.0))
               ],
               color: Color(0xffFFFFFF),
-              borderRadius: BorderRadius.all(
-                Radius.circular(21.0),
-              ),
             ),
             child: Stack(
               children: [

@@ -4,6 +4,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:flutter/material.dart';
 import 'package:multiicon/homescreen_home/stories/uploadStory/uploadStory_main.dart';
 import 'package:multiicon/homescreen_home/stories/uploadphoto/uploadPhoto_main.dart';
+import 'package:multiicon/homescreen_home/stories/uploadreels/uploadReels_main.dart';
 
 class StoryTypes extends StatefulWidget {
   @override
@@ -89,74 +90,80 @@ class _StoryTypesState extends State<StoryTypes> {
                   ),
                 ),
               ),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.3,
-                width: MediaQuery.of(context).size.width * 0.4,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(16)),
-                  gradient: LinearGradient(colors: [
-                    Color(0xff896ae4),
-                    Color(0xff937cdc),
-                  ], begin: Alignment.topRight, end: Alignment.bottomLeft),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Color(0xff121212).withOpacity(0.1),
-                        blurRadius: 4.0,
-                        spreadRadius: 4.0,
-                        offset: Offset(7.0, 6.0))
-                  ],
-                ),
-                child: Stack(
-                  children: [
-                    Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Padding(
-                        padding:
-                            const EdgeInsets.only(left: 20.0, bottom: 30.0),
-                        child: Container(
-                          child: Text(
-                            "Record",
-                            style: GoogleFonts.montserrat(
-                              fontSize: 36,
-                              color: Color(0xff000000).withOpacity(0.1),
-                              fontWeight: FontWeight.w500,
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(_reelsRoute());
+                },
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(16)),
+                    gradient: LinearGradient(colors: [
+                      Color(0xff896ae4),
+                      Color(0xff937cdc),
+                    ], begin: Alignment.topRight, end: Alignment.bottomLeft),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color(0xff121212).withOpacity(0.1),
+                          blurRadius: 4.0,
+                          spreadRadius: 4.0,
+                          offset: Offset(7.0, 6.0))
+                    ],
+                  ),
+                  child: Stack(
+                    children: [
+                      Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding:
+                              const EdgeInsets.only(left: 20.0, bottom: 30.0),
+                          child: Container(
+                            child: Text(
+                              "Record",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 36,
+                                color: Color(0xff000000).withOpacity(0.1),
+                                fontWeight: FontWeight.w500,
+                              ),
+                              textAlign: TextAlign.start,
                             ),
-                            textAlign: TextAlign.start,
                           ),
                         ),
                       ),
-                    ),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 20.0, top: 20.0),
-                        child: Container(
-                          child: Icon(
-                            MdiIcons.music,
-                            color: Color(0xff000000).withOpacity(0.3),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Padding(
-                        padding:
-                            const EdgeInsets.only(left: 20.0, bottom: 20.0),
-                        child: Container(
-                          child: Text(
-                            "Reels",
-                            style: GoogleFonts.montserrat(
-                              fontSize: 16,
-                              color: Color(0xffFFFFFF),
-                              fontWeight: FontWeight.w400,
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Padding(
+                          padding:
+                              const EdgeInsets.only(right: 20.0, top: 20.0),
+                          child: Container(
+                            child: Icon(
+                              MdiIcons.music,
+                              color: Color(0xff000000).withOpacity(0.3),
                             ),
-                            textAlign: TextAlign.start,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding:
+                              const EdgeInsets.only(left: 20.0, bottom: 20.0),
+                          child: Container(
+                            child: Text(
+                              "Reels",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 16,
+                                color: Color(0xffFFFFFF),
+                                fontWeight: FontWeight.w400,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -341,6 +348,25 @@ Route _nextRoute() {
 Route _createRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => UploadStoryMain(),
+    transitionDuration: Duration(milliseconds: 250),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(0.0, 1.0);
+      var end = Offset.zero;
+      var curve = Curves.easeIn;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      // ignore: unused_local_variable
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _reelsRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => UploadReelsMain(),
     transitionDuration: Duration(milliseconds: 250),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       var begin = Offset(0.0, 1.0);

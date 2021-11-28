@@ -15,6 +15,7 @@ class UploadStoryMain extends StatefulWidget {
 
 class _UploadStoryMainState extends State<UploadStoryMain> {
   int _index = null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
