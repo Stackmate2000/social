@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:multiicon/homescreen_userprofile/profileUI/savedStories.dart';
 import 'package:multiicon/homescreen_userprofile/settings/profileSettings.dart';
 import 'package:multiicon/homescreen_userprofile/tabBar/gallery_mainTabbar.dart';
 
@@ -274,6 +275,16 @@ class _ProfileUIState extends State<ProfileUI> {
                           ),
                         ],
                       ),
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                      child: SavedStories(),
                     ),
                     GalleryMainTabBar(),
                   ],
