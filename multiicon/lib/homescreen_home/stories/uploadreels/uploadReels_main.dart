@@ -51,111 +51,178 @@ class _UploadReelsMainState extends State<UploadReelsMain> {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Container(
-                  width: MediaQuery.of(context).size.width * 0.1,
-                  alignment: Alignment.center,
+                  width: MediaQuery.of(context).size.width * 0.2,
+                  alignment: Alignment.centerLeft,
                   child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _index = 0;
-                            });
-                          },
-                          child: _index == 0
-                              ? Container(
-                                  child: Icon(
-                                    MdiIcons.brush,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              : Row(
-                                  children: [
-                                    Container(
+                      Row(
+                        children: [
+                          Container(
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _index = 0;
+                                });
+                              },
+                              child: _index == 0
+                                  ? Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  : Row(
+                                      children: [
+                                        Container(
+                                          child: Icon(
+                                            MdiIcons.brush,
+                                            color:
+                                                Colors.white.withOpacity(0.5),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Container(
+                            child: Text(
+                              "eta",
+                              style: GoogleFonts.montserrat(
+                                  color: Color(0xffFFFFFF),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _index = 1;
+                                });
+                              },
+                              child: _index == 1
+                                  ? Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  : Container(
                                       child: Icon(
                                         MdiIcons.brush,
                                         color: Colors.white.withOpacity(0.5),
                                       ),
                                     ),
-                                  ],
-                                ),
-                        ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Container(
+                            child: Text(
+                              "eta",
+                              style: GoogleFonts.montserrat(
+                                  color: Color(0xffFFFFFF),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(
                         height: 20.0,
                       ),
-                      Container(
-                        child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _index = 1;
-                            });
-                          },
-                          child: _index == 1
-                              ? Container(
-                                  child: Icon(
-                                    MdiIcons.brush,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              : Container(
-                                  child: Icon(
-                                    MdiIcons.brush,
-                                    color: Colors.white.withOpacity(0.5),
-                                  ),
-                                ),
-                        ),
+                      Row(
+                        children: [
+                          Container(
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _index = 2;
+                                });
+                              },
+                              child: _index == 2
+                                  ? Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  : Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white.withOpacity(0.5),
+                                      ),
+                                    ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Container(
+                            child: Text(
+                              "eta",
+                              style: GoogleFonts.montserrat(
+                                  color: Color(0xffFFFFFF),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(
                         height: 20.0,
                       ),
-                      Container(
-                        child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _index = 2;
-                            });
-                          },
-                          child: _index == 2
-                              ? Container(
-                                  child: Icon(
-                                    MdiIcons.brush,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              : Container(
-                                  child: Icon(
-                                    MdiIcons.brush,
-                                    color: Colors.white.withOpacity(0.5),
-                                  ),
-                                ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Container(
-                        child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _index = 3;
-                            });
-                          },
-                          child: _index == 3
-                              ? Container(
-                                  child: Icon(
-                                    MdiIcons.brush,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              : Container(
-                                  child: Icon(
-                                    MdiIcons.brush,
-                                    color: Colors.white.withOpacity(0.5),
-                                  ),
-                                ),
-                        ),
+                      Row(
+                        children: [
+                          Container(
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _index = 3;
+                                });
+                              },
+                              child: _index == 3
+                                  ? Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  : Container(
+                                      child: Icon(
+                                        MdiIcons.brush,
+                                        color: Colors.white.withOpacity(0.5),
+                                      ),
+                                    ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Container(
+                            child: Text(
+                              "eta",
+                              style: GoogleFonts.montserrat(
+                                  color: Color(0xffFFFFFF),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
