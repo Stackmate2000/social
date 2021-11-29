@@ -47,7 +47,7 @@ class _BoxSettingsState extends State<BoxSettings> {
                           child: Container(
                             child: Text(
                               "Rate",
-                              style: GoogleFonts.karla(
+                              style: GoogleFonts.montserrat(
                                 fontSize: 38,
                                 color: Color(0xff000000).withOpacity(0.1),
                                 fontWeight: FontWeight.bold,
@@ -76,10 +76,10 @@ class _BoxSettingsState extends State<BoxSettings> {
                           child: Container(
                             child: Text(
                               "Rate TrickyBin stars",
-                              style: GoogleFonts.karla(
-                                fontSize: 16,
+                              style: GoogleFonts.montserrat(
+                                fontSize: 15,
                                 color: Color(0xffFFFFFF),
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -116,7 +116,7 @@ class _BoxSettingsState extends State<BoxSettings> {
                           child: Container(
                             child: Text(
                               "Contac",
-                              style: GoogleFonts.karla(
+                              style: GoogleFonts.montserrat(
                                 fontSize: 38,
                                 color: Color(0xff000000).withOpacity(0.1),
                                 fontWeight: FontWeight.bold,
@@ -145,10 +145,10 @@ class _BoxSettingsState extends State<BoxSettings> {
                           child: Container(
                             child: Text(
                               "Contact support",
-                              style: GoogleFonts.karla(
-                                fontSize: 16,
-                                color: Color(0xff000000),
-                                fontWeight: FontWeight.w600,
+                              style: GoogleFonts.montserrat(
+                                fontSize: 15,
+                                color: Color(0xff000000).withOpacity(0.7),
+                                fontWeight: FontWeight.w500,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -192,7 +192,7 @@ class _BoxSettingsState extends State<BoxSettings> {
                           child: Container(
                             child: Text(
                               "Know ",
-                              style: GoogleFonts.karla(
+                              style: GoogleFonts.montserrat(
                                 fontSize: 38,
                                 color: Color(0xff000000).withOpacity(0.1),
                                 fontWeight: FontWeight.bold,
@@ -216,20 +216,19 @@ class _BoxSettingsState extends State<BoxSettings> {
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Padding(
-                          padding:
-                              const EdgeInsets.only(left: 20.0, bottom: 10.0),
-                          child: Container(
-                            child: Text(
-                              "Know about our Policy",
-                              style: GoogleFonts.karla(
-                                fontSize: 16,
-                                color: Color(0xff000000),
-                                fontWeight: FontWeight.w600,
+                            padding:
+                                const EdgeInsets.only(left: 20.0, bottom: 10.0),
+                            child: Container(
+                              child: Text(
+                                "Know about our Policy",
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 15,
+                                  color: Color(0xff000000).withOpacity(0.7),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                textAlign: TextAlign.start,
                               ),
-                              textAlign: TextAlign.start,
-                            ),
-                          ),
-                        ),
+                            )),
                       ),
                     ],
                   ),
@@ -260,8 +259,8 @@ class _BoxSettingsState extends State<BoxSettings> {
                               const EdgeInsets.only(left: 20.0, bottom: 10.0),
                           child: Container(
                             child: Text(
-                              "Achieve",
-                              style: GoogleFonts.karla(
+                              "Achie'v",
+                              style: GoogleFonts.montserrat(
                                 fontSize: 38,
                                 color: Color(0xff000000).withOpacity(0.1),
                                 fontWeight: FontWeight.bold,
@@ -285,20 +284,19 @@ class _BoxSettingsState extends State<BoxSettings> {
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Padding(
-                          padding:
-                              const EdgeInsets.only(left: 20.0, bottom: 10.0),
-                          child: Container(
-                            child: Text(
-                              "Achievements",
-                              style: GoogleFonts.karla(
-                                fontSize: 16,
-                                color: Color(0xff000000),
-                                fontWeight: FontWeight.w600,
+                            padding:
+                                const EdgeInsets.only(left: 20.0, bottom: 10.0),
+                            child: Container(
+                              child: Text(
+                                "Achievements",
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 15,
+                                  color: Color(0xff000000).withOpacity(0.7),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                textAlign: TextAlign.start,
                               ),
-                              textAlign: TextAlign.start,
-                            ),
-                          ),
-                        ),
+                            )),
                       ),
                     ],
                   ),

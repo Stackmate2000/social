@@ -14,6 +14,7 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
   bool isliked = false;
   bool isfollowing = false;
   bool issavedfile = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(

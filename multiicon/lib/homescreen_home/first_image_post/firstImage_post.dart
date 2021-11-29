@@ -140,10 +140,10 @@ class _FirstImagePostState extends State<FirstImagePost> {
                               decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(16)),
-                                image: DecorationImage(
-                                  image: AssetImage("assets/nigga.jpg"),
-                                  fit: BoxFit.cover,
-                                ),
+                                //image: DecorationImage(
+                                //  image: AssetImage("assets/nigga.jpg"),
+                                //  fit: BoxFit.cover,
+                                //),
                                 color: Color(0xffADB3BF),
                               ),
                             ),

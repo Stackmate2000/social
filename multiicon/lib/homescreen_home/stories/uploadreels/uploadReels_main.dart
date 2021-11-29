@@ -24,24 +24,40 @@ class _UploadReelsMainState extends State<UploadReelsMain> {
           children: [
             SafeArea(
               child: Padding(
-                padding: const EdgeInsets.only(right: 15.0, top: 15.0),
+                padding:
+                    const EdgeInsets.only(right: 15.0, top: 15.0, left: 15.0),
                 child: Align(
                   alignment: Alignment.topRight,
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                          color: Color(0xffFFFFFF).withOpacity(0.1)),
-                      child: Icon(
-                        MdiIcons.close,
-                        color: Color(0xffFFFFFF).withOpacity(0.5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        child: Text(
+                          "Record",
+                          style: GoogleFonts.montserrat(
+                              color: Color(0xffFFFFFF),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400),
+                        ),
                       ),
-                    ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(16.0)),
+                              color: Color(0xffFFFFFF).withOpacity(0.1)),
+                          child: Icon(
+                            MdiIcons.close,
+                            color: Color(0xffFFFFFF).withOpacity(0.5),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -230,6 +246,13 @@ class _UploadReelsMainState extends State<UploadReelsMain> {
                     ),
                   ],
                 ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 60.0),
+                child: Container(),
               ),
             ),
           ],

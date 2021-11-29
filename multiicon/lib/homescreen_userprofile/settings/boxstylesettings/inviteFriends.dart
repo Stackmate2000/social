@@ -49,11 +49,11 @@ class _InviteFriendsState extends State<InviteFriends> {
                 padding: const EdgeInsets.only(left: 50.0, right: 50.0),
                 child: Container(
                   child: Text(
-                    "Invite your friends and start poking together",
-                    style: GoogleFonts.karla(
-                      fontSize: 16,
+                    "Invite your friendmates and start poking together",
+                    style: GoogleFonts.montserrat(
+                      fontSize: 15,
                       color: Color(0xffFFFFFF),
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                     ),
                     textAlign: TextAlign.center,
                   ),

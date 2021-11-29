@@ -5,6 +5,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:multiicon/homescreen_home/first_image_post/firstImage_post.dart';
 import 'package:multiicon/homescreen_home/multiple_Image_post.dart/multiple_Image_post.dart';
 import 'package:multiicon/homescreen_home/stories/story_Main.dart';
+import 'package:multiicon/homescreen_home/uploadStyle_two/uploadStyle_two.dart';
 
 class HomeMain extends StatefulWidget {
   @override
@@ -103,6 +104,9 @@ class _HomeMainState extends State<HomeMain> {
                           // Container(child: SharedImage_post()),
                           SizedBox(height: 15.0),
                           Container(child: MultipleImagePost()),
+                          SizedBox(height: 15.0),
+
+                          Container(child: UploadStyleTwo()),
                         ],
                       ),
                     ),
