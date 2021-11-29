@@ -48,183 +48,147 @@ class _UploadReelsMainState extends State<UploadReelsMain> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  width: MediaQuery.of(context).size.width * 0.2,
+              child: SafeArea(
+                child: Align(
                   alignment: Alignment.centerLeft,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _index = 0;
-                                });
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              child: Icon(
+                                MdiIcons.googlePodcast,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            TweenAnimationBuilder(
+                              tween: Tween<double>(begin: 0.0, end: 1.0),
+                              builder: (BuildContext context, double _val,
+                                  Widget child) {
+                                return Opacity(
+                                  opacity: _val,
+                                  child: Text(
+                                    "Audio",
+                                    style: GoogleFonts.roboto(
+                                        color: Color(0xffFFFFFF),
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                );
                               },
-                              child: _index == 0
-                                  ? Container(
-                                      child: Icon(
-                                        MdiIcons.brush,
-                                        color: Colors.white,
-                                      ),
-                                    )
-                                  : Row(
-                                      children: [
-                                        Container(
-                                          child: Icon(
-                                            MdiIcons.brush,
-                                            color:
-                                                Colors.white.withOpacity(0.5),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                              duration: Duration(milliseconds: 1000),
                             ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            child: Text(
-                              "eta",
-                              style: GoogleFonts.montserrat(
-                                  color: Color(0xffFFFFFF),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              child: Icon(
+                                MdiIcons.timer10,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _index = 1;
-                                });
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            TweenAnimationBuilder(
+                              tween: Tween<double>(begin: 0.0, end: 1.0),
+                              builder: (BuildContext context, double _val,
+                                  Widget child) {
+                                return Opacity(
+                                  opacity: _val,
+                                  child: Text(
+                                    "Length",
+                                    style: GoogleFonts.roboto(
+                                        color: Color(0xffFFFFFF),
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                );
                               },
-                              child: _index == 1
-                                  ? Container(
-                                      child: Icon(
-                                        MdiIcons.brush,
-                                        color: Colors.white,
-                                      ),
-                                    )
-                                  : Container(
-                                      child: Icon(
-                                        MdiIcons.brush,
-                                        color: Colors.white.withOpacity(0.5),
-                                      ),
-                                    ),
+                              duration: Duration(milliseconds: 1000),
                             ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            child: Text(
-                              "eta",
-                              style: GoogleFonts.montserrat(
-                                  color: Color(0xffFFFFFF),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              child: Icon(
+                                MdiIcons.autoFix,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _index = 2;
-                                });
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            TweenAnimationBuilder(
+                              tween: Tween<double>(begin: 0.0, end: 1.0),
+                              builder: (BuildContext context, double _val,
+                                  Widget child) {
+                                return Opacity(
+                                  opacity: _val,
+                                  child: Text(
+                                    "Effects",
+                                    style: GoogleFonts.roboto(
+                                        color: Color(0xffFFFFFF),
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                );
                               },
-                              child: _index == 2
-                                  ? Container(
-                                      child: Icon(
-                                        MdiIcons.brush,
-                                        color: Colors.white,
-                                      ),
-                                    )
-                                  : Container(
-                                      child: Icon(
-                                        MdiIcons.brush,
-                                        color: Colors.white.withOpacity(0.5),
-                                      ),
-                                    ),
+                              duration: Duration(milliseconds: 1000),
                             ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            child: Text(
-                              "eta",
-                              style: GoogleFonts.montserrat(
-                                  color: Color(0xffFFFFFF),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              child: Icon(
+                                MdiIcons.timer,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _index = 3;
-                                });
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            TweenAnimationBuilder(
+                              tween: Tween<double>(begin: 0.0, end: 1.0),
+                              builder: (BuildContext context, double _val,
+                                  Widget child) {
+                                return Opacity(
+                                  opacity: _val,
+                                  child: Text(
+                                    "Timer",
+                                    style: GoogleFonts.roboto(
+                                        color: Color(0xffFFFFFF),
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                );
                               },
-                              child: _index == 3
-                                  ? Container(
-                                      child: Icon(
-                                        MdiIcons.brush,
-                                        color: Colors.white,
-                                      ),
-                                    )
-                                  : Container(
-                                      child: Icon(
-                                        MdiIcons.brush,
-                                        color: Colors.white.withOpacity(0.5),
-                                      ),
-                                    ),
+                              duration: Duration(milliseconds: 1000),
                             ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            child: Text(
-                              "eta",
-                              style: GoogleFonts.montserrat(
-                                  color: Color(0xffFFFFFF),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
