@@ -145,30 +145,30 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                   _toggleOpen();
                 },
                 child: Container(
-                    height: 55,
-                    width: 55,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: Color(0xff896ae4).withOpacity(0.1),
-                            blurRadius: 4.0,
-                            spreadRadius: 2.0,
-                            offset: Offset(7.0, 6.0))
-                      ],
-                      borderRadius: BorderRadius.all(Radius.circular(21.0)),
-                      gradient: LinearGradient(colors: [
-                        Color(0xff896ae4),
-                        Color(0xff937cdc),
-                      ], begin: Alignment.topRight, end: Alignment.bottomLeft),
-                    ),
-                    child: isOpen
-                        ? Icon(MdiIcons.close,
-                            color: Color(0xffFFFFFF), size: 22)
-                        : Icon(
-                            CupertinoIcons.add,
-                            color: Color(0xffFFFFFF),
-                            size: 22,
-                          )),
+                  height: 55,
+                  width: 55,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color(0xff896ae4).withOpacity(0.1),
+                          blurRadius: 4.0,
+                          spreadRadius: 2.0,
+                          offset: Offset(7.0, 6.0))
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(21.0)),
+                    gradient: LinearGradient(colors: [
+                      Color(0xff896ae4),
+                      Color(0xff937cdc),
+                    ], begin: Alignment.topRight, end: Alignment.bottomLeft),
+                  ),
+                  child: isOpen
+                      ? Icon(MdiIcons.close, color: Color(0xffFFFFFF), size: 22)
+                      : Icon(
+                          CupertinoIcons.add,
+                          color: Color(0xffFFFFFF),
+                          size: 22,
+                        ),
+                ),
               ),
             ),
           ),

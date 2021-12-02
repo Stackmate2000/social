@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:multiicon/homescreen_home/first_image_post/firstImage_hero.dart';
 import 'package:multiicon/homescreen_home/first_image_post/firstImage_menubutton.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:multiicon/homescreen_home/first_image_post/firstimagecomments/firstImage_comment.dart';
 
 class FirstImagePost extends StatefulWidget {
   @override
@@ -17,6 +18,34 @@ class _FirstImagePostState extends State<FirstImagePost> {
 
   @override
   Widget build(BuildContext context) {
+    modalBottomSheet(context) {
+      showModalBottomSheet(
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          context: context,
+          builder: (BuildContext context) {
+            return Container(
+              height: MediaQuery.of(context).size.height * 0.85,
+              decoration: BoxDecoration(
+                color: Color(0xffFFFFFF),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Container(
+                    child: FirstImageComment(),
+                  ),
+                ),
+              ),
+            );
+          });
+    }
+
     return Container(
       child: Stack(
         children: [
@@ -163,27 +192,32 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          child: Icon(
-                                            CupertinoIcons.bubble_right,
-                                            size: 20.0,
+                                    GestureDetector(
+                                      onTap: () {
+                                        modalBottomSheet(context);
+                                      },
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            child: Icon(
+                                              CupertinoIcons.bubble_right,
+                                              size: 20.0,
+                                            ),
                                           ),
-                                        ),
-                                        SizedBox(
-                                          width: 3.0,
-                                        ),
-                                        Text(
-                                          "0",
-                                          style: GoogleFonts.roboto(
-                                              fontSize: 14,
-                                              color: Color(0xff000000)
-                                                  .withOpacity(0.7),
-                                              letterSpacing: 0.2,
-                                              fontWeight: FontWeight.w400),
-                                        )
-                                      ],
+                                          SizedBox(
+                                            width: 3.0,
+                                          ),
+                                          Text(
+                                            "0",
+                                            style: GoogleFonts.roboto(
+                                                fontSize: 14,
+                                                color: Color(0xff000000)
+                                                    .withOpacity(0.7),
+                                                letterSpacing: 0.2,
+                                                fontWeight: FontWeight.w400),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                     SizedBox(
                                       width: 20.0,

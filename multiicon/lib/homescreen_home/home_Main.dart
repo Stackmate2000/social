@@ -72,12 +72,10 @@ class _HomeMainState extends State<HomeMain>
                                     child: Icon(MdiIcons.text),
                                   ),
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                                Row(
                                   children: [
                                     Text(
-                                      "HI, Rovira James",
+                                      "Morning,",
                                       style: GoogleFonts.montserrat(
                                           color: Color(0xff000000)
                                               .withOpacity(0.5),
@@ -86,35 +84,70 @@ class _HomeMainState extends State<HomeMain>
                                       textAlign: TextAlign.center,
                                     ),
                                     SizedBox(
-                                      height: 5.0,
+                                      width: 2.0,
                                     ),
-                                    Container(
-                                      child: Text(
-                                        "Thursday,02",
-                                        style: GoogleFonts.montserrat(
-                                            color: Color(0xff000000)
-                                                .withOpacity(0.7),
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ),
+                                    Text(
+                                      "Rovira James",
+                                      style: GoogleFonts.montserrat(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.5),
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500),
+                                      textAlign: TextAlign.center,
+                                    )
                                   ],
                                 ),
                                 Container(
-                                  height: 50,
-                                  width: 50,
+                                  height: 40,
+                                  width: 40,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.all(
-                                      Radius.circular(16.0),
+                                      Radius.circular(12.0),
                                     ),
                                     image: DecorationImage(
-                                        image: AssetImage("assets/work.jpg"),
+                                        image: AssetImage("assets/nigga.jpg"),
                                         fit: BoxFit.cover),
                                     color: Color(0xffADB3BF),
                                   ),
                                 ),
                               ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            child: TextField(
+                              style: GoogleFonts.montserrat(
+                                  color: Color(0xff000000),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500),
+                              textAlign: TextAlign.left,
+                              autofocus: false,
+                              decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color:
+                                          Color(0xff000000).withOpacity(0.1)),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(21.0),
+                                  ),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(8.0),
+                                  ),
+                                ),
+                                hintText: "Search...",
+                                hintStyle: GoogleFonts.montserrat(
+                                    color: Color(0xff000000).withOpacity(0.5),
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400),
+                                fillColor: Color(0xffFFFFFF),
+                                filled: true,
+                                prefixIcon: Icon(CupertinoIcons.search),
+                              ),
                             ),
                           ),
 
