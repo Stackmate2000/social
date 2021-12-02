@@ -19,86 +19,86 @@ class _IntroPageState extends State<IntroPage> {
             Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/3Drenders.jpg"),
-                    fit: BoxFit.cover),
+                    image: AssetImage("assets/nigga.jpg"), fit: BoxFit.cover),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(7.0),
+              padding: const EdgeInsets.all(15.0),
               child: Align(
                 alignment: Alignment.bottomCenter,
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.45,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                      color: Color(0xffFFFFFF),
-                      borderRadius: BorderRadius.all(Radius.circular(16.0))),
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment.center,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Container(
-                              child: Text(
-                                "Never Stress",
-                                style: GoogleFonts.roboto(
-                                    color: Color(0xff000000),
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.w300),
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15.0,
-                            ),
-                            Container(
-                              width: MediaQuery.of(context).size.width * 0.65,
-                              child: Text(
-                                "Plan your day, stay productive and accomplish your goals",
-                                style: GoogleFonts.roboto(
-                                    color: Color(0xff000000).withOpacity(0.7),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400),
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15.0,
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.of(context).push(_nextRoute());
-                              },
-                              child: Container(
-                                height: 50,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color:
-                                            Color(0xff3190FF).withOpacity(0.2),
-                                        blurRadius: 4.0,
-                                        spreadRadius: 2.0,
-                                        offset: Offset(0.0, 6.0))
-                                  ],
-                                  color: Color(0xff3190FF),
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(16.0),
-                                  ),
-                                ),
-                                child: Icon(
-                                  CupertinoIcons.arrow_right,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ],
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    TweenAnimationBuilder(
+                      tween: Tween<double>(begin: 0.0, end: 1.0),
+                      builder:
+                          (BuildContext context, double _val, Widget child) {
+                        return Opacity(
+                          opacity: _val,
+                          child: Text(
+                            "Never Stress",
+                            style: GoogleFonts.montserrat(
+                                color: Color(0xffFFFFFF),
+                                fontSize: 28,
+                                fontWeight: FontWeight.w400),
+                            textAlign: TextAlign.center,
+                          ),
+                        );
+                      },
+                      duration: Duration(milliseconds: 1000),
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.65,
+                      child: Text(
+                        "Plan your day, stay productive and accomplish your goals",
+                        style: GoogleFonts.montserrat(
+                            color: Color(0xffFFFFFF).withOpacity(0.5),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 15.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(_nextRoute());
+                        },
+                        child: Container(
+                          height: 55,
+                          width: 55,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Color(0xff896ae4).withOpacity(0.1),
+                                  blurRadius: 4.0,
+                                  spreadRadius: 2.0,
+                                  offset: Offset(7.0, 6.0))
+                            ],
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(21.0)),
+                            gradient: LinearGradient(
+                                colors: [
+                                  Color(0xff896ae4),
+                                  Color(0xff937cdc),
+                                ],
+                                begin: Alignment.topRight,
+                                end: Alignment.bottomLeft),
+                          ),
+                          child: Icon(
+                            CupertinoIcons.arrow_right,
+                            color: Color(0xffFFFFFF),
+                          ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),

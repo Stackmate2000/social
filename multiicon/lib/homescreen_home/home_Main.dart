@@ -12,7 +12,27 @@ class HomeMain extends StatefulWidget {
   _HomeMainState createState() => _HomeMainState();
 }
 
-class _HomeMainState extends State<HomeMain> {
+class _HomeMainState extends State<HomeMain>
+    with SingleTickerProviderStateMixin {
+  Animation<double> animation;
+  AnimationController animController;
+  bool isforward = false;
+  @override
+  void initState() {
+    super.initState();
+
+    animController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+
+    final curvedAnimation =
+        CurvedAnimation(parent: animController, curve: Curves.easeOutExpo);
+
+    animation = Tween<double>(begin: 0, end: 150).animate(curvedAnimation)
+      ..addListener(() {
+        setState(() {});
+      });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,54 +62,48 @@ class _HomeMainState extends State<HomeMain> {
                             padding: const EdgeInsets.only(
                                 left: 15.0, right: 15.0, top: 0.0),
                             child: Container(
-                              alignment: Alignment.centerLeft,
                               height: 50,
-                              width: MediaQuery.of(context).size.width,
-                              decoration:
-                                  BoxDecoration(color: Colors.transparent),
-                              child: Container(
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    GestureDetector(
-                                      onTap: () {
-                                        Navigator.of(context)
-                                            .push(_nextRoute());
-                                      },
-                                      child: Container(
-                                        child: Icon(MdiIcons.text),
-                                      ),
+                              width: 220,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: animation.value,
+                                    decoration: BoxDecoration(
+                                        color: Colors.black,
+                                        borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(50.0),
+                                            bottomLeft: Radius.circular(50.0))),
+                                    child: TextField(
+                                      cursorColor: Colors.white12,
+                                      style: TextStyle(color: Colors.white),
+                                      decoration: InputDecoration(
+                                          border: InputBorder.none),
                                     ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.end,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          "B",
-                                          style: GoogleFonts.dancingScript(
-                                              color: Color(0xff000000),
-                                              fontSize: 30,
-                                              fontWeight: FontWeight.bold),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        Container(
-                                          child: Text(
-                                            "eta",
-                                            style: GoogleFonts.dancingScript(
-                                                color: Color(0xff000000),
-                                                fontSize: 24,
-                                                fontWeight: FontWeight.bold),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Container(child: Icon(Icons.send)),
-                                  ],
-                                ),
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.black,
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(16.0))),
+                                    width: 50.0,
+                                    height: 50.0,
+                                    child: IconButton(
+                                        onPressed: () {
+                                          setState(() {
+                                            if (isforward) {
+                                              animController.forward();
+                                              isforward = true;
+                                            } else
+                                              animController.reverse();
+                                          });
+                                        },
+                                        icon: Icon(
+                                          Icons.search,
+                                          color: Colors.white,
+                                        )),
+                                  )
+                                ],
                               ),
                             ),
                           ),

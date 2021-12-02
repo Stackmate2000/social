@@ -12,7 +12,11 @@ class _HelloPageNamsataeState extends State<HelloPageNamsatae> {
     super.initState();
     Future.delayed(Duration(milliseconds: 2000), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => IntroPage()));
+        context,
+        MaterialPageRoute(
+          builder: (context) => IntroPage(),
+        ),
+      );
     });
   }
 

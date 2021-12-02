@@ -2,7 +2,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:multiicon/homescreen_home/stories/camerabuttons/cameraMain.dart';
 import 'package:multiicon/homescreen_home/stories/uploadStory/uploadtext/upload_textFour.dart';
 import 'package:multiicon/homescreen_home/stories/uploadStory/uploadtext/upload_textTwo.dart';
 import 'package:multiicon/homescreen_home/stories/uploadStory/uploadtext/upload_textone.dart';
