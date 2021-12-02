@@ -5,34 +5,13 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:multiicon/homescreen_home/first_image_post/firstImage_post.dart';
 import 'package:multiicon/homescreen_home/multiple_Image_post.dart/multiple_Image_post.dart';
 import 'package:multiicon/homescreen_home/stories/story_Main.dart';
-import 'package:multiicon/homescreen_home/uploadStyle_two/uploadStyle_two.dart';
 
 class HomeMain extends StatefulWidget {
   @override
   _HomeMainState createState() => _HomeMainState();
 }
 
-class _HomeMainState extends State<HomeMain>
-    with SingleTickerProviderStateMixin {
-  Animation<double> animation;
-  AnimationController animController;
-  bool isforward = false;
-  @override
-  void initState() {
-    super.initState();
-
-    animController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
-
-    final curvedAnimation =
-        CurvedAnimation(parent: animController, curve: Curves.easeOutExpo);
-
-    animation = Tween<double>(begin: 0, end: 150).animate(curvedAnimation)
-      ..addListener(() {
-        setState(() {});
-      });
-  }
-
+class _HomeMainState extends State<HomeMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -136,10 +115,10 @@ class _HomeMainState extends State<HomeMain>
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.all(
-                                    Radius.circular(8.0),
+                                    Radius.circular(21.0),
                                   ),
                                 ),
-                                hintText: "Search...",
+                                hintText: "Looking for SomeOne",
                                 hintStyle: GoogleFonts.montserrat(
                                     color: Color(0xff000000).withOpacity(0.5),
                                     fontSize: 15,
@@ -161,14 +140,11 @@ class _HomeMainState extends State<HomeMain>
                           // Container(child: SharedImage_post()),
                           SizedBox(height: 15.0),
                           Container(child: MultipleImagePost()),
-                          SizedBox(height: 15.0),
-
-                          Container(child: UploadStyleTwo()),
                         ],
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -181,12 +157,13 @@ class _HomeMainState extends State<HomeMain>
 Route _nextRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => StoryMain(),
-    transitionDuration: Duration(milliseconds: 3000),
+    transitionDuration: Duration(milliseconds: 300),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       var begin = Offset(-1.0, 0.0);
       var end = Offset.zero;
       var curve = Curves.easeIn;
-      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var tween =
+          Tween(begin: begin, end: end).chain(CurveTween(curve: Curves.easeIn));
       // ignore: unused_local_variable
       var offsetAnimation = animation.drive(tween);
       return SlideTransition(

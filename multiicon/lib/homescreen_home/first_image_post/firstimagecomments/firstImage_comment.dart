@@ -65,57 +65,15 @@ class _FirstImageCommentState extends State<FirstImageComment> {
                     SizedBox(
                       height: 10.0,
                     ),
-                    Row(
-                      children: [
-                        Container(
-                          child: Text(
-                            "50m.",
-                            style: GoogleFonts.montserrat(
-                                fontSize: 13,
-                                color: Color(0xff000000).withOpacity(0.7),
-                                fontWeight: FontWeight.w400),
-                            textAlign: TextAlign.start,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 25.0,
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              child: Icon(
-                                CupertinoIcons.heart,
-                                color: Color(0xff000000).withOpacity(0.7),
-                                size: 20.0,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 3.0,
-                            ),
-                            Text(
-                              "0",
-                              style: GoogleFonts.roboto(
-                                  fontSize: 14,
-                                  color: Color(0xff000000).withOpacity(0.7),
-                                  letterSpacing: 0.2,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                            SizedBox(
-                              width: 25.0,
-                            ),
-                            Container(
-                              child: Text(
-                                "Reply",
-                                style: GoogleFonts.montserrat(
-                                    fontSize: 13,
-                                    color: Color(0xff000000).withOpacity(0.7),
-                                    fontWeight: FontWeight.w400),
-                                textAlign: TextAlign.start,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                    Container(
+                      child: Text(
+                        "50m.",
+                        style: GoogleFonts.montserrat(
+                            fontSize: 13,
+                            color: Color(0xff000000).withOpacity(0.7),
+                            fontWeight: FontWeight.w400),
+                        textAlign: TextAlign.start,
+                      ),
                     ),
                   ],
                 ),
@@ -181,7 +139,7 @@ class _FirstImageCommentState extends State<FirstImageComment> {
                       children: [
                         Container(
                           child: Text(
-                            "50m.",
+                            "5m",
                             style: GoogleFonts.montserrat(
                                 fontSize: 13,
                                 color: Color(0xff000000).withOpacity(0.7),
