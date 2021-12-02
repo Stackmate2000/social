@@ -4,6 +4,7 @@ import 'package:multiicon/homescreen_home/first_image_post/firstImage_hero.dart'
 import 'package:multiicon/homescreen_home/first_image_post/firstImage_menubutton.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:multiicon/homescreen_home/first_image_post/firstimagecomments/firstImage_comment.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class FirstImagePost extends StatefulWidget {
   @override
@@ -33,14 +34,59 @@ class _FirstImagePostState extends State<FirstImagePost> {
                   topRight: Radius.circular(30),
                 ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Container(
-                    child: FirstImageComment(),
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: SingleChildScrollView(
+                        child: Container(
+                          child: FirstImageComment(),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.9,
+                        child: TextField(
+                          style: GoogleFonts.montserrat(
+                              color: Color(0xff000000),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.left,
+                          autofocus: false,
+                          decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Color(0xff000000).withOpacity(0.1)),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(21.0),
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
+                              ),
+                            ),
+                            hintText: "Text a comment..",
+                            hintStyle: GoogleFonts.montserrat(
+                                color: Color(0xff000000).withOpacity(0.5),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400),
+                            fillColor: Color(0xffFFFFFF),
+                            filled: true,
+                            suffixIcon: Icon(MdiIcons.send),
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
               ),
             );
           });
