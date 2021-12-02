@@ -60,51 +60,61 @@ class _HomeMainState extends State<HomeMain>
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: 15.0, right: 15.0, top: 0.0),
-                            child: Container(
-                              height: 50,
-                              width: 220,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    width: animation.value,
-                                    decoration: BoxDecoration(
-                                        color: Colors.black,
-                                        borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(50.0),
-                                            bottomLeft: Radius.circular(50.0))),
-                                    child: TextField(
-                                      cursorColor: Colors.white12,
-                                      style: TextStyle(color: Colors.white),
-                                      decoration: InputDecoration(
-                                          border: InputBorder.none),
-                                    ),
+                                left: 15.0, right: 15.0, top: 15.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(_nextRoute());
+                                  },
+                                  child: Container(
+                                    child: Icon(MdiIcons.text),
                                   ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                        color: Colors.black,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(16.0))),
-                                    width: 50.0,
-                                    height: 50.0,
-                                    child: IconButton(
-                                        onPressed: () {
-                                          setState(() {
-                                            if (isforward) {
-                                              animController.forward();
-                                              isforward = true;
-                                            } else
-                                              animController.reverse();
-                                          });
-                                        },
-                                        icon: Icon(
-                                          Icons.search,
-                                          color: Colors.white,
-                                        )),
-                                  )
-                                ],
-                              ),
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "HI, Rovira James",
+                                      style: GoogleFonts.montserrat(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.5),
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    SizedBox(
+                                      height: 5.0,
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        "Thursday,02",
+                                        style: GoogleFonts.montserrat(
+                                            color: Color(0xff000000)
+                                                .withOpacity(0.7),
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(16.0),
+                                    ),
+                                    image: DecorationImage(
+                                        image: AssetImage("assets/work.jpg"),
+                                        fit: BoxFit.cover),
+                                    color: Color(0xffADB3BF),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
 
