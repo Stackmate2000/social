@@ -4,7 +4,6 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:flutter/material.dart';
 import 'package:multiicon/homescreen_home/stories/uploadphoto/upload_pageOne.dart';
 import 'package:multiicon/homescreen_home/stories/uploadphoto/upload_pageThree.dart';
-import 'package:multiicon/homescreen_home/stories/uploadphoto/upload_pageTwo.dart';
 
 class UploadPhotoMain extends StatefulWidget {
   @override
@@ -56,7 +55,6 @@ class _UploadPhotoMainState extends State<UploadPhotoMain> {
                   physics: BouncingScrollPhysics(),
                   children: [
                     UploadPageOne(),
-                    UploadPageTwo(),
                     UploadPageThree(),
                   ],
                 ),

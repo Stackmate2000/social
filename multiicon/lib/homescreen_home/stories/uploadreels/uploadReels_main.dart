@@ -2,9 +2,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:multiicon/homescreen_home/stories/uploadphoto/upload_pageOne.dart';
-import 'package:multiicon/homescreen_home/stories/uploadphoto/upload_pageThree.dart';
-import 'package:multiicon/homescreen_home/stories/uploadphoto/upload_pageTwo.dart';
 
 class UploadReelsMain extends StatefulWidget {
   const UploadReelsMain({Key key}) : super(key: key);

@@ -33,16 +33,17 @@ class _HomeScreenDState extends State<HomeScreenD> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 20.0, top: 20),
+                        padding: const EdgeInsets.only(
+                            left: 15.0, top: 15.0, right: 15.0),
                         child: Align(
-                          alignment: Alignment.centerLeft,
+                          alignment: Alignment.topCenter,
                           child: Container(
                             color: Colors.transparent,
                             child: Text(
                               "Activity",
-                              style: GoogleFonts.roboto(
-                                  color: Colors.blueGrey[900],
-                                  fontSize: 17,
+                              style: GoogleFonts.montserrat(
+                                  color: Color(0xff000000).withOpacity(0.5),
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w500),
                             ),
                           ),

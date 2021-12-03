@@ -199,8 +199,6 @@ class Notify extends StatelessWidget {
 class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ProfileUI(),
-    );
+    return Container();
   }
 }

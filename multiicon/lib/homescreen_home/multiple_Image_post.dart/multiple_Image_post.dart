@@ -40,9 +40,9 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(16.0),
                                 ),
-                                image: DecorationImage(
-                                    image: AssetImage("assets/girl.jpg"),
-                                    fit: BoxFit.cover),
+                                //image: DecorationImage(
+                                //image: AssetImage("assets/girl.jpg"),
+                                //fit: BoxFit.cover),
                                 color: Color(0xffADB3BF),
                               ),
                             ),
@@ -137,7 +137,7 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                             //    image: AssetImage(
                                             //       "assets/splash.jpg"),
                                             //   fit: BoxFit.cover),//
-                                            color: Colors.grey[600],
+                                            color: Color(0xffADB3BF),
                                           ),
                                         ),
                                       ),
@@ -162,7 +162,7 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                             //    image: AssetImage(
                                             //       "assets/girl.jpg"),
                                             //
-                                            color: Colors.grey[600],
+                                            color: Color(0xffADB3BF),
                                           ),
                                         ),
                                         Container(
@@ -181,7 +181,7 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                                             //    image: AssetImage(
                                             //       "assets/work.jpg"),
                                             //
-                                            color: Colors.grey[600],
+                                            color: Color(0xffADB3BF),
                                           ),
                                         ),
                                       ],

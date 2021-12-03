@@ -5,6 +5,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:multiicon/homescreen_home/first_image_post/firstImage_post.dart';
 import 'package:multiicon/homescreen_home/multiple_Image_post.dart/multiple_Image_post.dart';
 import 'package:multiicon/homescreen_home/stories/story_Main.dart';
+import 'package:multiicon/homescreen_userprofile/profileUI/profileUI.dart';
 
 class HomeMain extends StatefulWidget {
   @override
@@ -76,17 +77,22 @@ class _HomeMainState extends State<HomeMain> {
                                     )
                                   ],
                                 ),
-                                Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(12.0),
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(_profileRoute());
+                                  },
+                                  child: Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(12.0),
+                                      ),
+                                      //image: DecorationImage(
+                                      //image: AssetImage("assets/nigga.jpg"),
+                                      //fit: BoxFit.cover),
+                                      color: Color(0xffADB3BF),
                                     ),
-                                    image: DecorationImage(
-                                        image: AssetImage("assets/nigga.jpg"),
-                                        fit: BoxFit.cover),
-                                    color: Color(0xffADB3BF),
                                   ),
                                 ),
                               ],
@@ -157,6 +163,26 @@ class _HomeMainState extends State<HomeMain> {
 Route _nextRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => StoryMain(),
+    transitionDuration: Duration(milliseconds: 300),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(-1.0, 0.0);
+      var end = Offset.zero;
+      var curve = Curves.easeIn;
+      var tween =
+          Tween(begin: begin, end: end).chain(CurveTween(curve: Curves.easeIn));
+      // ignore: unused_local_variable
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _profileRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProfileUI(),
     transitionDuration: Duration(milliseconds: 300),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       var begin = Offset(-1.0, 0.0);
