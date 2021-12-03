@@ -42,8 +42,9 @@ class _SavedStoriesState extends State<SavedStories> {
               borderRadius: BorderRadius.all(
                 Radius.circular(16.0),
               ),
-              image: DecorationImage(
-                  image: AssetImage("assets/nigga.jpg"), fit: BoxFit.cover),
+              //image: DecorationImage(
+              //image: AssetImage("assets/work.jpg"),
+              //fit: BoxFit.cover),
               color: Color(0xffADB3BF),
             ),
           ),
@@ -57,8 +58,9 @@ class _SavedStoriesState extends State<SavedStories> {
               borderRadius: BorderRadius.all(
                 Radius.circular(16.0),
               ),
-              image: DecorationImage(
-                  image: AssetImage("assets/3Drenders.jpg"), fit: BoxFit.cover),
+              //image: DecorationImage(
+              //image: AssetImage("assets/work.jpg"),
+              //fit: BoxFit.cover),
               color: Color(0xffADB3BF),
             ),
           ),
@@ -72,8 +74,9 @@ class _SavedStoriesState extends State<SavedStories> {
               borderRadius: BorderRadius.all(
                 Radius.circular(16.0),
               ),
-              image: DecorationImage(
-                  image: AssetImage("assets/girl.jpg"), fit: BoxFit.cover),
+              //image: DecorationImage(
+              //image: AssetImage("assets/work.jpg"),
+              //fit: BoxFit.cover),
               color: Color(0xffADB3BF),
             ),
           ),
