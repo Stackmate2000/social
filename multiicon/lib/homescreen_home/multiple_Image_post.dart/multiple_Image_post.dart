@@ -34,16 +34,46 @@ class _MultipleImagePostState extends State<MultipleImagePost> {
                         Row(
                           children: [
                             Container(
-                              height: 50,
-                              width: 50,
+                              height: 55,
+                              width: 55,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(16.0),
                                 ),
-                                //image: DecorationImage(
-                                //image: AssetImage("assets/girl.jpg"),
-                                //fit: BoxFit.cover),
-                                color: Color(0xffADB3BF),
+                                gradient: LinearGradient(
+                                    colors: [Colors.red, Colors.purple],
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft),
+                              ),
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: Container(
+                                  height: 505,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(12.0),
+                                    ),
+                                    color: Color(0xffFFFFFF),
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: Container(
+                                      height: 45,
+                                      width: 45,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(16.0),
+                                        ),
+                                        //  image: DecorationImage(
+                                        //    image:
+                                        //        AssetImage("assets/girl.jpg"),
+                                        //    fit: BoxFit.cover),
+                                        color: Color(0xffADB3BF),
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
                             SizedBox(
