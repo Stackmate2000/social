@@ -21,7 +21,7 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
+      padding: const EdgeInsets.only(bottom: 13.0),
       child: Stack(
         children: [
           isOpen
@@ -145,15 +145,15 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                   _toggleOpen();
                 },
                 child: Container(
-                  height: 55,
-                  width: 55,
+                  height: 60,
+                  width: 60,
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                          color: Color(0xff896ae4).withOpacity(0.1),
+                          color: Color(0xff896ae4).withOpacity(0.2),
                           blurRadius: 4.0,
                           spreadRadius: 2.0,
-                          offset: Offset(7.0, 6.0))
+                          offset: Offset(0.0, 6.0))
                     ],
                     borderRadius: BorderRadius.all(Radius.circular(21.0)),
                     gradient: LinearGradient(colors: [

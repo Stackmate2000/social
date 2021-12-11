@@ -34,7 +34,7 @@ class _BottomNav2State extends State<BottomNav2> {
             Align(
               alignment: Alignment.bottomRight,
               child: Container(
-                height: 55,
+                height: 60,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -56,7 +56,7 @@ class _BottomNav2State extends State<BottomNav2> {
                           },
                           child: Container(
                               width: MediaQuery.of(context).size.width * 0.07,
-                              height: 50,
+                              height: 60,
                               decoration: BoxDecoration(),
                               child: Center(
                                 child: Container(
@@ -83,7 +83,7 @@ class _BottomNav2State extends State<BottomNav2> {
                           },
                           child: Container(
                               width: MediaQuery.of(context).size.width * 0.07,
-                              height: 50,
+                              height: 60,
                               decoration: BoxDecoration(),
                               child: Center(
                                 child: Container(
@@ -99,7 +99,6 @@ class _BottomNav2State extends State<BottomNav2> {
                         ),
                       ),
                       Container(
-                        height: 50,
                         width: MediaQuery.of(context).size.width * 0.07,
                       ),
                       Container(
@@ -111,7 +110,7 @@ class _BottomNav2State extends State<BottomNav2> {
                           },
                           child: Container(
                               width: MediaQuery.of(context).size.width * 0.07,
-                              height: 50,
+                              height: 60,
                               decoration: BoxDecoration(),
                               child: Center(
                                 child: Container(
@@ -139,7 +138,7 @@ class _BottomNav2State extends State<BottomNav2> {
                           },
                           child: Container(
                               width: MediaQuery.of(context).size.width * 0.07,
-                              height: 50,
+                              height: 60,
                               decoration: BoxDecoration(),
                               child: Center(
                                 child: Container(

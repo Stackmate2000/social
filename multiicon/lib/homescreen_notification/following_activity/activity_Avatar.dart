@@ -22,17 +22,47 @@ class _ActivityAvatarState extends State<ActivityAvatar> {
             width: 15.0,
           ),
           Container(
-            height: 50,
-            width: 50,
+            height: 55,
+            width: 55,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(16.0),
               ),
-              image: DecorationImage(
-                  image: AssetImage("assets/work.jpg"), fit: BoxFit.cover),
-              color: Color(0xffADB3BF),
+              gradient: LinearGradient(
+                  colors: [Colors.redAccent, Colors.purple],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter),
             ),
-          ),
+            child: Align(
+              alignment: Alignment.center,
+              child: Container(
+                height: 55,
+                width: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12.0),
+                  ),
+                  color: Color(0xffFFFFFF),
+                ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    height: 45,
+                    width: 45,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(16.0),
+                      ),
+                      image: DecorationImage(
+                          image: AssetImage("assets/work.jpg"),
+                          fit: BoxFit.cover),
+                      color: Color(0xffADB3BF),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );

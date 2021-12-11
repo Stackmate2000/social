@@ -114,14 +114,14 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                 Radius.circular(16.0),
                               ),
                               gradient: LinearGradient(
-                                  colors: [Colors.red, Colors.purple],
-                                  begin: Alignment.topRight,
-                                  end: Alignment.bottomLeft),
+                                  colors: [Colors.redAccent, Colors.purple],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter),
                             ),
                             child: Align(
                               alignment: Alignment.center,
                               child: Container(
-                                height: 505,
+                                height: 55,
                                 width: 50,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
@@ -138,10 +138,9 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(16.0),
                                       ),
-                                      //  image: DecorationImage(
-                                      //    image:
-                                      //        AssetImage("assets/work.jpg"),
-                                      //    fit: BoxFit.cover),
+                                      image: DecorationImage(
+                                          image: AssetImage("assets/work.jpg"),
+                                          fit: BoxFit.cover),
                                       color: Color(0xffADB3BF),
                                     ),
                                   ),

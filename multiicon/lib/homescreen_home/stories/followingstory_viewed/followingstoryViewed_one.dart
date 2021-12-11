@@ -145,15 +145,41 @@ class _FollowingStoryViewedOneState extends State<FollowingStoryViewedOne> {
       child: Row(
         children: [
           Container(
-            height: 60,
-            width: 60,
+            height: 70,
+            width: 70,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(
-                Radius.circular(16.0),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(16.0),
+                ),
+                color: Color(0xffADB3BF)),
+            child: Align(
+              alignment: Alignment.center,
+              child: Container(
+                height: 70,
+                width: 65,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12.0),
+                  ),
+                  color: Color(0xffFFFFFF),
+                ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(16.0),
+                      ),
+                      image: DecorationImage(
+                          image: AssetImage("assets/work.jpg"),
+                          fit: BoxFit.cover),
+                      color: Color(0xffADB3BF),
+                    ),
+                  ),
+                ),
               ),
-              image: DecorationImage(
-                  image: AssetImage("assets/work.jpg"), fit: BoxFit.cover),
-              color: Color(0xffADB3BF),
             ),
           ),
           SizedBox(
