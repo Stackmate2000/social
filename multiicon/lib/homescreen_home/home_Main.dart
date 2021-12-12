@@ -77,62 +77,36 @@ class _HomeMainState extends State<HomeMain> {
                                     )
                                   ],
                                 ),
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(_profileRoute());
-                                  },
-                                  child: Container(
-                                    height: 40,
-                                    width: 40,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(12.0),
+                                Row(
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context)
+                                            .push(_profileRoute());
+                                      },
+                                      child: Container(
+                                        height: 40,
+                                        width: 40,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(12.0),
+                                          ),
+                                          //image: DecorationImage(
+                                          //image: AssetImage("assets/nigga.jpg"),
+                                          //fit: BoxFit.cover),
+                                          color: Color(0xffADB3BF),
+                                        ),
                                       ),
-                                      //image: DecorationImage(
-                                      //image: AssetImage("assets/nigga.jpg"),
-                                      //fit: BoxFit.cover),
-                                      color: Color(0xffADB3BF),
                                     ),
-                                  ),
+                                    SizedBox(
+                                      width: 15.0,
+                                    ),
+                                    Container(
+                                      child: Icon(CupertinoIcons.search),
+                                    ),
+                                  ],
                                 ),
                               ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.9,
-                            child: TextField(
-                              style: GoogleFonts.montserrat(
-                                  color: Color(0xff000000),
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500),
-                              textAlign: TextAlign.left,
-                              autofocus: false,
-                              decoration: InputDecoration(
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color:
-                                          Color(0xff000000).withOpacity(0.1)),
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(21.0),
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(21.0),
-                                  ),
-                                ),
-                                hintText: "Looking for SomeOne",
-                                hintStyle: GoogleFonts.montserrat(
-                                    color: Color(0xff000000).withOpacity(0.5),
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w400),
-                                fillColor: Color(0xffFFFFFF),
-                                filled: true,
-                                prefixIcon: Icon(CupertinoIcons.search),
-                              ),
                             ),
                           ),
 

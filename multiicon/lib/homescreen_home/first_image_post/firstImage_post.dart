@@ -96,97 +96,101 @@ class _FirstImagePostState extends State<FirstImagePost> {
       child: Stack(
         children: [
           Padding(
-            padding: const EdgeInsets.only(right: 15.0, left: 15.0),
+            padding: const EdgeInsets.only(right: 0.0, left: 0.0),
             child: Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            height: 55,
-                            width: 55,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(16.0),
-                              ),
-                              gradient: LinearGradient(
-                                  colors: [Colors.redAccent, Colors.purple],
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter),
-                            ),
-                            child: Align(
-                              alignment: Alignment.center,
-                              child: Container(
-                                height: 55,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(12.0),
-                                  ),
-                                  color: Color(0xffFFFFFF),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 15.0, left: 15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              height: 55,
+                              width: 55,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(16.0),
                                 ),
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Container(
-                                    height: 45,
-                                    width: 45,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(16.0),
+                                gradient: LinearGradient(
+                                    colors: [Colors.redAccent, Colors.purple],
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter),
+                              ),
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: Container(
+                                  height: 55,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(12.0),
+                                    ),
+                                    color: Color(0xffFFFFFF),
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: Container(
+                                      height: 45,
+                                      width: 45,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(16.0),
+                                        ),
+                                        image: DecorationImage(
+                                            image:
+                                                AssetImage("assets/work.jpg"),
+                                            fit: BoxFit.cover),
+                                        color: Color(0xffADB3BF),
                                       ),
-                                      image: DecorationImage(
-                                          image: AssetImage("assets/work.jpg"),
-                                          fit: BoxFit.cover),
-                                      color: Color(0xffADB3BF),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  child: Text(
-                                    "Rovira james",
-                                    style: GoogleFonts.montserrat(
-                                        fontSize: 16,
-                                        color:
-                                            Color(0xff000000).withOpacity(0.9),
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 2.0,
-                                ),
-                                Container(
-                                  child: Text(
-                                    "netherland",
-                                    style: GoogleFonts.montserrat(
-                                        fontSize: 12,
-                                        color:
-                                            Color(0xff000000).withOpacity(0.5),
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                              ],
+                            SizedBox(
+                              width: 10.0,
                             ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        child: FirstImageMenuButton(),
-                      )
-                    ],
+                            Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    child: Text(
+                                      "Rovira james",
+                                      style: GoogleFonts.montserrat(
+                                          fontSize: 16,
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.9),
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 2.0,
+                                  ),
+                                  Container(
+                                    child: Text(
+                                      "netherland",
+                                      style: GoogleFonts.montserrat(
+                                          fontSize: 12,
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.5),
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          child: FirstImageMenuButton(),
+                        )
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 7.0,
@@ -195,7 +199,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                        padding: const EdgeInsets.only(left: 30.0, right: 30.0),
                         child: Container(
                           child: Text(
                             "Exploring",
@@ -211,7 +215,7 @@ class _FirstImagePostState extends State<FirstImagePost> {
                         height: 10.0,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                        padding: const EdgeInsets.only(left: 30.0, right: 30.0),
                         child: Container(
                           child: Text(
                             "When I find myself in a creative block I always find it the most reenergizing to explore the way.",
@@ -239,15 +243,15 @@ class _FirstImagePostState extends State<FirstImagePost> {
                           child: Hero(
                             tag: 'firstpost',
                             child: Container(
-                              height: MediaQuery.of(context).size.height * 0.4,
-                              width: MediaQuery.of(context).size.width * 0.7,
+                              height: MediaQuery.of(context).size.height * 0.65,
+                              width: MediaQuery.of(context).size.width,
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(16)),
-                                //image: DecorationImage(
-                                // image: AssetImage("assets/nigga.jpg"),
-                                // fit: BoxFit.cover,
-                                // ),
+                                    BorderRadius.all(Radius.circular(0.0)),
+                                image: DecorationImage(
+                                  image: AssetImage("assets/nigga.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
                                 color: Color(0xffADB3BF),
                               ),
                             ),
@@ -257,10 +261,10 @@ class _FirstImagePostState extends State<FirstImagePost> {
                           height: 10.0,
                         ),
                         Container(
-                          width: MediaQuery.of(context).size.width * 0.7,
+                          width: MediaQuery.of(context).size.width,
                           child: Padding(
                             padding:
-                                const EdgeInsets.only(left: 15.0, right: 15.0),
+                                const EdgeInsets.only(right: 30.0, left: 30.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
