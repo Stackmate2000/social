@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:multiicon/startup/introPage.dart';
+import 'package:multiicon/login/login_page.dart';
 
 class HelloPageNamsatae extends StatefulWidget {
   @override
@@ -14,7 +14,7 @@ class _HelloPageNamsataeState extends State<HelloPageNamsatae> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => IntroPage(),
+          builder: (context) => Login(),
         ),
       );
     });

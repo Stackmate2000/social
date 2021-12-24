@@ -110,16 +110,16 @@ class _HomeMainState extends State<HomeMain> {
                             ),
                           ),
 
-                          SizedBox(height: 15.0),
-                          Container(
-                            child: FirstImagePost(),
-                          ),
+                          //SizedBox(height: 15.0),
+                          // Container(
+                          //   child: FirstImagePost(),
+                          // ),
                           //SizedBox(height: 15.0),
 
                           //ReelOne(),
                           // Container(child: SharedImage_post()),
-                          SizedBox(height: 15.0),
-                          Container(child: MultipleImagePost()),
+                          // SizedBox(height: 15.0),
+                          // Container(child: MultipleImagePost()),
                         ],
                       ),
                     ),

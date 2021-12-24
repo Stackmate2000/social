@@ -132,30 +132,31 @@ class _SignUpPageCState extends State<SignUpPageC> {
                           Navigator.of(context).push(_nextRoute());
                         },
                         child: Container(
-                            alignment: Alignment.center,
-                            height: 50,
-                            width: MediaQuery.of(context).size.width * 0.8,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xff3190FF).withOpacity(0.2),
-                                    blurRadius: 4.0,
-                                    spreadRadius: 2.0,
-                                    offset: Offset(0.0, 6.0))
-                              ],
-                              color: Color(0xff3190FF),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(8.0),
-                              ),
+                          alignment: Alignment.center,
+                          height: 50,
+                          width: MediaQuery.of(context).size.width * 0.8,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Color(0xff3190FF).withOpacity(0.2),
+                                  blurRadius: 4.0,
+                                  spreadRadius: 2.0,
+                                  offset: Offset(0.0, 6.0))
+                            ],
+                            color: Color(0xff3190FF),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(8.0),
                             ),
-                            child: Text(
-                              "Next",
-                              style: GoogleFonts.roboto(
-                                  color: Color(0xffFFFFFF),
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500),
-                              textAlign: TextAlign.center,
-                            )),
+                          ),
+                          child: Text(
+                            "Next",
+                            style: GoogleFonts.roboto(
+                                color: Color(0xffFFFFFF),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
                       ),
                     ],
                   ),
