@@ -34,7 +34,7 @@ class _SearchHomeState extends State<SearchHome> {
                           Colors.transparent,
                           Colors.transparent
                         ],
-                        stops: [0.0, 0.55, 0.6, 1.0],
+                        stops: [0.0, 0.55, 0.0, 1.0],
                         center: FractionalOffset(0.95, 0.00),
                       ).createShader(rect);
                     },
