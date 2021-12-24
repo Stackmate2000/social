@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/homescreen_home/first_image_post/firstImage_post.dart';
 import 'package:multiicon/homescreen_home/multiple_Image_post.dart/multiple_Image_post.dart';
+import 'package:multiicon/homescreen_home/searchhome/searchHome.dart';
 import 'package:multiicon/homescreen_home/stories/story_Main.dart';
 import 'package:multiicon/homescreen_userprofile/profileUI/profileUI.dart';
 
@@ -101,8 +102,20 @@ class _HomeMainState extends State<HomeMain> {
                                     SizedBox(
                                       width: 15.0,
                                     ),
-                                    Container(
-                                      child: Icon(CupertinoIcons.search),
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context).push(
+                                          PageRouteBuilder(
+                                              pageBuilder:
+                                                  (context, animation, _) {
+                                                return SearchHome();
+                                              },
+                                              opaque: false),
+                                        );
+                                      },
+                                      child: Container(
+                                        child: Icon(CupertinoIcons.search),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -111,9 +124,9 @@ class _HomeMainState extends State<HomeMain> {
                           ),
 
                           //SizedBox(height: 15.0),
-                          // Container(
-                          //   child: FirstImagePost(),
-                          // ),
+                          //Container(
+                          // child: FirstImagePost(),
+                          //),
                           //SizedBox(height: 15.0),
 
                           //ReelOne(),

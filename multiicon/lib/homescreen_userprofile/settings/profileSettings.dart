@@ -63,7 +63,7 @@ class _ProfileSettingsState extends State<ProfileSettings> {
                           children: [
                             InviteFriends(),
                             SizedBox(
-                              height: 15.0,
+                              height: 25.0,
                             ),
                             BoxSettings(),
                             SizedBox(

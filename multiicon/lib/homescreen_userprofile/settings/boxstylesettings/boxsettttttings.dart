@@ -32,9 +32,9 @@ class _BoxSettingsState extends State<BoxSettings> {
                     boxShadow: [
                       BoxShadow(
                           color: Color(0xff000000).withOpacity(0.1),
-                          blurRadius: 4.0,
+                          blurRadius: 40.0,
                           spreadRadius: 2.0,
-                          offset: Offset(0.0, 6.0))
+                          offset: Offset(0.0, 30.0))
                     ],
                   ),
                   child: Stack(
@@ -101,9 +101,9 @@ class _BoxSettingsState extends State<BoxSettings> {
                     boxShadow: [
                       BoxShadow(
                           color: Color(0xff000000).withOpacity(0.1),
-                          blurRadius: 4.0,
-                          spreadRadius: 2.0,
-                          offset: Offset(0.0, 6.0))
+                          blurRadius: 40.0,
+                          spreadRadius: 0.0,
+                          offset: Offset(0.0, 30.0))
                     ],
                   ),
                   child: Stack(
@@ -177,7 +177,7 @@ class _BoxSettingsState extends State<BoxSettings> {
                     boxShadow: [
                       BoxShadow(
                           color: Color(0xff000000).withOpacity(0.1),
-                          blurRadius: 4.0,
+                          blurRadius: 40.0,
                           spreadRadius: 2.0,
                           offset: Offset(0.0, 6.0))
                     ],
@@ -245,7 +245,7 @@ class _BoxSettingsState extends State<BoxSettings> {
                     boxShadow: [
                       BoxShadow(
                           color: Color(0xff000000).withOpacity(0.1),
-                          blurRadius: 4.0,
+                          blurRadius: 40.0,
                           spreadRadius: 2.0,
                           offset: Offset(0.0, 6.0))
                     ],

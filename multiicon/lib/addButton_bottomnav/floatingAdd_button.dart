@@ -150,10 +150,10 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                          color: Color(0xff896ae4).withOpacity(0.2),
-                          blurRadius: 4.0,
+                          color: Color(0xff896ae4).withOpacity(0.4),
+                          blurRadius: 40.0,
                           spreadRadius: 2.0,
-                          offset: Offset(0.0, 6.0))
+                          offset: Offset(0.0, 40.0))
                     ],
                     borderRadius: BorderRadius.all(Radius.circular(21.0)),
                     gradient: LinearGradient(colors: [

@@ -23,10 +23,10 @@ class _InviteFriendsState extends State<InviteFriends> {
           ], begin: Alignment.topRight, end: Alignment.bottomLeft),
           boxShadow: [
             BoxShadow(
-                color: Color(0xff000000).withOpacity(0.1),
-                blurRadius: 4.0,
+                color: Color(0xff000000).withOpacity(0.3),
+                blurRadius: 40.0,
                 spreadRadius: 2.0,
-                offset: Offset(0.0, 6.0))
+                offset: Offset(0.0, 30.0))
           ],
         ),
         child: Stack(
