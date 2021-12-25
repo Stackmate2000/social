@@ -71,7 +71,7 @@ class _SearchPageMainState extends State<SearchPageMain> {
                                   Radius.circular(21.0),
                                 ),
                               ),
-                              hintText: "Looking for someOne",
+                              hintText: "",
                               hintStyle: GoogleFonts.montserrat(
                                   color: Color(0xffFFFFFF).withOpacity(0.9),
                                   fontSize: 15,
