@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -14,6 +15,265 @@ class StoryMain extends StatefulWidget {
 }
 
 class _StoryMainState extends State<StoryMain> {
+  modalBottomSheet(context) {
+    showModalBottomSheet(
+        isScrollControlled: true,
+        backgroundColor: Colors.transparent,
+        context: context,
+        builder: (BuildContext context) {
+          return buildBlur(
+            child: Container(
+              height: MediaQuery.of(context).size.height,
+              decoration: BoxDecoration(),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      height: MediaQuery.of(context).size.height * 0.7,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(40),
+                          topRight: Radius.circular(40),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(0.0),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    child: Text(
+                                      "What's your",
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 28,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.5),
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 0.0,
+                                  ),
+                                  Container(
+                                    child: Text(
+                                      "plan for todays?",
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 28,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.9),
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10.0,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 0.0),
+                                    child: Container(
+                                      child: Text(
+                                        "Add your feed with powerful categories and beautiful pictures.",
+                                        style: GoogleFonts.montserrat(
+                                            color: Color(0xff000000)
+                                                .withOpacity(0.5),
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 15.0,
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                      height: 50.0,
+                                      width: 50.0,
+                                      decoration: BoxDecoration(
+                                        color: Colors.blueGrey[900],
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(16.0),
+                                        ),
+                                      ),
+                                      child: Icon(
+                                        MdiIcons.plus,
+                                        color: Color(0xffFFFFFF),
+                                      )),
+                                  SizedBox(width: 10.0),
+                                  Container(
+                                    child: Text(
+                                      "Add Story",
+                                      style: GoogleFonts.roboto(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.7),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                      height: 50.0,
+                                      width: 50.0,
+                                      decoration: BoxDecoration(
+                                        color: Colors.blueGrey[900],
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(16.0),
+                                        ),
+                                      ),
+                                      child: Icon(
+                                        CupertinoIcons.music_note,
+                                        color: Color(0xffFFFFFF),
+                                      )),
+                                  SizedBox(width: 10.0),
+                                  Container(
+                                    child: Text(
+                                      "Record",
+                                      style: GoogleFonts.roboto(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.7),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                      height: 50.0,
+                                      width: 50.0,
+                                      decoration: BoxDecoration(
+                                        color: Colors.blueGrey[900],
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(16.0),
+                                        ),
+                                      ),
+                                      child: Icon(
+                                        MdiIcons.cameraPlusOutline,
+                                        color: Color(0xffFFFFFF),
+                                      )),
+                                  SizedBox(width: 10.0),
+                                  Container(
+                                    child: Text(
+                                      "Upload",
+                                      style: GoogleFonts.roboto(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.7),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                      height: 50.0,
+                                      width: 50.0,
+                                      decoration: BoxDecoration(
+                                        color: Colors.blueGrey[900],
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(16.0),
+                                        ),
+                                      ),
+                                      child: Icon(
+                                        MdiIcons.feather,
+                                        color: Color(0xffFFFFFF),
+                                      )),
+                                  SizedBox(width: 10.0),
+                                  Container(
+                                    child: Text(
+                                      "Note to speak",
+                                      style: GoogleFonts.roboto(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.7),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 450,
+                    right: e + 40,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(16.0),
+                          ),
+                          color: Colors.blueGrey[900],
+                        ),
+                        child: Icon(
+                          CupertinoIcons.clear,
+                          color: Color(0xffFFFFFF),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  Widget buildBlur({
+    @required Widget child,
+    double sigmaX = 2,
+    double sigmaY = 2,
+  }) =>
+      ClipRRect(
+        borderRadius: BorderRadius.zero,
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: sigmaX, sigmaY: sigmaY),
+          child: child,
+        ),
+      );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,8 +364,9 @@ class _StoryMainState extends State<StoryMain> {
                                           children: [
                                             GestureDetector(
                                               onTap: () {
-                                                Navigator.of(context)
-                                                    .push(_nextRoute());
+                                                //Navigator.of(context)
+                                                //.push(_nextRoute());
+                                                modalBottomSheet(context);
                                               },
                                               child: Container(
                                                 height: 60,
@@ -136,8 +397,9 @@ class _StoryMainState extends State<StoryMain> {
                                                       Color(0xffF4F6F6),
                                                   child: GestureDetector(
                                                     onTap: () {
-                                                      Navigator.of(context)
-                                                          .push(_nextRoute());
+                                                      //Navigator.of(context)
+                                                      //.push(_nextRoute());
+                                                      modalBottomSheet(context);
                                                     },
                                                     child: Container(
                                                       height: 20,
