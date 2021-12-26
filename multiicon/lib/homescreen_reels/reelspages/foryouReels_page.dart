@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:multiicon/animation/animatedcamera/animatedMusic_button.dart';
 import 'package:multiicon/homescreen_reels/buttons/comment_Button.dart';
 import 'package:multiicon/homescreen_reels/buttons/homescreenreelsMenu.dart';
 import 'package:multiicon/homescreen_reels/buttons/like_Button.dart';
@@ -80,9 +79,6 @@ class _ForYouReelsPageState extends State<ForYouReelsPage> {
                       ),
                       Row(
                         children: [
-                          Container(
-                            child: AnimatedMusicButton(),
-                          ),
                           SizedBox(
                             width: 15.0,
                           ),
