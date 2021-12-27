@@ -43,8 +43,8 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.7,
-                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    width: MediaQuery.of(context).size.width * 0.95,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
@@ -61,195 +61,50 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            TweenAnimationBuilder(
-                              duration: Duration(milliseconds: 750),
-                              builder: (BuildContext context, Object _val,
-                                  Widget child) {
-                                return Opacity(
-                                  opacity: _val,
-                                  child: child,
-                                );
-                              },
-                              tween: Tween<double>(begin: 0, end: 1),
-                              curve: Curves.easeIn,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    child: Text(
-                                      "What's your",
-                                      style: GoogleFonts.montserrat(
-                                        fontSize: 28,
-                                        color:
-                                            Color(0xff000000).withOpacity(0.5),
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 0.0,
-                                  ),
-                                  Container(
-                                    child: Text(
-                                      "plan for the day?",
-                                      style: GoogleFonts.montserrat(
-                                        fontSize: 28,
-                                        color:
-                                            Color(0xff000000).withOpacity(0.9),
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 10.0,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(right: 0.0),
-                                    child: Container(
-                                      child: Text(
-                                        "Add your feed with powerful categories and beautiful pictures.",
-                                        style: GoogleFonts.montserrat(
-                                            color: Color(0xff000000)
-                                                .withOpacity(0.5),
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                            Container(
+                              child: Text(
+                                "Upload",
+                                style: GoogleFonts.roboto(
+                                    color: Color(0xff000000).withOpacity(0.7),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500),
                               ),
                             ),
                             SizedBox(
-                              height: 15.0,
+                              height: 10.0,
                             ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Container(
-                                    height: 50.0,
-                                    width: 50.0,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blueGrey[900],
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(16.0),
-                                      ),
-                                    ),
-                                    child: Icon(
-                                      MdiIcons.plus,
-                                      color: Color(0xffFFFFFF),
-                                    )),
-                                SizedBox(width: 10.0),
-                                Container(
-                                  child: Text(
-                                    "Add Story",
-                                    style: GoogleFonts.roboto(
-                                        color:
-                                            Color(0xff000000).withOpacity(0.7),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ),
-                              ],
+                            Container(
+                              child: Text(
+                                "Upload",
+                                style: GoogleFonts.roboto(
+                                    color: Color(0xff000000).withOpacity(0.7),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500),
+                              ),
                             ),
                             SizedBox(
                               height: 10.0,
                             ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Container(
-                                    height: 50.0,
-                                    width: 50.0,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blueGrey[900],
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(16.0),
-                                      ),
-                                    ),
-                                    child: Icon(
-                                      CupertinoIcons.music_note,
-                                      color: Color(0xffFFFFFF),
-                                    )),
-                                SizedBox(width: 10.0),
-                                Container(
-                                  child: Text(
-                                    "Record",
-                                    style: GoogleFonts.roboto(
-                                        color:
-                                            Color(0xff000000).withOpacity(0.7),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ),
-                              ],
+                            Container(
+                              child: Text(
+                                "Upload",
+                                style: GoogleFonts.roboto(
+                                    color: Color(0xff000000).withOpacity(0.7),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500),
+                              ),
                             ),
                             SizedBox(
                               height: 10.0,
                             ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Container(
-                                    height: 50.0,
-                                    width: 50.0,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blueGrey[900],
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(16.0),
-                                      ),
-                                    ),
-                                    child: Icon(
-                                      CupertinoIcons.camera_fill,
-                                      color: Color(0xffFFFFFF),
-                                    )),
-                                SizedBox(width: 10.0),
-                                Container(
-                                  child: Text(
-                                    "Upload",
-                                    style: GoogleFonts.roboto(
-                                        color:
-                                            Color(0xff000000).withOpacity(0.7),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10.0,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Container(
-                                    height: 50.0,
-                                    width: 50.0,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blueGrey[900],
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(16.0),
-                                      ),
-                                    ),
-                                    child: Icon(
-                                      MdiIcons.feather,
-                                      color: Color(0xffFFFFFF),
-                                    )),
-                                SizedBox(width: 10.0),
-                                Container(
-                                  child: Text(
-                                    "Note to speak",
-                                    style: GoogleFonts.roboto(
-                                        color:
-                                            Color(0xff000000).withOpacity(0.7),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ),
-                              ],
+                            Container(
+                              child: Text(
+                                "Upload",
+                                style: GoogleFonts.roboto(
+                                    color: Color(0xff000000).withOpacity(0.7),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500),
+                              ),
                             ),
                           ],
                         ),
@@ -258,7 +113,7 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
                   ),
                 ),
                 Positioned(
-                  bottom: 450,
+                  bottom: 315,
                   right: e + 30,
                   child: GestureDetector(
                     onTap: () {

@@ -286,17 +286,3 @@ class _UploadRandomState extends State<UploadRandom>
         });
   }
 }
-
-class UploadRandomList extends StatefulWidget {
-  const UploadRandomList({Key key}) : super(key: key);
-
-  @override
-  _UploadRandomListState createState() => _UploadRandomListState();
-}
-
-class _UploadRandomListState extends State<UploadRandomList> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}

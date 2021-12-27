@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:multiicon/homescreen_reels/buttons/modalSheet_menubuttons.dart';
+import 'package:multiicon/homescreen_reels/buttons/menubuttons_reel/modalSheet_menubuttons.dart';
 
 class HomeScreenReelsMenu extends StatefulWidget {
   @override
