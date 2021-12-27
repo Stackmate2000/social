@@ -61,49 +61,63 @@ class _UploadRandomState extends State<UploadRandom>
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  child: Text(
-                                    "What's your",
-                                    style: GoogleFonts.montserrat(
-                                      fontSize: 28,
-                                      color: Color(0xff000000).withOpacity(0.5),
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 0.0,
-                                ),
-                                Container(
-                                  child: Text(
-                                    "plan for the day?",
-                                    style: GoogleFonts.montserrat(
-                                      fontSize: 28,
-                                      color: Color(0xff000000).withOpacity(0.9),
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 0.0),
-                                  child: Container(
+                            TweenAnimationBuilder(
+                              duration: Duration(milliseconds: 750),
+                              builder: (BuildContext context, Object _val,
+                                  Widget child) {
+                                return Opacity(
+                                  opacity: _val,
+                                  child: child,
+                                );
+                              },
+                              tween: Tween<double>(begin: 0, end: 1),
+                              curve: Curves.easeIn,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
                                     child: Text(
-                                      "Add your feed with powerful categories and beautiful pictures.",
+                                      "What's your",
                                       style: GoogleFonts.montserrat(
-                                          color: Color(0xff000000)
-                                              .withOpacity(0.5),
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500),
+                                        fontSize: 28,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.5),
+                                        fontWeight: FontWeight.w400,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(
+                                    height: 0.0,
+                                  ),
+                                  Container(
+                                    child: Text(
+                                      "plan for the day?",
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 28,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.9),
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10.0,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 0.0),
+                                    child: Container(
+                                      child: Text(
+                                        "Add your feed with powerful categories and beautiful pictures.",
+                                        style: GoogleFonts.montserrat(
+                                            color: Color(0xff000000)
+                                                .withOpacity(0.5),
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             SizedBox(
                               height: 15.0,
@@ -270,5 +284,19 @@ class _UploadRandomState extends State<UploadRandom>
             ),
           );
         });
+  }
+}
+
+class UploadRandomList extends StatefulWidget {
+  const UploadRandomList({Key key}) : super(key: key);
+
+  @override
+  _UploadRandomListState createState() => _UploadRandomListState();
+}
+
+class _UploadRandomListState extends State<UploadRandomList> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

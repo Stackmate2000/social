@@ -139,36 +139,42 @@ class _FloatingAddButtonState extends State<FloatingAddButton> {
                 ),
           Container(
             alignment: Alignment.bottomCenter,
-            child: Positioned(
-              child: GestureDetector(
-                onTap: () {
-                  _toggleOpen();
+            child: GestureDetector(
+              onTap: () {
+                _toggleOpen();
+              },
+              child: TweenAnimationBuilder(
+                duration: Duration(milliseconds: 500),
+                builder: (BuildContext context, _val, child) {
+                  return Container(
+                    height: _val,
+                    width: _val,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Color(0xff896ae4).withOpacity(0.4),
+                            blurRadius: 40.0,
+                            spreadRadius: 2.0,
+                            offset: Offset(0.0, 40.0))
+                      ],
+                      borderRadius: BorderRadius.all(Radius.circular(21.0)),
+                      gradient: LinearGradient(colors: [
+                        Color(0xff896ae4),
+                        Color(0xff937cdc),
+                      ], begin: Alignment.topRight, end: Alignment.bottomLeft),
+                    ),
+                    child: isOpen
+                        ? Icon(MdiIcons.close,
+                            color: Color(0xffFFFFFF), size: 22)
+                        : Icon(
+                            CupertinoIcons.add,
+                            color: Color(0xffFFFFFF),
+                            size: 22,
+                          ),
+                  );
                 },
-                child: Container(
-                  height: 60,
-                  width: 60,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                          color: Color(0xff896ae4).withOpacity(0.4),
-                          blurRadius: 40.0,
-                          spreadRadius: 2.0,
-                          offset: Offset(0.0, 40.0))
-                    ],
-                    borderRadius: BorderRadius.all(Radius.circular(21.0)),
-                    gradient: LinearGradient(colors: [
-                      Color(0xff896ae4),
-                      Color(0xff937cdc),
-                    ], begin: Alignment.topRight, end: Alignment.bottomLeft),
-                  ),
-                  child: isOpen
-                      ? Icon(MdiIcons.close, color: Color(0xffFFFFFF), size: 22)
-                      : Icon(
-                          CupertinoIcons.add,
-                          color: Color(0xffFFFFFF),
-                          size: 22,
-                        ),
-                ),
+                tween: Tween<double>(begin: 0, end: 60),
+                curve: Curves.bounceInOut,
               ),
             ),
           ),
