@@ -110,7 +110,7 @@ class _LoginState extends State<Login> {
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: Color(0xff000000).withOpacity(0.1),
+                    color: Color(0xffFFFFFF).withOpacity(0.1),
                   ),
                   child: Stack(
                     children: [
@@ -197,7 +197,7 @@ class _LoginState extends State<Login> {
                                       color: Color(0xff000000).withOpacity(0.6),
                                       fontSize: 14,
                                       fontWeight: FontWeight.w400),
-                                  fillColor: Color(0xffFFFFFF).withOpacity(0.3),
+                                  fillColor: Color(0xffFFFFFF).withOpacity(0.9),
                                   filled: true,
                                 ),
                               ),
@@ -234,7 +234,7 @@ class _LoginState extends State<Login> {
                                       color: Color(0xff000000).withOpacity(0.6),
                                       fontSize: 14,
                                       fontWeight: FontWeight.w400),
-                                  fillColor: Color(0xffFFFFFF).withOpacity(0.3),
+                                  fillColor: Color(0xffFFFFFF).withOpacity(0.9),
                                   filled: true,
                                 ),
                               ),
@@ -270,12 +270,12 @@ class _LoginState extends State<Login> {
                                   boxShadow: [
                                     BoxShadow(
                                         color:
-                                            Color(0xff000000).withOpacity(0.2),
+                                            Color(0xff000000).withOpacity(0.1),
                                         blurRadius: 40.0,
                                         spreadRadius: 2.0,
                                         offset: Offset(0.0, 20.0))
                                   ],
-                                  color: Color(0xffFFFFFF).withOpacity(0.3),
+                                  color: Color(0xffFFFFFF).withOpacity(0.5),
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(8.0),
                                   ),
