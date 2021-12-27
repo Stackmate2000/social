@@ -52,20 +52,20 @@ class _BottomNav2State extends State<BottomNav2>
                             : Profile()),
                 Align(
                   alignment: Alignment.bottomRight,
-                  child: Container(
-                    height: 60,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30.0),
-                        topRight: Radius.circular(30.0),
+                  child: Transform(
+                    transform: Matrix4.translationValues(
+                        0.0, animation.value * height, 0.0),
+                    child: Container(
+                      height: 60,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30.0),
+                          topRight: Radius.circular(30.0),
+                        ),
+                        color:
+                            _index == 1 ? Color(0xff000000) : Color(0xffFFFFFF),
                       ),
-                      color:
-                          _index == 1 ? Color(0xff000000) : Color(0xffFFFFFF),
-                    ),
-                    child: Transform(
-                      transform: Matrix4.translationValues(
-                          0.0, animation.value * height, 0.0),
                       child: Container(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
