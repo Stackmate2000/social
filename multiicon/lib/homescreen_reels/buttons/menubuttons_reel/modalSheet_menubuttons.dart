@@ -44,7 +44,7 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
                   alignment: Alignment.bottomCenter,
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.4,
-                    width: MediaQuery.of(context).size.width * 0.95,
+                    width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
@@ -113,7 +113,7 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
                   ),
                 ),
                 Positioned(
-                  bottom: 315,
+                  bottom: 250,
                   right: e + 30,
                   child: GestureDetector(
                     onTap: () {

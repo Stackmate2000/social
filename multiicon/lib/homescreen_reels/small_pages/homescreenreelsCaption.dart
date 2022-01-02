@@ -14,8 +14,8 @@ class _HomeScreenReelsCaptionState extends State<HomeScreenReelsCaption> {
       child: TextButton(
         onPressed: () {},
         child: Text(
-          "No caption yet hello world #hello world hello world Hwww ryhkski sdjm, sakjdnkjsank sandknask ksandknsa",
-          style: GoogleFonts.roboto(
+          "Dope days,dim nights,lit comapny,and love vibes.",
+          style: GoogleFonts.montserrat(
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.w500),
           textAlign: TextAlign.start,
           maxLines: 3,

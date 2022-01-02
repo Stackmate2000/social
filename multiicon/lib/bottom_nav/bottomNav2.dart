@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:multiicon/addButton_bottomnav/floatingAdd_button.dart';
+import 'package:multiicon/bottom_nav/actionbuttonReels_view.dart';
 import 'package:multiicon/homescreen_home/home_Main.dart';
 import 'package:multiicon/homescreen_notification/homescreen_Notification.dart';
 import 'package:multiicon/homescreen_reels/homescreen_Reels.dart';
@@ -187,7 +188,9 @@ class _BottomNav2State extends State<BottomNav2>
                   ),
                 ),
                 Container(
-                  child: FloatingAddButton(),
+                  child: _index == 1
+                      ? ActionButtonReelsView()
+                      : FloatingAddButton(),
                 ),
               ],
             ),
