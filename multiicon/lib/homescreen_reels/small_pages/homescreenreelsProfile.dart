@@ -21,15 +21,15 @@ class _HomeScreenReelsProfileState extends State<HomeScreenReelsProfile> {
       child: Row(
         children: [
           Container(
-            height: 50,
-            width: 50,
+            height: 45,
+            width: 45,
             decoration: BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage("assets/splash.jpg"),
+              borderRadius: BorderRadius.all(
+                Radius.circular(16.0),
               ),
+              image: DecorationImage(
+                  image: AssetImage("assets/girl.jpg"), fit: BoxFit.cover),
+              color: Color(0xffADB3BF),
             ),
           ),
           SizedBox(

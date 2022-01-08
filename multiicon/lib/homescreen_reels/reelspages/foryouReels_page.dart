@@ -22,9 +22,11 @@ class _ForYouReelsPageState extends State<ForYouReelsPage> {
         children: [
           Container(
             decoration: BoxDecoration(
-                color: Colors.black,
-                image: DecorationImage(
-                    image: AssetImage("assets/nigga.jpg"), fit: BoxFit.cover)),
+              color: Colors.black,
+              //image: DecorationImage(
+              //image: AssetImage("assets/nigga.jpg"),
+              //  fit: BoxFit.cover),
+            ),
           ),
           Align(
             alignment: Alignment.bottomRight,
@@ -47,33 +49,20 @@ class _ForYouReelsPageState extends State<ForYouReelsPage> {
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 50.0, left: 15.0),
+              padding: const EdgeInsets.only(bottom: 80.0, left: 15.0),
               child: Container(
                 child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      //Container(child: HomeScreenReelsProfile()),
-                      SizedBox(height: 5.0),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.7,
-                        child: HomeScreenReelsCaption(),
-                      ),
-                      SizedBox(height: 5.0),
-                      Row(
-                        children: [
-                          //SizedBox(width: 15.0),
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.5,
-                            height: 20,
-                            //child: MarqueeMusic()
-                          ),
-                          Container(
-                              //child: HomeScreenReelsMenu(),
-                              )
-                        ],
-                      ),
-                    ]),
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(child: HomeScreenReelsProfile()),
+                    SizedBox(height: 5.0),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.7,
+                      child: HomeScreenReelsCaption(),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

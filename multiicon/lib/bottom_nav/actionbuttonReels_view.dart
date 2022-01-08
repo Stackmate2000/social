@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/bottom_nav/iconButton_actionreelsbutton.dart';
+import 'package:multiicon/homescreen_reels/buttons/menubuttons_reel/homescreenreelsMenu.dart';
 
 const _maxHeight = 350.0;
 const _minHeight = 60.0;
@@ -82,13 +83,16 @@ class _ActionButtonReelsViewState extends State<ActionButtonReelsView>
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: [
-                              Color(0xff896ae4),
+                              Colors.cyan,
+                              Color(0xff5599EE),
                               Color(0xff937cdc),
                             ],
                             begin: Alignment.topRight,
                             end: Alignment.bottomLeft),
                         borderRadius: BorderRadius.vertical(
-                          top: Radius.circular(20),
+                          top: Radius.circular(
+                            lerpDouble(20.0, 30.0, value),
+                          ),
                           bottom: Radius.circular(
                             lerpDouble(20.0, 0.0, value),
                           ),
@@ -124,7 +128,8 @@ class _ActionButtonReelsViewState extends State<ActionButtonReelsView>
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           gradient: LinearGradient(colors: [
-            Color(0xff896ae4),
+            Colors.cyan,
+            Color(0xff5599EE),
             Color(0xff937cdc),
           ], begin: Alignment.topRight, end: Alignment.bottomLeft),
         ),
@@ -148,31 +153,66 @@ class _ActionButtonReelsViewState extends State<ActionButtonReelsView>
       child: FittedBox(
         fit: BoxFit.scaleDown,
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              color: Colors.black,
-              height: 60.0,
-              width: 60.0,
+              height: 80,
+              width: 80,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(16.0),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                      color: Color(0xff000000).withOpacity(0.4),
+                      blurRadius: 20.0,
+                      spreadRadius: 2.0,
+                      offset: Offset(0.0, 15.0))
+                ],
+                color: Colors.black,
+                image: DecorationImage(
+                    image: AssetImage("assets/nigga.jpg"), fit: BoxFit.cover),
+              ),
             ),
             SizedBox(
-              height: 15.0,
+              height: 50.0,
             ),
             Text(
-              "unknown",
-              style: GoogleFonts.montserrat(
-                  color: Color(0xffFFFFFF),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              "Morning,",
+              "Blinding lights",
               style: GoogleFonts.montserrat(
                   color: Color(0xffFFFFFF),
                   fontSize: 16,
                   fontWeight: FontWeight.w500),
+            ),
+            SizedBox(
+              height: 15.0,
+            ),
+            Row(
+              children: [
+                Container(
+                  height: 30,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(8.0),
+                    ),
+                    color: Colors.black,
+                    image: DecorationImage(
+                        image: AssetImage("assets/work.jpg"),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+                SizedBox(width: 5.0),
+                Container(
+                  child: Text(
+                    "The Weekend,",
+                    style: GoogleFonts.montserrat(
+                        color: Color(0xffFFFFFF).withOpacity(0.5),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
