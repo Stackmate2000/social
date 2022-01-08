@@ -2,9 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:multiicon/homescreen_userprofile/tabBar/indexOne.dart';
-import 'package:multiicon/homescreen_userprofile/tabBar/indexThree.dart';
-import 'package:multiicon/homescreen_userprofile/tabBar/indexTwo.dart';
 
 class GalleryMainTabBar extends StatefulWidget {
   @override

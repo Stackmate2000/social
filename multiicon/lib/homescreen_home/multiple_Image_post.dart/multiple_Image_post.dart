@@ -406,6 +406,7 @@ Route _firstRoute() {
   );
 }
 
+// ignore: unused_element
 Route _secondRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => MultipleImageTwo(),
@@ -425,6 +426,7 @@ Route _secondRoute() {
   );
 }
 
+// ignore: unused_element
 Route _thirdRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) =>

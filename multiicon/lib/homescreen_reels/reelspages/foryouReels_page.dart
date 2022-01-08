@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:multiicon/homescreen_reels/buttons/comment_Button.dart';
 import 'package:multiicon/homescreen_reels/buttons/menubuttons_reel/homescreenreelsMenu.dart';
 import 'package:multiicon/homescreen_reels/buttons/like_Button.dart';
-import 'package:multiicon/homescreen_reels/buttons/marqrueeMusic.dart';
 import 'package:multiicon/homescreen_reels/buttons/share_Button.dart';
 import 'package:multiicon/homescreen_reels/small_pages/homescreenreelsCaption.dart';
 import 'package:multiicon/homescreen_reels/small_pages/homescreenreelsProfile.dart';

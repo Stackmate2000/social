@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/addButton_bottomnav/moodCheck/mood_checkinResults.dart';
 import 'package:multiicon/addButton_bottomnav/moodCheck/selectActivity.dart';
-import 'package:multiicon/addButton_bottomnav/moodCheck/sliderFeeling.dart';
 
 class MoodCheckIn extends StatefulWidget {
   @override

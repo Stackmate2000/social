@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:multiicon/homescreen_home/first_image_post/firstImage_post.dart';
-import 'package:multiicon/homescreen_home/multiple_Image_post.dart/multiple_Image_post.dart';
 import 'package:multiicon/homescreen_home/searchhome/searchHome.dart';
 import 'package:multiicon/homescreen_home/stories/story_Main.dart';
 import 'package:multiicon/homescreen_userprofile/profileUI/profileUI.dart';
@@ -154,6 +152,7 @@ Route _nextRoute() {
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       var begin = Offset(-1.0, 0.0);
       var end = Offset.zero;
+      // ignore: unused_local_variable
       var curve = Curves.easeIn;
       var tween =
           Tween(begin: begin, end: end).chain(CurveTween(curve: Curves.easeIn));
@@ -174,6 +173,7 @@ Route _profileRoute() {
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       var begin = Offset(0.0, -1.0);
       var end = Offset.zero;
+      // ignore: unused_local_variable
       var curve = Curves.easeIn;
       var tween =
           Tween(begin: begin, end: end).chain(CurveTween(curve: Curves.easeIn));

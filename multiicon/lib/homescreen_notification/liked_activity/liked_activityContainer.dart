@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:multiicon/homescreen_notification/liked_activity/liked_activityAvatar.dart';
 import 'package:multiicon/homescreen_notification/liked_activity/liked_imageActivity.dart';
-import 'package:multiicon/homescreen_notification/tagged_activity/tagged_activityActivity.dart';
-import 'package:multiicon/homescreen_notification/tagged_activity/tagged_activityAvatar.dart';
 
 class LikedActivityContainer extends StatefulWidget {
   @override

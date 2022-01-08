@@ -1,8 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class IconButtonActionReelsButton extends StatefulWidget {
   const IconButtonActionReelsButton({Key key, this.duration, this.color})
@@ -31,7 +29,7 @@ class _IconButtonActionReelsButtonState
     final curvedAnimation =
         CurvedAnimation(parent: _controller, curve: Curves.easeIn);
 
-    animation = Tween<double>(begin: 0, end: 20).animate(curvedAnimation)
+    animation = Tween<double>(begin: 0, end: 15).animate(curvedAnimation)
       ..addListener(() {
         setState(() {});
       });
@@ -53,6 +51,7 @@ class _IconButtonActionReelsButtonState
   }
 }
 
+// ignore: must_be_immutable
 class Musicvisitualizer extends StatelessWidget {
   List<int> duartion = [900, 700, 600, 800, 500];
   List<Color> colors = [

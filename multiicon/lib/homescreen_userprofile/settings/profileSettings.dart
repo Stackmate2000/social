@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/homescreen_userprofile/settings/boxstylesettings/boxsettttttings.dart';
 import 'package:multiicon/homescreen_userprofile/settings/boxstylesettings/inviteFriends.dart';
-import 'package:multiicon/homescreen_userprofile/settings/signOut.dart';
 
 class ProfileSettings extends StatefulWidget {
   @override
