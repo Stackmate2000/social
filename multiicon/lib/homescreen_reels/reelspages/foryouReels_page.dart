@@ -31,7 +31,7 @@ class _ForYouReelsPageState extends State<ForYouReelsPage> {
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 70.0, right: 15.0),
+              padding: const EdgeInsets.only(bottom: 80.0, right: 15.0),
               child: Container(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -41,6 +41,10 @@ class _ForYouReelsPageState extends State<ForYouReelsPage> {
                     Container(child: CommentButton()),
                     SizedBox(height: 15.0),
                     Container(child: ShareButton()),
+                    SizedBox(height: 15.0),
+                    Container(
+                      child: HomeScreenReelsMenu(),
+                    ),
                   ],
                 ),
               ),

@@ -188,10 +188,9 @@ class _BottomNav2State extends State<BottomNav2>
                   ),
                 ),
                 Container(
-                  child: _index == 1
-                      ? ActionButtonReelsView()
-                      : FloatingAddButton(),
-                ),
+                    child: _index == 1
+                        ? ActionButtonReelsView()
+                        : FloatingAddButton()),
               ],
             ),
           );

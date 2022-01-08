@@ -27,8 +27,8 @@ class _HomeScreenReelsMenuState extends State<HomeScreenReelsMenu> {
 
   Widget buildBlur({
     @required Widget child,
-    double sigmaX = 2,
-    double sigmaY = 2,
+    double sigmaX = 4,
+    double sigmaY = 4,
   }) =>
       ClipRRect(
         borderRadius: BorderRadius.zero,

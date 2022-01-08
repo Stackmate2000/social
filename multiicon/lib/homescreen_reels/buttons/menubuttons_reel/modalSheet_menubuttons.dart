@@ -22,7 +22,7 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
   initState() {
     super.initState();
     animationController =
-        AnimationController(duration: Duration(seconds: 1), vsync: this);
+        AnimationController(duration: Duration(milliseconds: 500), vsync: this);
 
     animation = Tween(begin: 1.0, end: 0.0).animate(CurvedAnimation(
         parent: animationController, curve: Curves.fastOutSlowIn));
@@ -31,7 +31,7 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
 
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height * 0.4;
+    final double height = MediaQuery.of(context).size.height * 0.2;
     return AnimatedBuilder(
         animation: animationController,
         builder: (BuildContext context, Widget child) {
@@ -43,7 +43,7 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.4,
+                    height: MediaQuery.of(context).size.height * 0.2,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -63,7 +63,7 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
                           children: [
                             Container(
                               child: Text(
-                                "Upload",
+                                "Report",
                                 style: GoogleFonts.roboto(
                                     color: Color(0xff000000).withOpacity(0.7),
                                     fontSize: 16,
@@ -75,31 +75,7 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
                             ),
                             Container(
                               child: Text(
-                                "Upload",
-                                style: GoogleFonts.roboto(
-                                    color: Color(0xff000000).withOpacity(0.7),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10.0,
-                            ),
-                            Container(
-                              child: Text(
-                                "Upload",
-                                style: GoogleFonts.roboto(
-                                    color: Color(0xff000000).withOpacity(0.7),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10.0,
-                            ),
-                            Container(
-                              child: Text(
-                                "Upload",
+                                "Save this reel",
                                 style: GoogleFonts.roboto(
                                     color: Color(0xff000000).withOpacity(0.7),
                                     fontSize: 16,
@@ -113,7 +89,7 @@ class _ModalSheetMenuButtonsState extends State<ModalSheetMenuButtons>
                   ),
                 ),
                 Positioned(
-                  bottom: 250,
+                  bottom: 110,
                   right: e + 30,
                   child: GestureDetector(
                     onTap: () {
