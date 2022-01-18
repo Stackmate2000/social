@@ -60,6 +60,27 @@ class _HomeScreenDState extends State<HomeScreenD> {
                             Container(
                               child: LikedActivityContainer(),
                             ),
+                            Container(
+                              child: LikedActivityContainer(),
+                            ),
+                            Container(
+                              child: ActivityContainers(),
+                            ),
+                            Container(
+                              child: LikedActivityContainer(),
+                            ),
+                            Container(
+                              child: LikedActivityContainer(),
+                            ),
+                            Container(
+                              child: LikedActivityContainer(),
+                            ),
+                            Container(
+                              child: LikedActivityContainer(),
+                            ),
+                            Container(
+                              child: LikedActivityContainer(),
+                            ),
                           ],
                         ),
                       ),

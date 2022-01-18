@@ -57,18 +57,19 @@ class _HomeScreenUserProfileState extends State<HomeScreenUserProfile> {
                                           height: 60,
                                           width: 90,
                                           decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.only(
-                                                  topLeft: Radius.circular(30),
-                                                  bottomLeft:
-                                                      Radius.circular(30)),
-                                              color: Colors.white,
-                                              boxShadow: [
-                                                BoxShadow(
-                                                    color: Colors.grey[500]
-                                                        .withOpacity(0.7),
-                                                    blurRadius: 6.0,
-                                                    offset: Offset(0.0, 6.0))
-                                              ]),
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(30),
+                                                bottomLeft:
+                                                    Radius.circular(30)),
+                                            color: Colors.white,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                  color: Colors.grey[500]
+                                                      .withOpacity(0.7),
+                                                  blurRadius: 6.0,
+                                                  offset: Offset(0.0, 6.0))
+                                            ],
+                                          ),
                                           child: Icon(
                                             Icons.settings,
                                             color: Colors.blueGrey,
