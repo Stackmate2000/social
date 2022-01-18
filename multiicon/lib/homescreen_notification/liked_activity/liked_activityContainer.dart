@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:multiicon/homescreen_notification/liked_activity/liked_activityAvatar.dart';
 import 'package:multiicon/homescreen_notification/liked_activity/liked_imageActivity.dart';
 
 class LikedActivityContainer extends StatefulWidget {
@@ -144,17 +143,41 @@ class _LikedActivityContainerState extends State<LikedActivityContainer> {
       child: Container(
         height: 100,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 15.0),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.2,
+              alignment: Alignment.center,
               child: Container(
-                alignment: Alignment.center,
-                child: LikedActivityAvatar(),
+                height: 55,
+                width: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12.0),
+                  ),
+                  color: Color(0xffFFFFFF),
+                ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    height: 45,
+                    width: 45,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(16.0),
+                      ),
+                      image: DecorationImage(
+                          image: AssetImage("assets/work.jpg"),
+                          fit: BoxFit.cover),
+                      color: Color(0xffADB3BF),
+                    ),
+                  ),
+                ),
               ),
+            ),
+            SizedBox(
+              width: 5.0,
             ),
             Container(
               alignment: Alignment.centerLeft,
@@ -165,7 +188,7 @@ class _LikedActivityContainerState extends State<LikedActivityContainer> {
                 children: [
                   Container(
                     child: Text(
-                      "Kriss Jona",
+                      "Rovira james",
                       style: GoogleFonts.montserrat(
                           fontSize: 14,
                           color: Color(0xff000000).withOpacity(0.9),
@@ -176,7 +199,7 @@ class _LikedActivityContainerState extends State<LikedActivityContainer> {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "liked your photo.",
+                      "followed you,checkout his profile.",
                       style: GoogleFonts.montserrat(
                           fontSize: 13,
                           color: Color(0xff000000),
@@ -202,17 +225,11 @@ class _LikedActivityContainerState extends State<LikedActivityContainer> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 15.0),
-              child: Container(
-                alignment: Alignment.center,
-                width: MediaQuery.of(context).size.width * 0.25,
-                child: Stack(
-                  children: [
-                    LikedImageActivity(),
-                  ],
-                ),
-              ),
+            SizedBox(
+              width: 5.0,
+            ),
+            Container(
+              child: LikedImageActivity(),
             ),
           ],
         ),

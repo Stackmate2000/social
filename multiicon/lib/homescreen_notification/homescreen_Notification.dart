@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:multiicon/homescreen_notification/following_activity/activity_Containers.dart';
 import 'package:multiicon/homescreen_notification/liked_activity/liked_activityContainer.dart';
-import 'package:multiicon/homescreen_notification/tagged_activity/tagged_activityContainers.dart';
 
 class HomeScreenD extends StatefulWidget {
   @override
@@ -12,19 +11,22 @@ class HomeScreenD extends StatefulWidget {
 class _HomeScreenDState extends State<HomeScreenD> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-          ),
-          child: Stack(
-            children: [
-              Container(color: Color(0xffF4F6F6)),
-              Align(
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+        ),
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Color(0xffF4F6F6),
+              ),
+            ),
+            SafeArea(
+              child: Align(
                 alignment: Alignment.topCenter,
                 child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -48,21 +50,25 @@ class _HomeScreenDState extends State<HomeScreenD> {
                       SizedBox(
                         height: 10,
                       ),
-                      Container(
-                        child: ActivityContainers(),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          children: [
+                            Container(
+                              child: ActivityContainers(),
+                            ),
+                            Container(
+                              child: LikedActivityContainer(),
+                            ),
+                          ],
+                        ),
                       ),
-                      Container(
-                        child: TaggedActivityContainers(),
-                      ),
-                      Container(
-                        child: LikedActivityContainer(),
-                      )
                     ],
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
