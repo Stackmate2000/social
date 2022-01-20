@@ -1,184 +1,181 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/addButton_bottomnav/moodCheck/moodCheck_in.dart';
+import 'package:multiicon/animation/iconButton_actionreelsbutton.dart';
+
+const _maxHeight = 350.0;
+const _minHeight = 60.0;
 
 class FloatingAddButton extends StatefulWidget {
   @override
   _FloatingAddButtonState createState() => _FloatingAddButtonState();
 }
 
-class _FloatingAddButtonState extends State<FloatingAddButton> {
-  var isOpen = false;
+class _FloatingAddButtonState extends State<FloatingAddButton>
+    with SingleTickerProviderStateMixin {
+  AnimationController _controller;
+  bool _expanded = false;
+  double _currentHeight = _minHeight;
 
-  _toggleOpen() {
-    setState(() {
-      isOpen = !isOpen;
-    });
+  @override
+  void initState() {
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 600),
+    );
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final menuWidth = 60;
     return Padding(
-      padding: const EdgeInsets.only(bottom: 13.0),
-      child: Stack(
-        children: [
-          isOpen
-              ? TweenAnimationBuilder(
-                  duration: Duration(milliseconds: 300),
-                  builder: (BuildContext context, Object _val, Widget child) {
-                    return Padding(
-                      padding: EdgeInsets.only(bottom: _val),
-                      child: child,
-                    );
-                  },
-                  tween: Tween<double>(begin: 45, end: 60),
-                  curve: Curves.easeIn,
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
+      padding: const EdgeInsets.only(bottom: 0.0),
+      child: Align(
+        alignment: Alignment.bottomCenter,
+        child: GestureDetector(
+          onVerticalDragUpdate: _expanded
+              ? (details) {
+                  setState(() {
+                    final newHeight = _currentHeight - details.delta.dy;
+                    _controller.value = _currentHeight / _maxHeight;
+                    _currentHeight = newHeight.clamp(_minHeight, _maxHeight);
+                  });
+                }
+              : null,
+          onVerticalDragEnd: _expanded
+              ? (details) {
+                  if (_currentHeight < _maxHeight / 1.5) {
+                    _controller.reverse();
+                    _expanded = false;
+                  } else {
+                    _expanded = true;
+                    _controller.forward(from: _currentHeight / _maxHeight);
+                    _currentHeight = _maxHeight;
+                  }
+                }
+              : null,
+          child: AnimatedBuilder(
+            animation: _controller,
+            builder: (context, snapshot) {
+              final value = ElasticInOutCurve(0.7).transform(_controller.value);
+              return Stack(
+                children: [
+                  Positioned(
+                    bottom: lerpDouble(13.0, 0.0, value),
+                    width: lerpDouble(menuWidth, size.width, value),
+                    height: lerpDouble(_minHeight, _currentHeight, value),
+                    left: lerpDouble(size.width / 2 - menuWidth / 2, 0, value),
                     child: Container(
-                      width:
-                          isOpen ? MediaQuery.of(context).size.width * 0.45 : 0,
-                      height: 180,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(16)),
                         gradient: LinearGradient(
                             colors: [
-                              Color(0xff896ae4),
+                              Colors.cyan,
+                              Color(0xff5599EE),
                               Color(0xff937cdc),
                             ],
                             begin: Alignment.topRight,
                             end: Alignment.bottomLeft),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            MoodCheckIn(),
-                            GestureDetector(
-                              onTap: () {},
-                              child: Container(
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      'Record reel',
-                                      style: GoogleFonts.roboto(
-                                          fontSize: 16,
-                                          color: Color(0xffFFFFFF),
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                    Container(
-                                      height: 25,
-                                      width: 25,
-                                      decoration: BoxDecoration(
-                                          color: Color(0xff000000)
-                                              .withOpacity(0.1),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0)),
-                                      child: Icon(
-                                        MdiIcons.musicNotePlus,
-                                        color: Color(0xffFFFFFF),
-                                        size: 15.0,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            GestureDetector(
-                              onTap: () {},
-                              child: Container(
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      child: Text(
-                                        'Add photo',
-                                        style: GoogleFonts.roboto(
-                                            fontSize: 16,
-                                            color: Color(0xffFFFFFF),
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 25,
-                                      width: 25,
-                                      decoration: BoxDecoration(
-                                          color: Color(0xff000000)
-                                              .withOpacity(0.1),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0)),
-                                      child: Icon(
-                                        Icons.photo_outlined,
-                                        size: 15,
-                                        color: Color(0xffFFFFFF),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
+                        borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(
+                            lerpDouble(20.0, 30.0, value),
+                          ),
+                          bottom: Radius.circular(
+                            lerpDouble(20.0, 0.0, value),
+                          ),
                         ),
                       ),
+                      child: _expanded
+                          ? Opacity(
+                              opacity: _controller.value,
+                              child: _buildExpandedContent(),
+                            )
+                          : _buildMenuContent(),
                     ),
                   ),
-                )
-              : Container(
-                  width: isOpen ? MediaQuery.of(context).size.width * 0.45 : 0,
-                  height: 0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(21)),
-                    color: Color(0xffFFFFFF),
-                  ),
-                ),
-          Container(
-            alignment: Alignment.bottomCenter,
-            child: GestureDetector(
-              onTap: () {
-                _toggleOpen();
-              },
-              child: TweenAnimationBuilder(
-                duration: Duration(milliseconds: 500),
-                builder: (BuildContext context, _val, child) {
-                  return Container(
-                    height: _val,
-                    width: _val,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: Color(0xff896ae4).withOpacity(0.4),
-                            blurRadius: 40.0,
-                            spreadRadius: 2.0,
-                            offset: Offset(0.0, 40.0))
-                      ],
-                      borderRadius: BorderRadius.all(Radius.circular(21.0)),
-                      gradient: LinearGradient(colors: [
-                        Color(0xff896ae4),
-                        Color(0xff937cdc),
-                      ], begin: Alignment.topRight, end: Alignment.bottomLeft),
-                    ),
-                    child: isOpen
-                        ? Icon(MdiIcons.close,
-                            color: Color(0xffFFFFFF), size: 22)
-                        : Icon(
-                            CupertinoIcons.add,
-                            color: Color(0xffFFFFFF),
-                            size: 22,
-                          ),
-                  );
-                },
-                tween: Tween<double>(begin: 0, end: 60),
-                curve: Curves.bounceInOut,
-              ),
-            ),
+                ],
+              );
+            },
           ),
-        ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMenuContent() {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _expanded = true;
+          _currentHeight = _maxHeight;
+          _controller.forward(from: 0.0);
+        });
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          gradient: LinearGradient(colors: [
+            Colors.cyan,
+            Color(0xff5599EE),
+            Color(0xff937cdc),
+          ], begin: Alignment.topRight, end: Alignment.bottomLeft),
+        ),
+        child: GestureDetector(
+          onTap: () {
+            setState(() {
+              _expanded = true;
+              _currentHeight = _maxHeight;
+              _controller.forward(from: 0.0);
+            });
+          },
+          child: Icon(
+            CupertinoIcons.add,
+            color: Color(0xffFFFFFF),
+            size: 22,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildExpandedContent() {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              height: 100,
+              width: 150,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(16)),
+                color: Color(0xffFFFFFF),
+                boxShadow: [
+                  BoxShadow(
+                      color: Color(0xff000000).withOpacity(0.2),
+                      blurRadius: 40.0,
+                      spreadRadius: 2.0,
+                      offset: Offset(0.0, 40.0))
+                ],
+              ),
+              child: MoodCheckIn(),
+            ),
+          ],
+        ),
       ),
     );
   }

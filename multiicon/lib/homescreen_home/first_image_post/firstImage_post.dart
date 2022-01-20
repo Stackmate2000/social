@@ -102,135 +102,101 @@ class _FirstImagePostState extends State<FirstImagePost> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 15.0, left: 15.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              height: 55,
-                              width: 55,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(16.0),
-                                ),
-                                gradient: LinearGradient(
-                                    colors: [Colors.redAccent, Colors.purple],
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter),
-                              ),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: Container(
-                                  height: 55,
-                                  width: 50,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(12.0),
-                                    ),
-                                    color: Color(0xffFFFFFF),
+                    padding: const EdgeInsets.only(right: 0.0, left: 0.0),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                height: 55,
+                                width: 55,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(16.0),
                                   ),
-                                  child: Align(
-                                    alignment: Alignment.center,
-                                    child: Container(
-                                      height: 45,
-                                      width: 45,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.all(
-                                          Radius.circular(16.0),
+                                  gradient: LinearGradient(
+                                      colors: [Colors.redAccent, Colors.purple],
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter),
+                                ),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: Container(
+                                    height: 55,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(12.0),
+                                      ),
+                                      color: Color(0xffF4F6F6),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: Container(
+                                        height: 45,
+                                        width: 45,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(16.0),
+                                          ),
+                                          //image: DecorationImage(
+                                          //image:
+                                          //AssetImage("assets/work.jpg"),
+                                          //fit: BoxFit.cover),
+                                          color: Color(0xffADB3BF),
                                         ),
-                                        image: DecorationImage(
-                                            image:
-                                                AssetImage("assets/work.jpg"),
-                                            fit: BoxFit.cover),
-                                        color: Color(0xffADB3BF),
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                            SizedBox(
-                              width: 10.0,
-                            ),
-                            Container(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    child: Text(
-                                      "Rovira james",
-                                      style: GoogleFonts.montserrat(
-                                          fontSize: 16,
-                                          color: Color(0xff000000)
-                                              .withOpacity(0.9),
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 2.0,
-                                  ),
-                                  Container(
-                                    child: Text(
-                                      "netherland",
-                                      style: GoogleFonts.montserrat(
-                                          fontSize: 12,
-                                          color: Color(0xff000000)
-                                              .withOpacity(0.5),
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                  ),
-                                ],
+                              SizedBox(
+                                width: 10.0,
                               ),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          child: FirstImageMenuButton(),
-                        )
-                      ],
+                              Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      child: Text(
+                                        "Rovira james",
+                                        style: GoogleFonts.montserrat(
+                                            fontSize: 16,
+                                            color: Color(0xff000000)
+                                                .withOpacity(0.9),
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 2.0,
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        "Oslo, Norway",
+                                        style: GoogleFonts.montserrat(
+                                            fontSize: 12,
+                                            color: Color(0xff000000)
+                                                .withOpacity(0.7),
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            child: FirstImageMenuButton(),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
-                    height: 7.0,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                        child: Container(
-                          child: Text(
-                            "Exploring",
-                            style: GoogleFonts.montserrat(
-                                fontSize: 15,
-                                color: Color(0xff000000),
-                                fontWeight: FontWeight.w500),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                        child: Container(
-                          child: Text(
-                            "When I find myself in a creative block I always find it the most reenergizing to explore the way.",
-                            style: GoogleFonts.montserrat(
-                                fontSize: 13,
-                                color: Color(0xff000000),
-                                fontWeight: FontWeight.w400),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10.0,
+                    height: 15.0,
                   ),
                   Align(
                     alignment: Alignment.center,
@@ -243,15 +209,13 @@ class _FirstImagePostState extends State<FirstImagePost> {
                           child: Hero(
                             tag: 'firstpost',
                             child: Container(
-                              height: MediaQuery.of(context).size.height * 0.65,
-                              width: MediaQuery.of(context).size.width,
+                              height: MediaQuery.of(context).size.height * 0.45,
+                              width: MediaQuery.of(context).size.width * 0.8,
                               decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(0.0)),
-                                image: DecorationImage(
-                                  image: AssetImage("assets/nigga.jpg"),
-                                  fit: BoxFit.cover,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(21.0),
                                 ),
+                                //image: DecorationImage(image: AssetImage("assets/nigga.jpg"),fit: BoxFit.cover),
                                 color: Color(0xffADB3BF),
                               ),
                             ),
@@ -261,10 +225,10 @@ class _FirstImagePostState extends State<FirstImagePost> {
                           height: 10.0,
                         ),
                         Container(
-                          width: MediaQuery.of(context).size.width,
+                          width: MediaQuery.of(context).size.width * 0.8,
                           child: Padding(
                             padding:
-                                const EdgeInsets.only(right: 30.0, left: 30.0),
+                                const EdgeInsets.only(right: 0.0, left: 0.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -275,27 +239,70 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                       onTap: () {
                                         modalBottomSheet(context);
                                       },
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            child: Icon(
-                                              CupertinoIcons.bubble_right,
-                                              size: 20.0,
+                                      child: Container(
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                              child: AnimatedCrossFade(
+                                                duration:
+                                                    Duration(milliseconds: 0),
+                                                reverseDuration:
+                                                    Duration(milliseconds: 0),
+                                                crossFadeState: isliked
+                                                    ? CrossFadeState.showSecond
+                                                    : CrossFadeState.showFirst,
+                                                firstChild: GestureDetector(
+                                                  onTap: () {
+                                                    setState(() {
+                                                      counter++;
+                                                      {
+                                                        print("counter++");
+                                                      }
+                                                    });
+                                                    setState(() {
+                                                      isliked = true;
+                                                    });
+                                                  },
+                                                  child: Icon(
+                                                    CupertinoIcons.suit_heart,
+                                                    size: 20,
+                                                  ),
+                                                ),
+                                                secondChild: GestureDetector(
+                                                  onTap: () {
+                                                    setState(() {
+                                                      counter--;
+                                                      {
+                                                        print("counter--");
+                                                      }
+                                                    });
+                                                    setState(() {
+                                                      isliked = false;
+                                                    });
+                                                  },
+                                                  child: Icon(
+                                                    CupertinoIcons
+                                                        .suit_heart_fill,
+                                                    color: Colors.red,
+                                                    size: 20,
+                                                  ),
+                                                ),
+                                              ),
                                             ),
-                                          ),
-                                          SizedBox(
-                                            width: 3.0,
-                                          ),
-                                          Text(
-                                            "0",
-                                            style: GoogleFonts.roboto(
-                                                fontSize: 14,
-                                                color: Color(0xff000000)
-                                                    .withOpacity(0.7),
-                                                letterSpacing: 0.2,
-                                                fontWeight: FontWeight.w400),
-                                          )
-                                        ],
+                                            SizedBox(
+                                              width: 3.0,
+                                            ),
+                                            Text(
+                                              "$counter",
+                                              style: GoogleFonts.roboto(
+                                                  fontSize: 14,
+                                                  color: Color(0xff000000)
+                                                      .withOpacity(0.7),
+                                                  letterSpacing: 0.2,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                     SizedBox(
@@ -304,62 +311,23 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                     Row(
                                       children: [
                                         Container(
-                                          child: AnimatedCrossFade(
-                                            duration: Duration(milliseconds: 0),
-                                            reverseDuration:
-                                                Duration(milliseconds: 0),
-                                            crossFadeState: isliked
-                                                ? CrossFadeState.showSecond
-                                                : CrossFadeState.showFirst,
-                                            firstChild: GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  counter++;
-                                                  {
-                                                    print("counter++");
-                                                  }
-                                                });
-                                                setState(() {
-                                                  isliked = true;
-                                                });
-                                              },
-                                              child: Icon(
-                                                CupertinoIcons.suit_heart,
-                                                size: 20,
-                                              ),
-                                            ),
-                                            secondChild: GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  counter--;
-                                                  {
-                                                    print("counter--");
-                                                  }
-                                                });
-                                                setState(() {
-                                                  isliked = false;
-                                                });
-                                              },
-                                              child: Icon(
-                                                CupertinoIcons.suit_heart_fill,
-                                                color: Colors.red,
-                                                size: 20,
-                                              ),
-                                            ),
+                                          child: Icon(
+                                            CupertinoIcons.bubble_right,
+                                            size: 20.0,
                                           ),
                                         ),
                                         SizedBox(
                                           width: 3.0,
                                         ),
                                         Text(
-                                          "$counter",
+                                          "0",
                                           style: GoogleFonts.roboto(
                                               fontSize: 14,
                                               color: Color(0xff000000)
                                                   .withOpacity(0.7),
                                               letterSpacing: 0.2,
                                               fontWeight: FontWeight.w400),
-                                        ),
+                                        )
                                       ],
                                     ),
                                     SizedBox(
@@ -407,6 +375,59 @@ class _FirstImagePostState extends State<FirstImagePost> {
                                 ),
                               ],
                             ),
+                          ),
+                        ),
+                        SizedBox(height: 15.0),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.8,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 0.0, right: 0.0),
+                                child: Container(
+                                  child: Text(
+                                    "ekko_design",
+                                    style: GoogleFonts.montserrat(
+                                        fontSize: 14,
+                                        color: Color(0xff000000),
+                                        fontWeight: FontWeight.w500),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 2.0,
+                              ),
+                              Container(
+                                child: Text(
+                                  "When I find myself in a creative block I always find it the most reenergizing to explore the way.",
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 13,
+                                      color: Color(0xff000000),
+                                      fontWeight: FontWeight.w400),
+                                  maxLines: 1,
+                                  textAlign: TextAlign.start,
+                                ),
+                              ),
+                              SizedBox(height: 5.0),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 20.0),
+                                child: Container(
+                                  child: Text(
+                                    "1 hour ago",
+                                    style: GoogleFonts.montserrat(
+                                        fontSize: 13,
+                                        color:
+                                            Color(0xff000000).withOpacity(0.7),
+                                        fontWeight: FontWeight.w400),
+                                    maxLines: 1,
+                                    textAlign: TextAlign.start,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],

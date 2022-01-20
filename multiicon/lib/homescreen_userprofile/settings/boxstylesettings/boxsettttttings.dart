@@ -60,10 +60,11 @@ class _BoxSettingsState extends State<BoxSettings> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0, top: 20.0),
                         child: Container(
-                            child: Icon(
-                          Icons.star_outline,
-                          color: Color(0xffFFFFFF),
-                        )),
+                          child: Icon(
+                            Icons.star_outline,
+                            color: Color(0xffFFFFFF),
+                          ),
+                        ),
                       ),
                     ),
                     Align(
@@ -129,10 +130,11 @@ class _BoxSettingsState extends State<BoxSettings> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0, top: 20.0),
                         child: Container(
-                            child: Icon(
-                          Icons.mobile_friendly,
-                          color: Color(0xff896ae4),
-                        )),
+                          child: Icon(
+                            Icons.mobile_friendly,
+                            color: Color(0xff896ae4),
+                          ),
+                        ),
                       ),
                     ),
                     Align(
@@ -212,19 +214,20 @@ class _BoxSettingsState extends State<BoxSettings> {
                     Align(
                       alignment: Alignment.bottomLeft,
                       child: Padding(
-                          padding:
-                              const EdgeInsets.only(left: 20.0, bottom: 10.0),
-                          child: Container(
-                            child: Text(
-                              "Know about our Policy",
-                              style: GoogleFonts.montserrat(
-                                fontSize: 15,
-                                color: Color(0xff000000).withOpacity(0.7),
-                                fontWeight: FontWeight.w500,
-                              ),
-                              textAlign: TextAlign.start,
+                        padding:
+                            const EdgeInsets.only(left: 20.0, bottom: 10.0),
+                        child: Container(
+                          child: Text(
+                            "Know about our Policy",
+                            style: GoogleFonts.montserrat(
+                              fontSize: 15,
+                              color: Color(0xff000000).withOpacity(0.7),
+                              fontWeight: FontWeight.w500,
                             ),
-                          )),
+                            textAlign: TextAlign.start,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -280,19 +283,20 @@ class _BoxSettingsState extends State<BoxSettings> {
                     Align(
                       alignment: Alignment.bottomLeft,
                       child: Padding(
-                          padding:
-                              const EdgeInsets.only(left: 20.0, bottom: 10.0),
-                          child: Container(
-                            child: Text(
-                              "Achievements",
-                              style: GoogleFonts.montserrat(
-                                fontSize: 15,
-                                color: Color(0xff000000).withOpacity(0.7),
-                                fontWeight: FontWeight.w500,
-                              ),
-                              textAlign: TextAlign.start,
+                        padding:
+                            const EdgeInsets.only(left: 20.0, bottom: 10.0),
+                        child: Container(
+                          child: Text(
+                            "Achievements",
+                            style: GoogleFonts.montserrat(
+                              fontSize: 15,
+                              color: Color(0xff000000).withOpacity(0.7),
+                              fontWeight: FontWeight.w500,
                             ),
-                          )),
+                            textAlign: TextAlign.start,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),

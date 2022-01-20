@@ -41,7 +41,7 @@ class _LoginState extends State<Login> {
                             Text(
                               "B",
                               style: GoogleFonts.dancingScript(
-                                  color: Color(0xff000000).withOpacity(0.6),
+                                  color: Color(0xff000000),
                                   fontSize: 45,
                                   fontWeight: FontWeight.w600),
                               textAlign: TextAlign.center,
@@ -50,7 +50,7 @@ class _LoginState extends State<Login> {
                               child: Text(
                                 "eta",
                                 style: GoogleFonts.dancingScript(
-                                    color: Color(0xff000000).withOpacity(0.6),
+                                    color: Color(0xff000000),
                                     fontSize: 38,
                                     fontWeight: FontWeight.w600),
                                 textAlign: TextAlign.center,
@@ -206,8 +206,8 @@ class _LoginState extends State<Login> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Container(
-                                height: 25,
-                                width: 25,
+                                height: 20,
+                                width: 20,
                                 child: Image(
                                   image: AssetImage("assets/googleicon.png"),
                                   fit: BoxFit.cover,
@@ -219,9 +219,9 @@ class _LoginState extends State<Login> {
                               Text(
                                 "Sign in with Google",
                                 style: GoogleFonts.montserrat(
-                                    color: Color(0xff000000).withOpacity(0.5),
+                                    color: Color(0xff000000).withOpacity(0.9),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w500),
+                                    fontWeight: FontWeight.w400),
                                 textAlign: TextAlign.center,
                               ),
                             ],

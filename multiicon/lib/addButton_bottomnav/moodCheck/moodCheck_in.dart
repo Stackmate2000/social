@@ -70,6 +70,9 @@ class _MoodCheckInState extends State<MoodCheckIn> {
                   color: Color(0xffFFFFFF),
                   fontWeight: FontWeight.bold),
             ),
+            SizedBox(
+              width: 10.0,
+            ),
             Container(
               height: 25,
               width: 25,
