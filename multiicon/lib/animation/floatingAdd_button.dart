@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:multiicon/addButton_bottomnav/moodCheck/moodCheck_in.dart';
+import 'package:multiicon/addButton_bottomnav/moodCheck/sliderFeeling.dart';
 import 'package:multiicon/animation/iconButton_actionreelsbutton.dart';
 
 const _maxHeight = 350.0;
@@ -81,8 +82,7 @@ class _FloatingAddButtonState extends State<FloatingAddButton>
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: [
-                              Colors.cyan,
-                              Color(0xff5599EE),
+                              Color(0xff896ae4),
                               Color(0xff937cdc),
                             ],
                             begin: Alignment.topRight,
@@ -124,10 +124,11 @@ class _FloatingAddButtonState extends State<FloatingAddButton>
       },
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          borderRadius: BorderRadius.all(
+            Radius.circular(20.0),
+          ),
           gradient: LinearGradient(colors: [
-            Colors.cyan,
-            Color(0xff5599EE),
+            Color(0xff896ae4),
             Color(0xff937cdc),
           ], begin: Alignment.topRight, end: Alignment.bottomLeft),
         ),
@@ -150,33 +151,105 @@ class _FloatingAddButtonState extends State<FloatingAddButton>
   }
 
   Widget _buildExpandedContent() {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              height: 100,
-              width: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(16)),
-                color: Color(0xffFFFFFF),
-                boxShadow: [
-                  BoxShadow(
-                      color: Color(0xff000000).withOpacity(0.2),
-                      blurRadius: 40.0,
-                      spreadRadius: 2.0,
-                      offset: Offset(0.0, 40.0))
-                ],
+    return Stack(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 15.0),
+          child: Column(
+            children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(30.0),
+                      topRight: Radius.circular(30.0),
+                    ),
+                  ),
+                  height: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 40.0, right: 40.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          child: Text(
+                            "Rate us",
+                            style: GoogleFonts.montserrat(
+                                fontSize: 20,
+                                color: Color(0xff000000).withOpacity(0.5),
+                                fontWeight: FontWeight.w500),
+                            textAlign: TextAlign.start,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5.0,
+                        ),
+                        Container(
+                          child: Text(
+                            "Share us what you think about our app.",
+                            style: GoogleFonts.montserrat(
+                                fontSize: 14,
+                                color: Color(0xff000000).withOpacity(0.5),
+                                fontWeight: FontWeight.w500),
+                            textAlign: TextAlign.start,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               ),
-              child: MoodCheckIn(),
-            ),
-          ],
+              SizedBox(height: 20.0),
+              Container(
+                alignment: Alignment.centerRight,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
+                  ),
+                ),
+                height: 100,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 40.0, right: 40.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Container(
+                        child: Text(
+                          "Rate us",
+                          style: GoogleFonts.montserrat(
+                              fontSize: 20,
+                              color: Color(0xff000000).withOpacity(0.5),
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.start,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      Container(
+                        child: Text(
+                          "Share us what you think about our app.",
+                          style: GoogleFonts.montserrat(
+                              fontSize: 14,
+                              color: Color(0xff000000).withOpacity(0.5),
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.start,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }

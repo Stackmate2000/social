@@ -66,7 +66,7 @@ class _SelectAvtivityState extends State<SelectAvtivity> {
                   Container(
                     child: Text(
                       "Hey! Select something thats makes you feel preety good.",
-                      style: GoogleFonts.karla(
+                      style: GoogleFonts.montserrat(
                           fontSize: 20,
                           color: Color(0xffFFFFFF),
                           fontWeight: FontWeight.bold),
@@ -79,7 +79,7 @@ class _SelectAvtivityState extends State<SelectAvtivity> {
                   Container(
                     child: Text(
                       "SELECT UPTO 10 ACTIVITES",
-                      style: GoogleFonts.karla(
+                      style: GoogleFonts.montserrat(
                           fontSize: 14,
                           color: Color(0xff000000).withOpacity(0.3),
                           fontWeight: FontWeight.bold),

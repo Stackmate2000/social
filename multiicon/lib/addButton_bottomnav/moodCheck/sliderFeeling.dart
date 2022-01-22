@@ -18,144 +18,98 @@ class _SliderFeelingState extends State<SliderFeeling> {
     return Container(
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 30.0,
-              right: 30.0,
-              left: 30.0,
+          Container(
+            alignment: Alignment.centerRight,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    color: Color(0xffFFFFFF).withOpacity(0.1)),
+                child: Icon(
+                  MdiIcons.close,
+                  color: Color(0xffFFFFFF).withOpacity(0.5),
+                ),
+              ),
             ),
+          ),
+          Container(
             child: Container(
-              alignment: Alignment.centerRight,
-              height: MediaQuery.of(context).size.height * 0.1,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: Container(
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                      color: Color(0xffFFFFFF).withOpacity(0.1)),
-                  child: Icon(
-                    MdiIcons.close,
-                    color: Color(0xffFFFFFF).withOpacity(0.5),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.15,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 0.0, right: 30.0, left: 30.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    child: Text(
-                      "Morning!,How was your day today?",
-                      style: GoogleFonts.karla(
-                          fontSize: 20,
-                          color: Color(0xffFFFFFF),
-                          fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.start,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Container(
-                    child: Text(
-                      "Share us how was you day.",
-                      style: GoogleFonts.karla(
-                          fontSize: 14,
-                          color: Color(0xff000000).withOpacity(0.3),
-                          fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.start,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.45,
-            width: double.infinity,
-            child: Column(
-              children: [
-                Container(
-                  child: Icon(
-                    FeedBackIcon,
+              child: Text(
+                "Share us how was you day.",
+                style: GoogleFonts.karla(
+                    fontSize: 20,
                     color: Color(0xffFFFFFF),
-                    size: 100,
-                  ),
-                ),
-                SizedBox(
-                  height: 5.0,
-                ),
-                Container(
-                  child: Text(
-                    FeedbackText,
-                    style: GoogleFonts.karla(
-                        color: Color(0xffFFFFFF).withOpacity(0.9),
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                SizedBox(
-                  height: 15.0,
-                ),
-                Container(
-                  child: Slider(
-                    min: 0.0,
-                    max: 5.0,
-                    divisions: 5,
-                    value: sliderValue,
-                    activeColor: Color(0xffFFFFFF),
-                    inactiveColor: Color(0xffFFFFFF).withOpacity(0.2),
-                    onChanged: (newValue) {
-                      setState(
-                        () {
-                          sliderValue = newValue;
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.start,
+              ),
+            ),
+          ),
+          Container(
+            child: Icon(
+              FeedBackIcon,
+              color: Color(0xffFFFFFF),
+              size: 50,
+            ),
+          ),
+          Container(
+            child: Text(
+              FeedbackText,
+              style: GoogleFonts.karla(
+                  color: Color(0xffFFFFFF).withOpacity(0.9),
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          Container(
+            child: Slider(
+              min: 0.0,
+              max: 5.0,
+              divisions: 5,
+              value: sliderValue,
+              activeColor: Color(0xffFFFFFF),
+              inactiveColor: Color(0xffFFFFFF).withOpacity(0.2),
+              onChanged: (newValue) {
+                setState(
+                  () {
+                    sliderValue = newValue;
 
-                          if (sliderValue == 0.0 && sliderValue == 0.0) {
-                            FeedbackText = "REALLY TERRIBLE";
-                            FeedBackIcon = Icons.zoom_out_sharp;
-                          }
+                    if (sliderValue == 0.0 && sliderValue == 0.0) {
+                      FeedbackText = "REALLY TERRIBLE";
+                      FeedBackIcon = Icons.zoom_out_sharp;
+                    }
 
-                          if (sliderValue >= 1.0 && sliderValue <= 1.0) {
-                            FeedbackText = "SOMEWHAT BAD";
-                            FeedBackIcon = Icons.calendar_today;
-                          }
-                          if (sliderValue >= 1.1 && sliderValue <= 2.0) {
-                            FeedbackText = "MEDIUM";
-                            FeedBackIcon = Icons.car_rental;
-                          }
-                          if (sliderValue >= 2.1 && sliderValue <= 3.0) {
-                            FeedbackText = "PREETY GOOD";
-                            FeedBackIcon = CupertinoIcons.smiley;
-                          }
-                          if (sliderValue >= 3.1 && sliderValue <= 4.0) {
-                            FeedbackText = "AWSOME";
-                            FeedBackIcon = Icons.access_alarm;
-                          }
-                          if (sliderValue >= 4.1 && sliderValue <= 5.0) {
-                            FeedbackText = "SUPER AWSOME";
-                            FeedBackIcon = Icons.car_rental;
-                          }
-                        },
-                      );
-                    },
-                  ),
-                )
-              ],
+                    if (sliderValue >= 1.0 && sliderValue <= 1.0) {
+                      FeedbackText = "SOMEWHAT BAD";
+                      FeedBackIcon = Icons.calendar_today;
+                    }
+                    if (sliderValue >= 1.1 && sliderValue <= 2.0) {
+                      FeedbackText = "MEDIUM";
+                      FeedBackIcon = Icons.car_rental;
+                    }
+                    if (sliderValue >= 2.1 && sliderValue <= 3.0) {
+                      FeedbackText = "PREETY GOOD";
+                      FeedBackIcon = CupertinoIcons.smiley;
+                    }
+                    if (sliderValue >= 3.1 && sliderValue <= 4.0) {
+                      FeedbackText = "AWSOME";
+                      FeedBackIcon = Icons.access_alarm;
+                    }
+                    if (sliderValue >= 4.1 && sliderValue <= 5.0) {
+                      FeedbackText = "SUPER AWSOME";
+                      FeedBackIcon = Icons.car_rental;
+                    }
+                  },
+                );
+              },
             ),
           ),
           Container(
             alignment: Alignment.topRight,
-            height: MediaQuery.of(context).size.height * 0.1,
             width: double.infinity,
             child: Stack(
               children: [

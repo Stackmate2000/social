@@ -61,12 +61,11 @@ class _MoodCheckInState extends State<MoodCheckIn> {
       },
       child: Container(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               'Mood check-in',
               style: GoogleFonts.karla(
-                  fontSize: 16,
+                  fontSize: 20,
                   color: Color(0xffFFFFFF),
                   fontWeight: FontWeight.bold),
             ),
