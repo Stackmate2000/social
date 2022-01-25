@@ -8,7 +8,7 @@ import 'package:multiicon/addButton_bottomnav/moodCheck/moodCheck_in.dart';
 import 'package:multiicon/addButton_bottomnav/moodCheck/sliderFeeling.dart';
 import 'package:multiicon/animation/iconButton_actionreelsbutton.dart';
 
-const _maxHeight = 350.0;
+const _maxHeight = 450.0;
 const _minHeight = 60.0;
 
 class FloatingAddButton extends StatefulWidget {
@@ -80,13 +80,7 @@ class _FloatingAddButtonState extends State<FloatingAddButton>
                     left: lerpDouble(size.width / 2 - menuWidth / 2, 0, value),
                     child: Container(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [
-                              Color(0xff896ae4),
-                              Color(0xff937cdc),
-                            ],
-                            begin: Alignment.topRight,
-                            end: Alignment.bottomLeft),
+                        color: Color(0xffF4F6F6),
                         borderRadius: BorderRadius.vertical(
                           top: Radius.circular(
                             lerpDouble(20.0, 30.0, value),
@@ -151,105 +145,239 @@ class _FloatingAddButtonState extends State<FloatingAddButton>
   }
 
   Widget _buildExpandedContent() {
-    return Stack(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 15.0),
-          child: Column(
-            children: [
-              Align(
-                alignment: Alignment.centerLeft,
+    return Container(
+      decoration: BoxDecoration(),
+      child: Stack(
+        children: [
+          Align(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 0.0),
+              child: SingleChildScrollView(
                 child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(30.0),
-                      topRight: Radius.circular(30.0),
-                    ),
-                  ),
-                  height: 100,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 40.0, right: 40.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          child: Text(
-                            "Rate us",
-                            style: GoogleFonts.montserrat(
-                                fontSize: 20,
-                                color: Color(0xff000000).withOpacity(0.5),
-                                fontWeight: FontWeight.w500),
-                            textAlign: TextAlign.start,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Container(
-                          child: Text(
-                            "Share us what you think about our app.",
-                            style: GoogleFonts.montserrat(
-                                fontSize: 14,
-                                color: Color(0xff000000).withOpacity(0.5),
-                                fontWeight: FontWeight.w500),
-                            textAlign: TextAlign.start,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20.0),
-              Container(
-                alignment: Alignment.centerRight,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(30.0),
-                    topRight: Radius.circular(30.0),
-                  ),
-                ),
-                height: 100,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 40.0, right: 40.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Container(
-                        child: Text(
-                          "Rate us",
-                          style: GoogleFonts.montserrat(
-                              fontSize: 20,
-                              color: Color(0xff000000).withOpacity(0.5),
-                              fontWeight: FontWeight.w500),
-                          textAlign: TextAlign.start,
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              bottomRight: Radius.circular(30.0),
+                              topRight: Radius.circular(30.0),
+                            ),
+                            gradient: LinearGradient(
+                                colors: [
+                                  Color(0xff896ae4),
+                                  Color(0xff937cdc),
+                                ],
+                                begin: Alignment.topRight,
+                                end: Alignment.bottomLeft),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Color(0xff000000).withOpacity(0.1),
+                                  blurRadius: 40.0,
+                                  spreadRadius: 2.0,
+                                  offset: Offset(0.0, 30.0))
+                            ],
+                          ),
+                          height: 100,
+                          width: MediaQuery.of(context).size.width * 0.85,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 20.0, right: 20.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Icon(
+                                    CupertinoIcons.heart_fill,
+                                    color: Colors.redAccent,
+                                    size: 30.0,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Favourite lists",
+                                        style: GoogleFonts.montserrat(
+                                            fontSize: 18,
+                                            color: Color(0xffFFFFFF),
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                      SizedBox(height: 5.0),
+                                      Text(
+                                        "Select the type of activities you like to have",
+                                        style: GoogleFonts.montserrat(
+                                            fontSize: 12,
+                                            color: Color(0xffFFFFFF)
+                                                .withOpacity(0.8),
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
                       ),
-                      SizedBox(
-                        height: 5.0,
+                      SizedBox(height: 40.0),
+                      Column(
+                        children: [
+                          Align(
+                            alignment: Alignment.centerRight,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 20.0),
+                                  child: Container(
+                                    child: Icon(
+                                      MdiIcons.image,
+                                      size: 40,
+                                      color: Color(0xff000000).withOpacity(0.5),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.3),
+                                          blurRadius: 40.0,
+                                          spreadRadius: 2.0,
+                                          offset: Offset(30.0, 30.0))
+                                    ],
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(30.0),
+                                      topLeft: Radius.circular(30.0),
+                                    ),
+                                  ),
+                                  height: 110,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.75,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 20.0, right: 20.0),
+                                    child: Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "Add photo",
+                                            style: GoogleFonts.montserrat(
+                                                fontSize: 18,
+                                                color: Color(0xff000000),
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                          SizedBox(height: 5.0),
+                                          Text(
+                                            "Add some of your photo for you friends and others.",
+                                            style: GoogleFonts.montserrat(
+                                                fontSize: 12,
+                                                color: Color(0xff000000)
+                                                    .withOpacity(0.5),
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 20.0),
+                          Align(
+                            alignment: Alignment.centerRight,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 20.0, right: 20.0),
+                                  child: Container(
+                                    child: Icon(
+                                      CupertinoIcons.music_note,
+                                      size: 40,
+                                      color: Color(0xff000000).withOpacity(0.5),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Color(0xff000000)
+                                              .withOpacity(0.3),
+                                          blurRadius: 40.0,
+                                          spreadRadius: 2.0,
+                                          offset: Offset(30.0, 30.0))
+                                    ],
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(30.0),
+                                      topLeft: Radius.circular(30.0),
+                                    ),
+                                  ),
+                                  height: 110,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.6,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(20.0),
+                                    child: Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "Reels",
+                                            style: GoogleFonts.montserrat(
+                                                fontSize: 18,
+                                                color: Color(0xff000000),
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                          SizedBox(height: 5.0),
+                                          Text(
+                                            "Share some of your contents.",
+                                            style: GoogleFonts.montserrat(
+                                                fontSize: 12,
+                                                color: Color(0xff000000)
+                                                    .withOpacity(0.5),
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                      Container(
-                        child: Text(
-                          "Share us what you think about our app.",
-                          style: GoogleFonts.montserrat(
-                              fontSize: 14,
-                              color: Color(0xff000000).withOpacity(0.5),
-                              fontWeight: FontWeight.w500),
-                          textAlign: TextAlign.start,
-                        ),
-                      )
                     ],
                   ),
                 ),
-              )
-            ],
+              ),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

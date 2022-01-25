@@ -130,9 +130,14 @@ class _StoryMainState extends State<StoryMain> {
                                           children: [
                                             GestureDetector(
                                               onTap: () {
-                                                //Navigator.of(context)
-                                                //.push(_nextRoute());
-                                                modalBottomSheet(context);
+                                                Navigator.of(context).push(
+                                                  PageRouteBuilder(
+                                                      pageBuilder: (context,
+                                                          animation, _) {
+                                                        return UploadRandom();
+                                                      },
+                                                      opaque: false),
+                                                );
                                               },
                                               child: Container(
                                                 height: 60,
@@ -163,8 +168,6 @@ class _StoryMainState extends State<StoryMain> {
                                                       Color(0xffF4F6F6),
                                                   child: GestureDetector(
                                                     onTap: () {
-                                                      //Navigator.of(context)
-                                                      //.push(_nextRoute());
                                                       modalBottomSheet(context);
                                                     },
                                                     child: Container(
