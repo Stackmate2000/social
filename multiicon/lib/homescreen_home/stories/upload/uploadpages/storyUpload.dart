@@ -1,24 +1,15 @@
-import 'dart:math';
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/animation.dart';
+import 'package:flutter/material.dart';
 
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:multiicon/homescreen_home/homeScreen_main.dart';
-import 'package:multiicon/homescreen_notification/homescreen_Notification.dart';
-import 'package:multiicon/homescreen_reels/homescreen_Reels.dart';
-
-class UploadStory extends StatefulWidget {
-  const UploadStory({Key key}) : super(key: key);
+class StoryUpload extends StatefulWidget {
+  const StoryUpload({Key key}) : super(key: key);
 
   @override
-  _UploadStoryState createState() => _UploadStoryState();
+  _StoryUploadState createState() => _StoryUploadState();
 }
 
-class _UploadStoryState extends State<UploadStory> {
+class _StoryUploadState extends State<StoryUpload> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,12 +22,17 @@ class _UploadStoryState extends State<UploadStory> {
           ),
           SafeArea(
             child: Padding(
-              padding:
-                  const EdgeInsets.only(left: 15.0, right: 15.0, top: 15.0),
+              padding: const EdgeInsets.only(
+                left: 15.0,
+                right: 15.0,
+                top: 15.0,
+              ),
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Container(
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       GestureDetector(
                         onTap: () {
@@ -55,7 +51,15 @@ class _UploadStoryState extends State<UploadStory> {
                             color: Color(0XFFffffff),
                           ),
                         ),
-                      )
+                      ),
+                      Text(
+                        "Next",
+                        style: GoogleFonts.montserrat(
+                          color: Color(0xff3190FF),
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                     ],
                   ),
                 ),

@@ -8,7 +8,7 @@ import 'package:flutter/animation.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:multiicon/homescreen_home/homeScreen_main.dart';
-import 'package:multiicon/homescreen_home/stories/upload/uploadpages/uploadStory.dart';
+import 'package:multiicon/homescreen_home/stories/upload/uploadpages/storyUpload.dart';
 import 'package:multiicon/homescreen_notification/homescreen_Notification.dart';
 import 'package:multiicon/homescreen_reels/homescreen_Reels.dart';
 
@@ -39,7 +39,7 @@ class _UploadTabBarState extends State<UploadTabBar>
 
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height * 0.4;
+    final double height = MediaQuery.of(context).size.height * 0.6;
     return Scaffold(
       body: AnimatedBuilder(
         animation: animationController,
@@ -58,89 +58,98 @@ class _UploadTabBarState extends State<UploadTabBar>
                     alignment: Alignment.centerLeft,
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.2,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Container(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _index = 0;
-                                });
-                              },
-                              child: Container(
-                                  height: 60,
-                                  child: Center(
-                                    child: Container(
-                                        height: _index == 0 ? 25.0 : 22.0,
-                                        width: 30.0,
-                                        child: _index == 0
-                                            ? SvgPicture.asset(
-                                                "assets/svg/homesevenfill.svg",
-                                                color: Color(0xffFFFFFF),
-                                              )
-                                            : SvgPicture.asset(
-                                                "assets/svg/homeseven.svg",
-                                                color: Colors.grey[600],
-                                              )),
-                                  )),
-                            ),
-                          ),
-                          Container(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _index = 1;
-                                });
-                              },
-                              child: Container(
-                                  height: 60,
-                                  decoration: BoxDecoration(),
-                                  child: Center(
-                                    child: Container(
-                                        height: _index == 1 ? 25.0 : 22.0,
-                                        width: 30.0,
-                                        child: SvgPicture.asset(
-                                          "assets/svg/reeltv.svg",
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15.0),
+                        child: TweenAnimationBuilder(
+                          tween: Tween<double>(begin: 0, end: 1),
+                          curve: Curves.easeIn,
+                          duration: Duration(milliseconds: 1000),
+                          builder: (BuildContext context, Object _val,
+                              Widget child) {
+                            return Opacity(
+                              opacity: _val,
+                              child: child,
+                            );
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Container(
+                                child: GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      _index = 0;
+                                    });
+                                  },
+                                  child: Container(
+                                    child: Text(
+                                      "Posts",
+                                      style: GoogleFonts.montserrat(
+                                          fontSize: 16,
+                                          color: _index == 0
+                                              ? Color(0xffFFFFFF)
+                                              : Color(0xffFFFFFF)
+                                                  .withOpacity(0.7),
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 25.0),
+                              Container(
+                                child: GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      _index = 1;
+                                    });
+                                  },
+                                  child: Container(
+                                    child: Text(
+                                      "Stories",
+                                      style: GoogleFonts.montserrat(
+                                          fontSize: 16,
                                           color: _index == 1
                                               ? Color(0xffFFFFFF)
-                                              : Colors.grey[600],
-                                        )),
-                                  )),
-                            ),
-                          ),
-                          Container(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _index = 2;
-                                });
-                              },
-                              child: Container(
-                                  height: 60,
-                                  decoration: BoxDecoration(),
-                                  child: Center(
-                                    child: Container(
-                                      height: _index == 2 ? 25.0 : 22.0,
-                                      width: 30.0,
-                                      child: _index == 2
-                                          ? SvgPicture.asset(
-                                              "assets/svg/notifynew.svg",
-                                              color: Color(0xff000000),
-                                            )
-                                          : SvgPicture.asset(
-                                              "assets/svg/notificationone.svg",
-                                              color: Colors.grey[600],
-                                            ),
+                                              : Color(0xffFFFFFF)
+                                                  .withOpacity(0.7),
+                                          fontWeight: FontWeight.w400),
                                     ),
-                                  )),
-                            ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 25.0),
+                              Container(
+                                child: GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      _index = 2;
+                                    });
+                                  },
+                                  child: Container(
+                                    height: 60,
+                                    child: Container(
+                                      child: Text(
+                                        "Reels",
+                                        style: GoogleFonts.montserrat(
+                                            fontSize: 16,
+                                            color: _index == 2
+                                                ? Color(0xffFFFFFF)
+                                                : Color(0xffFFFFFF)
+                                                    .withOpacity(0.7),
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
                     ),
                   ),
-                ),
+                )
               ],
             ),
           );
@@ -154,7 +163,7 @@ class UploadOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: UploadStory(),
+      child: StoryUpload(),
     );
   }
 }
