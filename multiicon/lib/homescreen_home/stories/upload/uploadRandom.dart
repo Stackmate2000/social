@@ -1,10 +1,4 @@
-import 'dart:math';
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/animation.dart';
 import 'package:multiicon/homescreen_home/stories/upload/uploadTabbar.dart';
 
 class UploadRandom extends StatefulWidget {

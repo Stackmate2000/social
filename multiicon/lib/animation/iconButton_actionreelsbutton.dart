@@ -1,5 +1,3 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class IconButtonActionReelsButton extends StatefulWidget {
@@ -52,14 +50,21 @@ class _IconButtonActionReelsButtonState
 }
 
 // ignore: must_be_immutable
-class Musicvisitualizer extends StatelessWidget {
+class Musicvisitualizer extends StatefulWidget {
+  @override
+  State<Musicvisitualizer> createState() => _MusicvisitualizerState();
+}
+
+class _MusicvisitualizerState extends State<Musicvisitualizer> {
   List<int> duartion = [900, 700, 600, 800, 500];
+
   List<Color> colors = [
     Colors.blueAccent,
     Colors.greenAccent,
     Colors.redAccent,
     Colors.yellowAccent
   ];
+
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -1,12 +1,8 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:multiicon/addButton_bottomnav/moodCheck/moodCheck_in.dart';
-import 'package:multiicon/addButton_bottomnav/moodCheck/sliderFeeling.dart';
-import 'package:multiicon/animation/iconButton_actionreelsbutton.dart';
 
 const _maxHeight = 450.0;
 const _minHeight = 60.0;

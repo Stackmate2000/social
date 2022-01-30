@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:multiicon/homescreen_userprofile/profileUI/profile_imageProfile.dart';
 import 'package:multiicon/homescreen_userprofile/profileUI/savedStories.dart';
 import 'package:multiicon/homescreen_userprofile/settings/profileSettings.dart';
 import 'package:multiicon/homescreen_userprofile/tabBar/gallery_mainTabbar.dart';
@@ -118,8 +118,8 @@ class _ProfileUIState extends State<ProfileUI> {
                             width: 15.0,
                           ),
                           Container(
-                            height: 55,
-                            width: 55,
+                            height: 65,
+                            width: 65,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(
                                 Radius.circular(16.0),
@@ -132,8 +132,8 @@ class _ProfileUIState extends State<ProfileUI> {
                             child: Align(
                               alignment: Alignment.center,
                               child: Container(
-                                height: 55,
-                                width: 50,
+                                height: 65,
+                                width: 60,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(12.0),
@@ -141,21 +141,8 @@ class _ProfileUIState extends State<ProfileUI> {
                                   color: Color(0xffFFFFFF),
                                 ),
                                 child: Align(
-                                  alignment: Alignment.center,
-                                  child: Container(
-                                    height: 45,
-                                    width: 45,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(16.0),
-                                      ),
-                                      image: DecorationImage(
-                                          image: AssetImage("assets/nigga.jpg"),
-                                          fit: BoxFit.cover),
-                                      color: Color(0xffADB3BF),
-                                    ),
-                                  ),
-                                ),
+                                    alignment: Alignment.center,
+                                    child: ProfileImageProfile()),
                               ),
                             ),
                           ),
